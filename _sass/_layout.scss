@@ -196,8 +196,8 @@
 }
 
 .post-link {
-    display: block;
-    font-size: 24px;
+    display: inline;
+    font-size: 16px;
 }
 
 
@@ -210,12 +210,12 @@
 }
 
 .post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
+    font-size: 32px;
+    letter-spacing: 0px;
     line-height: 1;
 
     @include media-query($on-laptop) {
-        font-size: 36px;
+        font-size: 28px;
     }
 }
 
@@ -223,10 +223,11 @@
     margin-bottom: $spacing-unit;
 
     h2 {
-        font-size: 32px;
+        font-size: 28px;
+        margin-bottom: 10px;
 
         @include media-query($on-laptop) {
-            font-size: 28px;
+            font-size: 26px;
         }
     }
 
@@ -245,4 +246,30 @@
             font-size: 18px;
         }
     }
+}
+
+/**
+ * Paginator
+ */
+.pagination {
+    text-align: center;
+}
+.paginator-button {
+    padding: 5px 10px;
+    margin: 2.5px;
+    vertical-align: middle;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: $grey-color-light;
+}
+
+/**
+ * Embedded Twitter feed
+ */
+
+.twitter {
+    float: right;
+    width: 250px;
+    margin-left: 25px;
+    margin-bottom: 25px;
 }

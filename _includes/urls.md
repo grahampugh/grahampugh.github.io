@@ -24,6 +24,14 @@
 [Vagrant]: https://www.vagrantup.com
 [TextWrangler]: http://www.barebones.com/products/textwrangler/
 [AutoPkg]: https://github.com/autopkg/autopkg
+[The Luggage]: https://github.com/unixorn/luggage
+[Markdown]: http://en.wikipedia.org/wiki/Markdown
+[GitHub]: https://github.com
+[Jekyll]: http://jekyllrb.com/
+[kramdown]: http://kramdown.gettalong.org
+[AutoDMG]: https://github.com/MagerValp/AutoDMG
+[MunkiReport-PHP]: https://github.com/munkireport/munkireport-php
+[check_local_admin]: https://github.com/grahampugh/osx-scripts/tree/master/check_local_admin
 
 [@macmuleblog]: https://twitter.com/macmuleblog
 [@Steve2CV]: https://twitter.com/Steve2CV
@@ -31,4 +39,5 @@
 [@hunty1er]: https://twitter.com/hunty1er
 [@rtrouton]: https://twitter.com/rtrouton
 
+[WordPress.com]: https://www.wordpress.com
 [Der Flounder]: https://derflounder.wordpress.com

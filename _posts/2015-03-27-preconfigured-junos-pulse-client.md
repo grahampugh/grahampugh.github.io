@@ -37,7 +37,7 @@ $ cp /path/to/JunosPulse.dmg /path/to/Default.jnprpreconfig ~/luggage-packages/
 
 Create a new file named `Makefile` in the same folder using whatever editor you use, and populate as follows:
 
-{% highlight bash %}
+{% highlight bash linenos %}
 USE_PKGBUILD=1
 include /usr/local/share/luggage/luggage.make
 

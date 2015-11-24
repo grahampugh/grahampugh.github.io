@@ -7,14 +7,15 @@ layout: default
    <ul class="post-list">
       {% for post in site.posts %}
          <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} &nbsp;|&nbsp; <a class="post-meta" href="{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{post.url}}"></a></span>
-
-            <h2>
-               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
+            <span class="post-meta">
+               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> &nbsp;|&nbsp; 
+               {{ post.date | date: "%b %-d, %Y" }} &nbsp;|&nbsp; 
+               <a class="post-meta" href="{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
+            </span>
          </li>
       {% endfor %}
    </ul>
+
 
    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
