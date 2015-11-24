@@ -1,25 +1,26 @@
 {% if paginator.total_pages > 1 %}
+<hr />
 <div class="pagination">
-  {% if paginator.previous_page %}
-    <a rel="prev" href="{{ paginator.previous_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-  {% else %}
-    <span>&laquo; Prev</span>
-  {% endif %}
+	{% if paginator.previous_page %}
+		<span class="paginator-button"><a rel="prev" href="{{ paginator.previous_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Newer</a></span>
+	{% else %}
+		<span class="paginator-button">&laquo; Newer</span>
+	{% endif %}
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ '/archives' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
+	{% for page in (1..paginator.total_pages) %}
+		{% if page == paginator.page %}
+			<span class="paginator-button"><em>{{ page }}</em></span>
+		{% elsif page == 1 %}
+			<span class="paginator-button"><a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></span>
+		{% else %}
+			<span class="paginator-button"><a href="{{ site.paginate_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></span>
+		{% endif %}
+	{% endfor %}
 
-  {% if paginator.next_page %}
-    <a rel="next" href="{{ paginator.next_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-  {% else %}
-    <span>Next &raquo;</span>
-  {% endif %}
+	{% if paginator.next_page %}
+		<span class="paginator-button"><a rel="next" href="{{ paginator.next_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></span>
+	{% else %}
+		<span class="paginator-button">Older &raquo;</span>
+	{% endif %}
 </div>
 {% endif %}

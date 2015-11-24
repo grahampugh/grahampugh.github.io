@@ -3,7 +3,7 @@ layout: page
 title: About Graham R Pugh
 ---
 
-<img align="left" style="margin-right:25px;margin-bottom:50px" src="/assets/images/1506582_561159523982174_1717740710_n.jpg" />[View my Resume](/GrahamPughCV.md)
+<img align="left" style="margin-right:25px;margin-bottom:50px" src="/assets/images/1506582_561159523982174_1717740710_n.jpg" />
 
 I am an IT Systems Specialist, currently developing Mac Support and Management strategies for a major British University, and contributing to the development of Open Source Mac Management Software.  Testing.
 
