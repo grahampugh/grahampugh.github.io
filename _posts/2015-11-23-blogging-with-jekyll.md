@@ -181,7 +181,7 @@ This is referenced in any page where comments should be added. In my case, I've 
 
 Additionally, comments must be enabled in the [YAML front matter][5] of each file (including the blog template file and each individual blog file. So that I don't forget, I have a draft blog template at [`_drafts/template.md`]({{ site.src_url }}/_drafts/template.md), which I copy to start each new blog file:
 
-{% highlight markdown %}
+{% highlight html %}
 ---
 layout: post
 title:  "Template post"
