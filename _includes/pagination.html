@@ -18,7 +18,7 @@
 	{% endfor %}
 
 	{% if paginator.next_page %}
-		<span class="paginator-button"><a rel="next" href="{{ paginator.next_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></span>
+		<span class="paginator-button"><a rel="next" href="{{ paginator.next_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}">Older &raquo;</a></span>
 	{% else %}
 		<span class="paginator-button">Older &raquo;</span>
 	{% endif %}
