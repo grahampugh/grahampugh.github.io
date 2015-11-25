@@ -179,17 +179,7 @@ This is referenced in any page where comments should be added. In my case, I've 
 {% raw %}{% include comments.html %}{% endraw %}
 {% endhighlight %}
 
-Additionally, comments must be enabled in the [YAML front matter][5] of each file (including the blog template file and each individual blog file. So that I don't forget, I have a draft blog template at [`_drafts/template.md`]({{ site.src_url }}/_drafts/template.md), which I copy to start each new blog file:
-
-{% highlight html %}
----
-layout: post
-title:  "Template post"
-comments: true
----
-
-Enter content here...
-{% endhighlight %}
+Additionally, comments must be enabled in the [YAML front matter][5] of each file (including the blog template file and each individual blog file. 
 
 You can enable comment counts by adding the following line to the bottom of your default html page template, just before the `</body>` tag. The default template file is at [`_layouts/default.html`]({{ site.src_url }}/_layouts/default.html):
 
