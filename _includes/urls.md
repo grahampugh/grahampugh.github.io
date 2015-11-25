@@ -32,6 +32,7 @@
 [AutoDMG]: https://github.com/MagerValp/AutoDMG
 [MunkiReport-PHP]: https://github.com/munkireport/munkireport-php
 [check_local_admin]: https://github.com/grahampugh/osx-scripts/tree/master/check_local_admin
+[Slack]: https://slack.com
 
 [@macmuleblog]: https://twitter.com/macmuleblog
 [@Steve2CV]: https://twitter.com/Steve2CV

@@ -44,13 +44,14 @@ I have extended the functionality of Munki-Do so that it can now update Git repo
 GIT_PATH = '/usr/bin/git'
 {% endhighlight %}
 
-Bitbucket doesn’t respond to `--author` flags in git commit commands, so Munki-Do has been recoded to set the author variables based on the current user using git config user.name and git config user.email commands.
+Bitbucket doesn’t respond to `--author` flags in git commit commands, so Munki-Do has been recoded to set the author variables based on the current user using `git config user.name` and `git config user.email` commands.
 
 Since the Bitbucket repository is a private one, to enable automated interaction with the Bitbucket server, an ssh key needs to be generated on Munki-Do’s host, and the public key imported to the Bitbucket repo. [The process for doing this is described here.](https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html)
 
 My test Munki-Do host is a [Docker Container](https://github.com/grahampugh/docker-munki-do), so I imported my SSH key from my host Mac into the Docker Container using commands in the Dockerfile:
 
-{% highlight bash %}ADD id_rsa /root/.ssh/id_rsa
+{% highlight bash %}
+ADD id_rsa /root/.ssh/id_rsa
 RUN touch /root/.ssh/known_hosts
 RUN chown root: /root/.ssh/id_rsa && chmod 600 /root/.ssh/id_rsa
 RUN ssh-keyscan bitbucket.org >> /root/.ssh/known_hosts
