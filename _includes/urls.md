@@ -10,7 +10,9 @@
 [Munki Do-Not-Disturb package]: https://github.com/grahampugh/munki-do-not-disturb/releases
 [MacAdmins Slack Team]: https://macadmins.slack.com
 [Munki-Enroll]: https://github.com/grahampugh/munki-enroll
+[munkiimport]: https://github.com/munki/munki/wiki/munkiimport
 [manifestutil]: https://github.com/munki/munki/wiki/manifestutil
+[munki-with-git]: https://github.com/munki/munki/wiki/Munki-With-Git
 [MunkiAdmin]: https://github.com/hjuutilainen/munkiadmin
 [DeployStudio]: http://www.deploystudio.com
 [Imagr]: https://github.com/grahamgilbert/imagr/wiki/Getting-Started
@@ -24,6 +26,8 @@
 [Vagrant]: https://www.vagrantup.com
 [TextWrangler]: http://www.barebones.com/products/textwrangler/
 [AutoPkg]: https://github.com/autopkg/autopkg
+[Autopkg prepostprocessors]: https://github.com/autopkg/autopkg/wiki/PreAndPostProcessorSupport
+[AutoPkgr]: http://www.lindegroup.com/autopkgr
 [The Luggage]: https://github.com/unixorn/luggage
 [Markdown]: http://en.wikipedia.org/wiki/Markdown
 [GitHub]: https://github.com
@@ -33,6 +37,11 @@
 [MunkiReport-PHP]: https://github.com/munkireport/munkireport-php
 [check_local_admin]: https://github.com/grahampugh/osx-scripts/tree/master/check_local_admin
 [Slack]: https://slack.com
+[Simian]: https://github.com/google/simian/wiki/SimianAtAGlance
+[Puppet]: https://puppetlabs.com
+[BitBucket]: https://bitbucket.org
+[GitLab]: https://about.gitlab.com
+[Git]: https://git-scm.com
 
 [@macmuleblog]: https://twitter.com/macmuleblog
 [@Steve2CV]: https://twitter.com/Steve2CV
@@ -40,6 +49,7 @@
 [@hunty1er]: https://twitter.com/hunty1er
 [@rtrouton]: https://twitter.com/rtrouton
 [@grahamrpugh]: https://twitter.com/grahamrpugh
+[@n8felton]: https://twitter.com/n8felton
 
 [WordPress.com]: https://www.wordpress.com
 [Der Flounder]: https://derflounder.wordpress.com
