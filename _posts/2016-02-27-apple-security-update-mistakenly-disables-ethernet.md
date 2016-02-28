@@ -8,7 +8,8 @@ Apple today made an error with a security update that could have a high IT suppo
 As reported in [MacRumors Forums](http://forums.macrumors.com/threads/software-update-031-51913-will-break-your-ethernet-driver.1958521/),
 "Software update 031-51913", designed to block some incompatible Kernel Extensions, 
 also renders certain Mac models unable to connect to the Internet via Ethernet ports, as 
-the ports become unrecognised.
+the ports become unrecognised after a reboot. These types of updates are not reported via the Mac App Store; they 
+are installed silently, similar to Apple's XProtect anti-malware updates.
 
 Reports show that many iMacs, MacBook Pros, Mac mini and Mac Pro computers are affected.
 
@@ -41,7 +42,14 @@ deploying them to their Mac fleets.  There are two ways you can achieve this:
    Software Update service, which can be hosted on a Linux server or VM. A web front end for 
    Reposado has also been created: [Margarita].
 
+Home users can uncheck the option to "Install system data files and security updates" in the App Store System Preferences panel. 
+However, as Apple's mistake is likely to be very rare, and as this particular error only affected computers that solely use 
+the Ethernet port for Internet connectivity, it is likely to remain a better security decision to leave the option checked.
+
+![img_2]
+
 [img_1]: https://pbs.twimg.com/media/CcQi97EUEAARKJs.jpg
+[img_2]: /assets/images/app-store-preferences.png
 
 {% include urls.md %}
 
