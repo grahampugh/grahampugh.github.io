@@ -8,7 +8,6 @@ permalink: GrahamPughCV.md
 ---------------------
 
 ---
-<br>
 
    * __Nationality:__ British
    * __City:__ Washington, D.C., U.S.A. (from 2016-04-01: Basel, Switzerland)
@@ -24,7 +23,7 @@ permalink: GrahamPughCV.md
 
 ---
 
-I am an experienced I.T. technician, expert in supporting staff in the education sector with all aspects of their computing needs. My interests lie in efficiency of support, which involves identifying and automating repetitive support processes where possible, standardising, and optimising communication to empower both IT staff and end users, with the goal to reduce support incidents whilst at the same time improving customer satisfaction. 
+I am an experienced senior I.T. specialist, expert in supporting staff in the education sector with all aspects of their computing needs. My interests lie in efficiency of support, which involves identifying and automating repetitive support processes where possible, standardising, and optimising communication to empower both IT staff and end users, with the goal to reduce support incidents whilst at the same time improving customer satisfaction. 
 
 At the University of Bristol, I identified that due to increasing Mac real estate and a diversifying set of users, the need for improved Mac management and support systems and policies became paramount.  I set up and chaired a group of fellow experts, and delivered an integrated management solution for Mac computers using Open Source Software, enabling rapid imaging of, managed deployment of software to, and hugely improved security compliance for over 1300 Mac computers.  My team also vastly improved online support and documentation of Mac support issues and processes, setup communication strategies to ensure that Mac users in the University are kept informed and up-to-date with regard to important issues, and unified and improved the purchasing and repair processes.  The improvements I instigated have ensured a low incident count from Mac users, reduced the burden on IT Support staff, and resulted in improved incident feedback.
 
@@ -107,13 +106,13 @@ Documentation/Communication
 
 ---
 
-__2015-Present: *Mac Systems Administrator*, IT Services, University of Bristol, Bristol, UK__  
+__2015-2016: *Mac Systems Administrator*, IT Services, University of Bristol, Bristol, UK__  
 
    * Developing and maintaining Mac management systems. 
    * Chairing a "Mac Virtual Team" of Mac experts across the IT Services organisation, with the function of developing policies for Mac lifecycle management (purchasing, repair, disposal) and improving support. 
    * Documenting processes and IT support webpages and wikis.
 
-__2013-Present: *Senior Information Technology Technician*, IT Services, University of Bristol__  
+__2013-2016: *Senior Information Technology Technician*, IT Services, University of Bristol__  
 
    * *"Mathematics Subject Specialist":* First and Second Line support for the School of Mathematics.  
    * Liaison between IT Services and lead academics and administrators. 
@@ -166,7 +165,7 @@ __2000-2001: *Physics Technician*, Kings of Wessex Community School__
 
 ---
 
-* 2015: Attendee, *Mac DMV Group seminars*, Washington D.C.
+* 2015-2016: Attendee, *Mac DMV Group seminars*, Washington D.C.
 * 2015: Invited Speaker, *London Apple Admins Meeting*, ThoughtWorks, London
 * 2014: Invited Speaker, *Friday I.T. Talks*, University of Bristol
 * 2014: Attendee, *Mac Admins @ PSU Conference*, Penn State University, PA
@@ -181,6 +180,7 @@ __2000-2001: *Physics Technician*, Kings of Wessex Community School__
 * 2004: Attendee, *Apache Web Server Administration*, GBDirect Professional Training
 * 2003: Passed *Linux Operating System Certification* examination, City of Bristol College
 
+
 <br>Education
 ---------------------
 
@@ -191,5 +191,25 @@ __2000-2001: *Physics Technician*, Kings of Wessex Community School__
 * 1989-1992: B.Sc. (Hons), *Geochemistry*, University of Manchester
   
   
+<br>Voluntary / Additional Work
+---------------------
 
+---
+
+__2016: *Collections Volunteer*, Smithsonian Institution Museum of Natural History__  
+
+   * Helping development of a stratigraphy database for the museum's fossil Cypraea (cowry) collection
+   * Photographing and cataloguing the collection
+
+__2014-present: *Freelance Academic Editor*__
+
+   * Editing and copyrighting academic theses and publications.
+
+__2001-present: *Web Designer*__
+
+   * 2004-present: [*Royal Society for the encouragement of Arts, Manufactures and Commerce (The RSA), Wales & Western Division*](http://www.rsawaw.org)
+   * 2001-present: [*The-Van*](http://www.the-van.co.uk)
+   * 2001-2011: [*Sedgemoor Conservation Volunteers*](http://sedgemoorconservationvolunteers.org.uk)
+   * 2006-2010: [*The Bishop's Palace, Wells*](http://www.bishopspalace.org.uk)
+   * 2002-2009: [*IT For The Terrified*](http://www.itfortheterrified.co.uk)
 

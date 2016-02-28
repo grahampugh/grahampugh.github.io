@@ -18,6 +18,7 @@
 [Imagr]: https://github.com/grahamgilbert/imagr/wiki/Getting-Started
 [London Apple Admins]: http://www.londonappleadmins.org.uk
 [Docker]: https://www.docker.com
+[Docker-Machine]: https://docs.docker.com/machine/
 [Crypt]: https://github.com/grahamgilbert/Crypt
 [Bushel]: https://www.bushel.com"
 [BSDPy]: https://bitbucket.org/bruienne/bsdpy
@@ -42,6 +43,8 @@
 [BitBucket]: https://bitbucket.org
 [GitLab]: https://about.gitlab.com
 [Git]: https://git-scm.com
+[Reposado]: https://github.com/wdas/reposado
+[Margarita]: https://github.com/jessepeterson/margarita
 
 [@macmuleblog]: https://twitter.com/macmuleblog
 [@Steve2CV]: https://twitter.com/Steve2CV
@@ -50,6 +53,7 @@
 [@rtrouton]: https://twitter.com/rtrouton
 [@grahamrpugh]: https://twitter.com/grahamrpugh
 [@n8felton]: https://twitter.com/n8felton
+[@mikeymikey]: https://twitter.com/mikeymikey
 
 [WordPress.com]: https://www.wordpress.com
 [Der Flounder]: https://derflounder.wordpress.com
