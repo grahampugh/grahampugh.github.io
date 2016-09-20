@@ -21,6 +21,7 @@ markdown: kramdown
 
 #pagination
 gems:
+  - jekyll-gist
   - jekyll-paginate
 paginate: 10
 paginate_path: "/page/:num"
