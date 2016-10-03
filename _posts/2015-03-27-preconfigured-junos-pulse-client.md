@@ -40,78 +40,97 @@ Create a new file named `Makefile` in the same folder using whatever editor you 
 {% highlight bash linenos %}
 USE_PKGBUILD=1
 include /usr/local/share/luggage/luggage.make
+#PB_EXTRA_ARGS+= --sign "Your Org"  ## uncomment this line if you wish to sign the package
 
-TITLE=Junos-Pulse
+TITLE=Pulse-Secure-Configured
 PACKAGE_NAME=${TITLE}
+PACKAGE_VERSION=5.2r5.0-b869  ## change to reflect the current version
 REVERSE_DOMAIN=net.juniper
-MANAGEMENT_DIR = &quot;junos&quot;
-INSTALLER_PATH = &quot;.&quot;
-INSTALLER = &quot;JunosPulse.dmg&quot;
-CONFIG = &quot;Default.jnprpreconfig&quot;
+MANAGEMENT_DIR = "junos"
+INSTALLER_PATH = "."
+INSTALLER = "ps-pulse-mac-5.2r5.0-b869-installer.dmg"
+CONFIG = "Default.jnprpreconfig"  ## change to suit your config file
 PAYLOAD=\
-pack-server \
-pack-script-postinstall
-
+	pack-server \
+	pack-script-postinstall
+ 
 pack-server:
-    @sudo mkdir -p ${WORK_D}/Library/Management/$(MANAGEMENT_DIR)
-    @sudo cp $(INSTALLER_PATH)/$(INSTALLER) $(INSTALLER_PATH)/$(CONFIG) ${WORK_D}/Library/Management/$(MANAGEMENT_DIR)
-    @sudo chown -R root:wheel ${WORK_D}/Library/Management/$(MANAGEMENT_DIR)
+	@sudo mkdir -p ${WORK_D}/Library/Management/$(MANAGEMENT_DIR)
+	@sudo cp $(INSTALLER_PATH)/$(INSTALLER) ${WORK_D}/Library/Management/$(MANAGEMENT_DIR)/Pulse-Secure.dmg
+	@sudo cp $(INSTALLER_PATH)/$(CONFIG) ${WORK_D}/Library/Management/$(MANAGEMENT_DIR)/config.jnprpreconfig
+	@sudo chown -R root:wheel ${WORK_D}/Library/Management/$(MANAGEMENT_DIR)
 {% endhighlight %}
 
 You may wish to sign the package with a developer ID if you are intending to make the installer available to your users for self-install, so that Gatekeeper doesn't prevent installation. You will need an Apple Mac OS X Developer Account to do this, and have your Developer ID Certificate installed on the machine you are building the package. Then, add the following line as the third line of the Makefile, changing "Your Name" to the name of your certificate in your Keychain:
 
-{% highlight bash %}
-PB_EXTRA_ARGS+= --sign &quot;Your Name&quot;
+{% highlight bash  %}
+PB_EXTRA_ARGS+= --sign "Your Org"
 {% endhighlight %}
 
 Create a new file named `postinstall` in the same folder using whatever editor you use, and populate as follows (this is exactly the same as Rich Trouton's `postinstall` file except for the `install_dir`):
 
-{% highlight bash %}
+{% highlight bash linenos %}
 #!/bin/bash
+ 
 # Determine working directory
-install_dir=&quot;/Library/Management/junos&quot;
-
+ 
+install_dir="/Library/Management/junos"
+ 
 #
 # Installing Junos Pulse
 #
-
+ 
 # Specify location of the Junos Pulse disk image
-TOOLS=$install_dir/&quot;JunosPulse.dmg&quot;
-
+ 
+  TOOLS=$install_dir/"Pulse-Secure.dmg"
+ 
 # Specify location of the Junos Pulse configuration file
-VPN_CONFIG_FILE=$install_dir/&quot;Default.jnprpreconfig&quot;
-
+ 
+  VPN_CONFIG_FILE=$install_dir/"config.jnprpreconfig"
+ 
 # Specify a /tmp/junospulse.XXXX mountpoint for the disk image
-TMPMOUNT=`/usr/bin/mktemp -d /tmp/junospulse.XXXX`
-
+ 
+  TMPMOUNT=`/usr/bin/mktemp -d /tmp/junospulse.XXXX`
+ 
 # Mount the latest Junos Pulse disk image to the /tmp/junospulse.XXXX mountpoint
-hdiutil attach &quot;$TOOLS&quot; -mountpoint &quot;$TMPMOUNT&quot; -nobrowse -noverify -noautoopen
-
+ 
+  hdiutil attach "$TOOLS" -mountpoint "$TMPMOUNT" -nobrowse -noverify -noautoopen
+ 
 # Install Junos Pulse
-/usr/sbin/installer -dumplog -verbose -pkg &quot;$(/usr/bin/find $TMPMOUNT -maxdepth 1 \( -iname \*\.pkg -o -iname \*\.mpkg \))&quot; -target &quot;$3&quot;
-
+ 
+  /usr/sbin/installer -dumplog -verbose -pkg "$(/usr/bin/find $TMPMOUNT -maxdepth 1 \( -iname \*\.pkg -o -iname \*\.mpkg \))" -target "$3"
+ 
 #
 # Applying Janelia VPN configuration file
 #
+ 
+if [[ -d "$3/Applications/Junos Pulse.app" ]]; then
+ 
+    echo "Junos Pulse VPN Client Installed"
+    "$3/Applications/Junos Pulse.app/Contents/Plugins/JamUI/jamCommand" -importFile "$VPN_CONFIG_FILE"
+    echo "VPN Configuration Installed"
 
-if [[ -d &quot;$3/Applications/Junos Pulse.app&quot; ]]; then
-    echo &quot;Junos Pulse VPN Client Installed&quot;
-    &quot;$3/Applications/Junos Pulse.app/Contents/Plugins/JamUI/jamCommand&quot; -importFile &quot;$VPN_CONFIG_FILE&quot;
-    echo &quot;VPN Configuration Installed&quot;
+elif [[ -d "$3/Applications/Pulse Secure.app" ]]; then
+
+    echo "Pulse Secure VPN Client Installed"
+    "$3/Applications/Pulse Secure.app/Contents/Plugins/JamUI/jamCommand" -importFile "$VPN_CONFIG_FILE"
+    echo "VPN Configuration Installed"
 else
-    echo &quot;Pulse Client Not Installed&quot;
+    echo "Pulse Client Not Installed"
 fi
-
+ 
 #
 # Clean-up
 #
-
+ 
 # Unmount the Junos Pulse disk image
-/usr/bin/hdiutil detach &quot;$TMPMOUNT&quot;
-
+ 
+  /usr/bin/hdiutil detach "$TMPMOUNT"
+ 
 # Remove the /tmp/junospulse.XXXX mountpoint
-/bin/rm -rf &quot;$TMPMOUNT&quot;
-
+ 
+  /bin/rm -rf "$TMPMOUNT"
+ 
 exit 0
 {% endhighlight %}
 
@@ -121,7 +140,7 @@ To create the package, run the following command:
 $ make pkg
 {% endhighlight %}
 
-You should now have a package named `Junos-Pulse.pkg` which you can import into your software distribution system (Munki, Casper etc).
+You should now have a package named `Pulse-Secure-Configured.pkg` which you can import into your software distribution system (Munki, Casper etc).
 
 Making a DMG for manual distribution
 ============
@@ -137,21 +156,19 @@ Contents of `dmg-it.sh`:
 {% highlight bash %}
 #!/bin/bash
 
-# Run this script after &quot;make pkg&quot; to create a DMG
-# if you have already signed your pkg in the Makefile
-# or if you dont want to sign it.
+# Run this script after "make pkg" to create a DMG
 #
 # This version of the script will create a DMG for each pkg in the folder it is in.
 
 mkdir tmp
 ls ./*.pkg | while read script
 do
-    output_Name=&quot;${script%.pkg}.dmg&quot;
-    echo &quot;PKG-&gt;DMG maker. Checking for signed packages...&quot;
-    pkgutil --check-signature &quot;${script}&quot;
+    output_Name="${script%.pkg}.dmg"
+    echo "PKG->DMG maker. Checking for signed packages..."
+    pkgutil --check-signature "${script}"
     cp $script tmp/
     hdiutil create \
-        -volname &quot;${script}&quot; \
+        -volname "${script}" \
         -srcfolder ./tmp \
         -ov \
         $output_Name
@@ -168,7 +185,11 @@ $ chmod o+x dmg-it.sh
 $ ./dmg-it.sh
 {% endhighlight %}
 
-You should now have `Junos-Pulse.dmg` in your folder.
+You should now have `Pulse-Secure-Configured.dmg` in your folder.
+
+*Note:* This post was updated 04 October 2016. The installed Pulse Secure app is now correctly named *Pulse Secure.app*, so the script now checks for this as well as *Junos Pulse.app*. 
+
+
 
 [1]: https://derflounder.wordpress.com/2015/03/13/deploying-a-pre-configured-junos-pulse-vpn-client-on-os-x/
 [2]: http://grahamgilbert.com/blog/2013/08/09/the-luggage-an-introduction/
