@@ -106,7 +106,7 @@ jamf policy -trigger runsoftwareupdate
 
 # Quit CasperSplash if still running
 if [[ ! -z $(pgrep CasperSplash) ]]; then
-	osascript -e 'quit app "CasperSplash"
+	osascript -e 'quit app "CasperSplash"'
 fi
 
 # we are done, so delete CasperSplash
