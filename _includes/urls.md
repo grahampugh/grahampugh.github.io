@@ -14,6 +14,7 @@
 [manifestutil]: https://github.com/munki/munki/wiki/manifestutil
 [munki-with-git]: https://github.com/munki/munki/wiki/Munki-With-Git
 [MunkiAdmin]: https://github.com/hjuutilainen/munkiadmin
+[Munki-Pkg]: https://github.com/munki/munki-pkg
 [DeployStudio]: http://www.deploystudio.com
 [Imagr]: https://github.com/grahamgilbert/imagr/wiki/Getting-Started
 [London Apple Admins]: http://www.londonappleadmins.org.uk
@@ -45,6 +46,8 @@
 [Git]: https://git-scm.com
 [Reposado]: https://github.com/wdas/reposado
 [Margarita]: https://github.com/jessepeterson/margarita
+[JAMF Pro]: https://www.jamf.com/products/jamf-pro/
+[CasperSplash]: https://github.com/ftiff/CasperSplash
 
 [@macmuleblog]: https://twitter.com/macmuleblog
 [@Steve2CV]: https://twitter.com/Steve2CV
@@ -54,6 +57,7 @@
 [@grahamrpugh]: https://twitter.com/grahamrpugh
 [@n8felton]: https://twitter.com/n8felton
 [@mikeymikey]: https://twitter.com/mikeymikey
+[@ftiff]: https://twitter.com/ftiff
 
 [WordPress.com]: https://www.wordpress.com
 [Der Flounder]: https://derflounder.wordpress.com

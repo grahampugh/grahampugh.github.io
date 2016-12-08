@@ -13,7 +13,6 @@ Whilst looking for Open Source alternatives, I came across [this Python script f
 
 {% gist c5bbf3e8ec1641ce033791615eee25b0 %} 
 
-
 [1]: https://www.mozilla.org/en-US/thunderbird/
 [2]: http://www.beyondinbox.com/
 [3]: https://gist.github.com/robulouski/7442321
