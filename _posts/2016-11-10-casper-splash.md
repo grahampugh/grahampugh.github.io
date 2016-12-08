@@ -104,10 +104,9 @@ jamf policy -trigger runsoftwareupdate
 
 # Preparing for Reboot
 
-# Kill CasperSplash process if running
-if [[ $(/bin/ps -e | grep '/Library/CasperSplash/CasperSplash.app' | grep -vc grep) -ne 0 ]]; then
-	ps_num=$(/bin/ps -e | grep '/Library/CasperSplash/CasperSplash.app' | grep -v grep | cut -f 1 -d ' ')
-	kill -9 $ps_num
+# Quit CasperSplash if still running
+if [[ ! -z $(pgrep CasperSplash) ]]; then
+	osascript -e 'quit app "CasperSplash"
 fi
 
 # we are done, so delete CasperSplash
