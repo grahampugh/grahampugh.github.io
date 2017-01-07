@@ -48,6 +48,7 @@
 [Margarita]: https://github.com/jessepeterson/margarita
 [JAMF Pro]: https://www.jamf.com/products/jamf-pro/
 [CasperSplash]: https://github.com/ftiff/CasperSplash
+[Hello-IT]: https://github.com/ygini/Hello-IT
 
 [@macmuleblog]: https://twitter.com/macmuleblog
 [@Steve2CV]: https://twitter.com/Steve2CV
