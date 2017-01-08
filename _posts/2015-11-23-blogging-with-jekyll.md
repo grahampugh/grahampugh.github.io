@@ -63,7 +63,7 @@ Editing the template to create the blog identity
 The site settings are contained in the root directory, in `_config.yml`. I edited the 
 file as follows:
 
-{% highlight yaml %}
+~~~ yaml
 # Site settings
 title: On The Subject Of Macs
 email: g.r.pugh@gmail.com
@@ -73,42 +73,42 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://grahampugh.github.io" # the base hostname & protocol for your site
 twitter_username: GrahamRPugh
 github_username:  grahampugh
-{% endhighlight %}
+~~~
 
 Editing index.html, and archive.html
 =======================
 
-The default template has a list of blog posts in [`index.html`]({% raw %}{{ site.src_url }}{% endraw %}/index.html). I altered this to include the first 50 words of each post:
+The default template has a list of blog posts in [`index.html`]({{ site.baseurl }}{% link index.html %}). I altered this to include the first 50 words of each post:
 
-{% highlight html %}
-<p class="post-meta">{% raw %}{{ post.content | strip_html | truncatewords: 50 }}{% endraw %}</p>
-{% endhighlight %}
+~~~ html
+<p class="post-meta">{{ post.content | strip_html | truncatewords: 50 }}</p>
+~~~
 
-I moved the original list-style page to [`archive/index.html`]({{ site.src_url }}/archive/index.html). 
+I moved the original list-style page to [`archives/index.html`]({{ site.baseurl }}{% link archives/index.html %}). 
 
 Adding Pagination
 =======================
 
 Pagination enables you to restrict the number of posts visible on the first page of an index or list page, so that the page doesn't get too long. To set this up, install as follows:
 
-{% highlight bash %}
+~~~ bash
 $ gem install jekyll-paginate
-{% endhighlight %}
+~~~
 
 In the [`_config.yml`]({{ site.src_url }}/_config.yml) file, append the following lines:
 
-{% highlight yaml %}
+~~~ yaml
 #pagination
 gems: [jekyll-paginate]
 paginate: 10
 paginate_path: "/page/:num"
-{% endhighlight %}
+~~~
 
 The numeric value for the `paginate` setting can be altered to set the number of items to be listed per page.
 
 An includes file determines how the links to other pages are displayed. This is [`_includes/pagination.html`]({{ site.src_url }}/_includes/pagination.html):
 
-{% highlight html %}
+~~~ html
 {% raw %}{% if paginator.total_pages > 1 %}{% endraw %}
 <div class="pagination">
 	{% raw %}{% if paginator.previous_page %}{% endraw %}
@@ -134,26 +134,26 @@ An includes file determines how the links to other pages are displayed. This is 
 	{% raw %}{% endif %}{% endraw %}
 </div>
 {% raw %}{% endif %}{% endraw %}
-{% endhighlight %}
+~~~
 
-This must be referenced in [`index.html`]({{ site.src_url }}/index.html) at the point where the links should be displayed (at the end of the list of posts):
+This must be referenced in [`index.html`]({{ site.baseurl }}{% link index.html %}) at the point where the links should be displayed (at the end of the list of posts):
 
-{% highlight html %}
+~~~ html
 {% raw %}{% include pagination.html %}{% endraw %}
-{% endhighlight %}
+~~~
 
 Finally, for pagination to actually work, the reference to `site.posts` must be changed to `paginator.posts`:
 
-{% highlight html %}
+~~~ html
 {% raw %}{% for post in paginator.posts %}{% endraw %}
-{% endhighlight %}
+~~~
 
 Adding comment fields and counts to posts using Disqus
 =======================
 
 [Disqus](http://disqus.com/) is the most common embedded comment system used with Jekyll blogs. After you [register with Disqus](https://disqus.com/admin/create/), you are provided with a block of code to add to your site template. I created a file at [`_includes/comments.html`]({{ site.src_url }}/_includes/comments.html) with the following content:
 
-{% highlight html %}
+~~~ html
 {% raw %}{% if page.comments %}{% endraw %}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -171,45 +171,45 @@ Adding comment fields and counts to posts using Disqus
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 {% raw %}{% endif %}{% endraw %}
-{% endhighlight %}
+~~~
 
 This is referenced in any page where comments should be added. In my case, I've added it to the template for blog posts, which is [`_layouts/post.html`]({{ site.src_url }}/_layouts/post.html):
 
-{% highlight html %}
+~~~ html
 {% raw %}{% include comments.html %}{% endraw %}
-{% endhighlight %}
+~~~
 
 Additionally, comments must be enabled in the [YAML front matter][5] of each file (including the blog template file and each individual blog file. 
 
 You can enable comment counts by adding the following line to the bottom of your default html page template, just before the `</body>` tag. The default template file is at [`_layouts/default.html`]({{ site.src_url }}/_layouts/default.html):
 
-{% highlight html %}
+~~~ html
 <script id="dsq-count-scr" src="//grahamrpugh.disqus.com/count.js" async></script>
-{% endhighlight %}
+~~~
 
 Then, in the [`index.html`]({{ site.src_url }}/index.html) and [`archive/index.html`]({{ site.src_url }}/archive/index.html) files, add the following code where you wish the comment count of each post to be shown:
 
-{% highlight html %}
+~~~ html
 <a class="post-meta" href="{% raw %}{{ post.url }}{% endraw %}index.html#disqus_thread" data-disqus-identifier="{% raw %}{{ post.url }}{% endraw %}"></a>
-{% endhighlight %}
+~~~
 
 Adding Google Analytics
 =======================
 
 Any website can be registered for [Google Analytics](http://www.google.com/analytics/), which provides usage statistics for your site. Register your `username.github.io` site, and then create the file [`_includes/google_analytics.html`]({{ site.src_url }}/_includes/google_analytics.html), to contain the embed code provided for you by Google.  Then, add a reference to `_includes/google_analytics.html` in your default template, which is at [`_layouts/default.html`]({{ site.src_url }}/_layouts/default.html):
 
-{% highlight html %}
+~~~ html
 {% raw %}{% include google_analytics.html %}{% endraw %}
-{% endhighlight %}
+~~~
 
 Pushing the new repository to GitHub
 =======================
 
 Once the repository is set up, it can be pushed to the repository as with any git repository:
 
-{% highlight bash %}
+~~~ bash
 $ git push --set-upstream origin master
-{% endhighlight %}
+~~~
 
 The site should now be visible at your site URL.
 
@@ -218,20 +218,20 @@ Creating the first blog post
 
 This is the first new post using Jekyll. In the spirit of Git versioning, rather than working on a file in the `_drafts` folder, I first checkout a new Git branch, and then create the post in the place where it will ultimately reside. The file for the post is created by making a copy of [`_drafts/template.md`]({{ site.src_url }}/_drafts/template.md):
 
-{% highlight bash %}
+~~~ bash
 $ git checkout -b 2015-11-23-blogging-with-jekyll
 $ cp _drafts/template.md _posts/2015-11-23-blogging-with-jekyll.md
-{% endhighlight %}
+~~~
 
 I edited the title in the [YAML front matter][5] to `Blogging with Jekyll`, and created the content.
 
-The [kramdown version of Markdown used with Jekyll][kramdown] does not include the quoting of code snippets using the ``` syntax. Code is highlighted between `{% highlight html %}`...`{% endhighlight %}` tags (`html` can be substituted for `bash`, `yaml`, `markdown`, `python` etc.). If quoting Jekyll Liquid tags (e.g. `{% raw %}{% include google_analytics.html %}{% endraw %}`), one must embed the code in `{% raw %}{% raw ... endraw %}{% endraw %}` tags.
+The [kramdown version of Markdown used with Jekyll][kramdown] does not include the quoting of code snippets using the ``` syntax. Code is highlighted between `` ` ``...`` ` `` tags (`html` can be substituted for `bash`, `yaml`, `markdown`, `python` etc.). If quoting Jekyll Liquid tags (e.g. `{% raw %}{% include google_analytics.html %}{% endraw %}`), one must embed the code in `{% raw %}{% raw ... endraw %}{% endraw %}` tags.
 
 To preview the blog, run the following command:
 
-{% highlight bash %}
+~~~ bash
 $ jekyll serve
-{% endhighlight %}
+~~~
 
 Then browse to `http://localhost:4000/` and navigate to the new post.
 
