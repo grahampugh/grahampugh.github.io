@@ -72,7 +72,7 @@ tell application "System Events"
 			with hidden answer ¬
 			buttons {"Quit", "Continue"} default button 2
 		if button returned of the result is "Quit" then
-   			return 1
+			return 1
 			exit repeat
 		else if the button returned of the result is "Continue" then
 			set pswd to text returned of the result
@@ -90,8 +90,8 @@ EOT
 
 # Abort if the Quit button was pressed
 if [ "$authPass" == 1 ]; then
-   /bin/echo "User aborted. Exiting..."
-   exit 0
+	/bin/echo "User aborted. Exiting..."
+	exit 0
 fi
 
 # function that replaces sudo command
