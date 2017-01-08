@@ -10,7 +10,7 @@ layout: default
             <span class="post-meta">
                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> &nbsp;|&nbsp; 
                {{ post.date | date: "%b %-d, %Y" }} &nbsp;|&nbsp; 
-               <a class="post-meta" href="{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
+               <a class="post-meta" href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
             </span>
          </li>
       {% endfor %}

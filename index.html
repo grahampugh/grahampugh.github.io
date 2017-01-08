@@ -24,7 +24,7 @@ layout: default
       </a>
     </h1>
 
-    <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time> &nbsp; | &nbsp; <a class="post-meta" href="{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{ post.url }}"></a></p>
+    <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time> &nbsp; | &nbsp; <a class="post-meta" href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a></p>
 
     
     <p class="post-meta">{{ post.content | strip_html | truncatewords: 50 }}</p>
