@@ -46,7 +46,7 @@ This means that one can `echo` the authentication password to stdin, and pipe th
 
 I prepared a template which can be used at the beginning of any script to obtain the logged in user's password and place it in the variable `$authPass`. It checks that the username and password are correct, and have admin rights. 
 
-Wherever `sudo` is required, replace it with `echo $authPass | sudo -S`. 
+Wherever `sudo` is required, replace it with `echo $authPass | sudo -S`. The template creates a function which replaces the stock `sudo` command.
 
 **Note:** There are obvious dangers with echoing an administrator password, so one should be careful with the scripting: for instance definitely do not `set -x`.
 
@@ -94,7 +94,14 @@ if [ "$authPass" == 1 ]; then
    exit 0
 fi
 
+# function that replaces sudo command
+sudo () {
+	/bin/echo $authPass | /usr/bin/sudo -S "$@"
+}
+
+###==========================
 ### Shell script follows here
+###==========================
 ~~~
 
 The script can be written in your favourite text editor. Then, to create the app, open Automator, add the action "Run Shell Script" to the workflow, and copy-and-paste the script into the box.  Once saved, [add an icon to make the app appropriate for your organisation][1].
