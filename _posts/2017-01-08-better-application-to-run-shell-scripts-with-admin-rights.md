@@ -11,9 +11,7 @@ To do this, create an Application in AppleScript Editor:
   * Open AppleScript Editor
   * Click File > New
   * Click File > Save
-  * Enter name, select a path, select File Format > Application
-  * Optionally, you may wish to sign the application with your Developer ID
-  * Save
+  * Enter name, select a path, select File Format > Application, Save
 
 ![img-1]
 
