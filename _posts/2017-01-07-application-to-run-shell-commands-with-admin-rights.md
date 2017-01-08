@@ -90,7 +90,7 @@ EOT
 
 # Abort if the Quit button was pressed
 if [ "$authPass" == 1 ]; then
-   echo "User aborted. Exiting..."
+   /bin/echo "User aborted. Exiting..."
    exit 0
 fi
 
