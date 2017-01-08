@@ -56,7 +56,7 @@ Wherever `sudo` is required, replace it with `echo $authPass | sudo -S`. The tem
 ### Script designed to be placed in a "Run Shell Script" action in Automator
 ### This allows the administrator password to be called, and used in the script where sudo is required
 ### Beware: the inputted password is used in echo commands
-### Usage: Replace `sudo <command>` with `/bin/echo $authPass | /usr/bin/sudo -S <command>`
+### Usage: Use `sudo` without a path to ensure the `sudo` function is called rather than the actual command
 
 # Dialog Title
 dialogTitle="Name of this application"
