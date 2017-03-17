@@ -10,7 +10,7 @@ title: >
   Subject: Macs
 email: g.r.pugh@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  The Blog of a Mac Support Specialist in Switzerland
+  The rarely-updated blog of a Mac Support Specialist in Switzerland
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://grahampugh.github.io" # the base hostname & protocol for your site
 src_url: "https://github.com/grahampugh/grahampugh.github.io/blob/master"

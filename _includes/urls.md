@@ -1,6 +1,9 @@
 [Munki]: https://www.munki.org/munki
+[Munki Wiki Demonstration Setup]: https://github.com/munki/munki/wiki/Demonstration-Setup
+[Munki In A Box]: https://github.com/tbridge/munki-in-a-box
 [Munki-Do]: https://github.com/grahampugh/munki-do
 [MunkiWebAdmin]: https://github.com/munki/munkiwebadmin
+[MWA2]: https://github.com/munki/mwa2
 [Steve Kueng's forked version of MunkiWebAdmin]: https://github.com/SteveKueng/munkiwebadmin
 [Sal]: https://github.com/salopensource/sal
 [MunkiReport-PHP]: https://github.com/munkireport/munkireport-php
@@ -8,6 +11,7 @@
 [Munki-DND]: https://github.com/grahamgilbert/munki-dnd
 [Munki Do-Not-Disturb]: https://github.com/grahampugh/munki-do-not-disturb
 [Munki Do-Not-Disturb package]: https://github.com/grahampugh/munki-do-not-disturb/releases
+[Run-Munki-Run]: https://github.com/grahampugh/run-munki-run
 [MacAdmins Slack Team]: https://macadmins.slack.com
 [Munki-Enroll]: https://github.com/grahampugh/munki-enroll
 [munkiimport]: https://github.com/munki/munki/wiki/munkiimport
@@ -20,6 +24,7 @@
 [London Apple Admins]: http://www.londonappleadmins.org.uk
 [Docker]: https://www.docker.com
 [Docker-Machine]: https://docs.docker.com/machine/
+[Docker for Mac]: https://docs.docker.com/docker-for-mac/install/
 [Crypt]: https://github.com/grahamgilbert/Crypt
 [Bushel]: https://www.bushel.com"
 [BSDPy]: https://bitbucket.org/bruienne/bsdpy
@@ -59,6 +64,7 @@
 [@n8felton]: https://twitter.com/n8felton
 [@mikeymikey]: https://twitter.com/mikeymikey
 [@ftiff]: https://twitter.com/ftiff
+[@tbridge]: https://twitter.com/tbridge
 
 [WordPress.com]: https://www.wordpress.com
 [Der Flounder]: https://derflounder.wordpress.com
