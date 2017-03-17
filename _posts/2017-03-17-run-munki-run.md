@@ -21,7 +21,7 @@ enables a largely GUI-baed experience on Macs.
 There are, however, other useful Munki management tools with which it can be beneficial to evaluate,
 as they are cross-platform and therefore better suited to a large-scale installation,
 but are not as easy to set up. [Sal] is a full-featured reporting tool for Munki,
-[MunkiWebAdmin2] is a web application for manipulating Munki, and [Munki-Do] is a
+[MunkiWebAdmin2][MWA2] is a web application for manipulating Munki, and [Munki-Do] is a
 development of MunkiWebAdmin offering an alternative interface. These tools depend on a more
 advanced web server setup.
 
