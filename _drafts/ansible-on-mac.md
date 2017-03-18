@@ -30,7 +30,9 @@ Playbook (yml) files
 Check mode
 
 
-
+Notes:
+[Setting up AWS]: https://www.youtube.com/watch?v=tmNgXQXkpWs
+[Ansible on AWS Tutorial]: https://github.com/glenjarvis/ansible_tutorial
 
 
 [1]: http://docs.ansible.com/ansible/intro_installation.html#latest-releases-on-mac-osx
