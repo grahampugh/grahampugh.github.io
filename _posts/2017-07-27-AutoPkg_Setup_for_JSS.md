@@ -4,7 +4,7 @@ title:  "AutoPkg Setup for JSS"
 comments: true
 ---
 
-Here is a single-script installer/updater for [AutoPkg] and [JSSImporter]. It's largely comprised of code extracted from [Run-Munki-Run] and ultimately [Munki In A Box], but there's no Munki in there any more.
+[Here](https://github.com/grahampugh/AutoPkg_Setup_for_JSS) is a single-script installer/updater for [AutoPkg] and [JSSImporter]. It's largely comprised of code extracted from [Run-Munki-Run] and ultimately [Munki In A Box], but there's no Munki in there any more.
 
 
 ## What does it do?
