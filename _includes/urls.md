@@ -32,6 +32,7 @@
 [Imagr]: https://github.com/grahamgilbert/imagr/wiki/Getting-Started
 [JAMF Pro]: https://www.jamf.com/products/jamf-pro/
 [Jekyll]: http://jekyllrb.com/
+[JSSImporter]: https://github.com/sheagcraig/JSSImporter
 [kramdown]: http://kramdown.gettalong.org
 [London Apple Admins]: http://www.londonappleadmins.org.uk
 [MacAdmins Slack Team]: https://macadmins.slack.com
