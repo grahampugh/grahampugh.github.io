@@ -114,7 +114,7 @@ rm /Library/LaunchAgents/io.fti.SplashBuddy.launch.plist
 
 **Note:** this post was updated October 8, 2017 from the original post of 10 November, 2016.
 
-[img-1]: /assets/images/splashbuddy-1.png
+[img-1]: /assets/images/SplashBuddy-1.png
 
 
 
