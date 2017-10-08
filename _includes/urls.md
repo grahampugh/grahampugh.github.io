@@ -17,7 +17,7 @@
 [BitBucket]: https://bitbucket.org
 [BSDPy]: https://bitbucket.org/bruienne/bsdpy
 [Bushel]: https://www.bushel.com"
-[CasperSplash]: https://github.com/ftiff/CasperSplash
+[SplashBuddy]: https://github.com/ftiff/SplashBuddy
 [check_local_admin]: https://github.com/grahampugh/osx-scripts/tree/master/check_local_admin
 [Crypt]: https://github.com/grahamgilbert/Crypt
 [DeployStudio]: http://www.deploystudio.com
