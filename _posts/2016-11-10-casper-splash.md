@@ -78,6 +78,9 @@ In my usage with Jamf Pro, the package is added to a "thin provisioning" profile
 ~~~ bash
 #!/bin/bash
 
+# identify logged-in user
+loggedInUser=$(python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]]; sys.stdout.write(username + "\n");')
+
 # open SplashBuddy app
 su $loggedInUser -c 'open -a /Library/Application Support/SplashBuddy/SplashBuddy.app'
 
