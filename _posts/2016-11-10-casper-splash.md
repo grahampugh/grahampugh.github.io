@@ -71,7 +71,7 @@ An example preferences file is shown below:
 
 In the example above, the `packageName` key shows the name `Microsoft_Word_2016`, which will therefore expect a pkg name of `Microsoft_Word_2016-XX.YY.ZZ.pkg` (the version number is not used by the app but one must exist).
 
-Once configured, run `.build_pkg.sh` to package up SplashBuddy.
+Once configured, run `./build_pkg.sh` to package up SplashBuddy.
 
 In my usage with Jamf Pro, the package is added to a "thin provisioning" profile, which is triggered by Jamf Pro's `Enrollment Complete` trigger. The profile also contains a script which calls all the profiles that install the various applications that SplashBuddy will look for. A section of an example script is shown below:
 
@@ -115,7 +115,6 @@ rm /Library/LaunchAgents/io.fti.SplashBuddy.launch.plist
 **Note:** this post was updated October 8, 2017 from the original post of 10 November, 2016.
 
 [img-1]: /assets/images/SplashBuddy-1.png
-
 
 
 {% include urls.md %}
