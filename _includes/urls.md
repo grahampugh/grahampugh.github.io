@@ -9,6 +9,9 @@
 [@rtrouton]: https://twitter.com/rtrouton
 [@Steve2CV]: https://twitter.com/Steve2CV
 [@tbridge]: https://twitter.com/tbridge
+[Atom]: https://atom.io/
+[Atom Packages: Git-plus]: https://atom.io/packages/git-plus
+[Atom Packages: Minimap]: https://atom.io/packages/minimap
 [AutoDMG]: https://github.com/MagerValp/AutoDMG
 [AutoDSNBI]: https://github.com/MagerValp/AutoDSNBI
 [Autopkg prepostprocessors]: https://github.com/autopkg/autopkg/wiki/PreAndPostProcessorSupport
