@@ -9,6 +9,8 @@
 [@rtrouton]: https://twitter.com/rtrouton
 [@Steve2CV]: https://twitter.com/Steve2CV
 [@tbridge]: https://twitter.com/tbridge
+[@shea_craig]: https://twitter.com/shea_craig
+[@talkingmoose]: http://talkingmoose.net/
 [Atom]: https://atom.io/
 [Atom Packages: Git-plus]: https://atom.io/packages/git-plus
 [Atom Packages: Minimap]: https://atom.io/packages/minimap
