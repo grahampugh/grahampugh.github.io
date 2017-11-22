@@ -138,13 +138,13 @@ and     Application Title:      is:         ApplicationX.app
 and     Computer Group:         is:         Get auto-updates
 ```
 
-### Smart Group 5: "ApplicationX installed"
+### Smart Group 6: "ApplicationX installed"
 
 ```
         Application Title:      is:         ApplicationX.app
 ```
 
-### Smart Group 6: "ApplicationX current version installed"
+### Smart Group 7: "ApplicationX current version installed"
 
 ```
         Application Title:      is:         ApplicationX.app
