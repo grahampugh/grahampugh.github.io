@@ -16,17 +16,17 @@ If you work in a multilingual environment, this could be problematic when repurp
 
 Thanks to [an article on the Jamf discussion boards][1] I was able to figure out how to bring the screen back. The process is as follows:
 
-* Install the operating system from the recovery partition or from internet recovery.
-* After the computer reboots and gives you the "country choice" screen, force-shutdown the Mac and boot back into the recovery partition.
-* Open `Utilities` > `Terminal`
-* Enter the following, replacing the volume name if your system volume is not named `Macintosh HD`:
+1. Install the operating system from the recovery partition or from internet recovery.
+2. After the computer reboots and gives you the "country choice" screen, force-shutdown the Mac and boot back into the recovery partition.
+3. Open `Utilities` > `Terminal`
+4. Enter the following, replacing the volume name if your system volume is not named `Macintosh HD`:
 
-```bash
-mount -uw /
-touch /Volumes/Macintosh\ HD/var/db/.RunLanguageChooserToo
-```
+    ```bash
+    mount -uw /
+    touch /Volumes/Macintosh\ HD/var/db/.RunLanguageChooserToo
+    ```
 
-* Now, quit Terminal and reboot back into the newly-installed system volume, and you should see the "language chooser" screen.
+5. Now, quit Terminal and reboot back into the newly-installed system volume, and you should see the "language chooser" screen.
 
 [1]: https://www.jamf.com/jamf-nation/discussions/7217/making-language-chooser-run-at-first-boot
 [img-1]: /assets/images/mac-install-start.jpg

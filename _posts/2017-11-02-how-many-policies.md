@@ -44,9 +44,9 @@ We set up one static and two smart groups to assign software to certain sets of 
 
 2. `Software gets auto-installed`: We create this smart group for our customers to populate with computers on which they wish to manage installations. We don't want to assign this to anybody by default, we leave that to our customers. But, something needs to be added to the Smart Group, as an empty Smart Group scopes the same as if it were assigned to ALL computers (for some weird reason). So we set it as follows:
 
-```
-        User:                    is:                REPLACE WITH YOUR OWN CRITERIA
-```
+    ```
+            User:                    is:                REPLACE WITH YOUR OWN CRITERIA
+    ```
 
 3. `Software gets auto-updated`: We create this smart group for our customers to populate with computers to which they wish to push managed updates of all eligible software. This is set up identically to the `Software gets auto-installed` group by default.
 
