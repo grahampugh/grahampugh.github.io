@@ -35,8 +35,13 @@
 [GitLab]: https://about.gitlab.com
 [Hello-IT]: https://github.com/ygini/Hello-IT
 [Imagr]: https://github.com/grahamgilbert/imagr/wiki/Getting-Started
+[Jamf Marketplace]: https://marketplace.jamf.com/apps/#category=Integrations
+[Jamf Pro]: https://www.jamf.com/products/jamf-pro/
 [JAMF Pro]: https://www.jamf.com/products/jamf-pro/
+[Jamf Pro API Documentation]: https://developer.jamf.com/index
+[Jamf Pro Patch Management]: https://www.jamf.com/products/jamf-pro/patch-management/
 [Jekyll]: http://jekyllrb.com/
+[JNUC]: https://www.jamf.com/events/jamf-nation-user-conference/
 [JSSImporter]: https://github.com/sheagcraig/JSSImporter
 [kramdown]: http://kramdown.gettalong.org
 [London Apple Admins]: http://www.londonappleadmins.org.uk
