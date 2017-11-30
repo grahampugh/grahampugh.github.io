@@ -6,7 +6,7 @@ comments: true
 
 So everyone has tweeted, slacked, facebooked and blogged about [#rootgate][1] (or #iamroot). An oversight with the code development of macOS High Sierra resulted in requests for administrator access to certain System Preference Panes, Utility applications and Keychain Access enabling the `root` user with a null password.
 
-Whilst the furore was so big that Apple were sure to provide a quick solution, which they [did by 8.00am Pacific Time, 29 November 2017][2], many scrambled to provide fixes for the bug. Many of you were probably mandated by your seniors to provide a fix. Some of whom probably hadn't considered the existing vulnerabilities on their Mac fleet. But, how serious is it really, and was your Mac really secure before this bug came around?
+Whilst the furore was so big that Apple were sure to provide a quick solution, which they [did within 24 hours][2], many scrambled to provide fixes for the bug. Many of you were probably mandated by your seniors to provide a fix. Some of whom probably hadn't considered the existing vulnerabilities on their Mac fleet. But, how serious is it really, and was your Mac really secure before this bug came around?
 
 
 Clear and Present Danger
