@@ -42,7 +42,7 @@ Any JSS recipe that results in a change should give you a Slack notification lik
 
 ## Customising Slacker
 
-I quickly put this together, so it's not designed to be run with customisations. It's easiest to copy the script to your own AutoPkg git repository and make the changes you require. You can call any `<input>` or `<output>` variable that is available in any AutoPkg run. JSSImporter also outputs some JSON data that can be parsed (in my example, for instance, I extract the version number).
+I quickly put this together (hey, it's Christmas!), so it's not designed to be run with customisations. It's easiest to copy the script to your own AutoPkg git repository and make the changes you require. You can call any `<input>` or `<output>` variable that is available in any AutoPkg run. JSSImporter also outputs some JSON data that can be parsed (in my example, for instance, I extract the version number).
 
 Add each variable you wish to parse to the `input_variables` array, for example:
 
