@@ -6,7 +6,7 @@ comments: true
 
 If you are using [AutoPkgr] to run your [AutoPkg] recipes, you have an in-built Slack notifier. But what if you are not using AutoPkgr?
 
-I've written an AutoPkg post-processor that you can call as part of a command-line AutoPkg run, to send a Slack notification using a webhook. I unimaginatively named it `Slacker`.
+I've written an AutoPkg post-processor that you can call as part of a command-line AutoPkg run, to send a Slack notification using a webhook. I unimaginatively named it [Slacker](https://github.com/grahampugh/recipes/blob/master/PostProcessors/slacker.py).
 
 This version is configured specifically to notify that a JSS recipe ran and updated a software title. It would be easy to copy the post-processor and change the inputs for Munki or other recipe runs.
 
