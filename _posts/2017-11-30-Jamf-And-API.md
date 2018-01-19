@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Help Make the Jamf Pro API Great Again"
+title:  "Help Make the Jamf Pro API Better"
 comments: true
 ---
 
@@ -54,7 +54,7 @@ Many customers have requested parity between the GUI and the API, such as [this 
 
 ![img-2]{:height="500px"}
 
-How do we make the API great "again"? How do we ensure that Jamf don't release new features at all until they are ready in the API? My supporter said it clearly:
+How do we help Jamf make the API better and easier to use? How do we ensure that Jamf don't release new features at all until they are ready in the API? My supporter said it clearly:
 
 >... but generally speaking the Jamf Nation feature request will have more impact as other users can upvote it. To speed up the process, customers can create Feature Requests, and upvote them, which will get the priority for the feature getting created and released higher, by the amount of upvotes.
 

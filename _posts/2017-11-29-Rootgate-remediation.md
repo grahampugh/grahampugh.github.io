@@ -4,9 +4,9 @@ title:  "Rootgate - Keep Calm and Carry On Being Secure"
 comments: true
 ---
 
-So everyone has tweeted, slacked, facebooked and blogged about [#rootgate][1]. An oversight with the code development of macOS High Sierra resulted in requests for administrator access to certain System Preference Panes, Utility applications and Keychain Access enabling the `root` user with a null password.
+So everyone has tweeted, slacked, facebooked and blogged about [#rootgate][1] (or #iamroot). An oversight with the code development of macOS High Sierra resulted in requests for administrator access to certain System Preference Panes, Utility applications and Keychain Access enabling the `root` user with a null password.
 
-Whilst the furore was so big that Apple were sure to provide a quick solution, which they [did by 8.00am Pacific Time today][2], many scrambled to provide fixes for the bug. Many of you were probably mandated by your seniors to provide a fix. Some of whom probably hadn't considered the existing vulnerabilities on their Mac fleet. But, how serious is it really, and was your Mac really secure before thi bug came around?
+Whilst the furore was so big that Apple were sure to provide a quick solution, which they [did within 24 hours][2], many scrambled to provide fixes for the bug. Many of you were probably mandated by your seniors to provide a fix. Some of whom probably hadn't considered the existing vulnerabilities on their Mac fleet. But, how serious is it really, and was your Mac really secure before this bug came around?
 
 
 Clear and Present Danger
@@ -89,9 +89,9 @@ But, our management still tell us we have to push a patch for Rootgate
 
 Yes, I understand. We were also asked to push a patch for the problem, and so we wrote a script that we could push with our current management solution. This script can be pushed to all clients. It checks the following, in this order:
 
-1. Whether the client has already been patched with [Security Update 2017-001][2], which produces a Build Number `17B1002`.
+3. Whether the client is running 10.13. If not...
+1. Whether the client has already been patched with [Security Update 2017-001][2]. If not...
 2. If the script has already been run on the client and the root bug fixed.
-3. Whether the client is running 10.13.
 4. If `root` is already enabled with a real password.
 5. If none of the above, proceed to enable root with a complex random password (actually a UUID).
 
