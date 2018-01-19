@@ -39,6 +39,7 @@
 [Jamf Pro]: https://www.jamf.com/products/jamf-pro/
 [JAMF Pro]: https://www.jamf.com/products/jamf-pro/
 [Jamf Pro API Documentation]: https://developer.jamf.com/index
+[Jamf Pro Logo]: /assets/images/JamfPro-Logo.png
 [Jamf Pro Patch Management]: https://www.jamf.com/products/jamf-pro/patch-management/
 [Jekyll]: http://jekyllrb.com/
 [JNUC]: https://www.jamf.com/events/jamf-nation-user-conference/
@@ -60,6 +61,7 @@
 [Munki-Trello]: https://github.com/grahamgilbert/munki-trello
 [munki-with-git]: https://github.com/munki/munki/wiki/Munki-With-Git
 [Munki]: https://www.munki.org/munki
+[Munki Logo]: /assets/images/munki_logo.png
 [MunkiAdmin]: https://github.com/hjuutilainen/munkiadmin
 [munkiimport]: https://github.com/munki/munki/wiki/munkiimport
 [MunkiReport-PHP]: https://github.com/munkireport/munkireport-php
