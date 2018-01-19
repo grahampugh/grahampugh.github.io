@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Jamf Pro Uninstaller policies with a little help from Munki"
+title:  "Jamf Pro uninstaller policies with a little help from Munki"
 comments: true
 ---
 
