@@ -72,7 +72,7 @@ At this point you select 1, 2 or 3, and the download proceeds. By default the `I
 
 The different versions of macOS are present due to the forked build of 10.13.3, and any available public beta. It would be great to be able to run this locally and programmatically on a client in order to ensure the correct build, but there's currently no flag for that, so this script should be done on an administrator's Mac, and then uploaded to your management server in whatever form is suitable for your platform (`pkg`, `dmg`).
 
-It will then be easy to develop a policy or workflow in which the `Install macOS High Sierra.app` is downloaded to the client (e.g. in Jamf Pro this can be pre-cached on clients), and then the `startosinstall --eraseinstall` client is run in order to set off the rebuild of the device. In a DEP environment, nothing more will be required to get the device ready for the next user.
+It will then be easy to develop a policy or workflow in which the `Install macOS High Sierra.app` is downloaded to the client (e.g. in Jamf Pro this can be pre-cached on clients), and then the `startosinstall --eraseinstall` command is run in order to set off the rebuild of the device. In a DEP environment, nothing more will be required to get the device ready for the next user.
 
 ---
 
