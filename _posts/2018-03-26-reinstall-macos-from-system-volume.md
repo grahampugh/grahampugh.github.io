@@ -46,7 +46,7 @@ Since this command requires no interaction, it will be easy to run this as a com
 
 ### installinstallmacos.py
 
-Greg Neagle posted a script named [installinstallmacos.py][3] which makes obtaining `Install macOS High Sierra.app` even simpler than via the Mac App Store. It is *not quite* non-interactive, because you have to choose which version of the app to download.
+Greg Neagle posted a script named [installinstallmacos.py][3] which makes obtaining `Install macOS High Sierra.app` even simpler than via the Mac App Store. It is *not quite* non-interactive, because you have to choose which version of the app to download, but this can be circumvented - see below.
 
 As detailed in [another blog post by Rich Trouton][4], all that is required to obtain the `Install macOS High Sierra.app` in a disk image is the following command, which requires root privileges:
 
@@ -68,11 +68,28 @@ Downloading https://swdist.apple.com/content/downloads/45/61/091-71284/77pnhgsj5
 Choose a product to download (1-3):
 ```
 
-At this point you select 1, 2 or 3, and the download proceeds. By default the `Install macOS High Sierra.app` is saved into a sparse disk image.
+At this point you select 1, 2 or 3, and the download proceeds. By default the `Install macOS High Sierra.app` is saved into a sparse disk image. If you know in advance which value you want (in tests, it does consistently provide the list in the same order), you can supply the required value in a shell script with the following syntax, which will make the script proceed without interaction:
 
-The different versions of macOS are present due to the forked build of 10.13.3, and any available public beta. It would be great to be able to run this locally and programmatically on a client in order to ensure the correct build, but there's currently no flag for that, so this script should be done on an administrator's Mac, and then uploaded to your management server in whatever form is suitable for your platform (`pkg`, `dmg`).
+```
+$ yes 1 | sudo python installinstallmacos.py
+```
 
-It will then be easy to develop a policy or workflow in which the `Install macOS High Sierra.app` is downloaded to the client (e.g. in Jamf Pro this can be pre-cached on clients), and then the `startosinstall --eraseinstall` command is run in order to set off the rebuild of the device. In a DEP environment, nothing more will be required to get the device ready for the next user.
+Using this command means that you don't need to host the `Install macOS High Sierra.app` on your management system, you  can just run this when required on the device itself.
+
+With `Install macOS High Sierra.app` on the client, the `startosinstall --eraseinstall` command can be run in order to set off the rebuild of the device. In a DEP environment, nothing more will be required to get the device ready for the next user.  
+
+---
+
+## Automate the whole process
+
+I have written a script that can be deployed to a client that you wish to wipe, which will, without any required interaction, download and run `installinstallmacos.py`, download the `Install macOS High Sierra.app` and place it in a `sparseimage`, mount the `sparseimage` and run the `startosinstall --eraseinstall` which creates a temporary new volume on which to place the installer, reboots the Mac and proceeds to install the vanilla image.
+
+{% gist 3037fab3a32b333f2d8265ebfb2a71b3 %}
+
+Note that if you have this script in a Jamf Pro policy, you can specify which macOS installer value you wish to feed to `installinstallmacos.py` in Parameter 4. Otherwise, add the value into the script. See the notes in the script for details.
+
+Adding the `--installpackage` flag to the `startosinstall` command, you can add additional signed packages to the command which will be installed after installation, such as a signed client agent installer for Munki, Puppet, Chef etc.
+These would have to be cached on the client before the command was run.
 
 ---
 
