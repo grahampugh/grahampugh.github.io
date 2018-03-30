@@ -105,5 +105,6 @@ This is a **lethal** workflow and should obviously only be made available to the
 [2]: https://derflounder.wordpress.com/2017/09/26/using-the-macos-high-sierra-os-installers-startosinstall-tool-to-install-additional-packages-as-post-upgrade-tasks/
 [3]: https://github.com/munki/macadmin-scripts/blob/master/installinstallmacos.py
 [4]: https://derflounder.wordpress.com/2018/02/27/using-installinstallmacos-py-to-download-macos-high-sierra-installers/
+[5]: https://support.apple.com/en-us/HT208488
 
 {% include urls.md %}
