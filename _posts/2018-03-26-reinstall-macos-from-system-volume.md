@@ -20,9 +20,9 @@ The `startosinstall` command is included in the `Install macOS High Sierra.app` 
 
 The `--nointeraction` flag is undocumented, as described in [Rich Trouton's post][2], and allows the command to be run without interaction, meaning it can be scripted.
 
-In the Apple Knowledge Base article [Prepare your institution for macOS High Sierra 10.13.4][5], Apple revealed a new flag for the `startosinstall` command, the `--eraseinstall` flag.
+In the Apple Knowledge Base article [Prepare your institution for macOS High Sierra 10.13.4][5], Apple revealed a new flag for the `startosinstall` command, the `--eraseinstall` flag:
 
-![img-eraseinstall]
+> The `startosinstall` command inside the macOS Installer app at Contents/Resources/startosinstall lets you erase your boot volume and install macOS to it using the new `--eraseinstall` flag. You can use the `--installpackage` flag to specify additional packages to apply after installing macOS.
 
 Using the new flag, the following command erases the system disk *in situ*, without need to boot from a network drive, or Recovery Partition, or connect to another computer using Target Disk Mode:
 
@@ -97,9 +97,6 @@ Adding the `--installpackage` flag to the `startosinstall` command, you can add 
 ## Warning!
 
 This is a **lethal** workflow and should obviously only be made available to the correct people, and warning messages should be added before it is triggered, since it wipes the device!
-
-
-[img-eraseinstall]: /assets/images/eraseinstall.png
 
 [1]: https://support.apple.com/en-us/HT208020
 [2]: https://derflounder.wordpress.com/2017/09/26/using-the-macos-high-sierra-os-installers-startosinstall-tool-to-install-additional-packages-as-post-upgrade-tasks/
