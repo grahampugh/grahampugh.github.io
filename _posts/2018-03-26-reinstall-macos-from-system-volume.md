@@ -13,7 +13,9 @@ Many Mac admins have been anticipating an **"Erase All Contents And Settings"** 
 The `startosinstall` command is included in the `Install macOS High Sierra.app` (and, in fact, since *El Capitan*), which can be downloaded from the Mac App Store. An existing use case for this command is to install macOS High Sierra onto a blank volume, such as in a VM, an external drive, or onto a system volume from a NetInstall image using [Imagr]. A typical command to do so would be:
 
 ```
-/Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/startosinstall --applicationpath /Applications/Install\ macOS\ High\ Sierra.app --agreetolicense --nointeraction --volume /Volumes/External\ Macintosh\ HD
+/Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/startosinstall \
+  --applicationpath /Applications/Install\ macOS\ High\ Sierra.app \
+  --agreetolicense --nointeraction --volume /Volumes/External\ Macintosh\ HD
 ```
 
 The `--nointeraction` flag is undocumented, as described in [Rich Trouton's post][2], and allows the command to be run without interaction, meaning it can be scripted.
@@ -25,12 +27,18 @@ In the Apple Knowledge Base article [Prepare your institution for macOS High Sie
 Using the new flag, the following command erases the system disk *in situ*, without need to boot from a network drive, or Recovery Partition, or connect to another computer using Target Disk Mode:
 
 ```
-/Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/startosinstall --applicationpath /Applications/Install\ macOS\ High\ Sierra.app --eraseinstall --agreetolicense --nointeraction
+/Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/startosinstall \
+  --applicationpath /Applications/Install\ macOS\ High\ Sierra.app \
+  --eraseinstall --agreetolicense --nointeraction
 ```
 
 It's as near as you can get to "Erase All Contents And Settings" without some sort of built-in special APFS-snapshot-plus-software-updates mechanism. Many think that will come in the future, but I'm not so sure it would make sense for Apple to provide this. It may just be that we get a wrapper for the `startosinstall` mechanism; perhaps a new check-box in the GUI of `Install macOS High Sierra.app` that says "Erase my Boot Drive and reinstall macOS High Sierra".
 
-**Note:** This new flag only works on APFS volumes, and only works on devices that already have macOS 10.13.4 installed. It is also only present in versions of the `Install macOS High Sierra.app` that install macOS 10.13.4 or above.
+### Notes
+
+1. The `--eraseinstall` flag only works on APFS volumes, and only works on devices that already have macOS 10.13.4 installed. It is also only present in versions of the `Install macOS High Sierra.app` that install macOS 10.13.4 or above.
+
+2. You cannot specify a volume with the `--volume` flag in combination with the `--eraseinstall` flag, since it is implied that the command will be run on the volume to be erased.
 
 ---
 
