@@ -44,6 +44,8 @@
 [Jekyll]: http://jekyllrb.com/
 [JNUC]: https://www.jamf.com/events/jamf-nation-user-conference/
 [JSSImporter]: https://github.com/sheagcraig/JSSImporter
+[JSS-In-A-Box]: https://github.com/franton/JSS-In-A-Box
+[JSS-Config-In-A-Box]: https://github.com/franton/JSS-Config-In-A-Box
 [kramdown]: http://kramdown.gettalong.org
 [London Apple Admins]: http://www.londonappleadmins.org.uk
 [MacAdmins Slack Team]: https://macadmins.slack.com
