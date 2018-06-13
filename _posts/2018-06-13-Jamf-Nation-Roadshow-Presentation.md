@@ -4,7 +4,7 @@ title:  "ETH Zurich and Jamf Pro - Jamf Nation Roadshow, Munich, 13 June 2018"
 comments: true
 ---
 
-Today I gave a presentation at the [Jamf Nation Roadshow in Munich]. The presentation is entitled "ETH Zurich and Jamf Pro", and is an introduction to ETH Zurich, and how we have integrated Jamf Pro into our Mac management service over the past year. The presentation concentrates on our reliance on the Jamf Pro API, and the workflows we have created to allow us to maintain the service at scale, with the level of flexibility required to meet the varied demands of our internal customers.
+Today I gave a presentation at the [Jamf Nation Roadshow in Munich][4]. The presentation is entitled "ETH Zurich and Jamf Pro", and is an introduction to ETH Zurich, and how we have integrated Jamf Pro into our Mac management service over the past year. The presentation concentrates on our reliance on the Jamf Pro API, and the workflows we have created to allow us to maintain the service at scale, with the level of flexibility required to meet the varied demands of our internal customers.
 
 ![img-1]
 
@@ -33,6 +33,7 @@ During the presentation I refer to various tools and scripts, which I will list 
 [1]: https://www.youtube.com/watch?v=IvbhVPLS2fM
 [2]: https://www.youtube.com/watch?v=--aYHgPKGIs
 [3]: https://www.jamf.com/blog/moving-beyond-once-per-computer-workflows/
+[4]: https://www.jamf.com/events/jamf-nation-roadshow-munich/
 
 [img-1]: /assets/images/jamf-roadshow-presentation-2018.jpg
 
