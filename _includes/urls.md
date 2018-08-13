@@ -30,6 +30,7 @@
 [Docker for Mac]: https://docs.docker.com/docker-for-mac/install/
 [Docker-Machine]: https://docs.docker.com/machine/
 [Docker]: https://www.docker.com
+[erase-install]: https://github.com/grahampugh/erase-install
 [Git]: https://git-scm.com
 [GitHub]: https://github.com
 [GitLab]: https://about.gitlab.com

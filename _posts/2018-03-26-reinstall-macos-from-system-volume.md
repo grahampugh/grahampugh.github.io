@@ -86,7 +86,9 @@ With `Install macOS High Sierra.app` on the client, the `startosinstall --erasei
 
 I have written a script that can be deployed to a client that you wish to wipe, which will, without any required interaction, download and run `installinstallmacos.py`, download the `Install macOS High Sierra.app` and place it in a `sparseimage`, mount the `sparseimage` and run the `startosinstall --eraseinstall` which creates a temporary new volume on which to place the installer, reboots the Mac and proceeds to install the vanilla image.
 
-{% gist 3037fab3a32b333f2d8265ebfb2a71b3 %}
+**The script is now available as a GitHub repository. Go to [github.com/grahampugh/erase-install][erase-install]**
+
+***Note: to prevent duplication and stale scripts, I've removed the previous gist link for this script***
 
 Note that if you have this script in a Jamf Pro policy, you can specify which macOS installer value you wish to feed to `installinstallmacos.py` in Parameter 4. Otherwise, add the value into the script. See the notes in the script for details.
 
