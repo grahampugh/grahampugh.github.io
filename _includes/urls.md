@@ -47,6 +47,7 @@
 [JSSImporter]: https://github.com/sheagcraig/JSSImporter
 [JSS-In-A-Box]: https://github.com/franton/JSS-In-A-Box
 [JSS-Config-In-A-Box]: https://github.com/franton/JSS-Config-In-A-Box
+[keychain-creds]: https://github.com/grahampugh/keychain-creds
 [kramdown]: http://kramdown.gettalong.org
 [London Apple Admins]: http://www.londonappleadmins.org.uk
 [MacAdmins Slack Team]: https://macadmins.slack.com
