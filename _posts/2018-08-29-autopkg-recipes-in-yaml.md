@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Writing AutoPkg recipes and other Plists in YAML"
+title:  "Writing AutoPkg recipes and other plist-formatted files in yaml"
 comments: true
 ---
 
-[AutoPkg] recipes are PLIST files, a form of XML. Even the most simple of Autopkg recipes are somewhat voluminous. For example, here is `pkg` recipe that just does one thing, package up an `app` within a `dmg` using the `AppPkgCreator` processor:
+[AutoPkg] recipes are `plist` files, a form of XML. Even the most simple of Autopkg recipes are somewhat voluminous. For example, here is `pkg` recipe that just does one thing, package up an `app` within a `dmg` using the `AppPkgCreator` processor:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -95,6 +95,19 @@ You can easily see the basic `yaml` syntax by comparing the two files above. Thi
 * Strings do not automatically have to be escaped, but if they contain certain characters which are used in `yaml`, you should escape the string with single quotes, i.e. `'string'`. You may also need to do this if you wish for a valid number to be treated as a string.
 * `<dict>...</dict>` lists are handled with a simple indent. In the above example, the indent is two spaces. You must be consistent in the `yaml` file (unlike in the `plist`).
 * An array is handled with a `-` at the same indent as the array's key. Subsequent items in the array should be at the same level of indent as the first item's key name.
+
+A note on handling scripts within `yaml`. A good way is to use the [yaml literal style](http://www.yaml.org/spec/1.2/spec.html#id2795688). This uses a `|` to indicate a literal block of text, e.g. as follows:
+
+```yaml
+file_content: |
+    #!/bin/bash
+
+    if [[ $1 ]]; then
+        exit 0
+    else
+        exit 1
+    fi
+```
 
 # Converting existing AutoPkg recipes to yaml
 
