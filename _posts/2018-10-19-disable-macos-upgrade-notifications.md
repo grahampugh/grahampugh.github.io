@@ -63,7 +63,7 @@ If you're in Jamf Pro, push this script in a policy to computers running a versi
 If you use [Munki], then [Rick Heil](https://rickheil.com/) has a blog post just for you: [Suppress New OS Major Version Updates with Munki](https://rickheil.com/suppress-new-os-major-version-updates-with-munki/)
 
 
-# Acknowledgements
+## Acknowledgements
 
 This information came from a conversation in the [#mojave](https://macadmins.slack.com/messages/CB0547P08) channel on the [MacAdmins Slack Team], particularly from the following users:
 
