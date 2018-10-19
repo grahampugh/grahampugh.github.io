@@ -28,7 +28,7 @@ Note that as per the man page for `softwareupdate`:
 
 > The identifier is the first part of the item name (before the dash and version number) that is shown by `softwareupdate --list`.
 
-Using the `--ignore` option of `softwareupdate`, you can ignore the update as follows:
+Using the `--ignore` option of `softwareupdate`, you can therefore ignore the update as follows:
 
 ```
 softwareupdate --ignore macOSInstallerNotification_GM
@@ -43,7 +43,7 @@ Ignored updates:
 )
 ```
 
-If you missed the chance to prevent the update, then you can delete the installed bundle (again, as root):
+If you missed the chance to prevent the update and you're already seeing popups, then you can delete the installed bundle (again, as root):
 
 ```
 rm -rf /Library/Bundles/OSXNotification.bundle
