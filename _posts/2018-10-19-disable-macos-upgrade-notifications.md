@@ -18,6 +18,8 @@ The notification is then pushed as per the preferences in `/Library/Preferences/
 
 ## How do I stop it from showing on macOS 10.12 and 10.13 devices?
 
+_Note: This post is not concerned with the rights and wrongs of preventing upgrade to Mojave._
+
 If the computer has not yet received the update, you can prevent it if you manage your own software update catalog, for example with [Reposado].
 
 You can alternatively run a command to ignore the particular update.
@@ -60,10 +62,11 @@ Sure, see this gist:
 
 If you're in Jamf Pro, push this script in a policy to computers running a version of macOS less than 10.14.
 
-If you use [Munki], then [Rick Heil](https://rickheil.com/) has a blog post just for you: [Suppress New OS Major Version Updates with Munki](https://rickheil.com/suppress-new-os-major-version-updates-with-munki/)
+If you use [Munki], then [Rick Heil](https://rickheil.com/) has a blog post just for you: [Suppress New OS Major Version Updates with Munki](https://rickheil.com/suppress-new-os-major-version-updates-with-munki/).
 
 
-## Acknowledgements
+Acknowledgements
+----
 
 This information came from a conversation in the [#mojave](https://macadmins.slack.com/messages/CB0547P08) channel on the [MacAdmins Slack Team], particularly from the following users:
 
