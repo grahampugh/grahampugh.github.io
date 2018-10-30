@@ -17,14 +17,14 @@ To do this, create an Application in AppleScript Editor:
 
   * Enter the following commands:
 
-~~~ 
+~~~
 set myPath to POSIX path of (path to resource "MyShellScript.sh")
 
 do shell script quoted form of myPath with administrator privileges
 ~~~
 
-  * Click on the toolbar button in the top right of AppleScript Editor that reveals the right side bar. 
-  * Drag your shell script from a Finder window into the Resources list.
+  * Click on the toolbar button in the top right of AppleScript Editor that reveals the right side bar.
+  * Drag your shell script from a Finder window into the Resources list. **Important: the shell script must be executable; make sure you `chmod 755`.**
   * Save the application
 
 You may wish to sign the application with your Developer ID, and make it Run Only. To do this, click File > Export..., select the Developer ID and make any required other settings changes:
@@ -39,7 +39,7 @@ When running the application, you should be prompted with a system authenticatio
 
 ## Example Scripts
 
-Below is the same example as my previous post, adapted to use AppleScript Editor. 
+Below is the same example as my previous post, adapted to use AppleScript Editor.
 
 # Jamf Pro: check for new policies
 
@@ -54,5 +54,3 @@ As a simple example, here is an application script that checks for connection to
 [img-3]: /assets/images/export-application.png
 
 {% include urls.md %}
-
-
