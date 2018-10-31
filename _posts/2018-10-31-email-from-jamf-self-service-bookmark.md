@@ -10,14 +10,14 @@ If your common method of receiving IT help requests is via Email, you might want
 
 ## A script, in a policy
 
-It's possible to create Policies with a script to do this - this gives you the opportunity to generate additional content into the Email such as username, computer serial number etc. For example, see the answer from [@emily] in [this Jamf Nation post][2]
+It's possible to create Policies with a script to do this - this gives you the opportunity to generate additional content into the Email such as username, computer serial number etc. For example, see the answer from [@emily] in [this Jamf Nation post][2].
 
 ## Self Service Bookmark
 
 If you just want a quick and easy way to send to the correct address, you can just create a Self Service Bookmark. Although not mentioned in the [Jamf Pro Administrator's Guide][1], the URL can be a `mailto:` address. Since `mailto:` addresses can include subject and even body fields, you can pre-populate the Subject and Body with information, such as:
 
 ```
-mailto:apple-services@acme.com?subject=IT%Help%20Request
+mailto:apple-services@acme.com?subject=IT%20Help%20Request
 ```
 
 Note that as with any URL, it is necessary to encode certain characters. In this example, spaces are encoded with `%20`. You can find all the URL encoding characters [here][3].
