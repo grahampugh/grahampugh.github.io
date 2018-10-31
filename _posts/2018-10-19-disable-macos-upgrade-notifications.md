@@ -65,6 +65,24 @@ If you're in Jamf Pro, push this script in a policy to computers running a versi
 If you use [Munki], then [Rick Heil](https://rickheil.com/) has a blog post just for you: [Suppress New OS Major Version Updates with Munki](https://rickheil.com/suppress-new-os-major-version-updates-with-munki/).
 
 
+What about 10.11 devices?
+----
+
+Slack user `@rrenstrom` reported that the notification machanism is different on OS X 10.11:
+
+>I saw a similar upgrade notification on a 10.11 system. Looks like Apple is using a different mechanism here, although the notification looks the same.
+>
+>If it installs (perhaps only on Macs with a deprecated OS <10.12), it will show up in `install.log` as `10.14NoticeboardNotification`.
+>
+>Unlike the other Mojave upgrade notification being distributed as a software update (the macOSInstallerNotification_GM package), this one is triggered by nbagent and from a separate updates catalog (noticeboard), so it may not be possible to block with the `--ignore` tactic, but it's worth a try (e.g. `softwareupdate --ignore 10.14NoticeboardNotification`). The package receipt `pkgutil --files com.apple.pkg.10.14NoticeboardNotification.16U1627` shows it installed at `/private/tmp/noticeboard/com.apple.noticeboard.notification.10.14fornon10.8.1.0.bundle`.
+>
+>It adds some entries to `/Library/Preferences/com.apple.noticeboard.plist` to keep track of how many times the notification popup has been dismissed. From the `reminderIntervals` key in the update catalog, looks like it may appear every 7 days, 24 times.
+
+I have not yet set up an OS X 10.11 device with which I could test a mechanism for suppressing these updates. I'll update this blog if I can verify that the above steps are effective.
+
+
+
+
 Acknowledgements
 ----
 
@@ -77,6 +95,7 @@ This information came from a conversation in the [#mojave](https://macadmins.sla
 @matx
 @refreshingapathy
 @zoocoup
+@rrenstrom
 ```
 
 Thanks, all!
