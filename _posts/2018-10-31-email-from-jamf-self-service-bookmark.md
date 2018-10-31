@@ -17,7 +17,7 @@ It's possible to create Policies with a script to do this - this gives you the o
 If you just want a quick and easy way to send to the correct address, you can just create a Self Service Bookmark. Although not mentioned in the [Jamf Pro Administrator's Guide][1], the URL can be a `mailto:` address. Since `mailto:` addresses can include subject and even body fields, you can pre-populate the Subject and Body with information, such as:
 
 ```
-mailto:apple-servics@acme.com?subject=IT%Help%20Request
+mailto:apple-services@acme.com?subject=IT%Help%20Request
 ```
 
 Note that as with any URL, it is necessary to encode certain characters. In this example, spaces are encoded with `%20`. You can find all the URL encoding characters [here][3].
