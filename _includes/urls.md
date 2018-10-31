@@ -11,6 +11,7 @@
 [@tbridge]: https://twitter.com/tbridge
 [@shea_craig]: https://twitter.com/shea_craig
 [@talkingmoose]: http://talkingmoose.net/
+[@emily]: https://twitter.com/emilyooo
 [Atom]: https://atom.io/
 [Atom Packages: Git-plus]: https://atom.io/packages/git-plus
 [Atom Packages: Minimap]: https://atom.io/packages/minimap
