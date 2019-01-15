@@ -10,7 +10,6 @@ Here is a script to send notifications to a Slack channel when a server's main p
 
 * Set up an [incoming webhook][1] for a Slack channel.
 * Install the python `requests` module on the server or computer on which the script will be run. Either:
-
     * `pip install requests` on macOS
     * `yum install python-requests` on Red Hat 7
 
