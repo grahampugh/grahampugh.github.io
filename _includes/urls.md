@@ -11,6 +11,7 @@
 [@tbridge]: https://twitter.com/tbridge
 [@shea_craig]: https://twitter.com/shea_craig
 [@talkingmoose]: http://talkingmoose.net/
+[@emily]: https://twitter.com/emilyooo
 [Atom]: https://atom.io/
 [Atom Packages: Git-plus]: https://atom.io/packages/git-plus
 [Atom Packages: Minimap]: https://atom.io/packages/minimap
@@ -72,6 +73,7 @@
 [MunkiReport-PHP]: https://github.com/munkireport/munkireport-php
 [MunkiWebAdmin]: https://github.com/munki/munkiwebadmin
 [MWA2]: https://github.com/munki/mwa2
+[plist-yaml-plist]: https://github.com/grahampugh/plist-yaml-plist
 [Puppet]: https://puppetlabs.com
 [Reposado]: https://github.com/wdas/reposado
 [Run-Munki-Run]: https://github.com/grahampugh/run-munki-run
@@ -85,3 +87,4 @@
 [VirtualBox]: https://www.virtualbox.org
 [VMWare Fusion]: http://www.vmware.com/products/fusion
 [WordPress.com]: https://www.wordpress.com
+[YAML]: http://yaml.org/
