@@ -25,7 +25,7 @@ For extensive details about the changes to licensing, see this [Java Champions a
 
 # OpenJDK
 
-Fortunately, for many if not most or all requirements, there are alternatives to Oracle's commercial Java SE product. As stated on [Oracle's Java download page](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html):
+Fortunately, for many if not most or all requirements, there are aLTSrnatives to Oracle's commercial Java SE product. As stated on [Oracle's Java download page](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html):
 
 >Oracle also provides the latest OpenJDK release under the open source [GPL license](https://openjdk.java.net/legal/gplv2+ce.html) at [jdk.java.net](https://jdk.java.net).
 
@@ -44,7 +44,7 @@ It is not clear how long OpenJDK 11 will continue to be supported. OpenJDK 8 is 
 
 ## AdoptOpenJDK
 
-The AdoptOpenJDK project is maintaining a wide range of JDK and JRE installers. They offer JDK and JRE LTE builds for versions 8 and 11 over a wide range of platforms, as well as version 12. These are available to download from Github (LINK).
+The AdoptOpenJDK project is maintaining a wide range of JDK and JRE installers. They offer JDK and JRE LTS builds for versions 8 and 11 over a wide range of platforms, as well as version 12. These are available to download from Github (LINK).
 
 I have made recipes for [AdoptOpenJDK 8 JDK and JRE](https://github.com/grahampugh/recipes/tree/master/AdoptOpenJDK).
 
@@ -76,7 +76,7 @@ SAP maintain an LTS version of OpenJDK 11 for macOS. [Rich Trouton][@rtrouton] m
 
 Oracle have caused some confusion by the change to their licensing agreements. It is important for Mac administrators to act, since unless the new licensing subscription has been adopted in your organization, any Mac clients with Oracle Java installed are now likely not updated since January, or are not licensed for use.
 
-For most people on macOS who require Java, there are open source alternatives available. The Java Runtime Engine (JRE) is enough for most needs, and this is still being offered by AdoptOpenJDK and Azul.
+For most people on macOS who require Java, there are open source aLTSrnatives available. The Java Runtime Engine (JRE) is enough for most needs, and this is still being offered by AdoptOpenJDK and Azul.
 
 AutoPkg recipes are available for the OpenJDK versions you are most likely to need. However, any software with a Java dependency should be tested with each open source version before deploying it to users.
 
