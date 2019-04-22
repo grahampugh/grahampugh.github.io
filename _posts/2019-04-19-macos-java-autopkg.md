@@ -62,7 +62,7 @@ If you require the version reported by AutoPkg to match that reported from the C
 
 Azul Systems are providing LTS versions of Open JDK 12, 11, 8 and 7, with a separate JRE available for version 8 (see [download page](https://www.azul.com/downloads/zulu/#)). They are the only third-party provider to include the JavaFX features in their builds.
 
-So far, no AutoPkg recipes are available for Azul Zulu).
+So far, no AutoPkg recipes are available for Azul Zulu.
 
 
 ## SapMachine
