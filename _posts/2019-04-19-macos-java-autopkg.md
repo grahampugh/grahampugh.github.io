@@ -72,7 +72,8 @@ So far, no AutoPkg recipes are available for Azul Zulu).
 SAP maintain an LTS version of OpenJDK 11 for macOS. [Rich Trouton][@rtrouton] maintains [AutoPkg recipes for SapMachine](https://github.com/autopkg/rtrouton-recipes/tree/master/SapMachine), but note that this will download version 12.
 
 
-# Conclusion
+Conclusion
+==========
 
 Oracle have caused some confusion by the change to their licensing agreements. It is important for Mac administrators to act, since unless the new licensing subscription has been adopted in your organization, any Mac clients with Oracle Java installed are now likely not updated since January, or are not licensed for use.
 
