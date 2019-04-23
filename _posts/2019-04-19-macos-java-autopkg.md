@@ -69,7 +69,7 @@ So far, no AutoPkg recipes are available for Azul Zulu.
 
 [SapMachine](https://sap.github.io/SapMachine/) is SAP's downstream fork of the OpenJDK project. It is used to build and maintain a SAP supported version of OpenJDK for SAP customers and partners who wish to use OpenJDK to run their applications.
 
-SAP maintain an LTS version of OpenJDK 11 for macOS. [Rich Trouton][@rtrouton] maintains [AutoPkg recipes for SapMachine](https://github.com/autopkg/rtrouton-recipes/tree/master/SapMachine), but note that this will download version 12.
+SAP maintain an LTS version of OpenJDK 11 for macOS. [Rich Trouton][@rtrouton] maintains AutoPkg recipes for [SapMachine - latest](https://github.com/autopkg/rtrouton-recipes/tree/master/SapMachine) and [SapMachine 11 (LTS)](https://github.com/autopkg/rtrouton-recipes/tree/master/SapMachineJDK11).
 
 
 Conclusion
