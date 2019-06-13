@@ -22,7 +22,7 @@
 [AutoPkgr]: http://www.lindegroup.com/autopkgr
 [BitBucket]: https://bitbucket.org
 [BSDPy]: https://bitbucket.org/bruienne/bsdpy
-[Bushel]: https://www.bushel.com"
+[Bushel]: https://www.jamf.com/products/jamf-now/
 [SplashBuddy]: https://github.com/ftiff/SplashBuddy
 [check_local_admin]: https://github.com/grahampugh/osx-scripts/tree/master/check_local_admin
 [Crypt]: https://github.com/grahamgilbert/Crypt
@@ -38,6 +38,7 @@
 [Hello-IT]: https://github.com/ygini/Hello-IT
 [Imagr]: https://github.com/grahamgilbert/imagr/wiki/Getting-Started
 [Jamf Marketplace]: https://marketplace.jamf.com/apps/#category=Integrations
+[Jamf Now]: https://www.jamf.com/products/jamf-now/
 [Jamf Pro]: https://www.jamf.com/products/jamf-pro/
 [JAMF Pro]: https://www.jamf.com/products/jamf-pro/
 [Jamf Pro API Documentation]: https://developer.jamf.com/index
@@ -45,7 +46,7 @@
 [Jamf Pro Patch Management]: https://www.jamf.com/products/jamf-pro/patch-management/
 [Jekyll]: http://jekyllrb.com/
 [JNUC]: https://www.jamf.com/events/jamf-nation-user-conference/
-[JSSImporter]: https://github.com/sheagcraig/JSSImporter
+[JSSImporter]: https://github.com/jssimporter/JSSImporter
 [JSS-In-A-Box]: https://github.com/franton/JSS-In-A-Box
 [JSS-Config-In-A-Box]: https://github.com/franton/JSS-Config-In-A-Box
 [keychain-creds]: https://github.com/grahampugh/keychain-creds
@@ -80,7 +81,7 @@
 [Sal]: https://github.com/salopensource/sal
 [Simian]: https://github.com/google/simian/wiki/SimianAtAGlance
 [Slack]: https://slack.com
-[Steve Kueng's forked version of MunkiWebAdmin]: https://github.com/SteveKueng/munkiwebadmin
+[Steve Kueng's forked version of MunkiWebAdmin]: https://github.com/SteveKueng/munkiwebadmin
 [TextWrangler]: http://www.barebones.com/products/textwrangler/
 [The Luggage]: https://github.com/unixorn/luggage
 [Vagrant]: https://www.vagrantup.com

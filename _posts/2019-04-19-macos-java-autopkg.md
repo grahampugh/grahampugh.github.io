@@ -46,7 +46,7 @@ It is not clear how long OpenJDK 11 will continue to be supported. OpenJDK 8 is 
 
 The AdoptOpenJDK project is maintaining a wide range of JDK and JRE installers. They offer JDK and JRE LTS builds for versions 8 and 11 over a wide range of platforms, as well as version 12. These are available to download from Github.
 
-I have made recipes for [AdoptOpenJDK 8 JDK and JRE](https://github.com/grahampugh/recipes/tree/master/AdoptOpenJDK).
+I have made recipes for [versions 8, 11 and 12 of AdoptOpenJDK JDK, and the 8 JRE](https://github.com/grahampugh/recipes/tree/master/AdoptOpenJDK).
 
 
 ## Amazon Corretto JDK
