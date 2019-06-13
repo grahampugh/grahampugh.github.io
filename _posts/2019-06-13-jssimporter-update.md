@@ -10,7 +10,7 @@ This release introduces a subtle but important change to the behaviour of the pr
 
 # Stop processing if no package upload required
 
-## Background
+### Background
 
 The `MunkiImporter` processor for AutoPkg checks if a package has changed since the last import, by comparing the package in the repository with the package in the AutoPkg cache. If they are different, the processor proceeds to upload the package and `pkginfo` file. If the package is the same, the processor stops - no need to upload or rewrite the pkginfo.
 
@@ -22,7 +22,7 @@ Many of us had manually solved this problem by creating our own `.jss` recipes w
 
 However, it made more sense to replicate the behaviour of the `MunkiImporter` processor as closely as possible, to avoid everyone with this problem having to create their own recipes.
 
-## New `STOP_IF_NO_JSS_UPLOAD` argument
+### New `STOP_IF_NO_JSS_UPLOAD` argument
 
 Version 1.0.2b3 introduces the `STOP_IF_NO_JSS_UPLOAD` argument to the `JSSImporter` processor. This argument is set to `True` by default, but can be overridden.
 
