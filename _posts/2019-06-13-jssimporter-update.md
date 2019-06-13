@@ -22,7 +22,7 @@ Many of us had manually solved this problem by creating our own `.jss` recipes w
 
 However, it made more sense to replicate the behaviour of the `MunkiImporter` processor as closely as possible, to avoid everyone with this problem having to create their own recipes.
 
-### New `STOP_IF_NO_JSS_UPLOAD` argument
+### New 'STOP_IF_NO_JSS_UPLOAD' argument
 
 Version 1.0.2b3 introduces the `STOP_IF_NO_JSS_UPLOAD` argument to the `JSSImporter` processor. This argument is set to `True` by default, but can be overridden.
 
