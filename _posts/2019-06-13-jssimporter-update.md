@@ -4,7 +4,7 @@ title:  "JSSImporter 1.0.2b3 puts the brakes on"
 comments: true
 ---
 
-Today we released a new beta of the [JSSImporter] processor for importing packages into [Jamf Pro] using [AutoPkg]. The 1.0.2b2 release is available [here](https://github.com/jssimporter/JSSImporter/releases/tag/1.0.2b3).
+Today we released a new beta of the [JSSImporter] processor for importing packages into [Jamf Pro] using [AutoPkg]. The 1.0.2b3 release is available [here](https://github.com/jssimporter/JSSImporter/releases/tag/1.0.2b3).
 
 This release introduces a subtle but important change to the behaviour of the processor, so I thought it worthy of an explanation here. For other changes in this release, please see the [CHANGELOG](https://github.com/jssimporter/JSSImporter/blob/1.0.2b3/CHANGELOG.md).
 
