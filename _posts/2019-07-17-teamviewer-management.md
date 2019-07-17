@@ -4,7 +4,7 @@ title:  "Prevent TeamViewer from opening during package installation"
 comments: true
 ---
 
-A customer pointed out to us that when a new version of TeamViewer was pushed to a client managed by Jamf Pro, the application would open during the installation of the package.
+A customer pointed out to us that when a new version of TeamViewer was pushed to a client managed by Jamf Pro, the application would open during the installation of the package. That can be confusing to users, or badly timed.
 
 **Note:** by TeamViewer I mean the full application that acts both as client and server. TeamViewer QuickSupport does not have this problem.
 
