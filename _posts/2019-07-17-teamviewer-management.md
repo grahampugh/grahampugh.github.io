@@ -2,6 +2,8 @@
 layout: post
 title:  "Prevent TeamViewer from opening during package installation"
 comments: true
+excerpt: > # put a short description to make RSS feeds look better.
+TeamViewer can be prevented from opening during installation if a specific file is placed in the tmp folder before installation. This can be achieved with the use of a preinstall script.
 ---
 
 A customer pointed out to us that when a new version of TeamViewer was pushed to a client managed by Jamf Pro, the application would open during the installation of the package. That can be confusing to users, or badly timed.

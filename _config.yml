@@ -16,6 +16,7 @@ url: "http://grahampugh.github.io" # the base hostname & protocol for your site
 src_url: "https://github.com/grahampugh/grahampugh.github.io/blob/master"
 twitter_username: GrahamRPugh
 github_username:  grahampugh
+author: grahampugh
 
 # Build settings
 markdown: kramdown
