@@ -82,6 +82,7 @@
 [Simian]: https://github.com/google/simian/wiki/SimianAtAGlance
 [Slack]: https://slack.com
 [Steve Kueng's forked version of MunkiWebAdmin]: https://github.com/SteveKueng/munkiwebadmin
+[Suspicious Package]: https://www.mothersruin.com/software/SuspiciousPackage/
 [TextWrangler]: http://www.barebones.com/products/textwrangler/
 [The Luggage]: https://github.com/unixorn/luggage
 [Vagrant]: https://www.vagrantup.com
