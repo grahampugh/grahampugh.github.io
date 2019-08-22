@@ -21,17 +21,22 @@ I could not find any documentation on how to prevent the application opening, so
 
 ![TeamViewer in Suspicious Package (2)](/assets/images/suspicious-teamviewer2.png)
 
-So all we need to do is ensure the file `/tmp/tvPath` exists before installing. It needs no content. This is easily achieved with a script that can be added to a Jamf Pro policy (or a Munki `pkginfo` file), set to run before the package is installed.
+So all we need to do is ensure the file `/tmp/tvPath` exists before installing.
+
+Chris Dietrich (`@cdietrich` on MacAdmins Slack) helpfully spotted that if the `/tmp/tvPath` file exists, the contents determine where TeamViewer will be installed, so we need to take care to add `/Applications` as the contents of the file:
 
 ```
 #!/bin/sh
 ## preinstall script
 
 # Set TeamViewer to only restart the service on installation
-# This is achieved by touching the following file
-# before installing the package
+# This is achieved by creating the following file
+# before installing the package. the file should contain the
+# path to which TeamViewer should be installed, as this is
+# used elsewhere in the TeamViewer pkg postinstall script.
+# (thanks to @cdietrich)
 
-/usr/bin/touch /tmp/tvPath
+echo "/Applications" > /tmp/tvPath
 ```
 
 ![TeamViewer Policy in Jamf Pro](/assets/images/teamviewer-policy.png)
