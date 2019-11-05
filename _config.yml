@@ -18,6 +18,7 @@ twitter_username: GrahamRPugh
 github_username:  grahampugh
 author: grahampugh
 timezone: Europe/Zurich
+future: true
 
 # Build settings
 markdown: kramdown
