@@ -17,6 +17,7 @@ src_url: "https://github.com/grahampugh/grahampugh.github.io/blob/master"
 twitter_username: GrahamRPugh
 github_username:  grahampugh
 author: grahampugh
+timezone: Europe/Zurich
 
 # Build settings
 markdown: kramdown
