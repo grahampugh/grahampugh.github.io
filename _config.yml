@@ -24,7 +24,7 @@ future: true
 markdown: kramdown
 
 #pagination
-gems:
+plugins:
   - jekyll-gist
   - jekyll-paginate
 paginate: 10

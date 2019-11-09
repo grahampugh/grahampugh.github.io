@@ -19,7 +19,10 @@
 [AutoDSNBI]: https://github.com/MagerValp/AutoDSNBI
 [Autopkg prepostprocessors]: https://github.com/autopkg/autopkg/wiki/PreAndPostProcessorSupport
 [AutoPkg]: https://github.com/autopkg/autopkg
+[Autopkg Wiki]: https://github.com/autopkg/autopkg/wiki
 [AutoPkgr]: http://www.lindegroup.com/autopkgr
+[AutoPkgSetupforJSS]: https://github.com/grahampugh/AutoPkg_Setup_for_JSS
+[autopkg-conductor]: https://github.com/rtrouton/autopkg-conductor
 [BitBucket]: https://bitbucket.org
 [BSDPy]: https://bitbucket.org/bruienne/bsdpy
 [Bushel]: https://www.jamf.com/products/jamf-now/
@@ -49,6 +52,8 @@
 [JSSImporter]: https://github.com/jssimporter/JSSImporter
 [JSS-In-A-Box]: https://github.com/franton/JSS-In-A-Box
 [JSS-Config-In-A-Box]: https://github.com/franton/JSS-Config-In-A-Box
+[jss_helper]: https://github.com/jssimporter/jss_helper
+[JSSRecipeCreator]: https://github.com/jssimporter/JSSRecipeCreator
 [keychain-creds]: https://github.com/grahampugh/keychain-creds
 [kramdown]: http://kramdown.gettalong.org
 [London Apple Admins]: http://www.londonappleadmins.org.uk
