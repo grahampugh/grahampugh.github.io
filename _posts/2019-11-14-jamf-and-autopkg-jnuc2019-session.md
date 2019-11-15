@@ -1,14 +1,16 @@
 ---
 layout: post
-title:  "Jamf and AutoPkg: JNUC 2019 Session Links and commands"
+title:  "Jamf and AutoPkg: JNUC 2019 Session Links and commands - UPDATE: slide deck now available"
 comments: true
 ---
 
-On 14 November 2019, at 13:30, I am presenting at the [Jamf Nation User Conference in Minneapolis, MN, USA](https://www.jamf.com/events/jamf-nation-user-conference/2019/), on the following topic:
+On 14 November 2019, at 13:30, I presented at the [Jamf Nation User Conference in Minneapolis, MN, USA](https://www.jamf.com/events/jamf-nation-user-conference/2019/), on the following topic:
 
 **Jamf Pro and AutoPkg: How JSSImporter automates package management and policy creation in Jamf Pro**
 
-This posts detail the contents of the session, including sections originally planned that I had to cut to fit into 45 minutes. I will post a link to the slides here shortly.
+This posts detail the contents of the session, including sections originally planned that I had to cut to fit into 45 minutes.
+
+[The slides can now be viewed here](/assets/documents/JNUC 2019 Graham Pugh JSSImporter.pdf)
 
 ![jssimporter-logo](/assets/images/JNUC2019/jssimporter.png)
 
