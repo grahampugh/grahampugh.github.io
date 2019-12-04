@@ -16,8 +16,6 @@ The video is now available to view here:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-450-J4kgCk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-![jssimporter-logo](/assets/images/JNUC2019/jssimporter.png)
-
 ---
 
 # Contents
@@ -26,6 +24,8 @@ The video is now available to view here:
 2. Understand and use standard JSS recipes
 3. Roll your own JSS recipes
 4. The future of JSSImporter
+
+![jssimporter-logo](/assets/images/JNUC2019/jssimporter.png)
 
 ---
 
