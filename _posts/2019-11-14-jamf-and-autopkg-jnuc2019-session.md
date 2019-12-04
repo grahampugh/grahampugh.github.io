@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Jamf and AutoPkg: JNUC 2019 Session Links and commands - UPDATE: slide deck now available"
+title:  "Jamf and AutoPkg: JNUC 2019 Session Links and commands - UPDATE: video and slide deck now available"
 comments: true
 ---
 
@@ -11,6 +11,10 @@ On 14 November 2019, at 13:30, I presented at the [Jamf Nation User Conference i
 This posts detail the contents of the session, including sections originally planned that I had to cut to fit into 45 minutes.
 
 [The slides can now be viewed here](/assets/documents/JNUC 2019 Graham Pugh JSSImporter.pdf)
+
+The video is now available to view here:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-450-J4kgCk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ![jssimporter-logo](/assets/images/JNUC2019/jssimporter.png)
 
