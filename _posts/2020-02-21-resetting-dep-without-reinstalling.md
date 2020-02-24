@@ -25,17 +25,17 @@ First, we need to re-enable the Language Chooser Screen, which is the first scre
 
 On a Mac running Catalina or greater, run the following commands:
 
-    ```bash
-    mount -uw /System/Volumes/Data
-    touch /var/db/.RunLanguageChooserToo
-    ```
+```bash
+mount -uw /System/Volumes/Data
+touch /var/db/.RunLanguageChooserToo
+```
 
 On a Mac running Mojave or earlier, run the following commands, replacing the volume name if your system volume is not named `Macintosh HD`:
 
-    ```bash
-    mount -uw /
-    touch /Volumes/Macintosh\ HD/var/db/.RunLanguageChooserToo
-    ```
+```bash
+mount -uw /
+touch /Volumes/Macintosh\ HD/var/db/.RunLanguageChooserToo
+```
 
 Now, if you are in Recovery Mode, quit Terminal, and whether in Recovery or Single-User Mode, reboot back into the system volume, and you should see the "language chooser" screen.
 
