@@ -28,6 +28,17 @@ Thanks to [an article on the Jamf discussion boards][1] I was able to figure out
 
 5. Now, quit Terminal and reboot back into the newly-installed system volume, and you should see the "language chooser" screen.
 
+**Update:**
+
+On computers running macOS Catalina or higher, the mount point above is different, due to there now being two volumes, one for the system and one for the data. The following appears to work:
+
+    ```bash
+    mount -uw /System/Volumes/Data
+    touch /var/db/.RunLanguageChooserToo
+    ```
+
+
+
 [1]: https://www.jamf.com/jamf-nation/discussions/7217/making-language-chooser-run-at-first-boot
 [img-1]: /assets/images/mac-install-start.jpg
 [img-2]: /assets/images/mac-install-welcome.jpg
