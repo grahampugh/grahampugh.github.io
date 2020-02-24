@@ -8,7 +8,7 @@ When a freshly built or rebuilt Mac gets to the "country choice" screen as part 
 
 In recent times, the following command, which is supposed to reset the DEP cache, has become more reliable:
 
-```
+```bash
 sudo profiles renew -type enrollment
 ```
 
@@ -16,7 +16,7 @@ The question is, how to run this command during the Setup Assistant process? You
 
 ## Gaining root access at the Setup Assistant
 
-To be able to run the above command, we need to gain root access. I learned this is possible from [@yohan] via MacAdmins Slack. 
+To be able to run the above command, we need to gain root access. I learned this is possible from [@yohan] via MacAdmins Slack.
 
 First, we need to re-enable the Language Chooser Screen, which is the first screen in Setup Assistant but is not shown by default on computers more than once. To do this, we can do one of two things:
 
@@ -43,12 +43,11 @@ Now, if you are in Recovery Mode, quit Terminal, and whether in Recovery or Sing
 
 To open Terminal at this screen, click `ctrl-alt-cmd-T`. Terminal at this point is running as root. So, now you can run:
 
-```
+```bash
 profiles renew -type enrollment
 ```
 
 Then close Terminal and continue with Setup Assistant as normal. In my recent experience this has always been successful in resetting the DEP cache so that it will check in with Apple again and get the correct current DEP status.
-
 
 [img-1]: /assets/images/mac-install-start.jpg
 
