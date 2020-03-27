@@ -20,28 +20,44 @@ To be able to run the above command, we need to gain root access. I learned this
 
 First, we need to re-enable the Language Chooser Screen, which is the first screen in Setup Assistant but is not shown by default on computers more than once. To do this, we can do one of two things:
 
-1. On Macs without a T2 chip, boot into Single User Mode using `cmd-S`.
-2. On Macs with or without a T2 chip, boot into Recovery Mode using `cmd-R` and open `Utilities` > `Terminal`.
+### Enabling the Language Chooser screen on Macs without a T2 chip
 
-On a Mac running Catalina or greater, run the following commands:
+Boot into Single User Mode using `Cmd-S`.
+
+1. On a Mac running Catalina or greater, run the following commands:
+
+    ```bash
+    mount -uw /System/Volumes/Data
+    touch /var/db/.RunLanguageChooserToo
+    reboot
+    ```
+
+2. On a Mac running Mojave or earlier, run the following commands, replacing the volume name if your system volume is not named `Macintosh HD`:
+
+    ```bash
+    mount -uw /
+    touch /Volumes/Macintosh\ HD/var/db/.RunLanguageChooserToo
+    reboot
+    ```
+
+Upon restarting, you should see the "language chooser" screen.
+
+### Enabling the Language Chooser screen on Macs with a T2 chip
+
+Single User Mode is not available on T2 Macs, so instead, boot into Recovery Mode using `Cmd-R` and open `Utilities` > `Terminal` (you can also do this on non-T2 Macs if you wish). Then, run the following commands:
 
 ```bash
-mount -uw /System/Volumes/Data
+chroot /Volumes/Macintosh\ HD
 touch /var/db/.RunLanguageChooserToo
 ```
 
-On a Mac running Mojave or earlier, run the following commands, replacing the volume name if your system volume is not named `Macintosh HD`:
+Now, quit Terminal, and reboot back into the system volume, and you should see the "language chooser" screen.
 
-```bash
-mount -uw /
-touch /Volumes/Macintosh\ HD/var/db/.RunLanguageChooserToo
-```
-
-Now, if you are in Recovery Mode, quit Terminal, and whether in Recovery or Single-User Mode, reboot back into the system volume, and you should see the "language chooser" screen.
+### Opening Terminal as root on the Language Chooser screen
 
 ![img-1]
 
-To open Terminal at this screen, click `ctrl-alt-cmd-T`. Terminal at this point is running as root. So, now you can run:
+To open Terminal at this screen, click `Ctrl-Alt-Cmd-T` (all keys pressed together). Terminal at this point is running as root. So, now you can run:
 
 ```bash
 profiles renew -type enrollment
