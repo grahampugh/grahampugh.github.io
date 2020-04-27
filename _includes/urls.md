@@ -42,6 +42,7 @@
 [Hello-IT]: https://github.com/ygini/Hello-IT
 [Imagr]: https://github.com/grahamgilbert/imagr/wiki/Getting-Started
 [Jamf Marketplace]: https://marketplace.jamf.com/apps/#category=Integrations
+[Jamf Migrator]: https://github.com/jamf/JamfMigrator
 [Jamf Now]: https://www.jamf.com/products/jamf-now/
 [Jamf Pro]: https://www.jamf.com/products/jamf-pro/
 [JAMF Pro]: https://www.jamf.com/products/jamf-pro/
