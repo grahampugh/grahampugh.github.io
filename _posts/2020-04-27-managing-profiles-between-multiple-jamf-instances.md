@@ -84,7 +84,7 @@ I opened a case with Jamf Support, who initially told me "don't do that", and if
 
 * When uploading a new configuration profile to a destination instance via a `POST` request, the UUID of the profile is stripped out by Jamf to ensure that the profile could not inherit a UUID that already exists on that server (as UUIDs need to be Unique!).
 
-* However, when uploading a configuration profile using `PUT`, if the profile exists (based on `id` or `name`), the profile is overwritten, including the UUID, effectively creating a different profile as far as Apple/MDM is concerned, but removing any trace of the "old" profile, i.e. the profile with the UUID that was created with the `POST` request.
+* However, when uploading a configuration profile using `PUT`, if the profile exists (based on `id` or `name`), the profile is overwritten, including the UUID, effectively creating a different profile as far as Apple/MDM is concerned, but removing any trace of the "old" profile from the server, i.e. the profile with the UUID that was created with the `POST` request.
 
 So, we need to ensure the UUID remains constant as changes are made to a profile. There are two ways to go about this:
 
@@ -124,7 +124,7 @@ if [[ $existing_id ]]; then
         curl -s -N -X GET \
             -H "Accept: application/xml" \
             -H "authorization: Basic $destination_instance_encrypted_credentials" \
-            "https://jamfserver/destination//JSSResource/osxconfigurationprofiles/id/${existing_id}" \
+            "https://jamfserver/destination/JSSResource/osxconfigurationprofiles/id/${existing_id}" \
         | xmllint --xpath "//uuid/text()" - 2>/dev/null
     )
 
@@ -172,7 +172,7 @@ I also had a few profiles out in the wild that had been orphaned before I had be
 
 * Generate a "dummy" profile in Jamf that does as little as possible, certainly nothing that would be noticed by users, with no scope. Give it a name that makes it clear that it is deployed by you for fixing the problem. Copy it to the instance on which the affected device(s) are enrolled. Retain the downloaded XML.
 
-* Substitute the UUID from the "orphaned" profile into the XML of the downloaded profile using this snippet (the rest of the above script remiains the same), and then upload it to the affected instance with a PUT request:
+* Substitute the UUID from the "orphaned" profile into the XML of the downloaded profile, as in this example snippet below (the rest of the above script remiains the same), and then upload it to the affected instance with a PUT request:
 
     ```bash
     # now substitute the orphaned uuid and write a new parsed file
@@ -191,7 +191,7 @@ I also had a few profiles out in the wild that had been orphaned before I had be
 
 # Conclusion and caveats
 
-ow that Jamf have acknowledged that the behaviour of copying configuration profiles is somewhat inconsistent, I hope they will improve the API so that the above workaround is not required in the future. But for now, we have a (hopefully) reliable method of maintaining configuration profiles across multiple Jamf Pro instances. Thanks to the Jamf Engineer for helping point me in the right direction as to the behaviour of the Classic API. In the process, figuring out how to clear out orphaned profiles using a "dummy" profile has also been helpful for us. 
+Now that Jamf have acknowledged that the behaviour of copying configuration profiles is somewhat inconsistent, I hope they will improve the API so that the above workaround is not required in the future. But for now, we have a (hopefully) reliable method of maintaining configuration profiles across multiple Jamf Pro instances. Thanks to the Jamf Engineer for helping point me in the right direction as to the behaviour of the Classic API. In the process, figuring out how to clear out orphaned profiles using a "dummy" profile has also been helpful for us. 
 
 Note that I have not checked the code of Jamf Migrator to see if the developers already use this workaround, as it is a Swift application (I'm not familiar with Swift code), and it does not serve my own particular requirements for copying to multiple instances at once, so I anyway needed to solve the problem in my own scripts. I'd be interested to hear whether the problem occurs (or not) when using Jamf Migrator.
 
