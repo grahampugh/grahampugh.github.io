@@ -4,12 +4,15 @@ title:  "Presentation at the Texas Apple Admins Virtual Meetup"
 comments: true
 ---
 
-I am honoured to be joining illustrious presenters at the [Texas Apple Admins Virtual Meetup][1] today, 5 May 2020, to talk about multiple uses for my [erase-install] tool. If you are interested and haven't already done so, register using the link [here](https://www.eventbrite.com/e/texas-apple-admins-virtual-meetup-tickets-103709321372).
+I was honoured to join illustrious presenters at the [Texas Apple Admins Virtual Meetup][1] today, 5 May 2020, to talk about multiple uses for my [erase-install] tool.
 
-The presentation will not be recorded live, but I will record it separately and post the presentation here.
+The presentation was not be recorded live, but I have recorded it separately, and it is available here:
 
-The slides will also be available here shortly afterwards, for anyone who wants to go through at their own pace.
+<iframe type="text/html" width="625" height="382" src="https://www.youtube.com/embed/icUloz-fZ4o?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;start=0&amp;wmode=transparent" frameborder="0" allowfullscreen="true"></iframe>
+
+The slides are also be [available here][2], for anyone who wants to go through at their own pace.
 
 [1]: https://houstonappleadmins.org/TexasAppleAdminsVirtual/
+[2]: /assets/documents/TAA_2020_Erase_Install.pdf
 
 {% include urls.md %}
