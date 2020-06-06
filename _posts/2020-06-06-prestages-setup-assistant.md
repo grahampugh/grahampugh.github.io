@@ -16,7 +16,7 @@ I opened a ticket with Apple Enterprise Support, who could not reproduce the iss
 
 I performed some tests, and found that a different Mac that was enrolled to the same Jamf server but using User-Initiated Enrollment rather than DEP did not have the same problem. I could create a new user and progress through the usual Setup Assistant Screens, and get to the desktop.
 
-I then unenrolled one of the affected computers using the `sudo jamf removeFramework` command, and again, the problem went away. After the Screen Time Setup pane, the Siri Setup pane appeared, and then the "Setting Up Your Mac" pane and the desktop:
+I then unenrolled one of the affected computers using the `sudo jamf removeFramework` command, and again, the problem went away. After the Screen Time Setup pane, then came the Siri, TouchID, "Choose Your Look" and "Setting Up Your Mac" panes, and finally the desktop appeared:
 
 <img src="/assets/images/SetupAssistant-Siri.png" alt="Siri" width="300"/> <img src="/assets/images/SetupAssistant-TouchID.png" alt="TouchID" width="300"/>
 <img src="/assets/images/SetupAssistant-ChooseYourLook.png" alt="ChooseYourLook" width="300"/> <img src="/assets/images/SetupAssistant-SettingUpYourMac.png" alt="SettingUpYourMac" width="300"/>
