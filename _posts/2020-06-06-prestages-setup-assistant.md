@@ -47,7 +47,7 @@ I have updated my case with Apple Enterprise Support with this information, and 
 
 I personally had not previously made the connection that the settings in a PreStage Enrollment for skipping Setup Assistant panes persist for all future Setup Assistant runs, including after upgrades and when creating new users.
 
-This is potentially problematic, because new Setup Assistant panes are being introduced with each new version of macOS, such as Privacy Settings, "Choose Your Look", Screen Time etc. You cannot change these settings in a configuration profile, you can only change them in the DEP settings, which are only applied at enrollment. The only way to change the settings is to re-enroll the device.
+This is potentially problematic, because new Setup Assistant panes are being introduced with each new version of macOS, such as Privacy Settings, "Choose Your Look", Screen Time etc. You cannot change these settings in a configuration profile, you can only change them in the DEP settings, which are only applied at enrollment. The only way to change the settings that apply to a device is to re-enroll the device.
 
 This is not really anything more than a minor inconvenience, but due to a bug - most likely in Apple's Setup Assistant, but perhaps just with Jamf Pro - if you skip all screens other than Screen Time, and your user presses "Set Up Later" after installing a macOS update, they will get locked out of their device and have to force restart to continue.
 
