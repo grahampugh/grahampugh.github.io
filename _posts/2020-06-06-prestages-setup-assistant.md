@@ -4,7 +4,7 @@ title: "Automated Device Enrollment settings affect Setup Assistant beyond enrol
 comments: true
 ---
 
-I came across an interesting phenomenon regarding Automated Device Enrollment (DEP) and macOS's Setup Assisant that I hadn't considered before, while investigating a problem on some managed Mac computers. I'm not sure if it's widely known or not, but since I didn't know it, perhaps others are also not aware.
+I came across an interesting phenomenon regarding Automated Device Enrollment (DEP) and macOS's Setup Assistant that I hadn't considered before, while investigating a problem on some managed Mac computers. I'm not sure if it's widely known or not, but since I didn't know it, perhaps others are also not aware.
 
 I've been encountering problems since the release of macOS Catalina where a Mac gets stuck during Setup Assistant at the "Screen Time" pane, when the user presses "Set Up Later". The link greys out, but then Setup Assistant does not progress. In the past, pressing `Cmd-Q` would quit the Assistant and allow the Desktop to appear, but recently (I think since 10.15.4), this has stopped working, so the only option remaining is to force shutdown the computer, start up again, and login as the affected user.
 
