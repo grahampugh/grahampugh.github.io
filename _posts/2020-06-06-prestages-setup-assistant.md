@@ -18,8 +18,8 @@ I performed some tests, and found that a different Mac that was enrolled to the 
 
 I then unenrolled one of the affected computers using the `sudo jamf removeFramework` command, and again, the problem went away. After the Screen Time Setup pane, the Siri Setup pane appeared, and then the "Setting Up Your Mac" pane and the desktop:
 
-<img src="../assets/images/SetupAssistant-Siri.png" alt="Siri" width="300"/> <img src="../assets/images/SetupAssistant-TouchID.png" alt="TouchID" width="300"/>
-<img src="../assets/images/SetupAssistant-ChooseYourLook.png" alt="ChooseYourLook" width="300"/> <img src="../assets/images/SetupAssistant-SettingUpYourMac.png" alt="SettingUpYourMac" width="300"/>
+<img src="/assets/images/SetupAssistant-Siri.png" alt="Siri" width="300"/> <img src="/assets/images/SetupAssistant-TouchID.png" alt="TouchID" width="300"/>
+<img src="/assets/images/SetupAssistant-ChooseYourLook.png" alt="ChooseYourLook" width="300"/> <img src="/assets/images/SetupAssistant-SettingUpYourMac.png" alt="SettingUpYourMac" width="300"/>
 
 ## Skipping PreStage Enrollment Settings
 
