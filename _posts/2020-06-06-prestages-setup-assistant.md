@@ -55,4 +55,6 @@ Again, that's not the end of the world, but hopefully Apple will fix the problem
 
 Let me know in the comments or in Slack (and let Apple and your MDM provider know) if you have encountered this issue with other MDM providers.
 
+**UPDATE:** Aaron Polley has written a post which details how you can use undocumented MDM parameters to skip Setup Assistant panes at all times, including on computers that cannot be enrolled to MDM using DEP! Read the post here: [macOS Setup Assistant Preferences (Skip Screens)](https://www.aarondavidpolley.com/macos-setup-assistant-preferences-skip-screens/).
+
 {% include urls.md %}
