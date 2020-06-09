@@ -29,7 +29,9 @@ This option, along with the `--agreetolicense` option, is required to run the `s
 
 A problem was reported to me by my colleague Anver Housseini while running my [erase-install] tool to reinstall macOS. The `startosinstall` command quit without starting the install, with the following output:
 
-    The files "Preboot" and "com.apple.TimeMachine.localsnapshots" are located on the root of Macintosh HD. If you continue installing, these files will be deleted. To continue anyway, add --allowremoval.
+    The files "Preboot" and "com.apple.TimeMachine.localsnapshots" are located on the root
+    of Macintosh HD. If you continue installing, these files will be deleted. To continue
+    anyway, add --allowremoval.
 
 The `--allowremoval` was unknown to me, so I asked the MacAdmins Slack collective brain about it. Nobody seems to have come across it, but some digging by `@nstrauss` found this and one other additional undocumented option:
 
@@ -41,9 +43,12 @@ The `--allowremoval` was unknown to me, so I asked the MacAdmins Slack collectiv
 
 As shown above, this option seems to be a way to force-clear some files on the system disk that otherwise cause the command to halt. The possible error messages are as follows:
 
-    The file "%s" is located on the root of %s. If you continue installing, this file will be deleted. To continue anyway, add --allowremoval.
-    The files "%s" and "%s" are located on the root of %s. If you continue installing, these files will be deleted. To continue anyway, add --allowremoval.
-    The file "%s" and %lu others are located on the root of %s. If you continue installing, these files will be deleted. To continue anyway, add --allowremoval.
+    The file "%s" is located on the root of %s. If you continue installing, this file will
+    be deleted. To continue anyway, add --allowremoval.
+    The files "%s" and "%s" are located on the root of %s. If you continue installing,
+    these files will be deleted. To continue anyway, add --allowremoval.
+    The file "%s" and %lu others are located on the root of %s. If you continue installing,
+    these files will be deleted. To continue anyway, add --allowremoval.
 
 So, one or multiple files can cause the command to halt. I don't know what the possible files would be, but local snapshots appear to be one such object. I tried to reproduce the error by creating a local snapshot on a T1 MacBook Pro running 10.15.4, but it didn't cause the command to halt or print an error.
 
