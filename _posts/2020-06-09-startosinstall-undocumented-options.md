@@ -31,11 +31,11 @@ A problem was reported to me by my colleague Anver Housseini while running my [e
 
     The files "Preboot" and "com.apple.TimeMachine.localsnapshots" are located on the root of Macintosh HD. If you continue installing, these files will be deleted. To continue anyway, add --allowremoval.
 
-The `--allowremoval` was unknown to me, so I asked the MacAdmins Slack collective brain about it. Nobody seems to have come across it, but some digging by `@nstrauss` found this and one other additional undocumented options:
+The `--allowremoval` was unknown to me, so I asked the MacAdmins Slack collective brain about it. Nobody seems to have come across it, but some digging by `@nstrauss` found this and one other additional undocumented option:
 
     --bridgeos-pkg
 
-`@bp` was ble to determine that both these options have been present in all public versions of macOS 10.15.
+`@bp` was able to determine that both these options have been present in all public versions of macOS 10.15.
 
 ## allowremoval
 
