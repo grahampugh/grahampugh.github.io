@@ -4,7 +4,7 @@ title: "Undocumented options in the startosinstall command"
 comments: true
 ---
 
-Since OS X 10.11, OS X / macOS installer applications have had the `startosinstall` command line tool bundled in it. My [presentation at the Texas Apple Admins Virtual Meetup](2020-05-05-texas-apple-admins-presentation.md) last month went into the history of the command, and the available command line options.
+Since OS X 10.11, OS X / macOS installer applications have had the `startosinstall` command line tool bundled in it. My [presentation at the Texas Apple Admins Virtual Meetup](https://grahamrpugh.com/2020/05/05/texas-apple-admins-presentation.html) last month went into the history of the command, and the available command line options.
 
 The currently documented options are as follows:
 
