@@ -162,7 +162,7 @@ job prod tst:
 
 No need for me to show all four jobs, just to say that the things that change are just the job name, the stage, and the tag. I set `allow_failure: True` in all jobs as I want all the autopkg recipes to run regardless of whether any recipes fail.
 
-In the **CI/CD** section of your repo, there is a useful `CI Lint` button in the top right corner. Post your `.gitlab-ci.yml` file contenst here to ensure that you've written acceptable YAML.
+In the **CI/CD** section of your repo, there is a useful `CI Lint` button in the top right corner. Post your `.gitlab-ci.yml` file contests here to ensure that you've written acceptable YAML.
 
 ## Running, monitoring and scheduling pipelines
 
