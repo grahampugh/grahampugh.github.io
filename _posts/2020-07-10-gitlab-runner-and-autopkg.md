@@ -174,7 +174,7 @@ However, in the **Jobs** section you can see if your jobs failed. All mine are f
 
 ![gitlab-jobs](/assets/images/gitlab-jobs.png)
 
-To see the output of a job, click on the "Running", "Passed" or "Failed" button. Here you see the live output as well as the job's duration. yYu can view the raw output with the "Complete Raw" link. There is also a Cancel button.
+To see the output of a job, click on the "Running", "Passed" or "Failed" button. Here you see the live output as well as the job's duration. You can view the raw output with the "Complete Raw" link. There is also a Cancel button.
 
 ![gitlab-output](/assets/images/gitlab-output.png)
 
