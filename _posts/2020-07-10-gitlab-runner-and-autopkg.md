@@ -18,7 +18,7 @@ Fed up with the saga, I started looking for an alternative. I could just use a L
 
 Then, this conversation in the `#ci` MacAdmins Slack channel:
 
-![Slack conversation about Gitlab agents](/assets/images/slack-convo-gitlab-Runner.png)
+![Slack conversation about Gitlab agents](/assets/images/slack-convo-gitlab-runner.png)
 
 So, thanks to `@macjustice` I've now transferred to using GitLab. For now, I use it in a similar way to how I was using Jenkins, but with the advantage that I do not have to maintain the GitLab service which is already offered as a supported service by my organisation.
 
