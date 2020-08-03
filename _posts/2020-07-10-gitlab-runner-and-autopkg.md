@@ -24,6 +24,8 @@ So, thanks to `@macjustice` I've now transferred to using GitLab. For now, I use
 
 This is a very basic guide to how I set up my two Mac minis with the agents, and what it does. Please take it as a journal rather than Best Practice! I knew nothing about this a week ago.
 
+**UPDATE:** [Allister Banks][@allister] kindly pointed out [Rick Heil][@refreshingapathy]'s [2017 blog post][3] and a section of his [PSU MacAdmins 2017 talk][4] about setting up AutoPkg with GitLab CI, which uses a more advanced workflow than I present here.
+
 ## Setting up a GitLab repo for the Runner service
 
 A [GitLab Runner][2] service comprises of a repo on the GitLab server containing a command file, and any other files that might be needed in the run. An agent, or "Runner", is installed on computers on which the commands should be run. The command file is in YAML format, is called `.gitlab-ci.yml`, and should live in the root of a repository.
@@ -188,5 +190,7 @@ GitLab Runners only run on Mac when the user that registered the Runner is logge
 
 [1]: https://github.com/rtrouton/autopkg-conductor
 [2]: https://docs.gitlab.com/runner/
+[3]: https://rickheil.com/autopkg-on-gitlab-ci/
+[4]: https://rickheil.com/munkipsu2017/
 
 {% include urls.md %}
