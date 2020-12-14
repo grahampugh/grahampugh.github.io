@@ -30,7 +30,7 @@ Due to this gap in my understanding of the python-jss code, various niggling pro
 
 Furthermore, my organisation were never able to use any existing `.jss` recipes from the community, because the "standard" set by those recipes does not meet my organisation's rather specific needs (we need an exclusion smart group in our test recipes). Ultimately, I needed more flexibility than JSSImporter or any single processor could provide.
 
-# Back to basics
+# Back to basics
 
 The process of importing a package into Jamf Pro is actually not one, but many possible steps:
 
