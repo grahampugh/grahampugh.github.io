@@ -8,7 +8,7 @@ To get Adobe Creative Cloud Desktop application to work on an Apple Silicon devi
 
 The current version of Adobe Creative Cloud that is downloadable from [Adobe's admin console](https://adminconsole.adobe.com) (if you have access) at the time of writing is `5.3.2.471`.
 
-The instructions at Adobe's page ["Deploy packages to Apple Silicon devices"][1] give instructions on how to patch the downloadad and unzipped meta-package. This bascially involves removing an `InstallationCheck` file and adding a folder of stuff downloadable from the link named `ASU_5.3.5`. Then you can deploy the package by your usual means.
+The instructions at Adobe's page ["Deploy packages to Apple Silicon devices"][1] give instructions on how to patch the downloaded and unzipped meta-package. This involves removing an `InstallationCheck` file and adding a folder of stuff downloadable from the link named `ASU_5.3.5`. Then you can deploy the package by your usual means.
 
 When you install this package on a Mac running Big Sur with Intel processor, sure enough, you get version `5.3.2.471`.
 
@@ -20,9 +20,9 @@ However, if you install the _very same package_ on a Mac with Apple Silicon proc
 
 ## Scoping the Adobe Creative Cloud package in Jamf Pro
 
-If, like me, you create ongoing policies in Jamf to install or offer in Self Service a given version of a desired app if it isn't already installed, you will have to take the multiple versions into account. You could create a complicated set of criteria where Architecture is `x86` and Application Version is `5.3.2.471`, **OR** Architecture is `arm64` and Application Version is `5.3.5.518`. Or you could create two different policies.
+If, like me, you create ongoing policies in Jamf to install or offer in Self Service a given version of a desired app if it isn't already installed, you will have to take the multiple versions into account. You could create a complicated set of criteria where Architecture is `x86` and Application Version is `5.3.2.471`, **OR** Architecture is `arm64` and Application Version is `5.3.5.518`. Or you could create two different policies and smart groups for each architecture.
 
-Or, if you make use of William Smith's ["Match Version Number or Higher.bash"][2] script, or my `VersionRegexGenerator` AutoPkg processor (see my [previous post][3], you can use the generated regex for `5.3.2.471` (quoted below) as an Application Version "matches regex" value:
+Or, if you make use of William Smith's ["Match Version Number or Higher.bash"][2] script, or my `VersionRegexGenerator` AutoPkg processor (see my [previous post][3]), you can use the generated regex for `5.3.2.471` (quoted below) as an Application Version "matches regex" value:
 
     ^(\d{2,}.*|[6-9].*|5\.\d{2,}.*|5\.[4-9].*|5\.3\.\d{2,}.*|5\.3\.[3-9].*|5\.3\.2\.\d{4,}.*|5\.3\.2\.[5-9]\d{2,}.*|5\.3\.2\.4[8-9]\d{1,}.*|5\.3\.2\.47[2-9].*|5\.3\.2\.471.*)$
 
