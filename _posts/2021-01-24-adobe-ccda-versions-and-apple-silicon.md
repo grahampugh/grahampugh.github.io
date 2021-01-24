@@ -4,7 +4,7 @@ title: "When a single Adobe package can have two versions depending on architect
 comments: true
 ---
 
-To get Adobe Creative Cloud Desktop application to work on an Apple Silicon device, Adobe have provided a patch for their latest installers.
+To get Adobe Creative Cloud Desktop application to work on an Apple Silicon Mac, Adobe have provided a patch for their latest installers.
 
 The current version of Adobe Creative Cloud that is downloadable from [Adobe's admin console](https://adminconsole.adobe.com) (if you have access) at the time of writing is `5.3.2.471`.
 
