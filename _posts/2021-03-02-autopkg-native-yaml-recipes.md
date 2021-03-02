@@ -4,13 +4,13 @@ title: "YAML-formatted AutoPkg recipes can now be run natively without conversio
 comments: true
 ---
 
-Back in 2018, I published a blog post about how you can write AutoPkg recipes in `yaml` format, and convert them to `plist`-format to run them. See [Writing AutoPkg recipes and other plist-formatted files in yaml][1]. I've been writing all my recipes in `yaml` format asince then.
+Back in 2018, I published a blog post about how you can write AutoPkg recipes in `yaml` format, and convert them to `plist`-format to run them. See [Writing AutoPkg recipes and other plist-formatted files in yaml][1]. I've been writing all my recipes in `yaml` format since then.
 
 `plist` and `yaml` are both serialization standards. They both handle arrays, dictionaries, lists etc., and both can be directly imported as python data objects.
 
-I'm very happy to say that thanks to a lot of work in particular from Elliot Jordan ([@homebysix]), AutoPkg version 2.3, released today, now supports YAML-formatted recipes natively.
+I'm very happy to say that thanks to a lot of work in particular from Elliot Jordan ([@homebysix]), AutoPkg version 2.3, released today, now supports `yaml`-formatted recipes natively.
 
-Taken from my post in 2018, here is a typical recipe in YAML format:
+Taken from my post in 2018, here is a typical recipe in `yaml` format:
 
 ```yaml
 Description: Downloads the latest version of KNIME and creates a package.
@@ -28,7 +28,7 @@ Process:
       pkg_path: "%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg"
 ```
 
-So much easier to read, even without colour coding. Easier to type. Easier to auto-generate.
+So much easier to read, even without colour coding. Easier to type. Easier to auto-generate. Easier to parse.
 
 ## Can I start writing all my recipes in YAML format?
 
