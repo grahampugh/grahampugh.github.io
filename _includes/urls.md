@@ -15,6 +15,7 @@
 [@yohan]: https://yohan460.github.io
 [@allister]: https://twitter.com/sacrilicious
 [@refreshingapathy]: https://rickheil.com
+[@homebysix]: https://twitter.com/homebysix
 [atom]: https://atom.io/
 [atom packages: git-plus]: https://atom.io/packages/git-plus
 [atom packages: minimap]: https://atom.io/packages/minimap
@@ -54,6 +55,7 @@
 [jekyll]: http://jekyllrb.com/
 [jnuc]: https://www.jamf.com/events/jamf-nation-user-conference/
 [jssimporter]: https://github.com/jssimporter/JSSImporter
+[jamfuploader]: https://github.com/grahampugh/jamf-upload
 [jss-in-a-box]: https://github.com/franton/JSS-In-A-Box
 [jss-config-in-a-box]: https://github.com/franton/JSS-Config-In-A-Box
 [jss_helper]: https://github.com/jssimporter/jss_helper
