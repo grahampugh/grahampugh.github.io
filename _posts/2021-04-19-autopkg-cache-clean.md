@@ -6,7 +6,7 @@ comments: true
 
 The longer you use [AutoPkg] without cleaning up the Cache folder, the more cruft you're going to get. Much of the cruft is older downloads and any packages generated.
 
-Depending on your setup, you may be able to just delete the entire Cache folder periodically. In our setup, we cannot do that as we require the latest package and the recipe receipts to be kept in the Cache for further use. Additionally, we would rather keep the latest download so that comparisons with previous runs can be done to prevent re-download.
+Depending on your setup, you may be able to just delete the entire Cache folder periodically, or even after every run. In our setup, we cannot do that as we require the latest packages and recipe receipts to be kept in the Cache for further use by other recipes. Additionally, we would rather keep the latest downloads so that comparisons with previous runs can be done to prevent re-download.
 
 Prompted by a full system drive on one of my AutoPkg runners, I've finally got around to writing a rough-and-ready script to do the cleanup. The script will keep a specified number of packages in the root of each directory in the `RECIPE_CACHE_DIR`, defaulting to the 2 most recent, and a specified number of files in the `downloads` folder within each cache directory, again defaulting to the 2 most recent.
 
