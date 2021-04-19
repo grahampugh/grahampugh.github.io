@@ -4,7 +4,7 @@ title: "A script to clean up your AutoPkg Cache folder"
 comments: true
 ---
 
-The longer you use AutoPkg without cleaning up the Cache folder, the more cruft you're going to get. Much of the cruft is older downloads and any packages generated.
+The longer you use [AutoPkg] without cleaning up the Cache folder, the more cruft you're going to get. Much of the cruft is older downloads and any packages generated.
 
 Depending on your setup, you may be able to just delete the entire Cache folder periodically. In our setup, we cannot do that as we require the latest package and the recipe receipts to be kept in the Cache for further use. Additionally, we would rather keep the latest download so that comparisons with previous runs can be done to prevent re-download.
 
