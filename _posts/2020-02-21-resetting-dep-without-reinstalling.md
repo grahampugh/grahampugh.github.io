@@ -1,8 +1,10 @@
 ---
 layout: post
-title:  "Resetting Device Enrollment cache without reinstalling macOS"
+title: "Resetting Device Enrollment cache without reinstalling macOS"
 comments: true
 ---
+
+**UPDATE: This method does not work on macOS Big Sur. It can only be used on Catalina and older**
 
 When a freshly built or rebuilt Mac gets to the "country choice" screen as part of Setup Assistant, and is connected to a network, the device checks in with Apple to see if it is assigned to be enrolled to an MDM service using Automated Device Enrollment (what we used to call DEP). If you forget to assign the device to the correct MDM service before getting to this point, it can be difficult to get it to enroll to the service you intended without reinstalling the OS once again.
 
@@ -26,19 +28,19 @@ Boot into Single User Mode using `Cmd-S`.
 
 1. On a Mac running Catalina or greater, run the following commands:
 
-    ```bash
-    mount -uw /System/Volumes/Data
-    touch /var/db/.RunLanguageChooserToo
-    reboot
-    ```
+   ```bash
+   mount -uw /System/Volumes/Data
+   touch /var/db/.RunLanguageChooserToo
+   reboot
+   ```
 
 2. On a Mac running Mojave or earlier, run the following commands, replacing the volume name if your system volume is not named `Macintosh HD`:
 
-    ```bash
-    mount -uw /
-    touch /Volumes/Macintosh\ HD/var/db/.RunLanguageChooserToo
-    reboot
-    ```
+   ```bash
+   mount -uw /
+   touch /Volumes/Macintosh\ HD/var/db/.RunLanguageChooserToo
+   reboot
+   ```
 
 Upon restarting, you should see the "language chooser" screen.
 
