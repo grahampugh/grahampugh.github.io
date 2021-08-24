@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Munki-Enroll tweaked: Leverage DeployStudio's 'Computer Information' fields to customise Munki builds"
+title: "Munki-Enroll tweaked: Leverage DeployStudio's 'Computer Information' fields to customise Munki builds"
 comments: true
 ---
 
-[Munki-Enroll] is a useful tool to use when installing the Munki tools on Mac clients. It enables the automated creation of unique client manifests, which makes it easy to change the group manifests of a client remotely at any time using tools like [`manifestutil`][manifestutil], [MunkiAdmin] or [MunkiWebAdmin], utilising the `included_manifest` key in Munki manifests.
+[Munki-Enroll] is a useful tool to use when installing the Munki tools on Mac clients. It enables the automated creation of unique client manifests, which makes it easy to change the group manifests of a client remotely at any time using tools like [`manifestutil`][manifestutil], [MunkiAdmin] or [MunkiWebAdmin], utilising the `included_manifest` key in Munki manifests.
 
 I have tweaked Munki-Enroll in order to leverage a feature of [DeployStudio] called **Computer Information fields**. These are four text fields available in the **Hostname** workflow page.
 
 ![img-1]
 
-The contents of these fields are actually written to a preference file on the host computer at `/Library/Preferences/com.apple.RemoteDesktop`, with key names `Text1`, `Text2`, `Text3`, `Text4`. If you are using [Imagr] instead of DeployStudio, you could easily script the use of these fields with commands such as:
+The contents of these fields are actually written to a preference file on the host computer at `/Library/Preferences/com.apple.RemoteDesktop`, with key names `Text1`, `Text2`, `Text3`, `Text4`. If you are using [Imagr] instead of DeployStudio, you could easily script the use of these fields with commands such as:
 
 {% highlight bash %}
 sudo defaults write /Library/Preferences/com.apple.RemoteDesktop Text1 "Some text"
@@ -27,17 +27,17 @@ COMPFIELD4=`defaults read /Library/Preferences/com.apple.RemoteDesktop Text4`
 
 One could just write the manifest names one wished to include in the client manifest directly into these fields, and pass them to munki-enroll. In my case, I wished to use shortcuts to make inputting quicker, so I added some processing to the script so interpret shortcuts (`COMPFIELD1`-`COMPFIELD4`) and output manifest names (`IDENTIFIER1`-`IDENTIFIER4`):
 
-Field | Shortcut | Munki manifest   | Function 
-------|----------|------------------|----------------------------------------------------------------------
-#1    | empty    | _cg_ru           | Default package set for Regular Users
-      | ZA - ZF  | _cg_za - _cg_zf  | Zone (area) specific packages, including local admin user creation
-      | OA       | _cg_zd_oa        | Zone D Student Laptop build (Open Access)
-#2    | empty    | _cg_ru           | Default package set (if #1 is set to ZA-ZF)
-      | AD       | _cg_ad           | Join to Active Directory (desktop build)
-      | ADL      | _cg_ad_eduroam   | Join to Active Directory and add managed wifi profile (laptop build)
-      | AO       | _cg_all_optional | "Light touch" all-optional build 
-#3    | empty    | -                | Do not encrypt
-      | FV       | _cg_encrypt      | Encrypt the Mac using Crypt
+| Field   | Shortcut          | Munki manifest                                                       | Function                                    |
+| ------- | ----------------- | -------------------------------------------------------------------- | ------------------------------------------- |
+| #1      | empty             | \_cg_ru                                                              | Default package set for Regular Users       |
+| ZA - ZF | \_cg_za - \_cg_zf | Zone (area) specific packages, including local admin user creation   |
+| OA      | \_cg_zd_oa        | Zone D Student Laptop build (Open Access)                            |
+| #2      | empty             | \_cg_ru                                                              | Default package set (if #1 is set to ZA-ZF) |
+| AD      | \_cg_ad           | Join to Active Directory (desktop build)                             |
+| ADL     | \_cg_ad_eduroam   | Join to Active Directory and add managed wifi profile (laptop build) |
+| AO      | \_cg_all_optional | "Light touch" all-optional build                                     |
+| #3      | empty             | -                                                                    | Do not encrypt                              |
+| FV      | \_cg_encrypt      | Encrypt the Mac using Crypt                                          |
 
 I'm not using the fourth **Computer Information** field at this time. Of course, your organisation's manifests are very unlikely to be the same, but I hope this gives you an idea of the flexibility that can be gained using the **Computer Information** fields with Munki-Enroll. I also use the contents of **Computer Information field 1** in my Munki AD-binding package to determine the Active Directory Organisational Unit.
 
@@ -50,33 +50,34 @@ $MUNKI_REPO_URL/munki-enroll/enroll.php
 
 Note that this is a `POST` command - a change from the default munki-enroll which uses the less-secure `GET` method.
 
-The Munki-Enroll script (`enroll.php`) has been tweaked to accept each identifier and add them as `included_manifests` to the client manifest:
+The Munki-Enroll script (`enroll.php`) has been tweaked to accept each identifier and add them as `included_manifests` to the client manifest:
 {% highlight php %}
-    // Add parent manifest to included_manifests to achieve waterfall effect
-    $dict-&gt;add( 'included_manifests', $array = new CFArray() );
-    if ( $identifier1 != "" )
-        {
-            $array-&gt;add( new CFString( $identifier1 ) );
-        }
-    if ( $identifier2 != "" )
-        {
-            $array-&gt;add( new CFString( $identifier2 ) );
-        }
-    if ( $identifier3 != "" )
-        {
-            $array-&gt;add( new CFString( $identifier3 ) );
-        }
-    if ( $identifier4 != "" )
-        {
-            $array-&gt;add( new CFString( $identifier4 ) );
-        }
+// Add parent manifest to included_manifests to achieve waterfall effect
+$dict-&gt;add( 'included_manifests', $array = new CFArray() );
+if ( $identifier1 != "" )
+{
+$array-&gt;add( new CFString( $identifier1 ) );
+}
+if ( $identifier2 != "" )
+{
+$array-&gt;add( new CFString( $identifier2 ) );
+}
+if ( $identifier3 != "" )
+{
+$array-&gt;add( new CFString( $identifier3 ) );
+}
+if ( $identifier4 != "" )
+{
+$array-&gt;add( new CFString( $identifier4 ) );
+}
 {% endhighlight %}
 
-Take a look at my tweaked version of Munki-Enroll [here][Munki-Enroll].
+Take a look at my tweaked version of Munki-Enroll [here][munki-enroll].
 
 The full `enroll.php` script:
 
 {% highlight php %}
+
 <?php
 require_once( 'cfpropertylist-1.1.2/CFPropertyList.php' );
 // Default catalog
@@ -136,14 +137,16 @@ else
     echo "\tIncluded Manifest(s): " . $identifier1 . " " . $identifier2 . " " . $identifier3 . " " . $identifier4 . "\n";
         
 ?>
+
 {% endhighlight %}
 
-The full `munki-enroll.sh` script:
+The full `munki-enroll.sh` script:
 
 {% highlight bash %}
-#!/bin/bash 
+#!/bin/bash
 
 # The Munki Repo URL
+
 MUNKI_REPO_URL="http://your.munki.server"
 
 COMPFIELD1=`defaults read /Library/Preferences/com.apple.RemoteDesktop Text1`
@@ -152,59 +155,59 @@ COMPFIELD3=`defaults read /Library/Preferences/com.apple.RemoteDesktop Text3`
 
 #COMPFIELD1: Zone splits
 if [ "$COMPFIELD1" = "ZA" ]; then
-	IDENTIFIER1="_cg_za"
+IDENTIFIER1="\_cg_za"
 elif [ "$COMPFIELD1" = "ZB" ]; then
-	IDENTIFIER1="_cg_zb"
+IDENTIFIER1="\_cg_zb"
 elif [ "$COMPFIELD1" = "ZC" ]; then
-	IDENTIFIER1="_cg_zc"
+IDENTIFIER1="\_cg_zc"
 elif [ "$COMPFIELD1" = "ZD" ]; then
-	IDENTIFIER1="_cg_zd"
+IDENTIFIER1="\_cg_zd"
 elif [ "$COMPFIELD1" = "ZE" ]; then
-	IDENTIFIER1="_cg_ze"
+IDENTIFIER1="\_cg_ze"
 elif [ "$COMPFIELD1" = "ZF" ]; then
-	IDENTIFIER1="_cg_zf"
+IDENTIFIER1="\_cg_zf"
 elif [ "$COMPFIELD1" = "ES" ]; then
-	IDENTIFIER1="_cg_zd_oa_earthsci"
+IDENTIFIER1="\_cg_zd_oa_earthsci"
 else
-	IDENTIFIER1="_cg_ru"
+IDENTIFIER1="\_cg_ru"
 fi
 
 #COMPFIELD2: AD stuff
 if [ "$COMPFIELD2" = "AD" ]; then
-	if [ "$IDENTIFIER1" == "_cg_ru" ]; then
-		IDENTIFIER1="_cg_ru_ad"
-	else
-		IDENTIFIER2="_cg_ru_ad"
-	fi
-elif  [ "$COMPFIELD2" = "ADL" ]; then
-	if [ "$IDENTIFIER1" == "_cg_ru" ]; then
-		IDENTIFIER1="_cg_ru_eduroam"
-	else
-		IDENTIFIER2="_cg_ru_eduroam"
-	fi
-elif  [ "$COMPFIELD2" = "AO" ]; then
-	if [ "$IDENTIFIER1" == "_cg_ru" ]; then
-		IDENTIFIER1="_cg_all_optional"
-	else
-		IDENTIFIER2="_cg_all_optional"
-	fi
+if [ "$IDENTIFIER1" == "_cg_ru" ]; then
+IDENTIFIER1="\_cg_ru_ad"
 else
-	if [ "$IDENTIFIER1" != "_cg_ru" ]; then
-		IDENTIFIER2="_cg_ru"
-	else
-		IDENTIFIER2=""
-	
-	fi
+IDENTIFIER2="\_cg_ru_ad"
+fi
+elif [ "$COMPFIELD2" = "ADL" ]; then
+if [ "$IDENTIFIER1" == "_cg_ru" ]; then
+IDENTIFIER1="\_cg_ru_eduroam"
+else
+IDENTIFIER2="\_cg_ru_eduroam"
+fi
+elif [ "$COMPFIELD2" = "AO" ]; then
+if [ "$IDENTIFIER1" == "_cg_ru" ]; then
+IDENTIFIER1="\_cg_all_optional"
+else
+IDENTIFIER2="\_cg_all_optional"
+fi
+else
+if [ "$IDENTIFIER1" != "_cg_ru" ]; then
+IDENTIFIER2="\_cg_ru"
+else
+IDENTIFIER2=""
+fi
 fi
 
 #COMPFIELD3: FileVault
 if [ "$COMPFIELD3" = "FV" ]; then
-	IDENTIFIER3="_cg_encrypt"
+IDENTIFIER3="\_cg_encrypt"
 else
-	IDENTIFIER3=""
+IDENTIFIER3=""
 fi
 
 # Output for the benefit of the DeployStudio log
+
 echo "Compfield1: $COMPFIELD1"
 echo "Compfield2: $COMPFIELD2"
 echo "Compfield3: $COMPFIELD3"
@@ -213,45 +216,52 @@ echo "Identifer2 is $IDENTIFIER2"
 echo "Identifer3 is $IDENTIFIER3"
 
 # This setting determines whether Munki should handle Apple Software Updates
+
 # Set to false if you want Munki to only deal with third party software
+
 defaults write /Library/Preferences/ManagedInstalls InstallAppleSoftwareUpdates -bool True
 
 # The existence of this file prods Munki to check for and install updates upon startup
+
 # If you'd rather your clients waited for an hour or so, comment this out
+
 touch /Users/Shared/.com.googlecode.munki.checkandinstallatstartup
 
 # Figures out the computer's local host name - don't use ComputerName as this may contain bad characters
+
 LOCALHOSTNAME=$( scutil --get LocalHostName );
 
 # Checks whether it is a valid IT tag - you can choose your own naming scheme
+
 ITTAGCHECK=`echo $LOCALHOSTNAME | grep -iE '\<IT[0-9]{6}\>'`
-if [ $? -ne 0 ]; then
-	# Sets the LocalHostName to the serial number if we don't have an IT tag name
-	SERIAL=`/usr/sbin/system_profiler SPHardwareDataType | /usr/bin/awk '/Serial\ Number\ \(system\)/ {print $NF}'`
-	scutil --set LocalHostName "$SERIAL"
+if [ $? -ne 0 ]; then # Sets the LocalHostName to the serial number if we don't have an IT tag name
+SERIAL=`/usr/sbin/system_profiler SPHardwareDataType | /usr/bin/awk '/Serial\ Number\ \(system\)/ {print $NF}'`
+scutil --set LocalHostName "$SERIAL"
 	LOCALHOSTNAME="$SERIAL"
 fi
 
 # set the ClientIdentifier to "client-LOCALHOSTNAME
+
 defaults write /Library/Preferences/ManagedInstalls ClientIdentifier "client-$LOCALHOSTNAME"
 
 # Sets the URL to the Munki Repository
+
 defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL "$MUNKI_REPO_URL"
 
 # Leave this unless you have put your munki-enroll script somewhere unusual
+
 SUBMITURL="$MUNKI_REPO_URL/munki-enroll/enroll.php"
 
 # Application paths
+
 CURL="/usr/bin/curl"
 
 $CURL --max-time 5 --data \
 	"hostname=$LOCALHOSTNAME&identifier1=$IDENTIFIER1&identifier2=$IDENTIFIER2&identifier3=$IDENTIFIER3" \
-    $SUBMITURL
- 	 
+ $SUBMITURL
 exit 0
 {% endhighlight %}
 
 [img-1]: /assets/images/munki-enroll-1.png
 
 {% include urls.md %}
-
