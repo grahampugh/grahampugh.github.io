@@ -60,7 +60,7 @@ To assign VPP licenses, click **Edit** again, go to **Managed Distribution**, an
 
 That's it! Now you have the iOS app available in Self Service for installation on your Apple Silicon Mac.
 
-![Self Service](/assets/images/MAS-iOS-8.png)
+![Self Service](/assets/images/MAS-iOS-SelfService.png)
 
 ## Bugs
 
