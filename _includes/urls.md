@@ -55,7 +55,7 @@
 [jekyll]: http://jekyllrb.com/
 [jnuc]: https://www.jamf.com/events/jamf-nation-user-conference/
 [jssimporter]: https://github.com/jssimporter/JSSImporter
-[jamfuploader]: https://github.com/grahampugh/jamf-upload
+[jamfuploader]: https://github.com/grahampugh/jamf-upload/wiki/JamfUploader-AutoPkg-Processors
 [jss-in-a-box]: https://github.com/franton/JSS-In-A-Box
 [jss-config-in-a-box]: https://github.com/franton/JSS-Config-In-A-Box
 [jss_helper]: https://github.com/jssimporter/jss_helper
@@ -97,6 +97,7 @@
 [textwrangler]: http://www.barebones.com/products/textwrangler/
 [the luggage]: https://github.com/unixorn/luggage
 [vagrant]: https://www.vagrantup.com
+[version-regex-generator]: https://github.com/autopkg/grahampugh-recipes/blob/main/CommonProcessors/VersionRegexGenerator.py
 [virtualbox]: https://www.virtualbox.org
 [vmware fusion]: http://www.vmware.com/products/fusion
 [wordpress.com]: https://www.wordpress.com
