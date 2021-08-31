@@ -30,7 +30,7 @@ The script has various options, including:
 
 > Note: If no existing override is found, it will make one. This shouldn't be common, but if you are maintaining a single recipe list that is used on multiple AutoPkg servers, it will help you stay in sync. Additionally, you can add the `--pull` parameter and any parent repos that are missing will be added to your repo list.
 
-For a full set of options, run `autopkg-update-trust-info-recipe-list.sh --help`.
+For a full set of options, run `/path/to/autopkg-update-trust-info-recipe-list.sh --help`.
 
 ## Conclusion
 
