@@ -20,13 +20,13 @@ To update trust information on a recipe list, simply run the script with the pat
 
 The script has various options, including:
 
--   To add verbosity to the verification output, add `-v` or `-vv`. The `-vv` option is very useful, as it shows you the git diff of any changed recipe files or shared processors.
+- To add verbosity to the verification output, add `-v` or `-vv`. The `-vv` option is very useful, as it shows you the git diff of any changed recipe files or shared processors.
 
--   To run through the recipe list and verify which recipes are trusted, but not actually update the trust, use the `--verify-only` parameter. This should be used as a safety net before blindly updating trust on the list. If you don't already have another system in place to monitor the trust of your recipes, then I recommend that you run this first, with `-vv` set, so that you can see the differences in each recipe and mitigate any that are unconnected to the known update of a shared processor.
+- To run through the recipe list and verify which recipes are trusted, but not actually update the trust, use the `--verify-only` parameter. This should be used as a safety net before blindly updating trust on the list. If you don't already have another system in place to monitor the trust of your recipes, then I recommend that you run this first, with `-vv` set, so that you can see the differences in each recipe and mitigate any that are unconnected to the known update of a shared processor.
 
--   To set the format of the override, use the `--format` parameter with either the `plist` or `yaml` value. The default is `yaml`.
+- To set the format of the override, use the `--format` parameter with either the `plist` or `yaml` value. The default is `yaml`.
 
--   To force new overrides rather than update the existing one, use the `--force` option. I would not recommend this option unless you are maintaining your own recipes and have to make changes to the `Input` lists in a whole bunch of them at the same time (because `autopkg --update-trust-info` does not update the `Input` list of your override).
+- To force new overrides rather than update the existing one, use the `--force` option. I would not recommend this option unless you are maintaining your own recipes and have to make changes to the `Input` lists in a whole bunch of them at the same time (because `autopkg --update-trust-info` does not update the `Input` list of your override).
 
 > Note: If no existing override is found, it will make one. This shouldn't be common, but if you are maintaining a single recipe list that is used on multiple AutoPkg servers, it will help you stay in sync. Additionally, you can add the `--pull` parameter and any parent repos that are missing will be added to your repo list.
 

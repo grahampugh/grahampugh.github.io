@@ -12,9 +12,9 @@ Sample of links to be included in blog post:
 
 ## New to AutoPkg?
 
--   [AutoPkg 2020 - MacSysAdmin presentation Greg Neagle](https://managingosx.wordpress.com/2019/10/02/autopkg-2020-macsysadmin-2019-links/)
--   [Writing AutoPkg Recipes - EveryWorld workshop by Anthony](https://maclabs.jazzace.ca/2020/11/26/autopkg-workshop.html)
--   [Jamf and AutoPkg - JNUC presentation by Graham](https://grahamrpugh.com/2019/11/14/jamf-and-autopkg-jnuc2019-session.html)
+- [AutoPkg 2020 - MacSysAdmin presentation Greg Neagle](https://managingosx.wordpress.com/2019/10/02/autopkg-2020-macsysadmin-2019-links/)
+- [Writing AutoPkg Recipes - EveryWorld workshop by Anthony](https://maclabs.jazzace.ca/2020/11/26/autopkg-workshop.html)
+- [Jamf and AutoPkg - JNUC presentation by Graham](https://grahamrpugh.com/2019/11/14/jamf-and-autopkg-jnuc2019-session.html)
 
 ## JamfUploader
 
