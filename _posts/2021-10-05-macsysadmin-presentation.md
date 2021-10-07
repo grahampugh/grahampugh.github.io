@@ -4,7 +4,7 @@ title: "MacSysAdmin Presentation - 07 October 2021 - AutoPkg Everything"
 comments: true
 ---
 
-On 07 October 2021, I am proud to be presenting at the [MacSysAdmin Online Conerernce 2021](https://www.macsysadmin.se/program/program.html), on **AutoPkg Everything - How ETH Zürich extends the AutoPkg framework beyond uploading packages**.
+Today, 07 October 2021, I am proud to be presenting at the [MacSysAdmin Online Conerernce 2021](https://www.macsysadmin.se/program/program.html), on **AutoPkg Everything - How ETH Zürich extends the AutoPkg framework beyond uploading packages**.
 
 This post contains links to everything that was presented that is publicly available.
 
