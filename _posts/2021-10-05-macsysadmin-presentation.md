@@ -10,7 +10,9 @@ This post contains links to everything that was presented that is publicly avail
 
 ## Video and Slides
 
-I will link to the video and slides once they are published.
+A [PDF containing all slides (with transitions) and presenter notes is available here](/assets/documents/MacSysAdmin_2021_Presentation_GPugh.pdf)
+
+![Presentation slide 1](/assets/images/AutoPkg-everything-slides-cover.png)
 
 ## Jamf Policy Design
 
