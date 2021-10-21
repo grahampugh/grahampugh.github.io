@@ -46,7 +46,7 @@ If you are brand new to AutoPkg, please check out these resources to get you sta
 
 - The examples shown in the presentation are:
   - [All-Computers-Policy-Template.xml](https://github.com/jazzace/JNUC2021/blob/main/All-Computers-Policy-Template.xml) (Slide 34)
-  - [FirefoxSignedPkg.jamf.recipe](https://github.com/jazzace/JNUC2021/blob/main/FirefoxSignedPkg.jamf.recipe) (Slides 22, 23)
+  - [FirefoxSignedPkg.jamf.recipe.yaml](https://github.com/jazzace/JNUC2021/blob/main/FirefoxSignedPkg.jamf.recipe.yaml) (Slides 35)
 
 ### Putting multiple processors into a single recipe
 
