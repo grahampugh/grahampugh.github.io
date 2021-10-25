@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "macOS Monterey - MDM custom preference to disable python 2 depraction popups"
+title:  "macOS Monterey - MDM custom preference to disable python 2 deprecation popups"
 comments: true
 ---
 
