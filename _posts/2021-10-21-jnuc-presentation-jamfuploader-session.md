@@ -12,7 +12,9 @@ This blog post is intended to provide links to everything presented in the slide
 
 A PDF of the slides and presenter notes is available [here](/assets/documents/JNUC2021-JamfUploader-presentation.pdf).
 
-The video is available to watch until the end of November for registered attendees, and I will update this post when the video is posted onto YouTube after that period.
+The video is now available to view here:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/srz4U9RHliQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## New to AutoPkg?
 
