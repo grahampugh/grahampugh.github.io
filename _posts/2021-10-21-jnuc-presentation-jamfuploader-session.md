@@ -6,8 +6,6 @@ comments: true
 
 On 21 October 2021, I proudly co-presented with [Anthony Reimer][1] at the [Virtual Jamf Nation User Conference 2021][2], on the topic **Making package uploading and deployment easier with JamfUploader**.
 
-![JNUC2021-image-of-first-slide](/assets/images/JNUC2021-JamfUploader-frontcover.png)
-
 This blog post is intended to provide links to everything presented in the slides.
 
 A PDF of the slides and presenter notes is available [here](/assets/documents/JNUC2021-JamfUploader-presentation.pdf).
