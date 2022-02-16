@@ -40,6 +40,7 @@
 [docker]: https://www.docker.com
 [erase-install]: https://github.com/grahampugh/erase-install
 [git]: https://git-scm.com
+[gkluoe/git2jss]: https://github.com/gkluoe/git2jss
 [github]: https://github.com
 [gitlab]: https://about.gitlab.com
 [hello-it]: https://github.com/ygini/Hello-IT
@@ -52,6 +53,7 @@
 [jamf pro api documentation]: https://developer.jamf.com/index
 [jamf pro logo]: /assets/images/JamfPro-Logo.png
 [jamf pro patch management]: https://www.jamf.com/products/jamf-pro/patch-management/
+[jctl]: https://github.com/univ-of-utah-marriott-library-apple/jctl
 [jekyll]: http://jekyllrb.com/
 [jnuc]: https://www.jamf.com/events/jamf-nation-user-conference/
 [jssimporter]: https://github.com/jssimporter/JSSImporter
@@ -85,9 +87,12 @@
 [munkireport-php]: https://github.com/munkireport/munkireport-php
 [munkiwebadmin]: https://github.com/munki/munkiwebadmin
 [mwa2]: https://github.com/munki/mwa2
+[patchbot]: https://github.com/Honestpuck/PatchBot
 [plist-yaml-plist]: https://github.com/grahampugh/plist-yaml-plist
+[prune]: https://github.com/BIG-RAT/Prune
 [puppet]: https://puppetlabs.com
 [reposado]: https://github.com/wdas/reposado
+[ruby-jss]: https://github.com/PixarAnimationStudios/ruby-jss
 [run-munki-run]: https://github.com/grahampugh/run-munki-run
 [sal]: https://github.com/salopensource/sal
 [simian]: https://github.com/google/simian/wiki/SimianAtAGlance
