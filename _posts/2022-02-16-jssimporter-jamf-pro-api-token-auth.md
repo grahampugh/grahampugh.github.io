@@ -38,11 +38,11 @@ Jamf have stated that Basic Authentication will be removed as an option "later t
 
 The answer to this question is probably "no", or at least not by me. My organisation took the decision to end its reliance on JSSImporter, and we are fully migrating our [AutoPkg recipes][1] to JamfUploader.
 
-## What about Spruce, python-jss, jss_helper and JSSRecipeGenerator?
+## What about Spruce, python-jss, jss_helper and JSSRecipeCreator?
 
 The answer is unfortunately the same "no" for these tools.
 
-Actually, JSSImporter, [Spruce], [jss_helper] and [JSSRecipeGenerator] all depend on the underlying code of [python-jss]. This is awesome but complicated python code that I inherited from [@shea_craig] after they moved on to pastures un-Jamfed. Unfortunately, my initial efforts at fixing this have proved that I don't understand the code well enough to make the necessary changes myself.
+Actually, JSSImporter, [Spruce][2], [jss_helper] and [JSSRecipeCreator][3] all depend on the underlying code of [python-jss][4]. This is awesome but complicated python code that I inherited from [@shea_craig] after they moved on to pastures un-Jamfed. Unfortunately, my initial efforts at fixing this have proved that I don't understand the code well enough to make the necessary changes myself.
 
 Please note that there may be other tools that currently rely on python-jss. I know that [gkluoe/git2jss] is one.
 
@@ -57,5 +57,8 @@ Other tools have since been developed that replace and improve on the functional
 Yes you can! If you are able and motivated to dedicate resources and python expertise to make the necessary changes to the code in order for JSSImporter (specifically, the underlying tool, python-jss) to function with token-based authentication, please get in touch - I'd be happy to hand over the JSSImporter GitHub organisation to a new maintainer.
 
 [1]: https://github.com/eth-its/autopkg-mac-recipes-yaml
+[2]: https://github.com/jssimporter/Spruce
+[3]: https://github.com/jssimporter/JSSRecipeCreator
+[4]: https://github.com/jssimporter/python-jss
 
 {% include urls.md %}
