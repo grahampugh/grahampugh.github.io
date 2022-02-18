@@ -49,7 +49,7 @@ Please note that there may be other tools that currently rely on python-jss. I k
 Other tools have since been developed that replace and improve on the functionality of all these tools. Please check them out:
 
 * [Prune] - a GUI-based tool for cleaning up your Jamf, a capable successor to Spruce.
-* [jctl] - A python-based tool based on an underlying framework called python-janf for interactiing with the Jamf Pro APIs, which should do most if not all of what python-jss and jss_helper could do.
+* [jctl] - A python-based tool based on an underlying framework called [python-jamf][5] for interactiing with the Jamf Pro APIs, which should do most if not all of what python-jss and jss_helper could do.
 * [ruby-jss] - A ruby-based framework that can also do pretty much all of what python-jss could do.
 
 ## Can I fix it?
@@ -60,5 +60,6 @@ Yes you can! If you are able and motivated to dedicate resources and python expe
 [2]: https://github.com/jssimporter/Spruce
 [3]: https://github.com/jssimporter/JSSRecipeCreator
 [4]: https://github.com/jssimporter/python-jss
+[5]: https://github.com/univ-of-utah-marriott-library-apple/python-jamf
 
 {% include urls.md %}
