@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sponsoring me
+title: Sponsoring
 ---
 
 <img align="right" style="margin-right:25px;margin-bottom:50px" src="/assets/images/ukraine-heart.png" width="300" />I do not accept sponsorship for my work for the Mac community. I am very lucky to be well paid for my work.
