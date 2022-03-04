@@ -7,7 +7,7 @@ title: About Graham R Pugh
 
 Born in Lancashire, England, I am currently living and working as a Mac Systems Specialist at a University in Switzerland.  I work as part of a team that is currently developing a multi-instance Jamf Pro solution for our institute's federated IT support structure.
 
-Although I studied as a Geochemist, and qualified with a [Ph.D. studying Glacial Meltwater Chemistry][1] at [Aberystwyth University][3] ([read it here!][2]), I realised my true talents lay in IT support, and have been lucky to work supporting the computing needs of teachers and academics in scientific institutions pretty much ever since, first as a Science Technician and Web Designer for a [high school in Somerset, England][4], later as an IT Technician, Subject Specialist and [Mac Specialist at Bristol University][5].
+Although I studied Geochemistry, and qualified with a [Ph.D. studying Glacial Meltwater Chemistry][1] at [Aberystwyth University][3] ([read it here!][2]), I didn't succeed in that career, but soon realised my true talents lay in IT support. I have been lucky to work supporting the computing needs of teachers and academics in scientific institutions pretty much ever since, first as an IT Technician and Web Designer for a [high school in Somerset, England][4], later as an IT Support Technician, Subject Specialist and [Mac Specialist at Bristol University][5].
 
 At other times, I like to run, hike, cycle, climb/boulder, learn German, and travel the world.
 
