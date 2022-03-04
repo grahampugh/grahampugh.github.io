@@ -14,17 +14,17 @@ GitHub provides [free hosting for Jekyll blogs][1].
 
 Here, I describe the steps I took to create this blog:
 
--   [Registering with GitHub][github]
--   Creating a special repository for the blog
--   Installing Jekyll on my computer
--   Cloning a template blog
--   Editing the template to create the blog identity
--   Editing `index.html`, and `archive.html`
--   Adding Pagination
--   Adding comment fields and counts to posts using Disqus
--   Adding Google Analytics
--   Creating the first blog post
--   Migrating posts from Wordpress
+- [Registering with GitHub][github]
+- Creating a special repository for the blog
+- Installing Jekyll on my computer
+- Cloning a template blog
+- Editing the template to create the blog identity
+- Editing `index.html`, and `archive.html`
+- Adding Pagination
+- Adding comment fields and counts to posts using Disqus
+- Adding Google Analytics
+- Creating the first blog post
+- Migrating posts from Wordpress
 
 # Creating a special repository for the blog
 
@@ -85,7 +85,7 @@ I moved the original list-style page to [`archives/index.html`]({{ site.baseurl 
 Pagination enables you to restrict the number of posts visible on the first page of an index or list page, so that the page doesn't get too long. To set this up, install as follows:
 
 ```bash
-$ gem install jekyll-paginate
+gem install jekyll-paginate
 ```
 
 In the [`_config.yml`]({{ site.src_url }}/\_config.yml) file, append the following lines:
@@ -229,7 +229,7 @@ Any website can be registered for [Google Analytics](http://www.google.com/analy
 Once the repository is set up, it can be pushed to the repository as with any git repository:
 
 ```bash
-$ git push --set-upstream origin master
+git push --set-upstream origin master
 ```
 
 The site should now be visible at your site URL.
@@ -239,8 +239,8 @@ The site should now be visible at your site URL.
 This is the first new post using Jekyll. In the spirit of Git versioning, rather than working on a file in the `_drafts` folder, I first checkout a new Git branch, and then create the post in the place where it will ultimately reside. The file for the post is created by making a copy of [`_drafts/template.md`]({{ site.src_url }}/\_drafts/template.md):
 
 ```bash
-$ git checkout -b 2015-11-23-blogging-with-jekyll
-$ cp _drafts/template.md _posts/2015-11-23-blogging-with-jekyll.md
+git checkout -b 2015-11-23-blogging-with-jekyll
+cp _drafts/template.md _posts/2015-11-23-blogging-with-jekyll.md
 ```
 
 I edited the title in the [YAML front matter][5] to `Blogging with Jekyll`, and created the content.
@@ -250,7 +250,7 @@ The [kramdown version of Markdown used with Jekyll][kramdown] does not include t
 To preview the blog, run the following command:
 
 ```bash
-$ jekyll serve
+jekyll serve
 ```
 
 Then browse to `http://localhost:4000/` and navigate to the new post.
