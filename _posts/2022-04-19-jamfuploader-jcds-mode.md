@@ -4,7 +4,7 @@ title: "JamfPackageUploader 'JCDS-mode' for a new way to upload packages to Jamf
 comments: true
 ---
 
-Tools like [JSSImporter] and [JamfUploader] traditionally use an undocumented API endpoint for uploading packages to Cloud Distribution Points. Various people figured this `dbfileupload` endpoint out by reverse-engineering the package upload done by the Jamf Admin (formerly Casper Admin) application. 
+Tools such as the [JSSImporter] and [JamfUploader] AutoPkg processors traditionally use an undocumented API endpoint for uploading packages to Jamf Cloud Distribution Points. Various people figured this `dbfileupload` endpoint out by reverse-engineering the package upload done by the Jamf Admin (formerly Casper Admin) application. 
 
 For those interested, a `curl` request to this endpoint looks like this:
 
@@ -20,7 +20,7 @@ curl --request POST \
     "https://my.jamf.instance/dbfileupload"
 ```
 
-To replace an existing package, one can set the OBJECT_ID to an existing package.
+To replace an existing package, one can set the `OBJECT_ID` value to the ID of an existing package.
 
 This endpoint, although not supported by Jamf, works well for people using an external cloud provider for their fileshare distribution point. However, for those with a Jamf Cloud Distribution Point, it has been proving less reliable, especially recently.
 
