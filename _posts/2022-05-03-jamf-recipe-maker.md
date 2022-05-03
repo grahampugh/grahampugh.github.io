@@ -36,13 +36,13 @@ We just need to write these to a file in the correct structure of a `.jamf` reci
 
 We can use `JamfRecipeMaker` as a pre-processor (or post-processor if you like) when running a `.jss` recipe. There are 2 main options:
 
-1. Create a recipe that just uploads a package and nothing else. This is functionally equivalent to `.jss-upload` recipes as was described in [Daz Wallace][@dazwallace]'s 2019 blog post [Using Autopkg for package Uploads to Jamf Cloud only][4]. These types of `.jamf` recipe do not need any information from a `.jss` recipe (we only need `ParentRecipe` and `NAME`), so can be run directly from a `.pkg` recipe.
+(1) Create a recipe that just uploads a package and nothing else. This is functionally equivalent to `.jss-upload` recipes as was described in [Daz Wallace][@dazwallace]'s 2019 blog post [Using Autopkg for package Uploads to Jamf Cloud only][4]. These types of `.jamf` recipe do not need any information from a `.jss` recipe (we only need `ParentRecipe` and `NAME`), so can be run directly from a `.pkg` recipe.
 
 ```bash
 autopkg run Flux.pkg --pre com.github.grahampugh.recipes.commonprocessors/JamfRecipeMaker
 ```
 
-2. Create a recipe that uploads a package, smart group and policy. This is functionally equivalent to standard `.jss` recipes.
+(2) Create a recipe that uploads a package, smart group and policy. This is functionally equivalent to standard `.jss` recipes.
 
 ```bash
     autopkg run Flux.jss --key make_policy=True --post com.github.grahampugh.recipes.commonprocessors/JamfRecipeMaker
