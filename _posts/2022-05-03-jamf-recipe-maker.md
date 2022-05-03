@@ -16,7 +16,7 @@ JamfUploader is designed to be more flexible than JSSImporter, so a straight con
 
 However, if your policy and smart group design is compatible with the "standard" design devised for `.jss` recipes, you may be contemplating having to write a bunch of `.jamf` recipe that do exactly the same thing as those existing "standard" `.jss` recipes that are currently available in the [jss-recipes][1] and various other repos, notably [rtrouton-recipes][2].
 
-To help achieve this, I've developed a novel idea - a new AutoPkg processor that read from a `.jss` recipe while running it, and writes a new `.jamf` recipe. 
+To help achieve this, I've developed a novel idea - a new AutoPkg processor that reads from a `.jss` recipe while running it, and writes a new `.jamf` recipe. 
 
 **Say hello to `JamfRecipeMaker`.**
 
