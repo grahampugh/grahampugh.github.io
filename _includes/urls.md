@@ -16,6 +16,7 @@
 [@allister]: https://twitter.com/sacrilicious
 [@refreshingapathy]: https://rickheil.com
 [@homebysix]: https://twitter.com/homebysix
+[@dazwallace]: https://twitter.com/dazwallace
 [atom]: https://atom.io/
 [atom packages: git-plus]: https://atom.io/packages/git-plus
 [atom packages: minimap]: https://atom.io/packages/minimap
@@ -91,6 +92,7 @@
 [plist-yaml-plist]: https://github.com/grahampugh/plist-yaml-plist
 [prune]: https://github.com/BIG-RAT/Prune
 [puppet]: https://puppetlabs.com
+[recipe robot]: https://github.com/homebysix/recipe-robot
 [reposado]: https://github.com/wdas/reposado
 [ruby-jss]: https://github.com/PixarAnimationStudios/ruby-jss
 [run-munki-run]: https://github.com/grahampugh/run-munki-run
