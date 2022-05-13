@@ -121,7 +121,7 @@ However, let's look at a `.jamf` recipe that functionally equivalent to a "stand
 
 Here is the `.jamf` recipe in both `yaml` and `plist` formats:
 
-{% gist 951681d659213a840b2a61547935f8d3 %}
+{% gist 2460ba2a59fb30efdfe467d6f10f8d70 %}
 
 {% gist d70fff8935f656ac242ec4163d5be706 %}
 
