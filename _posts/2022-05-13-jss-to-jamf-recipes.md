@@ -29,7 +29,7 @@ Standard JSS recipes were designed to perform the following, where `Firefox` may
 4. Create a category for the policy if it doesn't already exist.
 5. Create or update a Self Service policy named `Install Latest Firefox`, which includes the uploaded package, is scoped to the `Firefox-update-smart` smart group, and is assigned a category and an icon (the icon is uploaded).
 
-Some applications require additional items to work properly such as a script or and extension attribute, but here we will assume the application doesn't need these.
+Some applications require additional items to work properly such as a script and/or an extension attribute, but here we will assume the application doesn't need these.
 
 To achieve this, each recipe requires access to additional files:
 
@@ -142,7 +142,7 @@ The Input array is not much changed from the `.jss` recipe:
   UPDATE_PREDICATE: "pkg_uploaded == False"
 ```
 
-In this example, I have included extra keys for `POLICY_NAME` and `SELF_SERVICE_DISPLAY_NAME` so that these can be overridden (in contract, those names are fixed in the `.jss` recipe), and I've included the `TESTING_GROUP_NAME` which is hard-coded as `Testing` in the SmartGroupTemplate of the `.jss` recipes, so that this can also be overridden.
+In this example, I have included extra keys for `POLICY_NAME` and `SELF_SERVICE_DISPLAY_NAME` so that these can be overridden (in contrast, those names are fixed in the `.jss` recipe), and I've included the `TESTING_GROUP_NAME` which is hard-coded as `Testing` in the SmartGroupTemplate of the `.jss` recipes, so that this can also be overridden.
 
 The only other extra key is `UPDATE_PREDICATE`. More on that below.
 
@@ -215,7 +215,7 @@ I hope this has given a good explanation of the small differences between the ou
 
 If you want to see more examples, I have converted most of the recipes from the old [jss-recipes][1] repo into `.jamf` format, available in my own recipe repo at [grahampugh-recipes/Jamf_Recipes][2].
 
-You can also easily convert any "standard" `.jss` recipes from other repos, or ones that you wrote yourself, using the [JamfRecipeMaker] tool that I introduced in [a previous blog post](/2022/05/03/jamf-recipe-maker.html).
+You can also easily convert any "standard" `.jss` recipes from other repos, or ones that you wrote yourself, using the [JamfRecipeMaker][3] tool that I introduced in [a previous blog post](/2022/05/03/jamf-recipe-maker.html).
 
 [1]: https://github.com/autopkg/jss-recipes
 [2]: https://github.com/autopkg/grahampugh-recipes/Jamf_Recipes
