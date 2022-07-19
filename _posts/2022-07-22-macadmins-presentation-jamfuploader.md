@@ -37,6 +37,6 @@ Here are all the links that were shown in the slides:
 [1]: https://maclabs.jazzace.ca/2022/07/14/jamfuploader.html
 [2]: https://macadmins.psu.edu
 [3]: /2021/10/21/jnuc-presentation-jamfuploader-session.html
-[1]: https://maclabs.jazzace.ca/2022/07/14/jamfuploader.html
+[4]: https://maclabs.jazzace.ca/2022/07/14/jamfuploader.html
 
 {% include urls.md %}
