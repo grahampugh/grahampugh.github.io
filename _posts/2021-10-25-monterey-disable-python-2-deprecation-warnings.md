@@ -4,6 +4,8 @@ title:  "macOS Monterey - MDM custom preference to disable python 2 deprecation 
 comments: true
 ---
 
+> **UPDATE:** As python2 was removed entirely from macOS with the release of Monterey 12.4, these instructions are only valid for machines running 12.0-12.3.1.
+
 If you run a Python script on a Mac running macOS Monterey, or even if there is a `python` command in a shell script that you run on Monterey, you will get a popup warning, something like this:
 
 ![python2 warning](/assets/images/JamfNeedsToBeUpdated.png)
