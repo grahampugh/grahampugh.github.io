@@ -14,7 +14,7 @@ Anthony has written a blog post including links to the slides [here][4].
 
 The video of the presentation is also now available to view here:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/srz4U9RHliQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3DcoVdVyXtU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Links in the slides
 
