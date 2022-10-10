@@ -18,9 +18,15 @@ Even with this workaround, there are problems with using the `softwareupdate --l
 
 ## Do we need to run the softwareupdate command at all?
 
-If you take a look in the `install.log` log file on a Mac, `softwareupdated` appears to run pretty often. I don't have data to say exactly how often, but it appears to be several times a day, without any manual prompting. In that case, is it really worth polling the software catalogs again in your own script or tool?
+The `softwareupdate` command is just one of the possible ways that a Mac may check for updates.
 
-We can access the data from the checks that are made by the machine by consulting the preferences file `com.apple.SoftwareUpdate.plist`. I first learned this from the people at Root3 who wrote the excellent [Support][1] app.
+In the Software Update settings, a user can check the box "Automatically keep my Mac up to date". Or, in the "Advanced" section, they could just check the box "Check for updates". When this is checked, a LaunchDaemon is set that checks for updates every six hours. These settings can of course also be managed via MDM.
+
+Additionally, your MDM software may also include methods for checking for software updates via MDM commands. And, of course, users may make manual checks of their own accord.
+
+One can imagine that if you have competing management, security and "nudging" tools all running uncoordinated software update checks, potentially simulteneuosly, this could cause the issues that have been reported. Perhaps the "Check for updates" box is enough?
+
+We can access the data from the software update checks by consulting the preferences file `com.apple.SoftwareUpdate.plist`. I first learned this from the people at Root3 who wrote the excellent [Support][1] app.
 
 If we consult the `RecommendedUpdates` key, we get a list of available updates. :
 
@@ -71,8 +77,9 @@ Notice also that the macOS update shown in the first example above is labelled w
 
 ## Conclusion
 
-While there may be reasons to run `softwareupdate --list` in scripts, consider whether it is necessary for your tool. Consulting the existing record on the computer may give you the result you need, is less work for your tool, and a reduction in the frequency of polling Apple's software catalog servers could improve the performance of that service.
+Consider whether it is necessary to run `softwareupdate --list` in your tool, especially if you have MDM software, and can push a configuration profile to enable automatic software update checks. Consulting the existing record on the computer is likely to give you the result you need, is less work for your tool, and a reduction in the frequency of polling Apple's software catalog servers could improve the performance of that service. If you are developing a tool that you intend to share, perhaps it is worth giving the tool's users the option of whether the `softwareupdate --list` command is used, or just consulting the plist instead?
 
+> **Amendments:** This post was updated 2022-10-10 with the information about the six hourly check that is made when the "Check for updates" box is checked.
 
 [1]: https://github.com/root3nl/supportapp
 
