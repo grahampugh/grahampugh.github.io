@@ -32,7 +32,8 @@ Secondly, it identifies the path where assets are stored. The default path is `/
 ---
 
 <details>
-<summary>  
+<summary>
+
 Click to show an example preferences file</summary>
 
     ```xml
@@ -86,7 +87,8 @@ In my usage with Jamf Pro, the package is added to a "thin provisioning" profile
 ---
 
 <details>
-<summary>  
+<summary>
+
 Click to show a section of an example script</summary>
 
 ~~~ bash
