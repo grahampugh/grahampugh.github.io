@@ -81,7 +81,13 @@ In the example above, the `packageName` key shows the name `Microsoft_Word_2016`
 
 Once configured, run `./build_pkg.sh` to package up SplashBuddy.
 
-In my usage with Jamf Pro, the package is added to a "thin provisioning" profile, which is triggered by Jamf Pro's `Enrollment Complete` trigger. The profile also contains a script which calls all the profiles that install the various applications that SplashBuddy will look for. A section of an example script is shown below:
+In my usage with Jamf Pro, the package is added to a "thin provisioning" profile, which is triggered by Jamf Pro's `Enrollment Complete` trigger. The profile also contains a script which calls all the profiles that install the various applications that SplashBuddy will look for.
+
+---
+
+<details>
+<summary>  
+Click to show a section of an example script</summary>
 
 ~~~ bash
 #!/bin/bash
@@ -122,6 +128,11 @@ rm -rf '/Library/Application Support/SplashBuddy'
 rm /Library/Preferences/io.fti.SplashBuddy.plist
 rm /Library/LaunchAgents/io.fti.SplashBuddy.launch.plist
 ~~~
+
+
+</details>
+
+---
 
 **Note:** this post was updated October 8, 2017 from the original post of 10 November, 2016.
 
