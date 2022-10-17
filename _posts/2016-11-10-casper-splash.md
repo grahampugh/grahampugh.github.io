@@ -31,49 +31,48 @@ Secondly, it identifies the path where assets are stored. The default path is `/
 
 ---
 
-<details>
-<summary>
+<details><summary>Click to show an example preferences file</summary>
+<p>
 
-Click to show an example preferences file</summary>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>assetPath</key>
+    <string>/Library/Application Support/SplashBuddy</string>
+    <key>applicationsArray</key>
+    <array>
+        <dict>
+            <key>canContinue</key>
+            <false/>
+            <key>displayName</key>
+            <string>Microsoft Word 2016</string>
+            <key>description</key>
+            <string>Office application</string>
+            <key>iconRelativePath</key>
+            <string>icons/Microsoft Word.png</string>
+            <key>packageName</key>
+            <string>Microsoft_Word_2016</string>
+        </dict>
+        <dict>
+            <key>canContinue</key>
+            <true/>
+            <key>displayName</key>
+            <string>Microsoft Excel 2016</string>
+            <key>description</key>
+            <string>Office application</string>
+            <key>iconRelativePath</key>
+            <string>icons/Microsoft Excel.png</string>
+            <key>packageName</key>
+            <string>Microsoft_Excel_2016</string>
+        </dict>
+    </array>
+</dict>
+</plist>
+```
 
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-        <key>assetPath</key>
-        <string>/Library/Application Support/SplashBuddy</string>
-        <key>applicationsArray</key>
-        <array>
-            <dict>
-                <key>canContinue</key>
-                <false/>
-                <key>displayName</key>
-                <string>Microsoft Word 2016</string>
-                <key>description</key>
-                <string>Office application</string>
-                <key>iconRelativePath</key>
-                <string>icons/Microsoft Word.png</string>
-                <key>packageName</key>
-                <string>Microsoft_Word_2016</string>
-            </dict>
-            <dict>
-                <key>canContinue</key>
-                <true/>
-                <key>displayName</key>
-                <string>Microsoft Excel 2016</string>
-                <key>description</key>
-                <string>Office application</string>
-                <key>iconRelativePath</key>
-                <string>icons/Microsoft Excel.png</string>
-                <key>packageName</key>
-                <string>Microsoft_Excel_2016</string>
-            </dict>
-        </array>
-    </dict>
-    </plist>
-    ```
-
+</p>
 </details>
 
 ---
@@ -86,12 +85,10 @@ In my usage with Jamf Pro, the package is added to a "thin provisioning" profile
 
 ---
 
-<details>
-<summary>
+<details><summary>Click to show a section of an example script</summary>
+<p>
 
-Click to show a section of an example script</summary>
-
-~~~ bash
+```bash
 #!/bin/bash
 
 # identify logged-in user
@@ -129,9 +126,9 @@ fi
 rm -rf '/Library/Application Support/SplashBuddy'
 rm /Library/Preferences/io.fti.SplashBuddy.plist
 rm /Library/LaunchAgents/io.fti.SplashBuddy.launch.plist
-~~~
+```
 
-
+</p>
 </details>
 
 ---
