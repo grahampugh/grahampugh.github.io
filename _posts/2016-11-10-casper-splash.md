@@ -32,45 +32,46 @@ Secondly, it identifies the path where assets are stored. The default path is `/
 ---
 
 <details>
-<summary><b>Click to show an example preferences file</b></summary>
+<summary>  
+Click to show an example preferences file</summary>
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>assetPath</key>
-    <string>/Library/Application Support/SplashBuddy</string>
-    <key>applicationsArray</key>
-    <array>
-        <dict>
-            <key>canContinue</key>
-            <false/>
-            <key>displayName</key>
-            <string>Microsoft Word 2016</string>
-            <key>description</key>
-            <string>Office application</string>
-            <key>iconRelativePath</key>
-            <string>icons/Microsoft Word.png</string>
-            <key>packageName</key>
-            <string>Microsoft_Word_2016</string>
-        </dict>
-        <dict>
-            <key>canContinue</key>
-            <true/>
-            <key>displayName</key>
-            <string>Microsoft Excel 2016</string>
-            <key>description</key>
-            <string>Office application</string>
-            <key>iconRelativePath</key>
-            <string>icons/Microsoft Excel.png</string>
-            <key>packageName</key>
-            <string>Microsoft_Excel_2016</string>
-        </dict>
-    </array>
-</dict>
-</plist>
-```
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+        <key>assetPath</key>
+        <string>/Library/Application Support/SplashBuddy</string>
+        <key>applicationsArray</key>
+        <array>
+            <dict>
+                <key>canContinue</key>
+                <false/>
+                <key>displayName</key>
+                <string>Microsoft Word 2016</string>
+                <key>description</key>
+                <string>Office application</string>
+                <key>iconRelativePath</key>
+                <string>icons/Microsoft Word.png</string>
+                <key>packageName</key>
+                <string>Microsoft_Word_2016</string>
+            </dict>
+            <dict>
+                <key>canContinue</key>
+                <true/>
+                <key>displayName</key>
+                <string>Microsoft Excel 2016</string>
+                <key>description</key>
+                <string>Office application</string>
+                <key>iconRelativePath</key>
+                <string>icons/Microsoft Excel.png</string>
+                <key>packageName</key>
+                <string>Microsoft_Excel_2016</string>
+            </dict>
+        </array>
+    </dict>
+    </plist>
+    ```
 
 </details>
 
