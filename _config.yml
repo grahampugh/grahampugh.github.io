@@ -15,13 +15,15 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://grahampugh.github.io" # the base hostname & protocol for your site
 src_url: "https://github.com/grahampugh/grahampugh.github.io/blob/master"
 twitter_username: GrahamRPugh
-github_username:  grahampugh
+github_username: grahampugh
 author: grahampugh
 timezone: Europe/Zurich
 future: true
 
 # Build settings
 markdown: kramdown
+kramdown:
+  parse_block_html: true
 
 #pagination
 plugins:
