@@ -31,8 +31,7 @@ Secondly, it identifies the path where assets are stored. The default path is `/
 
 ---
 
-<details><summary makrdown='span'>Click to show an example preferences file</summary>
-<p>
+<details><summary markdown='span'>Click to show an example preferences file</summary>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -72,7 +71,6 @@ Secondly, it identifies the path where assets are stored. The default path is `/
 </plist>
 ```
 
-</p>
 </details>
 
 ---
@@ -85,8 +83,7 @@ In my usage with Jamf Pro, the package is added to a "thin provisioning" profile
 
 ---
 
-<details><summary makrdown='span'>Click to show a section of an example script</summary>
-<p>
+<details><summary markdown='span'>Click to show a section of an example script</summary>
 
 ```bash
 #!/bin/bash
@@ -128,7 +125,6 @@ rm /Library/Preferences/io.fti.SplashBuddy.plist
 rm /Library/LaunchAgents/io.fti.SplashBuddy.launch.plist
 ```
 
-</p>
 </details>
 
 ---
