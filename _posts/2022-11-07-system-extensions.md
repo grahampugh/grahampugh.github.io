@@ -44,7 +44,7 @@ This is a small annoyance that, for such workflows, cannot currently be solved. 
 
 ## Conclusion
 
-I don't think this behaviour is intuitive. It is also inconsistent with the output of the `systemextensionsctl list`. however, it was not accepted as a bug via the AppleCare ticket:
+I don't think this behaviour is intuitive. It is also inconsistent with the output of the `systemextensionsctl list`. However, it was not accepted as a bug via the AppleCare ticket:
 
 > As it stands today, the MDM configuration must be removed by removing the profile, and this is confirmed to be known and expected by product engineering.
 
