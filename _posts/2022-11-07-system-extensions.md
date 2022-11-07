@@ -40,7 +40,7 @@ Obviously this is only going to be an issue in circumstances where you need to a
 
 However, you may also encounter a particular software title with a poorly designed installer that bundles in a system extension which &mdash; depending on your installer choices &mdash; serves no purpose. This is the case with Cisco Secure Client (_née_ AnyConnect), where the extensions bundled with the installer  are not required by the VPN client (which is the only part we install), and have been known to cause problems when installed alongside other network extensions such as Sophos Anti-Virus or Microsoft Defender &mdash; not to mention causing confusion to users who have the VPN menu bar item show the duration of connection, which is hijacked by this non-functional content filter extension.
 
-This is a small annoyance that, for such workflows, cannot currently be solved. The Cisco Secure Client extension allow-list profile must be in place at all times, ready for the next update which will install those unnecessaty and disruptive extensions again.
+This is a small annoyance that, for such workflows, cannot currently be solved. The Cisco Secure Client extension allow-list profile must be in place at all times, ready for the next update which will install those unnecessary and disruptive extensions again.
 
 ## Conclusion
 
