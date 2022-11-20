@@ -23,7 +23,19 @@
             {% include icon-twitter.html username=site.twitter_username %}
           </li>
           {% endif %}
-        </ul>
+
+          {% if site.slack_username %}
+          <li>
+            {% include icon-slack.html username=site.slack_username %}
+          </li>
+          {% endif %}
+
+          {% if site.mastodon_username %}
+          <li>
+            {% include icon-mastodon.html username=site.mastodon_username %}
+          </li>
+          {% endif %}
+       </ul>
       </div>
 
       <div class="footer-col footer-col-3">
