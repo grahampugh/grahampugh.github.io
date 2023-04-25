@@ -8,9 +8,9 @@ Thanks to the excellent contribution of Henrik Engström (`@creation` on the [Ma
 
 Jamf Pro can accumulate packages quickly if you have a broad suite of applications to deploy, and when you've automated the upload of those packages with [AutoPkg] and [JamfUploader], it's easy not to notice them build up until you start to get disk space or performance issues.
 
-## Introducing JamfPackageUploader
+## Introducing JamfPackageCleaner
 
-`JamfPackageUploader` is a simple processor that can be used as a post-processor to run after a regular `.jamf` recipe. It checks the existing packages for names matching an assigned string and deletes the oldest packages based on ID, which is an indicator of how recent they were uploaded (ID always increases on Jamf, gaps are never infilled). You can define how many packages should be kept.
+`JamfPackageCleaner` is a simple processor that can be used as a post-processor to run after a regular `.jamf` recipe. It checks the existing packages for names matching an assigned string and deletes the oldest packages based on ID, which is an indicator of how recent they were uploaded (ID always increases on Jamf, gaps are never infilled). You can define how many packages should be kept.
 
 This is the simplest form of how you would run a recipe that would invoke the post-processor:
 
