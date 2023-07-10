@@ -33,7 +33,7 @@ Making your source code openly available online is good for a few reasons:
 - It gives you visibility in the field if you're trying to build a reputation.
 - It can help your organisation attract new employees in the Mac Admin field by highlighting that good work is happening there.
 - It helps other members of the community who might not yet have the skills you have gained.
-- Exposing your work might result in somebody else improving it or adding ideas you haven't thought of inmcluding.
+- Exposing your work might result in somebody else improving it or adding ideas you haven't thought of including.
 
 But what are the consequences? Is it going to generate too much work? Do you want the extra responsibility? And what happens if you don't want to continue maintaining it?
 
