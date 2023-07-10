@@ -57,6 +57,8 @@ Choose one of the licenses available during the repo creation process - best to 
 
 Create a `CHANGELOG.md` file and record any changes you make to the script in here by date. This helps you and other users keep track of changes you made (and why!).
 
+You may wish to create all these files into the `main` branch of the repo before publishing the first version of the script. You can then create a development branch while you work on the first version of the script. See below for more information about branches.
+
 ### Create a Wiki
 
 Enable the [Wiki][2] feature, and link to the Wiki's Home Page from your README file. Editing the wiki is easy to do online and is a little more feature-rich than just using a README file. Linking directly from the `README` gives clear instructions to first-time visitors where to look for instructions.
@@ -70,8 +72,6 @@ Don't be surprised that people don't always look for documentation before they a
 I've also found it to be a good idea to ask people to open a GitHub issue for any sort of bug or question that can't be answered immediately, otherwise it can be too hard to keep on top of it all.
 
 [GitHub Discussions][1] are also useful, because not everyone is in Slack. This is not enabled by default, but I would recommend that you enable these for your repo. This allows people to ask general questions about the project without the formality of reporting a bug or requesting a new feature.
-
-You may wish to create all these files into the `main` branch of the repo before publishing the first version of the script. You can then create a development branch while you work on the first version of the script. See below for more information about branches.
 
 ### Use Versions, Releases, and Tags
 
