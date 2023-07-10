@@ -155,7 +155,7 @@ Here's my TL;DR about making a code project public:
 - Expect more work than if you had not published the thing
 - You can mitigate that a bit by taking the time from the beginning to create good documentation
 - Make a Slack channel if you're starting to get questions about it.
-- Create FAQs as you answer questions - this can save you repeating yourself over and over.
+- Populate an F.A.Q. page as you answer questions - this can save you repeating yourself over and over.
 - Keep on top of any problems by encouraging people to record it in your GitHub repo.
 - Keep the code simple and readable, even if it might seem less efficient. This increases the chances that people will send you pull requests and answer their own questions.
 - The MacAdmins community is amazing. You can expect a lot of thanks and a lot of help. So don't be shy in sharing your code!
