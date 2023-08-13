@@ -127,7 +127,7 @@ else
 fi
 ```
 
-If we need to replace the package, we should delete it and then we can upload the new one. 
+If we need to replace the package, we should delete it and then we can upload the new one.
 
 ```bash
 curl --request DELETE \
@@ -177,7 +177,7 @@ s3_path=$(plutil -extract path raw "$curl_output_file")
 
 ## Step 5 - uploading the package to the JCDS
 
-To perform the upload, we need to interact with the Amazon S3 bucket directly. The easiest way to do this from a shell script is to install the [aws-cli][2] tool.
+To perform the upload, we need to interact with the Amazon S3 bucket directly. The easiest way to do this from a shell script is to install the [aws-cli][1] tool.
 
 Once that is installed, we can use the variables from the previous step to configure the aws tool and upload the package.
 
@@ -226,7 +226,6 @@ One thing I've noticed is that if you don't check whether there's an existing pa
 
 Good luck with your testing and let me know if you find any problems, or discover any refinements that could be made.
 
-[1]: https://github.com/brunerd/ljt
-[2]: https://aws.amazon.com/cli/
+[1]: https://aws.amazon.com/cli/
 
 {% include urls.md %}
