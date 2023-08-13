@@ -1,1 +1,1 @@
-This is the repository for the [On The Subject Of Macs](http://grahampugh.github.io) blog.
+This is the repository for Graham Pugh's [What The Mac?!](http://grahampugh.github.io) blog.

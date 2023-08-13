@@ -26,56 +26,66 @@ Secondly, it identifies the path where assets are stored. The default path is `/
 
 * Presentation files for the main window. These are stored in `Presentation.bundle`. This contains a folder named `Base.lproj` that should be renamed to `en.lproj` if you wish to serve the app to English language computers. Inside the `en.lproj` folder should the following assets:
 
-   * `index.html`: The main HTML page which occupies the main window of SplashBuddy.
-   * Any other assets such as images, style sheets, javascript files, other HTML files, YouTube videos etc., which can be linked using relative paths from `index.html`. The pictured example above uses a CSS file and the JPEG image of coffee.
+    - `index.html`: The main HTML page which occupies the main window of SplashBuddy.
+    - Any other assets such as images, style sheets, javascript files, other HTML files, YouTube videos etc., which can be linked using relative paths from `index.html`. The pictured example above uses a CSS file and the JPEG image of coffee.
 
-An example preferences file is shown below:
+---
 
-~~~ xml
+<details><summary markdown='span'>Click to show an example preferences file</summary>
+
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>assetPath</key>
-	<string>/Library/Application Support/SplashBuddy</string>
-	<key>applicationsArray</key>
-	<array>
-		<dict>
-			<key>canContinue</key>
-			<false/>
-			<key>displayName</key>
-			<string>Microsoft Word 2016</string>
-			<key>description</key>
-			<string>Office application</string>
-			<key>iconRelativePath</key>
-			<string>icons/Microsoft Word.png</string>
-			<key>packageName</key>
-			<string>Microsoft_Word_2016</string>
-		</dict>
-		<dict>
-			<key>canContinue</key>
-			<true/>
-			<key>displayName</key>
-			<string>Microsoft Excel 2016</string>
-			<key>description</key>
-			<string>Office application</string>
-			<key>iconRelativePath</key>
-			<string>icons/Microsoft Excel.png</string>
-			<key>packageName</key>
-			<string>Microsoft_Excel_2016</string>
-		</dict>
-	</array>
+    <key>assetPath</key>
+    <string>/Library/Application Support/SplashBuddy</string>
+    <key>applicationsArray</key>
+    <array>
+        <dict>
+            <key>canContinue</key>
+            <false/>
+            <key>displayName</key>
+            <string>Microsoft Word 2016</string>
+            <key>description</key>
+            <string>Office application</string>
+            <key>iconRelativePath</key>
+            <string>icons/Microsoft Word.png</string>
+            <key>packageName</key>
+            <string>Microsoft_Word_2016</string>
+        </dict>
+        <dict>
+            <key>canContinue</key>
+            <true/>
+            <key>displayName</key>
+            <string>Microsoft Excel 2016</string>
+            <key>description</key>
+            <string>Office application</string>
+            <key>iconRelativePath</key>
+            <string>icons/Microsoft Excel.png</string>
+            <key>packageName</key>
+            <string>Microsoft_Excel_2016</string>
+        </dict>
+    </array>
 </dict>
 </plist>
-~~~
+```
+
+</details>
+
+---
 
 In the example above, the `packageName` key shows the name `Microsoft_Word_2016`, which will therefore expect a pkg name of `Microsoft_Word_2016-XX.YY.ZZ.pkg` (the version number is not used by the app but one must exist).
 
 Once configured, run `./build_pkg.sh` to package up SplashBuddy.
 
-In my usage with Jamf Pro, the package is added to a "thin provisioning" profile, which is triggered by Jamf Pro's `Enrollment Complete` trigger. The profile also contains a script which calls all the profiles that install the various applications that SplashBuddy will look for. A section of an example script is shown below:
+In my usage with Jamf Pro, the package is added to a "thin provisioning" profile, which is triggered by Jamf Pro's `Enrollment Complete` trigger. The profile also contains a script which calls all the profiles that install the various applications that SplashBuddy will look for.
 
-~~~ bash
+---
+
+<details><summary markdown='span'>Click to show a section of an example script</summary>
+
+```bash
 #!/bin/bash
 
 # identify logged-in user
@@ -113,7 +123,11 @@ fi
 rm -rf '/Library/Application Support/SplashBuddy'
 rm /Library/Preferences/io.fti.SplashBuddy.plist
 rm /Library/LaunchAgents/io.fti.SplashBuddy.launch.plist
-~~~
+```
+
+</details>
+
+---
 
 **Note:** this post was updated October 8, 2017 from the original post of 10 November, 2016.
 

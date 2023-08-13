@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Buggy 802.1x authentications in OS X 10.10 Yosemite - UPDATE: Fixed with 10.10.1"
+title: "Buggy 802.1x authentications in OS X 10.10 Yosemite - UPDATE: Fixed with 10.10.1"
 comments: true
 ---
 
@@ -8,9 +8,9 @@ Reports from my organisation's Network Team, after consultation with Cisco, are 
 
 This can obviously play havoc with connections to central network resources, remote desktop applications and so on.
 
-The bug only manifests itself on 802.1x wireless networks, so can lead to mistaken diagnoses of problems with the 802.1x network.
+The bug only manifests itself on 802.1x wireless networks, so can lead to mistaken diagnoses of problems with the 802.1x network.
 
-Apple are apparently aware of the issue, but haven’t produced a fix yet.
+Apple are apparently aware of the issue, but haven't produced a fix yet.
 
 **UPDATE 2014-11-04:** Apple haven't fixed this yet, but have [provided a workaround][1], which involves editing the appropriate Keychain entry.
 
@@ -19,4 +19,3 @@ Apple are apparently aware of the issue, but haven’t produced a fix yet.
 [1]: http://support.apple.com/en-us/TS5258
 
 {% include urls.md %}
-
