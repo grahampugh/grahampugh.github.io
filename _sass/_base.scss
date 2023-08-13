@@ -46,6 +46,8 @@ img {
     max-width: 100%;
     vertical-align: middle;
     border-radius: 3px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 .header-image {
@@ -110,6 +112,34 @@ a {
     }
 }
 
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+    background-color: #efefef;
+    font-family: "monospace", Courier;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: $spacing-unit / 2;
+    overflow-x: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+
+    > code {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
 
 
 /**
@@ -117,11 +147,13 @@ a {
  */
 blockquote {
     color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    padding: $spacing-unit / 1.5;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 25px;
+    margin-bottom: 25px;
 
     > :last-child {
         margin-bottom: 0;
@@ -172,38 +204,12 @@ table th:first-child {
 }
 
 table thead {
-    background-color: #e0e0e0;
+    background-color: #efefef;
     color: #000;
     text-align: left;
     vertical-align: bottom;
 }
 
-
-/**
- * Code formatting
- */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: auto;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
 
 
 
@@ -258,4 +264,16 @@ pre {
             fill: $grey-color;
         }
     }
+}
+
+/**
+ * Details
+ */
+details {
+	padding-bottom: 20px;
+	color: grey;
+}
+
+summary {
+	font-weight: bold;
 }

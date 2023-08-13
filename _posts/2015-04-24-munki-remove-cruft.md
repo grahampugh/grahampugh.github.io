@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Munki: How to remove cruft"
+title: "Munki: How to remove cruft"
 comments: true
 ---
 
@@ -8,21 +8,19 @@ An issue with [Munki], especially if using [AutoPkg], is that you can quickly am
 
 Removing a package involves the following process:
 
-   * Locate the imported package and delete it
-   * Locate the associated pkginfo file and delete it
-   * `makecatalogs`
+-   Locate the imported package and delete it
+-   Locate the associated pkginfo file and delete it
+-   `makecatalogs`
 
 If you're organised, you'll know exactly where every package is in the subdirectory structure of your Munki repository. But the repository can get hard to navigate. In which folder does Autopkg put Java 8? To where did your colleague import SPSS?
 
-Use a GUI!
-=============
+# Use a GUI!
 
 One way of removing packages is using the [MunkiAdmin] application. Simply right- or ctrl-click on an item in the Packages list, and select Delete Package. MunkiAdmin offers to delete the package and associated `pkginfo` file, and potentially the icon.
 
 ![img-1]
 
-Command-line alternative?
-=============
+# Command-line alternative?
 
 If you don't wish to use MunkiAdmin, for instance if you are working remotely on a server via `ssh`, you may wish for an easy way to find and remove old packages using the command line. The munkitools don't include a tool for this task. So I wrote a script to find items in the Munki repository that match an input, list the items in order of filename (so that associated .pkg and .plist files are adjacent in the list), and offer to delete each one in term.
 
@@ -31,49 +29,58 @@ Pressing `y` deletes the item and moves on to the next item in the list. Pressin
 {% highlight bash %}
 #!/bin/bash
 
-### A script to search your Munki repo and offer to delete items. Use with care! 
+### A script to search your Munki repo and offer to delete items. Use with care!
+
 ### It will search all directories including pkgs, pkgsinfo and icons.
-###    Syntax: /path/to/munkirm -d <search-term>
-###    For example, /path/to/munkirm -d xcode
-### Search is case insensitive. 
+
+### Syntax: /path/to/munkirm -d <search-term>
+
+### For example, /path/to/munkirm -d xcode
+
+### Search is case insensitive.
+
 ### Options are y or Y to delete, n, N or anything else to skip, and q or Q to quit
+
 ### If any changes are made, `makecatalogs` is run
+
 ### Put munkirm in /usr/local/munki/ if you wish to run from all directories
 
 # Munki repo - change to match your path
+
 MUNKI_REPO=`defaults read ~/Library/Preferences/com.googlecode.munki.munkiimport.plist repo_path`
 
 # Introductions
+
 echo
 echo "----------------------------"
-echo "  MUNKI FILE REMOVAL TOOL"
+echo " MUNKI FILE REMOVAL TOOL"
 echo "----------------------------"
-echo "Usage:   munkirm -d <string>"
+echo "Usage: munkirm -d <string>"
 echo "<string> is case-insensitive"
 echo "part strings OK, e.g. goog"
 echo
 
 # First level
-while getopts ":d:" opt; do
-	# Check to see if munkiimport is configured
-	if [ -z ${MUNKI_REPO} ]; then
-		echo "### munkiimport not configured. Run  `munkiimport --configure`"
-		echo
-		exit 1
-	fi
 
-	# Check to see if the repository is mounted
-	if [ ! -d ${MUNKI_REPO} ]; then
-		echo "### Munki repository not mounted! Cannot continue"
-		echo
-		exit 1
-	fi
-	
-	case $opt in
+while getopts ":d:" opt; do # Check to see if munkiimport is configured
+if [ -z ${MUNKI_REPO} ]; then
+echo "### munkiimport not configured. Run `munkiimport --configure`"
+echo
+exit 1
+fi
+
+    # Check to see if the repository is mounted
+    if [ ! -d ${MUNKI_REPO} ]; then
+    	echo "### Munki repository not mounted! Cannot continue"
+    	echo
+    	exit 1
+    fi
+
+    case $opt in
     d)
     	# echo "-d was triggered, Parameter: $OPTARG" >&2
     	PKG="$OPTARG"
-    	
+
     	# write find results to temporary file
     	#find $MUNKI_REPO -type f -iname "*$PKG*" > /tmp/list.txt
     	find $MUNKI_REPO -type f -iname "*$PKG*" | awk -v FS=/ -v OFS=/ '{ print $NF,$0 }' | sort -n -t / | cut -f2- -d/ > /tmp/list.txt
@@ -86,66 +93,61 @@ while getopts ":d:" opt; do
       	echo "Option -$OPTARG requires an argument." >&2
       	exit 1
       	;;
-  	esac
+
+esac
 done
 
-if [ -s /tmp/list.txt ]; then
-	# Print the results first
-	echo
-	echo "Found these files:"
-	echo
-	cat /tmp/list.txt
-	echo
-	
-	# Now offer up each file for deletion
-	for file in `cat /tmp/list.txt`; do
-		read -p "Delete $file (y/n/q)?  " -n 1 input    
+if [ -s /tmp/list.txt ]; then # Print the results first
+echo
+echo "Found these files:"
+echo
+cat /tmp/list.txt
+echo # Now offer up each file for deletion
+for file in `cat /tmp/list.txt`; do
+read -p "Delete $file (y/n/q)?  " -n 1 input    
 		case $input in 
 			y|Y ) 	echo
 					rm -r $file 
 					echo "$file Deleted!"
-					echo
-					REMAKE=1
-					;;
-			q|Q ) echo
-			      echo "skipped to end"
-			      echo
-			      break
-			      ;;
-			* ) echo
-			    echo "skipped"
-			    echo
-			    ;;
-		esac
-	done
-else
-	# No match, therefore no file
-	echo "Files not found!"
-	echo
+echo
+REMAKE=1
+;;
+q|Q ) echo
+echo "skipped to end"
+echo
+break
+;; \* ) echo
+echo "skipped"
+echo
+;;
+esac
+done
+else # No match, therefore no file
+echo "Files not found!"
+echo
 fi
 
 rm /tmp/list.txt
 
-
 # Update the repo if required
-if [[ $REMAKE == 1 ]]; then
-	if hash makecatalogs 2>/dev/null; then
-		echo "### Catalogs have changed - running makecatalogs"
-		echo
-		/usr/local/munki/makecatalogs $MUNKI_REPO
-	else
-		echo "### Catalogs have changed but you don't have makecatalogs installed!"
-		echo "### Now run makecatalogs on a Mac with munkitools installed to effect the changes"
-		echo
-	fi
+
+if [[$REMAKE == 1]]; then
+if hash makecatalogs 2>/dev/null; then
+echo "### Catalogs have changed - running makecatalogs"
+echo
+/usr/local/munki/makecatalogs $MUNKI_REPO
 else
-	echo "### Catalogs have not changed. Exiting..."
-	echo
+echo "### Catalogs have changed but you don't have makecatalogs installed!"
+echo "### Now run makecatalogs on a Mac with munkitools installed to effect the changes"
+echo
+fi
+else
+echo "### Catalogs have not changed. Exiting..."
+echo
 fi
 
 exit 0
 {% endhighlight %}
-
 
 Make the script executable:
 
@@ -164,11 +166,12 @@ Example output:
 {% highlight bash %}
 $ /path/to/munkirm -d chrome
 
-----------------------------
-  MUNKI FILE REMOVAL TOOL
-----------------------------
-Usage:   munkirm -d 
- is case-insensitive
+---
+
+## MUNKI FILE REMOVAL TOOL
+
+Usage: munkirm -d
+is case-insensitive
 part strings OK, e.g. goog
 
 Found these files:
@@ -209,4 +212,3 @@ $ sudo cp /path/to/munkirm /usr/local/munki/
 [img-1]: /assets/images/munkirm-1.png
 
 {% include urls.md %}
-

@@ -7,21 +7,29 @@
 
 # Site settings
 title: >
-  Subject: Macs
+  What The Mac?!
 email: g.r.pugh@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  The rarely-updated blog of a Mac Support Specialist in Switzerland
+  Graham Pugh's rarely-updated blog about Mac Admin-related stuff.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://grahampugh.github.io" # the base hostname & protocol for your site
+url: "https://grahampugh.github.io" # the base hostname & protocol for your site
 src_url: "https://github.com/grahampugh/grahampugh.github.io/blob/master"
-twitter_username: GrahamRPugh
-github_username:  grahampugh
+# twitter_username: GrahamRPugh
+github_username: grahampugh
+slack_username: grahamrpugh
+mastodon_server: mas.to
+mastodon_username: "@SubjectMac"
+author: grahampugh
+timezone: Europe/Zurich
+future: true
 
 # Build settings
 markdown: kramdown
+kramdown:
+  parse_block_html: true
 
 #pagination
-gems:
+plugins:
   - jekyll-gist
   - jekyll-paginate
 paginate: 10
