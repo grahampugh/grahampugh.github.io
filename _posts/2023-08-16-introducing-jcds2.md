@@ -4,15 +4,13 @@ title:  "Introducing JCDS 2.0 for uploading packages to Jamf Pro Cloud distribut
 comments: true
 ---
 
-🎉🥳🍾🪅 **Jamf Pro is introducing a new and official API endpoint for uploading packages to the Jamf Cloud Distribution Point.** 🎉🥳🍾🪅
+**Jamf Pro is introducing a new Jamf Cloud Distribution Point (JCDS), including an official API endpoint for uploading packages.** 🎉🥳🍾🪅
 
-This promises to provide Jamf Pro Cloud customers with a reliable method for uploading packages. This blog post explains what you need to know in order to set up scripts that will perform these updates.
+This promises to provide Jamf Pro Cloud customers with a reliable method for automated package uploads. This blog post explains what you need to know in order to set up scripts that will perform these updates.
 
-The change happens when Jamf switch over customers' instances to JCDS 2.0. Jamf has informed standard customers in the US regions that they are enabling JCDS2 starting on 26 August 2023. Upgrades to JCDS2 are happening on a regionalized basis and Jamf is communicating upgrades directly to customers.
+## When is this happening?
 
-Having advocated for this for many years, my `JamfPackageUploader` processor for AutoPkg is embracing this new endpoint for JCDS users. A new `jcds2_mode` has now been added to use this endpoint. The former `jcds_mode` method, which used the unofficial "v3" API, no longer works for Jamf Cloud instances that have been switched over to JCDS 2. During the transition period, admins will have to select the appropriate mode for their instance.
-
-Once all regions have been transitioned, I will remove `jcds_mode`, and `jcds2_mode` will become the default. I'll explain that in a future blog post.
+The change happens when Jamf switch over customers' instances to JCDS 2.0. Jamf has already begun upgrading U.S. region Q.A. and Sandbox instances to JCDS 2.0, and will then begin enabling U.S.-hosted instances in the coming weeks, followed later by other regions. Please see [Jamf's JCDS Release History page](https://learn.jamf.com/bundle/jamf-cloud-distribution-service-release-notes/page/Release_History.html) for additional details.
 
 ## Introduction to the workflow for uploading a package via the API
 
@@ -27,7 +25,7 @@ To upload a package to the new Jamf Pro Cloud Distribution Service requires the 
 
 That last part is important as it differs from previous methods of uploading package to Jamf Cloud. In fact, it more closely resembles the workflow for uploading packages to a local file share distribution point.
 
-## Step 1 - obtaining a Bearer Token
+### Step 1 - obtaining a Bearer Token
 
 This step is common to all Jamf Pro API queries so should be familiar to anyone who has written a script to interact with the Jamf Pro API. The endpoint is `/api/v1/auth/token`. No special privileges are required to access this endpoint.
 
@@ -61,7 +59,7 @@ token=$(plutil -extract token raw "$token_file")
 
 Note that starting from Jamf Pro 10.49.0, you can altwernatively obtain a bearer token using new API Clients, but to avoid this post getting too complicated, I'll leave that for another blog post.
 
-## Step 2 - check if there is an existing package in Jamf Pro
+### Step 2 - check if there is an existing package in Jamf Pro
 
 First of all we want to see if there's an existing package object in Jamf. We use the Classic API for this. Don't forget that if the package name has any funky characters in it - or spaces - these will need to be escaped for any of the URLs that contain the name.
 
@@ -112,7 +110,7 @@ for ((i=1; i<=pkg_count; i++)); do
 done
 ```
 
-Note that I've grabbed the MD5 hash data of the matching package. We can use this to compare with the local package we want to upload. If it's the same, then there's really no need to upload it again. If using python or another language, you can use the superior SHA3_512 hash instead of the MD5, but there's no built-in method of using this in bash/zsh.
+Note that I've grabbed the MD5 hash data of the matching package. We can use this to compare with the local package we want to upload. If it's the same, then there is really no need to upload it again. If using python or another language, you can use the superior SHA3_512 hash instead of the MD5, but there's no built-in method of using this in bash/zsh.
 
 ```bash
 # also find out the md5 hash of the local package
@@ -136,7 +134,7 @@ curl --request DELETE \
     "$url/api/v1/jcds/files/$pkg" \
 ```
 
-## Step 4 - obtain the session token for the package upload endpoint
+### Step 4 - obtain the session token for the package upload endpoint
 
 The JCDS is an Amazon AWS S3 bucket to which the Jamf Pro API grants access by generating a session token. `Create` privileges to the new `Create Jamf Content Distribution Server Files` privileges set are required.
 
@@ -175,11 +173,11 @@ s3_bucket=$(plutil -extract bucketName raw "$curl_output_file")
 s3_path=$(plutil -extract path raw "$curl_output_file")
 ```
 
-## Step 5 - uploading the package to the JCDS
+### Step 5 - uploading the package to the JCDS
 
 To perform the upload, we need to interact with the Amazon S3 bucket directly. The easiest way to do this from a shell script is to install the [aws-cli][1] tool.
 
-Once that is installed, we can use the variables from the previous step to configure the aws tool and upload the package.
+Once the `aws-cli` tool is installed, we can use the variables from the previous step to configure the aws tool and upload the package.
 
 ```bash
     # add the configuration to the aws-cli config file
@@ -192,7 +190,9 @@ Once that is installed, we can use the variables from the previous step to confi
     aws s3 cp "$pkg_path" "s3://$s3_bucket/$s3_path"
 ```
 
-## Step 6 - uploading the package metadata to Jamf Pro
+If programming in python, the `boto3` module is the way to interact with the AWS S3 bucket.
+
+### Step 6 - uploading the package metadata to Jamf Pro
 
 Now we need to tell Jamf Pro about the package, so we upload the package metadata to the Classic API `packages` endpoint. There are a bunch of variables you can add to the package metadata such as category, info, etc. Here we give the bare minimum: name and filename.
 
@@ -218,11 +218,34 @@ curl --request "$req" \
     "$url/JSSResource/packages/id/$pkg_id" \
 ```
 
+And that's it! There could be a short period where the package appears as "Availability Pending" in the GUI, but in my tests, the package can still be installed.
+
+## Complete scripts
+
+I have prepared test scripts for uploading a package in shell and python.
+
+**Shell:** this requires the [aws-cli][1] tool to be installed. [Click here to see the shell script](https://gist.github.com/grahampugh/836547859c18fefe1dba6ba8c093accc).
+**Python:** this requires the `boto3` and `requests` python modules. [Click here to see the python script](https://gist.github.com/grahampugh/7efd0417cf98f5412d1aedbc533b1fc1)
+
+## How does this affect JamfPackageUploader?
+
+Thanks to a kind collaboration with Jamf, the `JamfPackageUploader` processor for AutoPkg is embracing this new endpoint for JCDS users from day one. A new `jcds2_mode` has now been added to use this endpoint, which is available for testing in the [jamf-upload](https://github.com/grahampugh/jamf-upload) repo. To use this today, in your AutoPkg preferences, ensure that `grahampugh/jamf-upload` is higher up the recipe search path than `grahampugh-recipes`. I will merge the changes into `grahampugh-recipes` after some more tests (and I will amend this blog post once the changes are merged in).
+
+Importantly, the former experimental `jcds_mode` method, which used the unofficial "v3" API, no longer works for Jamf Cloud instances that have been switched over to JCDS 2.0. During the transition period, you will have to manually select the appropriate mode for your Jamf instance.
+
+Note that the "normal" mode, which uses the "dbfileupload" endpoint, remains functional for JCDS 2.0 users, so you can choose to remove `jcds_mode` and it should work. However, since the new `jcds2_mode` uses an officially supported endpoint, it should offer more reliable uploads. Therefore, once all regions have been transitioned and enough testing has been done, I will remove `jcds_mode`, and set `jcds2_mode` as the default mode for JCDS users. I'll announce that in a future blog post.
+
+Note also that `jcds2_mode` requires the use of a third-party python module for communication with AWS named `boto3`. To ensure that you can use `jcds2_mode`, it is recommended to run the following command on your AutoPkg machine:
+
+```
+/usr/local/autopkg/python -m pip install boto3
+```
+
 ## Conclusion
 
-That's it! There are a few gotchas to work through with this workflow - it's certainly more complex than the old `dbfileupload` endpoint - but it should be more reliable. And it's officially supported for the first time!
+The new workflow is certainly more complex than the old `dbfileupload` endpoint - but it should be more reliable. Most importantly, package upload via API is officially supported for the first time, so if you encounter any problems, contact Jamf Support for resolution.
 
-One thing I've noticed is that if you don't check whether there's an existing package and you upload it again, you get a duplicate file with an amended filename. For example if `$pkg` already exists, you'll get `MyPackage_1.pkg`. That's why I emphasise looking for an existing package in the example above before attempting the upload. I sense that it will be worth checking for these duplicates every now and again. This will need to be done with the API, as shown in Step 3 above.
+One thing I've noticed in my testing is that if you don't check whether there's an existing package and you upload it again, you get a duplicate file with an amended filename. For example if `$pkg` already exists, you'll get `MyPackage_1.pkg`. That's why, in the example above, I emphasise the requirement to look for an existing package before attempting the upload. I sense that it will be worth checking for these duplicates every now and again to prevent cruft, even though de-duplication should prevent any additional storage being used. This will need to be done with the API, as shown in Step 3 above.
 
 Good luck with your testing and let me know if you find any problems, or discover any refinements that could be made.
 
