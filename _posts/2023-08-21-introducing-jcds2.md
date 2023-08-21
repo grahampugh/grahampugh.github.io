@@ -57,7 +57,7 @@ curl --request POST \
 token=$(plutil -extract token raw "$token_file")
 ```
 
-Note that starting from Jamf Pro 10.49.0, you can altwernatively obtain a bearer token using new API Clients, but to avoid this post getting too complicated, I'll leave that for another blog post.
+Note that starting from Jamf Pro 10.49.0, you can alternatively obtain a bearer token using new API Clients, but to avoid this post getting too complicated, I'll leave that for another blog post.
 
 ### Step 2 - check if there is an existing package in Jamf Pro
 
@@ -224,8 +224,8 @@ And that's it! There could be a short period where the package appears as "Avail
 
 I have prepared test scripts for uploading a package in shell and python.
 
-**Shell:** this requires the [aws-cli][1] tool to be installed. [Click here to see the shell script](https://gist.github.com/grahampugh/836547859c18fefe1dba6ba8c093accc).
-**Python:** this requires the `boto3` and `requests` python modules. [Click here to see the python script](https://gist.github.com/grahampugh/7efd0417cf98f5412d1aedbc533b1fc1)
+- **Shell:** this requires the [aws-cli][1] tool to be installed. [Click here to see the shell script](https://gist.github.com/grahampugh/836547859c18fefe1dba6ba8c093accc).
+- **Python:** this requires the `boto3` and `requests` python modules. [Click here to see the python script](https://gist.github.com/grahampugh/7efd0417cf98f5412d1aedbc533b1fc1)
 
 ## How does this affect JamfPackageUploader?
 
