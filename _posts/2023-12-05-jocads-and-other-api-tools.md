@@ -8,7 +8,7 @@ For many years while working at ETH Zürich, I developed a set of shell scripts 
 
 ## jocads.sh
 
-JOCADS - `jocads.sh` - is the "Jamf Object Copier and Deleter" script. It's role is to copy existing items from one Jamf instance to any number of others, or to delete matching items across multiple instances. It can be used interactively in a command line window, or automated using script arguments.
+JOCADS - `jocads.sh` - is the "Jamf Object Copier and Deleter" script. Its role is to copy existing items from one Jamf instance to any number of others, or to delete matching items across multiple instances. It can be used interactively in a command line window, or automated using script arguments.
 
 It also handles dependencies, so, for example, if a policy depends on any categories, smart computer groups, static computer groups, scripts, extension attributes or packages, these objects are all copied first in order, so that the policy will successfully copy.
 
@@ -39,7 +39,7 @@ JOCADS can also be used to delete most of these API objects. In certain circumst
 
 Configuration Profiles are safely copied by handling UUIDs within the profiles, maintaining the existing UUID within a single instance so that the profile is properly redeployed. Note, however, that signed profiles cannot be copied using the API without stripping the signature, so certain types of profile are not suitable for distribution via API using any tool.
 
-A requirement at ETH Zürich was that certain computer groups should not be overwritten if they already exist on a destination Jamf instance, but that this should not provent the script from proceeding to copy objects that have such groups as dependencies. This is achieved by providing a text file containing a list of strings which are pattern-matched during the copy process, and any group matching any of the patterns is only copied if it doesn't already exist on the destination. However, there is a way to force-copy these items for remediation of any broken objects.
+A requirement at ETH Zürich was that certain computer groups should not be overwritten if they already exist on a destination Jamf instance, but that this should not prevent the script from proceeding to copy objects that have such groups as dependencies. This is achieved by providing a text file containing a list of strings which are pattern-matched during the copy process, and any group matching any of the patterns is only copied if it doesn't already exist on the destination. However, there is a way to force-copy these items for remediation of any broken objects.
 
 ## Setting up
 
@@ -53,7 +53,7 @@ At present, an API user account must be used for each instance. At some point I 
 
 ## Other scripts
 
-There are a bunch of other scripts that are mostly used during the initial set up of new Jamf Pro instances. Tthese work with input variables and/or a supplied XML template rather than copying from a source instance. Scripts currently available can perform the following actions on one or multiple instances:
+There are a bunch of other scripts that are mostly used during the initial set up of new Jamf Pro instances. These work with input variables and/or a supplied XML template rather than copying from a source instance. Scripts currently available can perform the following actions on one or multiple instances:
 
 * Create or update an LDAP user
 * Disable Engage
