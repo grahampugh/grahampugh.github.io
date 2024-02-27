@@ -32,6 +32,7 @@ This step is common to all Jamf Pro API queries so should be familiar to anyone 
 The following example outputs the response to a file. Instead you could output to stdout and wrap the curl command into a variable.
 
 First let's define some variables we'll need to repeat:
+
 ```bash
 pkg="$pkg"
 pkg_path="/path/to/$pkg"
@@ -100,7 +101,7 @@ pkg_count=$(grep -c fileName "$curl_output_file")
 
 # loop through each item in the JSON response
 jcds_pkg=""
-jcds_pkg_md5=0  # assign empty value to avoid errors
+jcds_pkg_md5=""  # assign empty value to avoid errors
 for ((i=1; i<=pkg_count; i++)); do
     jcds_pkg=$(/usr/libexec/PlistBuddy -c "Print :$i:fileName" "$curl_output_file")
     if [[ "$jcds_pkg" == "$pkg" ]]; then
@@ -237,7 +238,7 @@ Note that the "normal" mode, which uses the "dbfileupload" endpoint, remains fun
 
 Note also that `jcds2_mode` requires the use of a third-party python module for communication with AWS named `boto3`. To ensure that you can use `jcds2_mode`, it is recommended to run the following command on your AutoPkg machine:
 
-```
+```bash
 /usr/local/autopkg/python -m pip install boto3
 ```
 
