@@ -25,6 +25,8 @@ To upload a package to the new Jamf Pro Cloud Distribution Service requires the 
 
 That last part is important as it differs from previous methods of uploading package to Jamf Cloud. In fact, it more closely resembles the workflow for uploading packages to a local file share distribution point.
 
+> NOTE: Jamf requires bundle-style installer packages (which are actually folders) to be zipped prior to upload. Most packages are flat packages which are a single archive file and do not need zipping up. Only a very few vendors still provide bundle-style packages, such as Adobe's Creative Cloud apps. Tools like Jamf Admin and even the old `dbfileupload` endpoint perform the zip automatically when fed a bundle-style package. `JamfPackageUploader` for AutoPkg also zips up packages as required. The shell scripts I present here do not, so you will need to zip up the package prior to uploading it.
+
 ### Step 1 - obtaining a Bearer Token
 
 This step is common to all Jamf Pro API queries so should be familiar to anyone who has written a script to interact with the Jamf Pro API. The endpoint is `/api/v1/auth/token`. No special privileges are required to access this endpoint.
