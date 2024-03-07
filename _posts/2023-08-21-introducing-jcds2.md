@@ -80,7 +80,7 @@ If we get a response, we can get the package ID for later.
 pkg_id=$(plutil -extract package.id raw -expect integer "$curl_output_file")
 ```
 
-## Step 3 - check if there is an existing package in the JCDS
+### Step 3 - check if there is an existing package in the JCDS
 
 Now we can check if that package is also present in the JCDS.
 
