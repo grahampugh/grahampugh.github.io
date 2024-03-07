@@ -16,6 +16,8 @@ Many open source tools have introduced a step to kickstart the `softwareupdated`
 
 Even with this workaround, there are problems with using the `softwareupdate --list` command when trying to encourage users to perform software updates themselves, because there can be inconsistencies between the command's output and what gets displayed in the Software Updates Preferences Pane.
 
+> UPDATE, 07 March, 2024: As of macOS 14.4, it is no longer possible to run the kickstart command shown above.
+
 ## Do we need to run the softwareupdate command at all?
 
 The `softwareupdate` command is just one of the possible ways that a Mac may check for updates.
