@@ -42,7 +42,7 @@ The Extension Attribute script provided in the SOFA GitHub is named [XProtectVer
 
 In this example, we have named the Extension Attribute `XProtect Version Check`. The Smart Group is named `XProtect not up to date`. The single criterion is that `XProtect Version Check` is `Fail`.
 
-![XProtect not up to date smart group](/assets/images/XProtect-not-up-to-date-smart-group.png)
+![XProtect not up to date smart group](/assets/images/xprotect-not-up-to-date-smart-group.png)
 
 ## Conclusion
 
