@@ -46,7 +46,7 @@ In this example, we have named the Extension Attribute `XProtect Version Check`.
 
 ## Conclusion
 
-SOFA is sure to be extremely useful to Mac Admins, and its feed will no doubt be used in many projects in the future. The two extension attributes described here are just two examples of how to use the feed to trigger processes in Jamf Pro and any other management tool. I'm looking forward to seeing what else comes out of Henry's innovation.
+SOFA is sure to be extremely useful to Mac Admins, and its feed will no doubt be used in many projects in the future. The extension attributes described here are just two examples of how to use the feed to trigger processes in Jamf Pro and any other management tool. I'm looking forward to seeing what else comes out of Henry's innovation.
 
 [1]: https://grahamrpugh.com/2022/09/29/software-update-check.html
 [2]: https://grahamrpugh.com/2023/12/06/xprotect-version-check.html
