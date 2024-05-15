@@ -35,7 +35,13 @@
             {% include icon-mastodon.html username=site.mastodon_username mastodon_server=site.mastodon_server %}
           </li>
           {% endif %}
-       </ul>
+
+          {% if site.linkedin_username %}
+          <li>
+            {% include icon-linkedin.html username=site.linkedin_username %}
+          </li>
+          {% endif %}
+        </ul>
       </div>
 
       <div class="footer-col footer-col-3">
