@@ -21,7 +21,7 @@ mastodon_server: mas.to
 mastodon_username: "@SubjectMac"
 linkedin_username: grahamrpugh
 author: grahampugh
-timezone: Europe/Zurich
+timezone: Europe/Berlin
 future: true
 
 # Build settings
