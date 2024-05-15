@@ -99,6 +99,7 @@
 [sal]: https://github.com/salopensource/sal
 [simian]: https://github.com/google/simian/wiki/SimianAtAGlance
 [slack]: https://slack.com
+[SOFA]: https://sofa.macadmins.io
 [steve kueng's forked version of munkiwebadmin]: https://github.com/SteveKueng/munkiwebadmin
 [suspicious package]: https://www.mothersruin.com/software/SuspiciousPackage/
 [textwrangler]: http://www.barebones.com/products/textwrangler/
