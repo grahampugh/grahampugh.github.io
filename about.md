@@ -5,9 +5,9 @@ title: About Graham R Pugh
 
 <img align="left" style="margin-right:25px;margin-bottom:50px" src="/assets/images/1506582_561159523982174_1717740710_n.jpg" />
 
-I was born in Ormskirk, Lancashire, United Kingdom, and I am currently living and working as a Mac Systems Specialist at a University in Switzerland. I work as part of a team that is currently developing a multi-instance Jamf Pro solution for our institute's federated IT support structure.
+I was born in Ormskirk, Lancashire, United Kingdom, and I am currently living in Germany and working as a Senior Systems Engineer at Jamf.
 
-Although I studied Geochemistry, and qualified with a [Ph.D. studying Glacial Meltwater Chemistry][1] at [Aberystwyth University][3] ([read it here!][2]), I didn't succeed in that career, but soon realised my true talents lay in IT support. I have been lucky to work supporting the computing needs of teachers and academics in scientific institutions pretty much ever since, first as an IT Technician and Web Designer for a [high school in Somerset, England][4], later as an IT Support Technician, Subject Specialist and [Mac Specialist at Bristol University][5].
+Although I studied Geochemistry, and qualified with a [Ph.D. studying Glacial Meltwater Chemistry][1] at [Aberystwyth University][3] ([read it here!][2]), I didn't succeed in that career, but soon realised my true talents lay in IT support. I have been lucky to work supporting the computing needs of teachers and academics in scientific institutions pretty much ever since, first as an IT Technician and Web Designer for a [specialist technology school in Somerset, England][4], later as an IT Support Technician, Subject Specialist and [Mac Specialist at Bristol University][5], and as a Senior Apple Systems Engineer at [ETH Zürich][6] in Switzerland.
 
 At other times, I like to run, hike, cycle, climb/boulder, learn German, and travel the world.
 
@@ -16,3 +16,4 @@ At other times, I like to run, hike, cycle, climb/boulder, learn German, and tra
 [3]: https://www.aber.ac.uk/en/
 [4]: http://www.kowessex.co.uk/index.php
 [5]: https://www.bristol.ac.uk/it-services/advice/operatingsystems/mac/index_html
+[6]: https://www.ethz.ch
