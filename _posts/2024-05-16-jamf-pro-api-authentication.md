@@ -1,20 +1,25 @@
 ---
 layout: post
-title:  "Changes to the Classic API in Jamf Pro - what you need to know"
+title:  "Changes to Classic API authentication in Jamf Pro - what you need to know"
 comments: true
 ---
 
-> Note: My colleague William Smith created a similar blog post [How to convert Classic API scripts to use bearer token authentication][11] in 2022. This post serves as a timely reminder of what is changing with the Classic API, as well as providing updated information about the possible ways to authenticate against both Jamf Pro APIs.
+> Note: My colleague William Smith created a similar blog post [How to convert Classic API scripts to use bearer token authentication][11] in 2022. This post serves as a timely reminder of what is changing with the Classic API, as well as providing updated information about the possible ways to authenticate against both Jamf Pro APIs using Bearer Tokens or API Clients.
 
 ## Contents
 
-1. [Introduction](#introduction)
-2. [End of support of Basic Authentication - what does it mean?](#end-of-support-of-basic-authentication---what-does-it-mean)
-3. [How to adapt an existing shell script to use a Bearer Token](#how-to-adapt-an-existing-shell-script-to-use-a-bearer-token)
-4. [Additional tips and tricks](#additional-tips-and-tricks)
-5. [Client Credentials-based Authentication](#client-credentials-based-authentication)
-6. [Conclusion](#conclusion)
-7. [Further Reading](#further-reading)
+- [Contents](#contents)
+- [Introduction](#introduction)
+- [End of support of Basic Authentication - what does it mean?](#end-of-support-of-basic-authentication---what-does-it-mean)
+- [How to adapt an existing shell script to use a Bearer Token](#how-to-adapt-an-existing-shell-script-to-use-a-bearer-token)
+- [Additional tips and tricks](#additional-tips-and-tricks)
+  - [Use the same Bearer Token for multiple scripts](#use-the-same-bearer-token-for-multiple-scripts)
+  - [Check the expiration of an existing token](#check-the-expiration-of-an-existing-token)
+  - [Create a new token using an existing token](#create-a-new-token-using-an-existing-token)
+- [Client Credentials-based Authentication](#client-credentials-based-authentication)
+  - [Obtaining a Bearer Token](#obtaining-a-bearer-token)
+- [Conclusion](#conclusion)
+- [Further Reading](#further-reading)
 
 ## Introduction
 
@@ -41,12 +46,12 @@ In this post I will concentrate on the use of shell scripts (bash, zsh), as this
 Let's say we want to get a list of computers on a Jamf Pro server. In the past we would have used a single `curl` command such as the example below. 
 
 > Note: you may see short or long parameter names in `curl` statements. I've used the long names here, so here's a short glossary of equivalents that are relevant to this post:
-> * `-X` is the same as `--request` (`POST`, `GET`, `PUT` or `DELETE`)
-> * `-H` is the same as `--header`
-> * `-u` is the same as `--user`
-> * `-d` is the same as `--data` (but for URL-encoding, `--data-urlencode` should be specified)
-> * `-o` is the same as `--output` (i.e. write the output to a file)
-> * `--url` is optional; a URL can be supplied with no parameter name
+> - `-X` is the same as `--request` (`POST`, `GET`, `PUT` or `DELETE`)
+> - `-H` is the same as `--header`
+> - `-u` is the same as `--user`
+> - `-d` is the same as `--data` (but for URL-encoding, `--data-urlencode` should be specified)
+> - `-o` is the same as `--output` (i.e. write the output to a file)
+> - `--url` is optional; a URL can be supplied with no parameter name
 
 In all examples, we will assume an admin account with the username `jamfsw` and the password `jamf1234`.
 
@@ -196,20 +201,20 @@ Two last things to note, token expiration is achieved exactly as before using th
 
 ## Conclusion
 
-I hope this post provides clarity on what is being removed from Jamf Pro and what remains. To reiterate, we can continue to use normal account credentials to interact with the API, but if your scripts are using those credentials to directly request a Classic API endpoint, then before Jamf Pro is upgraded to 11.5.0, you will need to adapt the scripts to use those credentials to generate a Bearer Token, and then use that Bearer Token to make those subsequent requests.
+I hope this post provides clarity on what is being removed from Jamf Pro and what remains. To reiterate, we can continue to use normal account credentials to interact with the API, but if your scripts are using those credentials to directly request a Classic API endpoint, then before Jamf Pro is upgraded to 11.5.0, you should adapt the scripts to use those credentials to generate a Bearer Token, and then use that Bearer Token to make those subsequent requests.
 
 For security reasons, moving forward you may want to consider setting up API Roles and Clients instead of using actual account credentials. This is especially pertinent when setting up accounts for use by third party integrations, external teams, and so on. However, this does not need to be done before the release of Jamf Pro 11.5.0.
 
 ## Further Reading
 
-* [Jamf Pro API Overview][6] - includes code examples for obtaining a Bearer Token using Basic Authentication, and provides details on the HTTP Response Codes we may encounter.
-* [Classic API Reference][4] - Details on how to use the Classic API and a list of all endpoints.
-* [Classic API Authentication Changes][3] - Details on the depracation of the use of Basic Authentication for Classic API endpoints.
-* [Jamf Pro API Reference][8] - Details on how to use the Jamf Pro API and a list of all endpoints.
-* [How to convert Classic API scripts to use bearer token authentication][11] - Jamf Tech Thoughts post by William Smith.
-* [API Roles and Clients][5] - Technical documentation about API Roles and Clients, detailing how to set them up in the Jamf Pro user interface.
-* [Client Credentials][7] - Further details about API Roles and Clients, including a recipe for obtaining a Bearer Token using API Clients.
-* [API code recipes][9] - Easy to read shell code recipes for many of the workflows described in this post.
+- [Jamf Pro API Overview][6] - includes code examples for obtaining a Bearer Token using Basic Authentication, and provides details on the HTTP Response Codes we may encounter.
+- [Classic API Reference][4] - Details on how to use the Classic API and a list of all endpoints.
+- [Classic API Authentication Changes][3] - Details on the depracation of the use of Basic Authentication for Classic API endpoints.
+- [Jamf Pro API Reference][8] - Details on how to use the Jamf Pro API and a list of all endpoints.
+- [How to convert Classic API scripts to use bearer token authentication][11] - Jamf Tech Thoughts post by William Smith.
+- [API Roles and Clients][5] - Technical documentation about API Roles and Clients, detailing how to set them up in the Jamf Pro user interface.
+- [Client Credentials][7] - Further details about API Roles and Clients, including a recipe for obtaining a Bearer Token using API Clients.
+- [API code recipes][9] - Easy to read shell code recipes for many of the workflows described in this post.
 
 [1]: https://www.jamf.com/blog/advanced-api-examples-and-best-practices/
 [2]: https://community.jamf.com/t5/jamf-pro/what-s-new-in-the-jamf-pro-10-35-release/m-p/255145
