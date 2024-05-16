@@ -20,7 +20,7 @@ slack_username: grahamrpugh
 mastodon_server: mas.to
 mastodon_username: "@SubjectMac"
 author: grahampugh
-timezone: Europe/Berlin
+timezone: Europe/Zurich
 future: true
 
 # Build settings
