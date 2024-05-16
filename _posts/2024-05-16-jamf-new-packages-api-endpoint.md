@@ -159,7 +159,7 @@ We get the ID of the package object as follows:
 pkg_id=$(plutil -extract id raw -expect string "$output_file_record")
 ```
 
-### Step 4 - upload tbe package
+### Step 4 - upload the package
 
 Assuming that we have determined that we need to upload the package, this is done as the final step, since we always need to supply the ID of the package metadata object. This is always done as a `POST` operation. Any existing package will be replaced.
 
