@@ -68,6 +68,6 @@ I have described one way of fully automating the import of a package and its sta
 All our recipes are in an open GitHub repo, so if you are interested in examples, check out the following:
 
 * [Jamf_Recipes](https://github.com/eth-its/autopkg-mac-recipes-yaml/tree/main/Jamf_Recipes): these are the "testing" recipes. We add the `LastRecipeRunResult` as the last step in the recipe itself rather than run it as a post-processor, to allow our automation to work for a small number of recipes where we don't want this step.
-* [Jamf_Staging_Recipes](https://github.com/eth-its/autopkg-mac-recipes-yaml/tree/main/Jamf_Staging_Recipes): these are the "staging-to-production" recipes as described above. Since these recipes don't have parent `pkg` and `download` recipes, we can make use of template parent recipes, so that we don't have to copy-paste the same processor steps into all the recipes. You'll see these template recipes at the bottom of the listing, for example `_TEMPLATE-prod.jamf.recipe.yaml`.
+* [Jamf_Prod_Recipes](https://github.com/eth-its/autopkg-mac-recipes-yaml/tree/main/Jamf_Prod_Recipes): these are the "staging-to-production" recipes as described above. Since these recipes don't have parent `pkg` and `download` recipes, we can make use of template parent recipes, so that we don't have to copy-paste the same processor steps into all the recipes. You'll see these template recipes at the bottom of the listing, for example `_TEMPLATE-prod.jamf.recipe.yaml`.
 
 {% include urls.md %}
