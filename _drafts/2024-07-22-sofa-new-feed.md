@@ -24,7 +24,7 @@ The feed URL has changed to `https://sofafeed.macadmins.io/v1/macos_data_feed.js
 
 ### Compression
 
-`curl` offers a `--compressed` option which allows the file to be transferred as a gzipped version, saving extra bandwidth. So, please add this option to your `curl` commands in your SOFA scripts.
+`curl` offers a `--compressed` option which allows the file to be transferred as a gzipped version, saving extra bandwidth. This option is *required* for the new feed URL - the file may not download properly without it.
 
 ### E-tags
 
