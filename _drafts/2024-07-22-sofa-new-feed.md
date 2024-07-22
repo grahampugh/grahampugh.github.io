@@ -30,7 +30,7 @@ The feed URL has changed to `https://sofafeed.macadmins.io/v1/macos_data_feed.js
 
 `curl` offers the option to interrogate e-tags, which are a fingerprint of the feed, without having to download the whole file. We have updated the Extension Attribute scripts, and the OSQuery plugin hads also been updated to take advantage of e-tags, so that the feed file is only fully downloaded when changes are detected.
 
-If you wrote your own scripts, you can write the e-tag to a file using curl. So, first, check if there is a cached e-tag signature file on disk, and if it is present, compare the remote file with the locally cached one using the `--etag-compare` option. If not, download the feed to disk and write the e-tag to a file by using the `--etag-save` option. Here's how:
+If you wrote your own scripts, you can write the e-tag to a file using curl. You can therefore check first if there is a cached e-tag signature file already on disk, and if it is present, compare the remote file with the locally cached one using the `--etag-compare` option. If there is no e-tag file on disk, or the e-tag doesn't match, then you can go ahead and download the feed to disk and write the e-tag to a file, by using the `--etag-save` option. Here's how that works in bash code:
 
 ```bash
 # URL to the online JSON data
