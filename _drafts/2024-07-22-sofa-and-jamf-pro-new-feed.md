@@ -4,8 +4,6 @@ title:  "If you're using the SOFA feed, update the URL!"
 comments: true
 ---
 
-## What is SOFA?
-
 ![SOFA logo](https://sofa.macadmins.io/images/custom_logo.png)
 
 Back in April I [posted][1] about [SOFA], short for "Simple Organized Feed for Apple Software Updates", which consists of a machine-readable feed and user-friendly web interface, providing always-up-to-date information on XProtect data, OS updates, and associated patched CVEs .
@@ -14,9 +12,11 @@ SOFA is hosted by the Mac Admins Open Source organisation, but it can be hosted 
 
 ## What's new?
 
-The SOFA project has been a huge success, so much so that the amount of web traffic it has generated has exceeded all expectatations. As the Mac Admins Open Source organisation is providing the service free, we have been investigating how to reduce the amount of traffic while maintaining a great service. This is especially important since the release of [Nudge 2.0][2] last week, which now utilises the SOFA feed to simplify the administration of that app.
+The SOFA project has been a huge success, so much so that the amount of web traffic it has generated has exceeded all expectatations. We have been investigating ways to reduce the amount of traffic, while maintaining the same great service. This is especially important since the release of [Nudge 2.0][2] last week, which now utilises the SOFA feed, giving new opportunities to simplify the administration of the app.
 
-So, there are now some changes in the extension attribute scripts [provided in the SOFA project's GitHub repo][3], and we are asking you to update any of these scripts in your Jamf Pro instances if you have used them. Additionally, if you have crafted your own scripts, please take note of the following changes that you can make to reduce the web traffic:
+So, we have made some changes in the Extension Attribute scripts we [provided in the SOFA project's GitHub repo][3], and if you are using those scripts, we are asking you to use the new versions of these scripts in your Jamf Pro instances.
+
+Furthermore, if you have crafted your own scripts or tools that take advantage of the SOFA feed, please take note of the following changes that you can and should make, to help reduce unnecessary costs for the Mac Admins Open Source organisation:
 
 ### New Feed URL
 
