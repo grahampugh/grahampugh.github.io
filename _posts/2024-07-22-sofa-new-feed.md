@@ -20,7 +20,9 @@ Furthermore, if you have crafted your own scripts or tools that take advantage o
 
 ### New Feed URL
 
-The feed URL has changed to `https://sofafeed.macadmins.io/v1/macos_data_feed.json`. This allows the feed to use specific content encoding rules and ensure that everyone is using them. Please update any scripts that are using the old `sofa.macadmins.io` address of the json feed
+The macOS feed URL has changed to `https://sofafeed.macadmins.io/v1/macos_data_feed.json`. This allows the feed to use specific content encoding rules and ensure that everyone is using them. Please update any scripts that are using the old `sofa.macadmins.io` address of the json feed.
+
+Note that the URL of the iOS feed has also changed, this is now `https://sofafeed.macadmins.io/v1/ios_data_feed.json`.
 
 ### Compression
 
