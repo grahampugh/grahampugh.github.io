@@ -6,13 +6,13 @@ comments: true
 
 ![SOFA logo](https://sofa.macadmins.io/images/custom_logo.png)
 
-Back in April I [posted][1] about [SOFA], short for "Simple Organized Feed for Apple Software Updates", which consists of a machine-readable feed and user-friendly web interface, providing always-up-to-date information on XProtect data, OS updates, and associated patched CVEs .
+Back in April I [posted][1] about [SOFA], short for "Simple Organized Feed for Apple Software Updates", which consists of a machine-readable feed and user-friendly web interface, providing always-up-to-date information on XProtect data, OS updates, and associated patched CVEs.
 
 SOFA is hosted by the Mac Admins Open Source organisation, but it can be hosted in an organisation's own infrastructure, allowing a high level of control over the information if your organisation requires it.
 
 ## What's new?
 
-The SOFA project has been a huge success, so much so that the amount of web traffic it has generated has exceeded all expectatations. We have been investigating ways to reduce the amount of traffic, while maintaining the same great service. This is especially important since the release of [Nudge 2.0][2] last week, which now utilises the SOFA feed, giving new opportunities to simplify the administration of the app.
+The SOFA project has been a huge success, so much so that the amount of web traffic it has generated has exceeded all expectations. We have been investigating ways to reduce the amount of traffic, while maintaining the same great service. This is especially important since the release of [Nudge 2.0][2] last week, which now utilises the SOFA feed, giving new opportunities to simplify the administration of the app.
 
 So, we have made some changes in the Extension Attribute scripts we [provided in the SOFA project's GitHub repo][3], and if you are using those scripts, we are asking you to use the new versions of these scripts in your Jamf Pro instances.
 
@@ -61,6 +61,8 @@ fi
 ## Conclusion
 
 SOFA is still very new, so changes are inevitable as features are added, use cases grow, and problems are ironed out. We're glad you're part of the early adopters, and ask that you take a little time to ensure that you are using the latest feed and best practices. The old feed will be removed in a month or two to ensure that the old versions of these scripts are not used forever.
+
+We also continue to recommend hosting a mirror of the feed for your own organisation if that's feasible.
 
 [1]: https://grahamrpugh.com/2024/04/29/sofa-and-jamf-pro-new-feed.html
 [2]: https://github.com/macadmins/nudge/releases/tag/v2.0.0.81713
