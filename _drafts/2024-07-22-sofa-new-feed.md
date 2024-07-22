@@ -28,7 +28,7 @@ The feed URL has changed to `https://sofafeed.macadmins.io/v1/macos_data_feed.js
 
 ### E-tags
 
-`curl` offers the option to interrogate e-tags, which are a fingerprint of the feed, without having to download the whole file. We have updated the extension attribute scripts (and OSQuery plugin) to take advantage of e-tags, so that the feed file is only fully downloaded if it changes.
+`curl` offers the option to interrogate e-tags, which are a fingerprint of the feed, without having to download the whole file. We have updated the Extension Attribute scripts, and the OSQuery plugin hads also been updated to take advantage of e-tags, so that the feed file is only fully downloaded when changes are detected.
 
 If you wrote your own scripts, you can write the e-tag to a file using curl. So, first, check if there is a cached e-tag signature file on disk, and if it is present, compare the remote file with the locally cached one using the `--etag-compare` option. If not, download the feed to disk and write the e-tag to a file by using the `--etag-save` option. Here's how:
 
@@ -46,15 +46,15 @@ etag_cache="$json_cache_dir/macos_data_feed_etag.txt"
 
 # check local vs online using etag (only available on macOS 12+)
 if [[ -f "$etag_cache" && -f "$json_cache" ]]; then
-    if /usr/bin/curl --compressed --silent --etag-compare "$etag_cache" --header "User-Agent: $user_agent" "$online_json_url" --output /dev/null; then
+    if /usr/bin/curl --compressed --silent --etag-compare "$etag_cache" "$online_json_url" --output /dev/null; then
         echo "Cached e-tag matches online e-tag - cached json file is up to date"
     else
         echo "Cached e-tag does not match online e-tag, proceeding to download SOFA json file"
-        /usr/bin/curl --compressed --location --max-time 3 --silent --header "User-Agent: $user_agent" "$online_json_url" --etag-save "$etag_cache" --output "$json_cache"
+        /usr/bin/curl --compressed --location --silent "$online_json_url" --etag-save "$etag_cache" --output "$json_cache"
     fi
 else
     echo "No e-tag cached, proceeding to download SOFA json file"
-    /usr/bin/curl --compressed --location --max-time 3 --silent --header "User-Agent: $user_agent" "$online_json_url" --etag-save "$etag_cache" --output "$json_cache"
+    /usr/bin/curl --compressed --location --silent "$online_json_url" --etag-save "$etag_cache" --output "$json_cache"
 fi
 ```
 
