@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "If you're using the SOFA feed, update the URL!"
+title:  "If you're using the SOFA feed, please take note!"
 comments: true
 ---
 
