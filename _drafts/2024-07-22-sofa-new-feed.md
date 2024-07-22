@@ -60,7 +60,7 @@ fi
 
 ## Conclusion
 
-SOFA is still very new, so chagnes are inevitable as features are added, use cases grow, and problems are ironed out. We're glad you're part of the early adopters, and ask that you take a little time to ensure that you are using the latest feed and best practices. The old feed will be removed in a month or two to ensure that the old versions of these scripts are not used forever.
+SOFA is still very new, so changes are inevitable as features are added, use cases grow, and problems are ironed out. We're glad you're part of the early adopters, and ask that you take a little time to ensure that you are using the latest feed and best practices. The old feed will be removed in a month or two to ensure that the old versions of these scripts are not used forever.
 
 [1]: https://grahamrpugh.com/2024/04/29/sofa-and-jamf-pro-new-feed.html
 [2]: https://github.com/macadmins/nudge/releases/tag/v2.0.0.81713
