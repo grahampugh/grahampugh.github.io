@@ -26,11 +26,11 @@ The feed URL has changed to `https://sofafeed.macadmins.io/v1/macos_data_feed.js
 
 `curl` offers a `--compressed` option which allows the file to be transferred as a gzipped version, saving extra bandwidth. This option is *required* for the new feed URL - the json feed file may not download properly without it.
 
-### E-tags
+### ETags
 
-`curl` offers the option to interrogate e-tags, which are a fingerprint of the feed, without having to download the whole file. We have updated the Extension Attribute scripts, and the OSQuery plugin hads also been updated to take advantage of e-tags, so that the feed file is only fully downloaded when changes are detected.
+`curl` offers the option to interrogate ETags, which are a fingerprint of the feed, without having to download the whole file. We have updated the Extension Attribute scripts, and the OSQuery plugin hads also been updated to take advantage of ETags, so that the feed file is only fully downloaded when changes are detected.
 
-If you wrote your own scripts, you can write the e-tag to a file using curl. You can therefore check first if there is a cached e-tag signature file already on disk, and if it is present, compare the remote file with the locally cached one using the `--etag-compare` option. If there is no e-tag file on disk, or the e-tag doesn't match, then you can go ahead and download the feed to disk and write the e-tag to a file, by using the `--etag-save` option. Here's how that works in bash code:
+If you wrote your own scripts, you can write the ETag to a file using curl. You can therefore check first if there is a cached ETag signature file already on disk, and if it is present, compare the remote file with the locally cached one using the `--etag-compare` option. If there is no ETag file on disk, or the ETag doesn't match, then you can go ahead and download the feed to disk and write the ETag to a file, by using the `--etag-save` option. Here's how that works in bash code:
 
 ```bash
 # URL to the online JSON data
@@ -47,13 +47,13 @@ etag_cache="$json_cache_dir/macos_data_feed_etag.txt"
 # check local vs online using etag (only available on macOS 12+)
 if [[ -f "$etag_cache" && -f "$json_cache" ]]; then
     if /usr/bin/curl --compressed --silent --etag-compare "$etag_cache" "$online_json_url" --output /dev/null; then
-        echo "Cached e-tag matches online e-tag - cached json file is up to date"
+        echo "Cached ETag matches online ETag - cached json file is up to date"
     else
-        echo "Cached e-tag does not match online e-tag, proceeding to download SOFA json file"
+        echo "Cached ETag does not match online ETag, proceeding to download SOFA json file"
         /usr/bin/curl --compressed --location --silent "$online_json_url" --etag-save "$etag_cache" --output "$json_cache"
     fi
 else
-    echo "No e-tag cached, proceeding to download SOFA json file"
+    echo "No ETag cached, proceeding to download SOFA json file"
     /usr/bin/curl --compressed --location --silent "$online_json_url" --etag-save "$etag_cache" --output "$json_cache"
 fi
 ```
