@@ -46,19 +46,17 @@ etag_cache="$json_cache_dir/macos_data_feed_etag.txt"
 # ensure local store folder exists
 /bin/mkdir -p "$json_cache_dir"
 
-# check local vs online using etag (only available on macOS 12+)
+# check local vs online using etag (only available on macOS 12+) - only download if changed
 if [[ -f "$etag_cache" && -f "$json_cache" ]]; then
-    if /usr/bin/curl --compressed --silent --etag-compare "$etag_cache" "$online_json_url" --output /dev/null; then
-        echo "Cached ETag matches online ETag - cached json file is up to date"
-    else
-        echo "Cached ETag does not match online ETag, proceeding to download SOFA json file"
-        /usr/bin/curl --compressed --location --silent "$online_json_url" --etag-save "$etag_cache" --output "$json_cache"
-    fi
+    echo "Cached SOFA json file and ETag found, comparing with latest online version - only downloading if different"
+    /usr/bin/curl --compressed --location --silent --etag-compare "$etag_cache" --etag-save "$etag_cache" --output "$json_cache" "$online_json_url"
 else
     echo "No ETag cached, proceeding to download SOFA json file"
-    /usr/bin/curl --compressed --location --silent "$online_json_url" --etag-save "$etag_cache" --output "$json_cache"
+    /usr/bin/curl --compressed --location --silent --etag-save "$etag_cache" --output "$json_cache" "$online_json_url"
 fi
 ```
+
+> The above code was edited on 23 July thanks to advice from Gabriel Sroka
 
 ## Conclusion
 
