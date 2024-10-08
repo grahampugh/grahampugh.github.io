@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MacSysAdmin Presentation - 03 October 2021 - AutoPkg Everything"
+title: "MacSysAdmin Presentation - 03 October 2024 - Automated Testing of Managed Applications"
 comments: true
 ---
 
