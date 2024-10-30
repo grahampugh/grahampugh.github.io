@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "RocketmanTech LaunchPad Meetup Presentation, 7 June, 2024"
+title:  "RocketmanTech LaunchPad Presentation - 7 June 2024 - Why and how to use erase-install"
 comments: true
 ---
 
-Today, 7 June 2024, at 12:00 PM MST, I am proudly presenting at the [Rocketman Tech LaunchPad Meetup](https://rocketman.tech/launchpad), on the following topic:
+Today, 7 June 2024, at 12:00 PM MST, I am proudly presenting at the [RocketmanTech LaunchPad Meetup](https://rocketman.tech/launchpad), on the following topic:
 
 **Why and how to use erase-install to upgrade and update Mac with Jamf Pro**
 
