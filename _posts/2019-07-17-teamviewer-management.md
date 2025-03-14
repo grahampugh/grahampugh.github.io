@@ -5,6 +5,23 @@ comments: true
 excerpt: TeamViewer can be prevented from opening during installation if a specific file is placed in the tmp folder before installation. This can be achieved with the use of a preinstall script.
 ---
 
+### Update for 2023 and beyond
+
+The contents of the TeamViewer installation package have changed since this article was written. However, you should be able to prevent TeamViewer launching at installation with the following script run BEFORE installation:
+
+```bash
+#!/bin/sh
+## preinstall script
+
+# Set TeamViewer to only restart the service on installation
+# This is achieved by creating the following files
+# before installing the package. 
+
+touch /tmp/tvonlystartservice
+```
+
+### Original article from 2019 follows
+
 A customer pointed out to us that when a new version of TeamViewer was pushed to a client managed by Jamf Pro, the application would open during the installation of the package. That can be confusing to users, or badly timed.
 
 **Note:** by TeamViewer I mean the full application that acts both as client and server. TeamViewer QuickSupport does not have this problem.
