@@ -42,7 +42,7 @@ If you need to use multiple accounts or Client IDs on the same server, this is a
 
 ## How to create the Keychain entry
 
-The easiest way to add a Keychain entry for your Jamf Pro server is to use a new script that I've added to the [JamfUploader Repo][2,] called [set-credentials.sh][3].
+The easiest way to add a Keychain entry for your Jamf Pro server is to use a new script that I've added to the [JamfUploader Repo][2] called [set-credentials.sh][3].
 
 Run this script and you are asked to enter the Jamf Pro URL. Then you are asked to enter either an API account username and password, or API Client ID and Secret. It doesn't matter which you enter, either will be stored in the keychain. The script verifies that the credentials are correct by attempting to get a bearer token and retrieve the Jamf Pro server version.
 
@@ -52,14 +52,14 @@ Run this script and you are asked to enter the Jamf Pro URL. Then you are asked 
     URL : https://mylovely.jamfcloud.com
 
     Enter username or Client ID for mylovely.jamfcloud.com
-    User/Client ID : jamfsw
+    User/Client ID : jamfadmin
 
     Enter password or Client Secret for myob on mylovely.jamfcloud.com
-    Password/Secret : jamf1234
+    Password/Secret : jamfsw03
 
-    Credentials for mylovely.jamfcloud.com (jamfsw) added to keychain
+    Credentials for mylovely.jamfcloud.com (jamfadmin) added to keychain
 
-    Verifying credentials for mylovely.jamfcloud.com (jamfsw)
+    Verifying credentials for mylovely.jamfcloud.com (jamfadmin)
     Token request HTTP response: 200
     Version request HTTP response: 200
     Connection successful. Jamf Pro version: 11.14.1-t1740408745756   
@@ -70,7 +70,7 @@ The internet password entry created by `set-credentials.sh` contains a display l
 
 ![Keychain Access window showing multiple entries](/assets/images/keychain-mylovely.png)
 
-For a reason I am not aware of, when using the `security` command to add a Keychain entry, as `set-credentials.sh` does, the URL does not show in the "Where" field. So you have to just trust that it's there!
+For a reason I am not party to, when using the `security` command to add a Keychain entry (which is how `set-credentials.sh` works), the URL does not show in the "Where" field. So you have to just trust that it's there!
 
 ![Keychain Access window opened on a specific account](/assets/images/keychain-jamfadmin.png)
 
