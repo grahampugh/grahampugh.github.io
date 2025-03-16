@@ -5,7 +5,7 @@ comments: true
 ---
 
 
-<img src="/assets/images/Keychain%20Access.png" alt="Keychain Access icon" width="300" align="right" />It's been a while since I've posted anything about [JamfUploader], but there have been many updates to this suite of processors over the past few months. One new feature I would like to highlight is the ability to store your credentials for interacting with the Jamf Pro API in your Mac's Keychain.
+<img src="/assets/images/Keychain%20Access.png" alt="Keychain Access icon" width="300" align="right" hspace="10" />It's been a while since I've posted anything about [JamfUploader], but there have been many updates to this suite of processors over the past few months. One new feature I would like to highlight is the ability to store your credentials for interacting with the Jamf Pro API in your Mac's Keychain.
 
 JamfUploader processors were an evolution of the old JSSImporter processor and python-jss framework, both now deprecated. These both expected the API account username and password to be stored in a preferences file on disk, or supplied directly to the `autopkg` command. So, during the design stage for JamfUploader, I just replicated this requirement.
 
