@@ -104,7 +104,7 @@ Not at all, you can continue to supply credentials via prefs or command if you w
 
 ## Conclusion
 
-I'm glad to finally be able to prevent Jamf Pro credentials needing to be stored in AutoPkg prefs and saved to the receipts, and I hope you'll find this a convenient, more secure, and reliable way of using JamfUploader when running AutoPkg on a real Mac.
+I'm glad to finally be able to avoid Jamf Pro credentials having to be stored in AutoPkg prefs and being saved to the receipts, and I hope you'll find this a convenient, more secure, and reliable way of using JamfUploader when running AutoPkg on a real Mac.
 
 [3]: https://github.com/grahampugh/jamf-upload/blob/main/set-credentials.sh
 [4]: https://github.com/grahampugh/multitenant-jamf-tools
