@@ -104,7 +104,7 @@ token=$(/usr/bin/plutil -extract access_token raw "/tmp/access-token.txt")
 
 # compare expiry epoch to current time
 current_time_epoch=$(/bin/date +%s)
-expires_in=$(/usr/bin/plutil -extract expires_in raw "/tmp/access-token.txt")
+token_expires_in=$(/usr/bin/plutil -extract expires_in raw "/tmp/access-token.txt")
 expiration_epoch=$(($current_epoch + $token_expires_in - 1))
 
 if [[ $expiration_epoch -gt $current_time_epoch ]]; then
