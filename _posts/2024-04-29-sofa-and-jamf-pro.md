@@ -6,7 +6,7 @@ comments: true
 
 ## What is SOFA?
 
-![SOFA logo](https://sofa.macadmins.io/images/custom_logo.png)
+![SOFA logo](https://github.com/macadmins/sofa/raw/main/images/custom_logo.png)
 
 [SOFA], short for "Simple Organized Feed for Apple Software Updates", is a new open source resource for Mac Admins, developed primarily by Henry Stamerjohann of Zentral. It consists of a machine-readable feed and user-friendly web interface, providing always-up-to-date information on XProtect data, OS updates, and the CVEs (critical vulnerabilities) that have been reported as patched by Apple in each release. CVEs that are reported as actively exploited are listed distinctly.
 
@@ -18,7 +18,7 @@ There are many ways this feed will be useful to Mac Admins, so you're going to r
 
 Many existing tools use data from the client to verify if macOS is up to date on a Mac. Typically, obtaining the latest available version either involves interrogating `/Library/Preferences/com.apple.SoftwareUpdate.plist` on the local system for the results of the system's last software update check, or running `softwareupdate --list` to perform a new check. The current system version is then compared with the latest available version reported by either of those methods. I described these methods in the post [Do you need to use the softwareupdate command to discover available updates?][1]. However, if the software update checks on the system are not functional, we won't get an accurate comparison.
 
-The SOFA feed information is polled directly from Apple's servers, so provides a quick way of performing the comparison without relying on software update checks on the system to be working - so long as the system can reach the SOFA web page. 
+The SOFA feed information is polled directly from Apple's servers, so provides a quick way of performing the comparison without relying on software update checks on the system to be working - so long as the system can reach the SOFA web page.
 
 The SOFA feed includes information of which macOS models are compatible with each major version. We can use this information when determining whether a system is running the latest compatible OS.
 
@@ -34,7 +34,7 @@ Here, we use this smart group in Software Update to initiate MDM update commands
 
 ## XProtect Version Check
 
-I recently published a post [Is XProtect up to date?][2], which described how to check Apple's feed directly to see if the local system is up to date. This functions well, though it does require a certain amount of `grep` and `cut` hackery to get the correct version. 
+I recently published a post [Is XProtect up to date?][2], which described how to check Apple's feed directly to see if the local system is up to date. This functions well, though it does require a certain amount of `grep` and `cut` hackery to get the correct version.
 
 SOFA provides this information in a more readable JSON format, so we have an opportunity to use the SOFA feed to test whether XProtect and XProtect Remediator are up to date.
 
