@@ -46,6 +46,7 @@
 [gitlab]: https://about.gitlab.com
 [hello-it]: https://github.com/ygini/Hello-IT
 [imagr]: https://github.com/grahamgilbert/imagr/wiki/Getting-Started
+[installinstallmacos.py]: https://github.com/grahampugh/macadmin-scripts/blob/main/installinstallmacos.py
 [jamf marketplace]: https://marketplace.jamf.com/apps/#category=Integrations
 [jamf migrator]: https://github.com/jamf/JamfMigrator
 [jamf now]: https://www.jamf.com/products/jamf-now/
