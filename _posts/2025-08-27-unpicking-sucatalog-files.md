@@ -101,7 +101,7 @@ products=$(/usr/libexec/PlistBuddy -c "Print :Products:" "$catalog_plist_path" |
 Using this list, I then tried to use `plutil` to convert each individual product dictionary to JSON:
 
 ```bash
-package_plist=$(plutil -extract Products."$ia_product".Packages xml1 -o - "$catalog_plist_path" 2>/dev/null)
+package_plist=$(plutil -extract Products."$ia_product".Packages json -o - "$catalog_plist_path" 2>/dev/null)
 ```
 
 This failed for no real reason - seems to be a bug. I was instead able to extract the individual product dict as XML1 (i.e. PLIST), and then convert it to JSON. Shrug emoji.
