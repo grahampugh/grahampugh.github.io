@@ -46,7 +46,7 @@ Each entry in the `Products` dictionary consists of the following keys:
 
 * A product ID, in the form of a 3-digit number, followed by a dash, followed by a four- or five-digit number. For example, `061-1955` refers to a DVD Player update from 2005, and `093-27146` refers to an XProtect Plist Configuration Data release from 26 August, 2025.
 * `ServerMetadataURL`, a URL for a metadata file ending in `.smd`.
-* `Packages`, an array consisting of a dictionary of entries, each of which contains a `URL` key, the value of which is the URL of the available `.pkg` file for this product; a `MetadataURL` key, which links to a `.pkm` file, which is an XML file with some interesting metadata regarding the package, such as its version string (`CFBundleShortVersionString`); the package size, and a `Digest` value (I'm going to guess this is a hash value).
+* `Packages`, an array consisting of a dictionary of entries, each of which contains a `URL` key, the value of which is the URL of the available `.pkg` file for this product; a `MetadataURL` key, which links to a `.pkm` file, which is an XML file with some interesting metadata regarding the package, such as its version string (`CFBundleShortVersionString`); the package `Size`; and a `Digest` value (I'm going to guess this is a hash value).
 * `PostDate`, when this product was posted.
 * `Distributions`, a dictionary listing any number of languages with URLs pointing to `.dist` files, which also provide additional information about the product.
 
