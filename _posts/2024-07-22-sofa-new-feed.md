@@ -4,7 +4,7 @@ title:  "If you're using the SOFA feed, please take note!"
 comments: true
 ---
 
-![SOFA logo](https://sofa.macadmins.io/images/custom_logo.png)
+![SOFA logo](https://github.com/macadmins/sofa/raw/main/images/custom_logo.png)
 
 Back in April I [posted][1] about [SOFA], short for "Simple Organized Feed for Apple Software Updates", which consists of a machine-readable feed and user-friendly web interface, providing always-up-to-date information on XProtect data, OS updates, and associated patched CVEs.
 
@@ -64,7 +64,7 @@ SOFA is still very new, so changes are inevitable as features are added, use cas
 
 We also continue to recommend hosting a mirror of the feed for your own organisation if that's feasible.
 
-[1]: https://grahamrpugh.com/2024/04/29/sofa-and-jamf-pro-new-feed.html
+[1]: https://grahamrpugh.com/2024/04/29/sofa-and-jamf-pro.html
 [2]: https://github.com/macadmins/nudge/releases/tag/v2.0.0.81713
 [3]: https://github.com/macadmins/sofa/blob/main/tool-scripts
 
