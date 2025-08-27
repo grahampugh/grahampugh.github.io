@@ -179,33 +179,18 @@ Finally, for listing purposes, we can output to the terminal in a readable forma
     echo "│ PRODUCT ID │ TITLE            │ VERSION │ BUILD    │ SIZE GB  │ DATE       │ COMPATIBLE │"
     echo "├────────────┼──────────────────┼─────────┼──────────┼──────────┼────────────┼────────────┤"
 
-    if [[ "$beta" == "yes" ]]; then
-        jq -r 'sort_by(.version | split(".") | map(tonumber)) | reverse | .[] | [
-            (.product // ""),
-            (.title // ""),
-            (.version // ""),
-            (.build // ""),
-            (.pkg_size // ""),
-            (.post_date // ""),
-            (.compatible // "")
-        ] | @tsv' "$installers_list_json_file" | while IFS=$'\t' read -r ia_product ia_title ia_version ia_build ia_size ia_date ia_compatible; do
-            printf "│ %-10s │ %-16s │ %-7s │ %-8s │ %-8s │ %-10s │ %-10s │\n" \
-                "$ia_product" "$ia_title" "$ia_version" "$ia_build" "$ia_size" "$ia_date" "$ia_compatible"
-        done
-    else
-        jq -r 'sort_by(.version | split(".") | map(tonumber)) | reverse | .[] | select((.title // "" | test("beta"; "i")) | not) | [
-            (.product // ""),
-            (.title // ""),
-            (.version // ""),
-            (.build // ""),
-            (.pkg_size // ""),
-            (.post_date // ""),
-            (.compatible // "")
-        ] | @tsv' "$installers_list_json_file" | while IFS=$'\t' read -r ia_product ia_title ia_version ia_build ia_size ia_date ia_compatible; do
-            printf "│ %-10s │ %-16s │ %-7s │ %-8s │ %-8s │ %-10s │ %-10s │\n" \
-                "$ia_product" "$ia_title" "$ia_version" "$ia_build" "$ia_size" "$ia_date" "$ia_compatible"
-        done
-    fi
+    jq -r 'sort_by(.version | split(".") | map(tonumber)) | reverse | .[] | [
+        (.product // ""),
+        (.title // ""),
+        (.version // ""),
+        (.build // ""),
+        (.pkg_size // ""),
+        (.post_date // ""),
+        (.compatible // "")
+    ] | @tsv' "$installers_list_json_file" | while IFS=$'\t' read -r ia_product ia_title ia_version ia_build ia_size ia_date ia_compatible; do
+        printf "│ %-10s │ %-16s │ %-7s │ %-8s │ %-8s │ %-10s │ %-10s │\n" \
+            "$ia_product" "$ia_title" "$ia_version" "$ia_build" "$ia_size" "$ia_date" "$ia_compatible"
+    done
     echo "└────────────┴──────────────────┴─────────┴──────────┴──────────┴────────────┴────────────┘"
 ```
 
