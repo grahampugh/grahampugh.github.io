@@ -84,7 +84,7 @@ Since Issues appear with just their titles in default views (e.g. List, Kanban),
 
 ### Creating an API Token
 
-- Login via [id.atlassian.com]
+- Login via [id.atlassian.com](https://id.atlassian.com)
 - Click on your profile icon in the top-right of the website, and select "Account Settings".
 - Click the "Security" tab.
 - Click on "Create and manage API tokens".
