@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JNUC Presentation - 21 October 2021 - Making package uploading and deployment easier with JamfUploader"
+title: "JNUC Presentation Announcement - 21 October 2021 - JamfUploader"
 comments: true
 ---
 
@@ -16,7 +16,7 @@ On 21 October 2021, at 02:00 PM CDT (21:00 Central European Time), I am proud to
 
 In this session, Anthony and I will introduce JamfUploader and help attendees understand how to construct AutoPkg recipes using the processors, giving simple and more advanced examples.
 
-## See you there!
+## See you there
 
 If you are attending Virtual JNUC, Anthony and I hope that we will leave you with some new ideas on how to use AutoPkg in your organisation to improve your automation. We will be available for Q&A during and after the session. If you cannot attend live, there will be a video available a short time afterwards.
 
