@@ -6,7 +6,7 @@ comments: true
 
 ## Introduction
 
-[JamfUploader] started off as a successor to [JSSImporter], the now defunct [AutoPkg] processor designed to use a python framework called [python-jss] (also defunct) to upload packages to a Jamf Pro instance and create objects required to deploy that package, such as a category, a script, a smart group, and a policy. With JamfUploader, I decided to take a modular approach, with each object getting its own processor, for example `JamfCategoryUploader`, `JamfScriptUploader`, `JamfPackageUploader`, and so on. Over time, I and other contributors have added more and more processors to handle additional endpoints and perform additional tasks beyond just uploading something.
+[JamfUploader] started off as a successor to [JSSImporter], the now defunct [AutoPkg] processor designed to use a python framework called *python-jss* (also defunct) to upload packages to a Jamf Pro instance and create objects required to deploy that package, such as a category, a script, a smart group, and a policy. With JamfUploader, I decided to take a modular approach, with each object getting its own processor, for example `JamfCategoryUploader`, `JamfScriptUploader`, `JamfPackageUploader`, and so on. Over time, I and other contributors have added more and more processors to handle additional endpoints and perform additional tasks beyond just uploading something.
 
 This modular approach makes JamfUploader a powerful and flexible tool for maintaining all content in Jamf Pro, but I suspect not too many of you are aware of the utility beyond that original use case of uploading a package.
 
