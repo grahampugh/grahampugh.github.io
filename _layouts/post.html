@@ -5,16 +5,16 @@ comments: true
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-	<header class="post-header">
-		<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-		<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> • <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a></p>
-	</header>
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+        <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> • <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a></p>
+    </header>
 
-	<div class="post-content" itemprop="articleBody">
-		{{ content }}
-	</div>
+    <div class="post-content" itemprop="articleBody">
+        {{ content }}
+    </div>
 
-<script src="https://giscus.app/client.js"
+    <script src="https://giscus.app/client.js"
         data-repo="grahampugh/grahampugh.github.io"
         data-repo-id="MDEwOlJlcG9zaXRvcnk0NjYzMTE3Mg=="
         data-category="General"
@@ -29,6 +29,6 @@ comments: true
         data-loading="lazy"
         crossorigin="anonymous"
         async>
-</script>
+    </script>
 
 </article>
