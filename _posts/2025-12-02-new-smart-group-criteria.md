@@ -37,7 +37,7 @@ These criteria correspond to the `CFBundleShortVersionString` and `CFBundleVersi
 ![Application Bundle Short Version criteria](/assets/images/smartgroup-appshortversion.png)
 ![Application Bundle Version criteria](/assets/images/smartgroup-appbundleversion.png)
 
-## What does this mean for Jamf recipes?
+## What does this mean for Jamf AutoPkg recipes?
 
 Recipe writers can now use the same key as Munki users, so all existing `.download` recipes should now be able to be used.
 
