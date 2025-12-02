@@ -34,6 +34,9 @@ The great news for Jamf recipe writers is that as of version 11.23.0, two new Sm
 
 These criteria correspond to the `CFBundleShortVersionString` and `CFBundleVersion` values respectively, and can directly replace the `Application Version` criterion.
 
+![Application Bundle Short Version criteria](/assets/images/smartgroup-appshortversion.png)
+![Application Bundle Version criteria](/assets/images/smartgroup-appbundleversion.png)
+
 ## What does this mean for Jamf recipes?
 
 Recipe writers can now use the same key as Munki users, so all existing `.download` recipes should now be able to be used.
