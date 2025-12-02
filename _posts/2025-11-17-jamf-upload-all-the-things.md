@@ -53,6 +53,7 @@ Currently, the following settings are supported:
 - Cloud LDAP
 - Computer Inventory Collection Settings
 - Computer PreStage Enrollments
+- Device Communication Settings
 - Distribution Points
 - Enrollment Settings
 - Enrollment Customizations
