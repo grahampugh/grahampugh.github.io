@@ -6,7 +6,7 @@ comments: true
 
 ## Introduction
 
-Famously (or, infamously), when creating a configuration profile using the Jamf Pro admin console, some of the payloads are constructed such that to enforce any single setting, you have to enforce _all_ settings. Over the years, Jamf have updated some of those payloads so that specific settings can now be assigned, but payloads such as Restrictions, Accessibility, and Login Window Settings still use the old style "mononlithic" payload.
+Famously (or, infamously), when creating a configuration profile using the Jamf Pro admin console, some of the payloads are constructed such that to enforce any single setting, you have to enforce _all_ settings. Over the years, Jamf have updated some of those payloads so that specific settings can now be assigned, but payloads such as Restrictions, Accessibility, and Login Window Settings still use the old style "monolithic" payload.
 
 A workaround that many Jamf Pro admins use is to avoid those payloads altogether - where possible - and upload a custom payload instead. This consists of a PLIST file containing the key/value pairs to be assigned, set to the relevant domain, for example `com.apple.applicationsettings` for many (but not all) of the settings in the Restrictions payload.
 
@@ -27,7 +27,7 @@ However, if you've been using the console to apply settings over the years, depe
 
 ## Compliance Benchmarks - another spanner in the works
 
-> Or "wrench", for my colleauges across the Atlantic Ocean
+> Or "wrench", for my colleagues across the Atlantic Ocean
 
 The [macOS Security Compliance Project][1] (mSCP) provides a mechanism for generating custom profile payloads for a range of security baselines, including those provided by the Center for Internet Security (CIS), the National Institute of Standards and Technology Department of Commerce (NIST), and others. The [Jamf Compliance Editor][2] provides a user interface for generating the payloads and uploading them to Jamf Pro, and the recent addition of the Compliance Benchmarks feature in Jamf Pro cloud instances makes creating these profiles easier than ever.
 
@@ -93,7 +93,7 @@ For those familiar with Multitenant Jamf Tools, I've taken this a step further. 
 - Performs the analysis, discarding keys with default values and unrecognized keys
 - Creates the required PLIST files for each domain
 - Creates (uploads) new custom profiles for each domain using the Jamf Pro API (JamfUploader)
-- Optionally, a target scope may be defined (forf safety reasons, by default, no scope is assigned)
+- Optionally, a target scope may be defined (for safety reasons, by default, no scope is assigned)
 
 This allows you, _theoretically_, to replace a monolithic profile in a single step, as easy as something like:
 
