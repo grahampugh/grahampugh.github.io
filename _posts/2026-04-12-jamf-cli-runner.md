@@ -54,7 +54,7 @@ On the other hand, you're not limited by what endpoints are available (this is a
 
 Let's look at a process in a recipe for uploading a smart group in both JamfUploader and JamfCLIRunner, both of which hace been set to replace the content of any existing group.
 
-First, using JamfComputerGroupUploader:
+First, using `JamfComputerGroupUploader`:
 
 ```yaml
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
