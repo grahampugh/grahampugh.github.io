@@ -38,7 +38,7 @@ For individual but reproducible workflows with idempotency, you need to create a
 
 ## But hang on, that sounds quite a lot like an AutoPkg recipe
 
-The JamfUploader processors allow you to write an AutoPkg recipe to process a workflow of multiple steps, with the ability to decide on an object-by-object basis in each individual recipe when to replace the content of existing objects and when to leave them alone, as well as performing more esoteric actions like updating the scope of an object. See my previous post "Jamf-Upload All The Things" ([4]) for examples.
+The JamfUploader processors allow you to write an AutoPkg recipe to process a workflow of multiple steps, with the ability to decide on an object-by-object basis in each individual recipe when to replace the content of existing objects and when to leave them alone, as well as performing more esoteric actions like updating the scope of an object. See my previous post "_Jamf-Upload All The Things_" ([4]) for examples.
 
 `jamf-cli` can now do all these things too. So, theoretically, I could replace some of the core parts of JamfUploader with `jamf-cli` commands, although that would introduce a dependency on top of AutoPkg that I have previously tried to avoid with JamfUploader. So, for now at least, I'm not intending to do that.
 
