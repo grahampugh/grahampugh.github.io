@@ -54,7 +54,7 @@ Using a single processor while maintaining the flexibility enjoyed in JamfUpload
 
 On the other hand, you're not limited by what endpoints are available (this is also true with JamfUploader due to the `JamfObjectReader` and `JamfObjectUploader` processors, but I digress...).
 
-Let's look at a process in a recipe for uploading a smart group in both JamfUploader and JamfCLIRunner, both of which hace been set to replace the content of any existing group.
+Let's look at a process in a recipe for uploading a smart group in both JamfUploader and JamfCLIRunner, both of which have been set to replace the content of any existing group.
 
 First, using `JamfComputerGroupUploader`:
 
@@ -116,7 +116,7 @@ The `data` YAML object is converted to JSON and added to the command as `stdin`.
 
 By the way, the `output_vars` is an important feature of JamfCLIRunner - this gives the opportunity to provide new variable names for the `id` and `name` of objects created, which can be used in subsequent processors without them getting overwritten by some in-between processor that also outputs an `id` and `name`.
 
-For a working example of a complex recipe using JamfCLIRunner that is equivalent to a traditional JamfUploader recipe ([6]), checkout `JamfPro-DeployPackage-CarbonCopyCloner.jamfclirunner` ([7]). There are also a bunch of simpler recipes in that folder showing a range of use cases for JamfCLIRunner.
+For a working example of a complex recipe using JamfCLIRunner that is equivalent to a traditional JamfUploader recipe ([6]), check out `JamfPro-DeployPackage-CarbonCopyCloner.jamfclirunner` ([7]). There are also a bunch of simpler recipes in that folder showing a range of use cases for JamfCLIRunner.
 
 ## Will JamfCLIRunner replace JamfUploader?
 
