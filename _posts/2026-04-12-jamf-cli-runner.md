@@ -24,6 +24,8 @@ Let's look at how these two tools handle reading a computer group, as a simple e
 
 `jamf-cli` also goes a bit further, with a number of extremely useful "power commands" for reporting state, as well as some features lifted from JamfUploader and [Multitenant Jamf Tools], such as adjusting scope, discovering unused objects, and converting monolithic profiles.
 
+And, of course, it's not just confined to Jamf Pro. It can be used with Protect and the new Platform APIs, and I believe more APIs in the works.
+
 All in all, it's a big step forward from any previous individual tool in terms of useability and functionality.
 
 ## What jamf-cli isn't
