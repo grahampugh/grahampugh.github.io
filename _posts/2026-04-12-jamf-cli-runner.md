@@ -32,7 +32,7 @@ All in all, it's a big step forward from any previous individual tool in terms o
 
 ## Where does jamf-cli fit in terms of automation?
 
-While a terraform workflow, using the Jamf Pro, Protect and Platform terraform providers based on the golang SDKs ([1], [2], [3]), may suit many for maintaining their Jamf instances, for some organisations this is too prescriptive and inflexible - it largely prevents the ability to use of the user interfaces for Jamf products to make one-off changes, since they would get undone the next time terraform is induced.
+While a terraform workflow, using the Jamf Pro, Protect and Platform terraform providers based on the golang SDKs ([1], [2], [3]), may suit many for maintaining their Jamf instances, for some organisations this is too prescriptive and inflexible - it largely prevents the ability to use the user interfaces for Jamf products to make one-off changes, since they would get undone the next time terraform is induced.
 
 For individual but reproducible workflows with idempotency, you need to create a hierarchical list of `jamf-cli` commands that you can run repeatedly, setting options as required to either overwrite or leave alone any existing content. CI-CD workflows within shell scripts can definitely be built.
 
