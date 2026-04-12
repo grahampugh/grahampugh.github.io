@@ -47,6 +47,8 @@
 [hello-it]: https://github.com/ygini/Hello-IT
 [imagr]: https://github.com/grahamgilbert/imagr/wiki/Getting-Started
 [installinstallmacos.py]: https://github.com/grahampugh/macadmin-scripts/blob/main/installinstallmacos.py
+[Jamf API Utility]: https://github.com/Jamf-Concepts/apiutil
+[jamf-cli]: https://github.com/Jamf-Concepts/jamf-cli
 [jamf marketplace]: https://marketplace.jamf.com/apps/#category=Integrations
 [jamf migrator]: https://github.com/jamf/JamfMigrator
 [jamf now]: https://www.jamf.com/products/jamf-now/
@@ -60,6 +62,7 @@
 [jnuc]: https://www.jamf.com/events/jamf-nation-user-conference/
 [jssimporter]: https://github.com/jssimporter/JSSImporter
 [jamfuploader]: https://github.com/grahampugh/jamf-upload/wiki/JamfUploader-AutoPkg-Processors
+[jamf-upload.sh]: https://github.com/grahampugh/jamf-upload/wiki/jamf-upload.sh
 [jss-in-a-box]: https://github.com/franton/JSS-In-A-Box
 [jss-config-in-a-box]: https://github.com/franton/JSS-Config-In-A-Box
 [jss_helper]: https://github.com/jssimporter/jss_helper
@@ -71,6 +74,8 @@
 [manifestutil]: https://github.com/munki/munki/wiki/manifestutil
 [margarita]: https://github.com/jessepeterson/margarita
 [markdown]: http://en.wikipedia.org/wiki/Markdown
+[Multitenant Jamf Tools]: https://github.com/grahampugh/multitenant-jamf-tools
+[MJT]: https://github.com/grahampugh/multitenant-jamf-tools
 [munki do-not-disturb package]: https://github.com/grahampugh/munki-do-not-disturb/releases
 [munki do-not-disturb]: https://github.com/grahampugh/munki-do-not-disturb
 [munki in a box]: https://github.com/tbridge/munki-in-a-box
