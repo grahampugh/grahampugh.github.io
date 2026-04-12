@@ -48,7 +48,7 @@ Instead, I've taken a stab at creating a single new AutoPkg processor for drivin
 
 JamfCLIRunner is built with a similar concept to JamfUploader in mind - a single process for a single action. You can add as many processes as you need - one to create a category, one to upload a script, one to update a smart group, and so on. It can work with the `StopProcessingIf` processor just like JamfUploader, so as to only update objects if necessary, meaning it can be used with scheduled recipes.
 
-Using a single processor while maintaining the flexibility enjoyed in JamfUploader makes for longer recipes, as more parameters have to be provided to direct jamf-cli which are abstracted from JamfUploader due to the many different processors available - for example, since you use JamfScriptUploader purely to upload a script, you don't need a parameter to say "script" or "apply", and you don't need to construct or provide a JSON object that builds the script object in Jamf Pro, because that's been built into the processor.
+Using a single processor while maintaining the flexibility enjoyed in JamfUploader makes for longer recipes, as more parameters have to be provided to direct `jamf-cli` which are abstracted from JamfUploader due to the many different processors available - for example, since you use `JamfScriptUploader` purely to upload a script, you don't need a parameter to say "script" or "apply", and you don't need to construct or provide a JSON object that builds the script object in Jamf Pro, because that's been built into the processor.
 
 On the other hand, you're not limited by what endpoints are available (this is also true with JamfUploader due to the `JamfObjectReader` and `JamfObjectUploader` processors, but I digress...).
 
