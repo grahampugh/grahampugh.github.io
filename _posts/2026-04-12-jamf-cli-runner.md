@@ -112,7 +112,7 @@ I've also provided the ability in JamfCLIRunner to provide the template inline a
 
 The `data` YAML object is converted to JSON and added to the command as `stdin`.
 
-By the way, the `output_vars` become important with JamfCLIRunner - this gives the opportunity to provide new variable names for the `id` and `name` of objects created, which can be used in subsequent processors without them getting overwritten by some in-between processor that also outputs an `id` and `name`.
+By the way, the `output_vars` is an important feature of JamfCLIRunner - this gives the opportunity to provide new variable names for the `id` and `name` of objects created, which can be used in subsequent processors without them getting overwritten by some in-between processor that also outputs an `id` and `name`.
 
 For a working example of a complex recipe using JamfCLIRunner that is equivalent to a traditional JamfUploader recipe ([6]), checkout `JamfPro-DeployPackage-CarbonCopyCloner.jamfclirunner` ([7]). There are also a bunch of simpler recipes in that folder showing a range of use cases for JamfCLIRunner.
 
