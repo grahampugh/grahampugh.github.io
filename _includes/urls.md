@@ -1,3 +1,4 @@
+<!-- markdownlint-disable -->
 [@ftiff]: https://twitter.com/ftiff
 [@grahamgilbert]: https://twitter.com/grahamgilbert
 [@grahamrpugh]: https://twitter.com/grahamrpugh
@@ -49,6 +50,7 @@
 [installinstallmacos.py]: https://github.com/grahampugh/macadmin-scripts/blob/main/installinstallmacos.py
 [Jamf API Utility]: https://github.com/Jamf-Concepts/apiutil
 [jamf-cli]: https://github.com/Jamf-Concepts/jamf-cli
+[JamfCLIRunner]: https://github.com/autopkg/grahampugh-recipes/tree/main/JamfCLI-Runner
 [jamf marketplace]: https://marketplace.jamf.com/apps/#category=Integrations
 [jamf migrator]: https://github.com/jamf/JamfMigrator
 [jamf now]: https://www.jamf.com/products/jamf-now/
@@ -57,12 +59,12 @@
 [jamf pro api documentation]: https://developer.jamf.com/index
 [jamf pro logo]: /assets/images/JamfPro-Logo.png
 [jamf pro patch management]: https://www.jamf.com/products/jamf-pro/patch-management/
+[jamf-upload.sh]: https://github.com/grahampugh/jamf-upload/wiki/jamf-upload.sh
+[jamfuploader]: https://github.com/grahampugh/jamf-upload/wiki/JamfUploader-AutoPkg-Processors
 [jctl]: https://github.com/univ-of-utah-marriott-library-apple/jctl
 [jekyll]: http://jekyllrb.com/
 [jnuc]: https://www.jamf.com/events/jamf-nation-user-conference/
 [jssimporter]: https://github.com/jssimporter/JSSImporter
-[jamfuploader]: https://github.com/grahampugh/jamf-upload/wiki/JamfUploader-AutoPkg-Processors
-[jamf-upload.sh]: https://github.com/grahampugh/jamf-upload/wiki/jamf-upload.sh
 [jss-in-a-box]: https://github.com/franton/JSS-In-A-Box
 [jss-config-in-a-box]: https://github.com/franton/JSS-Config-In-A-Box
 [jss_helper]: https://github.com/jssimporter/jss_helper
