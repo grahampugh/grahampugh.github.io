@@ -98,6 +98,7 @@
 [mwa2]: https://github.com/munki/mwa2
 [patchbot]: https://github.com/Honestpuck/PatchBot
 [plist-yaml-plist]: https://github.com/grahampugh/plist-yaml-plist
+[plist-yaml-plist-swift]: https://github.com/grahampugh/plist-yaml-plist-swift
 [prune]: https://github.com/BIG-RAT/Prune
 [puppet]: https://puppetlabs.com
 [recipe robot]: https://github.com/homebysix/recipe-robot
