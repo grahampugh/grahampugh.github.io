@@ -80,7 +80,7 @@ plistyamlplist /path/to/YAML/ --tidy
 
 ## Convert JSON to PLIST?
 
-Yes, for some reason I've forgotten, a added the option to convert JSON to PLIST ,so this option has also been ported over, in case you wanted to maintain recipes in JSON format (I don't know why you would, but you could). Again, the file type is automatically detected.
+Yes, for some reason I've forgotten, I added the option to convert JSON to PLIST, so this option has also been ported over, in case you wanted to maintain recipes in JSON format (I don't know why you would, but you could). Again, the file type is automatically detected.
 
 ## Conclusion
 
