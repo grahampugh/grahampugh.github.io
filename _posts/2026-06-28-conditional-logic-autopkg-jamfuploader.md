@@ -65,6 +65,10 @@ Process:
           replace_policy: True
 ```
 
+It’s doable (and potentially without a rewrite to AutoPkg itself), but introducing sub-processors as a concept is a big shift, which could break all sorts of tooling that was built into or around AutoPkg (not least `autopkg info`).
+
+Another way would be to introduce some sort of processor that could skip a defined number of subsequent processors based on a predicate. This would surely need to be core to AutoPkg itself. Something like this:
+
 ```yaml
 Process:
 ...
@@ -101,12 +105,6 @@ Process:
       replace_policy: True 
 ```
 
-It’s doable (and potentially without a rewrite to AutoPkg itself), but introducing sub-processors as a concept is a big shift, which could break all sorts of tooling that was built into or around AutoPkg (not least `autopkg info`).
-
-Another way would be to introduce some sort of processor that could skip a defined number of subsequent processors based on a predicate. This would surely need to be core to AutoPkg itself. Something like this:
-
-(Move the above down here, not possible with iPad)
-
 This avoids indentations and subprocessors, but could be complex to implement.
 
 # How I’ve implemented conditional logic for JamfUploader
@@ -115,7 +113,7 @@ The need for conditional logic within my team recently reached a tipping point f
 
 ## ConditionalVariableAssigner
 
-The new `ConditionalVariableAssigner` processor allows you to assign the value of a key based on a predicate. For example, in the scenario where we want to either create a Self Service or a recurring trigger policy based on an input key, we can set a value to a key which we then use in a subsequent processors.
+The new `ConditionalVariableAssigner` processor allows you to assign the value of a key based on a predicate. For example, in the scenario where we want to either create a Self Service or a recurring trigger policy based on an input key, we can set a value to a key which we then use in subsequent processors.
 
 ```yaml
 Process:
@@ -138,15 +136,15 @@ Process:
     Arguments:
       predicate: "%CREATE_SELF_SERVICE_POLICY% == True"
       conditional_key: policy_name
-      value_if_true: 
-      value_if_false: Policy-Ongoing.xml
+      value_if_true: Install %NAME% - Self Service
+      value_if_false: Install %NAME% - Ongoing
       
   - Processor: com.github.grahampugh.recipes.commonprocesses/ConditionalVariableAssigner
     Arguments:
       predicate: "%CREATE_SELF_SERVICE_POLICY% == True"
       conditional_key: policy_template
-      value_if_true: Install %NAME% - Self Service
-      value_if_false: Install %NAME% - Ongoing
+      value_if_true: Policy-SelfService.xml
+      value_if_false: Policy-Ongoing.xml
       
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader # name/template keys conditionally defined
     Arguments:
@@ -207,8 +205,8 @@ I have also added the same `skip_if` logic to the `JamfCLIRunner` processor, for
 
 # Conclusion
 
-I came up with `ConditionalValueAssigner` before `skip_if`, and the latter is better for most scenarios concerning Jamf Pro. It will allow my team to reduce the number of recipes in our repo, though of course needs time to rewrite them all - no doubt something an LLM could figure out pretty well with good instructions.
+I came up with `ConditionalVariableAssigner` before `skip_if`, and the latter is better for most scenarios concerning Jamf Pro. It will allow my team to reduce the number of recipes in our repo, though of course needs time to rewrite them all - no doubt something an LLM could figure out pretty well with good instructions.
 
 Is there a use for `skip_if` in all AutoPkg processors? I’m not sure - it would add flexibility for sure, but I don’t know if the demand is there. AutoPkg has been around for well over ten years and I’ve personally only noticed 2 or 3 people publicly asking about the possibility of conditional logic being used or added. My team’s primary usage would be for that scenario I initially mentioned where we are given installer material for particular non-publicly-available apps in different formats depending on the whims of our customers.
 
-I’m curious to hear from you if you have a scenario where you could use either `skip_if` or the `ConditionalValueAssigner` processor in a Jamf or any other environment.
+I’m curious to hear from you if you have a scenario where you could use either `skip_if` or the `ConditionalVariableAssigner` processor in a Jamf or any other environment.
