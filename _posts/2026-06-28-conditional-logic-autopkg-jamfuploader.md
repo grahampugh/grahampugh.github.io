@@ -1,10 +1,12 @@
-Title: "Introducing Conditional Logic for JamfUploader and JamfCLIRunner"
-
+---
+layout: post
+title: "Introducing Conditional Logic for JamfUploader and JamfCLIRunner"
+comments: true
 ---
 
 # Introduction
 
-AutoPkg recipe syntax is not a programming language, but rather a markup for underlying python processors which adhere to a framework to ensure they are all compatible. Recipes essentially contain a list of actions, with all variables being added to the environment so that any processor can access the value of any variable generated at the start of the run (from Inputs, preferences, or command line parameters), or during the course of the run (output variables from each processor).
+[AutoPkg] recipe syntax is not a programming language, but rather a markup for underlying python processors which adhere to a framework to ensure they are all compatible. Recipes essentially contain a list of actions, with all variables being added to the environment so that any processor can access the value of any variable generated at the start of the run (from Inputs, preferences, or command line parameters), or during the course of the run (output variables from each processor).
 
 Since the AutoPkg framework itself contains no logical operators (if, else), it’s up to individual processors to include any logic that they need. This is generally confined within each processor, such as with the `StringReplacer` processor, which will only act on a matching input string but doesn’t depend on the presence of that string - a basic if/else logic - but without any direct influence on a subsequent processor. This means that each processor has to be valid for a recipe - you can’t add different processors based on an if/else discovery from a previous process. 
 
@@ -20,7 +22,7 @@ Indeed, this happened with the `PathDeleter` processor, which would fail if any 
 
 The life for Jamf Pro admins building package deployment options can be more complex than Munki admins. For example, if you wish to offer some users a self-service option for a particular software title, but automatically deploy that same title to different users, you only need one munki recipe - the scope of deployment (with apologies for using a Jamf term) is determined in Munki’s manifests, which are not adjusted by the AutoPkg recipe (they don’t change when a title version is updated).
 
-With Jamf Pro, when a title version is updated, a common task is to update at least one smart group criterion to reflect the latest version string (or a regular expression based on that string). For this reason it makes sense to automate this action in the recipe, so we add a processor that will create or update the smart group. However, if you’re offering both Self Service and automatic installations to different scopes, you need two smart groups, and two policies. That’s fine, just add two JamfComputerGroupUploader and two JamfPolicyUploader processors to the recipe, one for Self Service and one for the automated installation (recurring trigger).
+With Jamf Pro, when a title version is updated, a common task is to update at least one smart group criterion to reflect the latest version string (or a regular expression based on that string). For this reason it makes sense to automate this action in a [JamfUploader] recipe, so we add a processor that will create or update the smart group. However, if you’re offering both Self Service and automatic installations to different scopes, you need two smart groups, and two policies. That’s fine, just add two `JamfComputerGroupUploader` and two `JamfPolicyUploader` processors to the recipe, one for Self Service and one for the automated installation (recurring trigger).
 
 If you have more than one Jamf Pro instance and need different content in each, for example Self Service in one instance and recurring trigger in the other, then it gets more complicated - you need two recipes. Or some customer wants an uninstaller policy but the other doesn’t? That’s another recipe.
 
