@@ -6,13 +6,13 @@ comments: true
 
 # Introduction
 
-[AutoPkg] recipe syntax is not a programming language, but rather a markup for underlying python processors which adhere to a framework to ensure they are all compatible. Recipes essentially contain a list of actions, with all variables being added to the environment so that any processor can access the value of any variable generated at the start of the run (from Inputs, preferences, or command line parameters), or during the course of the run (output variables from each processor).
+[AutoPkg] ([1][autopkg]) recipe syntax is not a programming language, but rather a markup for underlying python processors which adhere to a framework to ensure they are all compatible. Recipes essentially contain a list of actions, with all variables being added to the environment so that any processor can access the value of any variable generated at the start of the run (from Inputs, preferences, or command line parameters), or during the course of the run (output variables from each processor).
 
 Since the AutoPkg framework itself contains no logical operators (if, else), it’s up to individual processors to include any logic that they need. This is generally confined within each processor, such as with the `StringReplacer` processor, which will only act on a matching input string but doesn’t depend on the presence of that string - a basic if/else logic - but without any direct influence on a subsequent processor. This means that each processor has to be valid for a recipe - you can’t add different processors based on an if/else discovery from a previous process. 
 
 For example, for a recipe where you need to supply a particular software’s installer material manually with the `PKG` option, but that could potentially be provided to you in a ZIP archive or not, you can’t create a recipe to handle both circumstances. That’s because the `Unarchiver` processor doesn’t have an option to just skip to the next processor if the input file is not a ZIP - it will simply fail.
 
-There is one obvious exception. The `StopProcessingIf` processor allows you to decide whether the recipe should continue or not based on a predicate. This is commonly used in JamfUploader recipes, for example, to end the recipe successfully without further action if the package that was created in the parent pkg recipe is the same as the one already in cache. But it doesn’t allow you to skip on to another processor - there’s no “else” option.
+There is one obvious exception. The `StopProcessingIf` processor allows you to decide whether the recipe should continue or not based on a predicate. This is commonly used in [JamfUploader] ([2][JamfUploader]) recipes, for example, to end the recipe successfully without further action if the package that was created in the parent pkg recipe is the same as the one already in cache. But it doesn’t allow you to skip on to another processor - there’s no “else” option.
 
 # Are there any use cases for conditional logic in AutoPkg recipes?
 
