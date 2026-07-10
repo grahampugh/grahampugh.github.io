@@ -25,7 +25,8 @@ GEM
     ethon (0.13.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
-    excon (0.80.1)
+    excon (1.5.0)
+      logger
     execjs (2.7.0)
     faraday (1.4.0)
       faraday-excon (~> 1.0)
@@ -214,6 +215,7 @@ GEM
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.7.0)
     mercenary (0.3.6)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
