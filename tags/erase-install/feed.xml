@@ -1,0 +1,61 @@
+---
+layout: null
+permalink: /tags/erase-install/feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>erase-install | https://grahamrpugh.com</title>
+    <link>https://grahamrpugh.com/tags/erase-install/</link>
+    <description>Posts tagged with erase-install</description>
+    <item>
+      <title>Erase All Contents And Settings - erase and reinstall macOS in situ</title>
+      <link>https://grahamrpugh.com/2018-03-26-reinstall-macos-from-system-volume</link>
+      <guid>https://grahamrpugh.com/2018-03-26-reinstall-macos-from-system-volume</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Erase All Contents And Settings - erase and reinstall macOS in situ</description>
+    </item>
+    <item>
+      <title>Updates to the erase-install.sh script</title>
+      <link>https://grahamrpugh.com/2019-04-02-erase-install-updates</link>
+      <guid>https://grahamrpugh.com/2019-04-02-erase-install-updates</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Updates to the erase-install.sh script</description>
+    </item>
+    <item>
+      <title>Presentation at the Texas Apple Admins Virtual Meetup</title>
+      <link>https://grahamrpugh.com/2020-05-05-texas-apple-admins-presentation</link>
+      <guid>https://grahamrpugh.com/2020-05-05-texas-apple-admins-presentation</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Presentation at the Texas Apple Admins Virtual Meetup</description>
+    </item>
+    <item>
+      <title>Undocumented options in the startosinstall command</title>
+      <link>https://grahamrpugh.com/2020-06-09-startosinstall-undocumented-options</link>
+      <guid>https://grahamrpugh.com/2020-06-09-startosinstall-undocumented-options</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Undocumented options in the startosinstall command</description>
+    </item>
+    <item>
+      <title>MacAdmins UK Conference Presentation - 23 May 2023 - Erase-Install: A Tool for Upgrading and Reinstalling your Mac</title>
+      <link>https://grahamrpugh.com/2023-05-14-macaduk-presentation-eraseinstall</link>
+      <guid>https://grahamrpugh.com/2023-05-14-macaduk-presentation-eraseinstall</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>MacAdmins UK Conference Presentation - 23 May 2023 - Erase-Install: A Tool for Upgrading and Reinstalling your Mac</description>
+    </item>
+    <item>
+      <title>RocketmanTech LaunchPad Presentation - 7 June 2024 - Why and how to use erase-install</title>
+      <link>https://grahamrpugh.com/2024-06-07-rocketman-launchpad-presentation</link>
+      <guid>https://grahamrpugh.com/2024-06-07-rocketman-launchpad-presentation</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>RocketmanTech LaunchPad Presentation - 7 June 2024 - Why and how to use erase-install</description>
+    </item>
+    <item>
+      <title>Unpicking Apple&apos;s Software Update Catalog Files</title>
+      <link>https://grahamrpugh.com/2025-08-27-unpicking-sucatalog-files</link>
+      <guid>https://grahamrpugh.com/2025-08-27-unpicking-sucatalog-files</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Unpicking Apple&apos;s Software Update Catalog Files</description>
+    </item>
+  </channel>
+</rss>

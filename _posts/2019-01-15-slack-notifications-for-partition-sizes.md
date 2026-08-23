@@ -2,6 +2,10 @@
 layout: post
 title:  "Send Slack notifications when a partition size exceeds a threshold"
 comments: true
+tags:
+  - apple
+  - mac
+  - linux
 ---
 
 Here is a script to send notifications to a Slack channel when a server's main partition size exceeds a safe threshold. It is tested on Red Hat 7 and macOS Mojave.
@@ -10,8 +14,8 @@ Here is a script to send notifications to a Slack channel when a server's main p
 
 * Set up an [incoming webhook][1] for a Slack channel.
 * Install the python `requests` module on the server or computer on which the script will be run. Either:
-    * `pip install requests` on macOS
-    * `yum install python-requests` on Red Hat 7
+  * `pip install requests` on macOS
+  * `yum install python-requests` on Red Hat 7
 
 * Add your Slack webhook to the script:
 
@@ -33,7 +37,6 @@ Here is a script to send notifications to a Slack channel when a server's main p
 ## The script
 
 {% gist grahampugh/e0d5cc5d1a494930561c45deb5281c2d %}
-
 
 [1]: https://api.slack.com/incoming-webhooks
 [2]: https://stackoverflow.com/questions/23532954/running-a-terminal-command-every-hour

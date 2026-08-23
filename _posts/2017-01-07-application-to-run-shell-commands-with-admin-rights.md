@@ -2,9 +2,13 @@
 layout: post
 title:  "Writing an application to run shell commands with admin rights"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
-The Mac users I support have admin rights, and I have recently had cause to provide end users with an easy way to run various shell commands which require admin rights (via `sudo`). My aim was not to have to repeatedly send support emails or provide articles which require users to open Terminal and type in one or a more commands. 
+The Mac users I support have admin rights, and I have recently had cause to provide end users with an easy way to run various shell commands which require admin rights (via `sudo`). My aim was not to have to repeatedly send support emails or provide articles which require users to open Terminal and type in one or a more commands.
 
 # Jamf Pro policy
 
@@ -20,7 +24,7 @@ The obvious answer is to wrap the script in an application, which is pushed to t
 
 # Admin rights?
 
-However, if the shell script contains `sudo` commands, it will fail to run. One can wrap each shell command in an AppleScript command such as: 
+However, if the shell script contains `sudo` commands, it will fail to run. One can wrap each shell command in an AppleScript command such as:
 
 ~~~ bash
 do shell script "/bin/bash -s <<'EOF'
@@ -35,7 +39,7 @@ This quickly becomes messy to program when there is more than one `sudo` command
 
 I found a solution in the command `sudo -S`:
 
-~~~ 
+~~~
        -S, --stdin Write the prompt to the standard error and read the
                    password from the standard input instead of using the
                    terminal device.  The password must be followed by a
@@ -44,7 +48,7 @@ I found a solution in the command `sudo -S`:
 
 This means that one can `echo` the authentication password to stdin, and pipe that into the `sudo` command. The password can be obtained from an AppleScript dialog box.
 
-I prepared a template which can be used at the beginning of any script to obtain the logged in user's password and place it in the variable `$authPass`. It checks that the username and password are correct, and have admin rights. 
+I prepared a template which can be used at the beginning of any script to obtain the logged in user's password and place it in the variable `$authPass`. It checks that the username and password are correct, and have admin rights.
 
 Wherever `sudo` is required, replace it with `echo $authPass | sudo -S`. The template creates a function which replaces the stock `sudo` command.
 
@@ -112,7 +116,7 @@ I link to a number of these types of apps from the [Hello-IT] status bar applica
 
 ## Example Scripts
 
-I have used this method for various simple self-help and IT Support applications, and will blog about them in the future.  They show a variety of ways to use an application that runs commands with `sudo`. 
+I have used this method for various simple self-help and IT Support applications, and will blog about them in the future.  They show a variety of ways to use an application that runs commands with `sudo`.
 
 # Jamf Pro: check for new policies
 
@@ -127,5 +131,3 @@ As a simple example, here is an application script that checks for connection to
 [img-2]: /assets/images/jamf-policy-checker.png
 
 {% include urls.md %}
-
-

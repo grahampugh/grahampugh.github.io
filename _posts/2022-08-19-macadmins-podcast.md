@@ -2,6 +2,13 @@
 layout: post
 title:  "MacAdmins Podcast, Episode 276: Big Changes to Jamf APIs and JSSImporter"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
+  - autopkg
+  - presentations
 ---
 
 I'm a bit late with this blog post due to holidays and a family emergency, but I was very proud to appear on the MacAdmins Podcast in Episode 276, which was released on 1 August, 2022.

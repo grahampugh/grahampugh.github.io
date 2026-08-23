@@ -2,6 +2,9 @@
 layout: post
 title: "How to script the uninstallation of macOS System Extensions"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 Modern System Extensions on macOS are generally installed via an application bundle. They can be bundled within the application with which they are associated (for example **Microsoft Defender ATP**), or in specific applications along side the main app that deliver the system extension (examples include **Sophos Anti-Virus** and **Cisco AnyConnect**).

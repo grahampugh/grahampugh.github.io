@@ -2,6 +2,9 @@
 layout: post
 title:  "If you're using the SOFA feed, please take note!"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 ![SOFA logo](https://github.com/macadmins/sofa/raw/main/images/custom_logo.png)

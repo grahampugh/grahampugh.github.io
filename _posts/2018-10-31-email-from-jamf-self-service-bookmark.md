@@ -2,6 +2,10 @@
 layout: post
 title:  "Send an Email from Jamf Pro Self Service"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 This is a quick and kind of obvious one, but a quick search did not find it documented.
@@ -37,7 +41,6 @@ If you're not familiar with Jamf Pro Self Service Bookmarks, you can determine t
 When the user clicks on the Bookmark, the email it opens looks like this (if Apple Mail is your default mail client, and you're using Dark Mode):
 
 ![img-3](/assets/images/apple-mail-from-bookmark.png)
-
 
 [1]: http://docs.jamf.com/10.8.0/jamf-pro/administrator-guide/Jamf_Self_Service_for_macOS_Bookmarks.html
 [2]: https://www.jamf.com/jamf-nation/discussions/12166/sending-emails-via-jss

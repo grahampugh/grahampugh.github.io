@@ -2,9 +2,15 @@
 layout: post
 title: "JamfPackageUploader 'JCDS-mode' for a new way to upload packages to Jamf Cloud"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
+  - autopkg
 ---
 
-Tools such as the [JSSImporter] and [JamfUploader] AutoPkg processors traditionally use an undocumented API endpoint for uploading packages to Jamf Cloud Distribution Points. Various people figured this `dbfileupload` endpoint out by reverse-engineering the package upload done by the Jamf Admin (formerly Casper Admin) application. 
+Tools such as the [JSSImporter] and [JamfUploader] AutoPkg processors traditionally use an undocumented API endpoint for uploading packages to Jamf Cloud Distribution Points. Various people figured this `dbfileupload` endpoint out by reverse-engineering the package upload done by the Jamf Admin (formerly Casper Admin) application.
 
 For those interested, a `curl` request to this endpoint looks like this:
 
@@ -34,11 +40,11 @@ The http response of a `curl` request to the `dbfileupload` endpoint is often am
 
 A conversation between `@mosen`, `@rodgerramjet` and myself (`@grahamrpugh`) in the [MacAdmins Slack][1] led to `@rodgerramjet` figuring out the Jamf Pro admin console GUI package upload mechanism by reading the network requests being made while uploading a package in the GUI. This method is a four-stage process, which, using `curl`, looks like this:
 
-{% gist 55b7657dbe3dbd15ac38888bf6e72bb8 %} 
+{% gist 55b7657dbe3dbd15ac38888bf6e72bb8 %}
 
 ## JamfPackageUploader JCDS-mode
 
-I have now added a `jcds_mode` option to `JamfPackageUploader` processor, so that those of you who use Jamf Cloud can upload packages using this alternative method. 
+I have now added a `jcds_mode` option to `JamfPackageUploader` processor, so that those of you who use Jamf Cloud can upload packages using this alternative method.
 
 `jcds_mode` is experimental, and comes with limitations:
 

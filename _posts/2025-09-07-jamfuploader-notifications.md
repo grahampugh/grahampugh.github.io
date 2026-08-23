@@ -2,6 +2,11 @@
 layout: post
 title:  "Event Notifications from JamfUploader - Slack, Teams, and now Jira"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
 ---
 
 ## Introduction

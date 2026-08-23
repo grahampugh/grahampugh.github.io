@@ -2,6 +2,12 @@
 layout: post
 title: "AutoPkg - verify and update trust information on all recipes in a recipe-list"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
+  - autopkg
 ---
 
 I use [AutoPkg] for multiple workflows, and as a result I have developed a lot of custom shared processors. As with most code, I often have to update my shared processors as I find bugs or scale up and factor in additional edge cases. Often times these shared processors feature in many or all of my recipes, and every time I make a change to one of the processors, I have to update the trust information on every recipe.

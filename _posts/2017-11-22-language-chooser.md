@@ -2,6 +2,9 @@
 layout: post
 title:  "Showing the Language Chooser screen after reinstalling macOS"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 When a Mac comes fresh out of the box and is started up, the first setup screen should be the one where you choose the language in which the setup will proceed.
@@ -36,8 +39,6 @@ On computers running macOS Catalina or higher, the mount point above is differen
     mount -uw /System/Volumes/Data
     touch /var/db/.RunLanguageChooserToo
     ```
-
-
 
 [1]: https://www.jamf.com/jamf-nation/discussions/7217/making-language-chooser-run-at-first-boot
 [img-1]: /assets/images/mac-install-start.jpg

@@ -2,6 +2,10 @@
 layout: post
 title:  "How many Jamf Pro Policies does each application need?"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 **TL;DR:** 7 (seven).
@@ -31,8 +35,6 @@ It turns out that in our environment, we need more! In this proof-of-concept, we
 * **Seven** policies
 
 In addition, three "global" smart groups are required.
-
-
 
 ---
 
@@ -94,6 +96,7 @@ Self-Service:       Enable
                     Button text:            Install
                     Secondary button text:  Install
 ```
+
 We then test that the policy works:
 
 * The package installs successfully.
@@ -279,6 +282,7 @@ Scope:              Targets:
                         Computer Groups:    ApplicationX current version installed
                         Computer Groups:    ApplicationX test version installed
 ```
+
 ---
 
 ## Maintenance

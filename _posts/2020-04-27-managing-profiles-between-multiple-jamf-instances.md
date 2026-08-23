@@ -2,6 +2,10 @@
 layout: post
 title: "Managing Configuration Profiles between Jamf Pro instances using the Classic API"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 If you manage multiple Jamf Pro instances, you may be used to using the Jamf Pro "Classic" API to copy endpoints between them.
@@ -64,7 +68,7 @@ else
 fi
 ```
 
-## All good? Not so fast...
+## All good? Not so fast
 
 The above process works for most API endpoints (policies, smart groups, categories, package metadata, App Store apps...), with a few tweaks required here and there for some endpoints to make it work, such as ensuring dependencies are already in place, dealing with self service icons and so on.
 
@@ -82,9 +86,9 @@ It's an "orphaned" profile. Only by removing the MDM profile, so effectively une
 
 I opened a case with Jamf Support, who initially told me "don't do that", and if I must, "use Jamf Migrator". I did not try the latter, as I know Jamf Migrator uses the API, so it either will have the same problem, or they have programmatically solved it, and I wanted to know how. But then the ticket was read by another Support Engineer, who was able to reproduce the problem and come up with a more helpful solution. A Product Issue was also opened (`PI-008168`), as the API is behaving inconsistently:
 
--   When uploading a new configuration profile to a destination instance via a `POST` request, the UUID of the profile is stripped out by Jamf to ensure that the profile could not inherit a UUID that already exists on that server (as UUIDs need to be Unique!).
+- When uploading a new configuration profile to a destination instance via a `POST` request, the UUID of the profile is stripped out by Jamf to ensure that the profile could not inherit a UUID that already exists on that server (as UUIDs need to be Unique!).
 
--   However, when uploading a configuration profile using `PUT`, if the profile exists (based on `id` or `name`), the profile is overwritten, including the UUID, effectively creating a different profile as far as Apple/MDM is concerned, but removing any trace of the "old" profile from the server, i.e. the profile with the UUID that was created with the `POST` request.
+- However, when uploading a configuration profile using `PUT`, if the profile exists (based on `id` or `name`), the profile is overwritten, including the UUID, effectively creating a different profile as far as Apple/MDM is concerned, but removing any trace of the "old" profile from the server, i.e. the profile with the UUID that was created with the `POST` request.
 
 So, we need to ensure the UUID remains constant as changes are made to a profile. There are two ways to go about this:
 
@@ -156,7 +160,7 @@ Note that in the above code, I have not included additional steps that I have in
 
 I also had a few profiles out in the wild that had been orphaned before I had become fully aware of this issue. I wanted to build a method of fixing this problem without having to re-enroll the devices. I found the following procedure does the trick:
 
--   Run the following command on an affected computer - it will reveal the UUID (`profileUUID`) of a named profile:
+- Run the following command on an affected computer - it will reveal the UUID (`profileUUID`) of a named profile:
 
     ```bash
     sudo profiles list -verbose | grep -A 5 "ExampleProfile"
@@ -169,9 +173,9 @@ I also had a few profiles out in the wild that had been orphaned before I had be
     _computerlevel[24] attribute: profileUUID: 0fd1fa10-225a-40b4-b433-72de5314b7d6
     ```
 
--   Generate a "dummy" profile in Jamf that does as little as possible, certainly nothing that would be noticed by users, with no scope. Give it a name that makes it clear that it is deployed by you for fixing the problem. Copy it to the instance on which the affected device(s) are enrolled. Retain the downloaded XML.
+- Generate a "dummy" profile in Jamf that does as little as possible, certainly nothing that would be noticed by users, with no scope. Give it a name that makes it clear that it is deployed by you for fixing the problem. Copy it to the instance on which the affected device(s) are enrolled. Retain the downloaded XML.
 
--   Substitute the UUID from the "orphaned" profile into the XML of the downloaded profile, as in this example snippet below (the rest of the above script remiains the same), and then upload it to the affected instance with a PUT request:
+- Substitute the UUID from the "orphaned" profile into the XML of the downloaded profile, as in this example snippet below (the rest of the above script remiains the same), and then upload it to the affected instance with a PUT request:
 
     ```bash
     # now substitute the orphaned uuid and write a new parsed file
@@ -180,13 +184,13 @@ I also had a few profiles out in the wild that had been orphaned before I had be
     > "/path/to/os_x_configuration_profile-DummyProfile-parsed-destination.xml"
     ```
 
--   Verify that the UUID is now correct in the profile on the destination by going to the `/api` URL of the affected instance, and looking up the profile in the `osxconfgurationprofiles` endpoint (on one occasion I had to copy the profile a third time to get the correct UUID injected into the profile - not sure why).
+- Verify that the UUID is now correct in the profile on the destination by going to the `/api` URL of the affected instance, and looking up the profile in the `osxconfgurationprofiles` endpoint (on one occasion I had to copy the profile a third time to get the correct UUID injected into the profile - not sure why).
 
--   Add the affected devices to the scope of the profile in the Jamf GUI. If it affects too many computers and/or too many instances to do manually, you could scope to `All Computers` on the template instance and copy the profile again - just bear in mind this will deploy the "dummy" profile to devices that may not be affected by the problem, so make sure the profile does not do anything unexpected!
+- Add the affected devices to the scope of the profile in the Jamf GUI. If it affects too many computers and/or too many instances to do manually, you could scope to `All Computers` on the template instance and copy the profile again - just bear in mind this will deploy the "dummy" profile to devices that may not be affected by the problem, so make sure the profile does not do anything unexpected!
 
--   The "orphaned" profile should now update on the affected devices, so the name of it should change to the name of your "dummy" profile.
+- The "orphaned" profile should now update on the affected devices, so the name of it should change to the name of your "dummy" profile.
 
--   Now you can delete the profile from the affected instances, or remove the affected devices from its scope, and it should be removed from the affected devices completely.
+- Now you can delete the profile from the affected instances, or remove the affected devices from its scope, and it should be removed from the affected devices completely.
 
 # Conclusion and caveats
 

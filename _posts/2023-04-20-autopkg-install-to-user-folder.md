@@ -2,6 +2,10 @@
 layout: post
 title:  "Use AutoPkg to install applications into the User Applications folder"
 comments: true
+tags:
+  - apple
+  - mac
+  - autopkg
 ---
 
 When setting up my own machine, I often like to install some applications into my own User Applications folder (`/Users/$currentuser/Applications`). This folder does not exist by default, but is recognised as an Applications folder by macOS when created, and items within appear in Spotlight just like any app installed in `/Applications`. Installing them in the user space keeps them separate from apps installed by my management system, MDM or from the App Store.
@@ -14,7 +18,7 @@ AutoPkg offers the use of `.install` recipes, intended to be run interactively o
 
 ## Introducing User-install Recipes
 
-With the help of a new processor, I've now started to create `.userinstall` recipes for apps that I'd like to install into my user space. 
+With the help of a new processor, I've now started to create `.userinstall` recipes for apps that I'd like to install into my user space.
 
 `.userinstall` recipes are like `.install` recipes, but instead of installing the apps into `/Applications`, they install the apps into `/Users/$currentuser/Applications`. They additionally change the ownership of the apps to the current user rather than root.
 

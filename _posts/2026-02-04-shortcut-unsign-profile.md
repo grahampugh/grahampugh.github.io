@@ -2,6 +2,10 @@
 layout: post
 title:  "'Unsign Profile' - A Small, Stumbling Step into the World of Shortcuts"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 ## Introduction

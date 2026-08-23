@@ -2,6 +2,10 @@
 layout: post
 title: "Making MunkiReport-PHP and MunkiWebAdmin work nicely together"
 comments: true
+tags:
+  - apple
+  - mac
+  - munki
 ---
 
 If you utilise [Munki] for package deployment (and you should), you have no doubt at least looked at some of the useful web-based tools for administering and reporting on your clients. [MunkiReport-PHP] is a well-designed client reporting tool, which includes many excellent features. [MunkiWebAdmin] allows you to do a lot of the configuration of clients and manifests via a web interface.

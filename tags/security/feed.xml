@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /tags/security/feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>security | https://grahamrpugh.com</title>
+    <link>https://grahamrpugh.com/tags/security/</link>
+    <description>Posts tagged with security</description>
+    <item>
+      <title>Apple Security Update mistakenly disables Ethernet ports</title>
+      <link>https://grahamrpugh.com/2016-02-27-apple-security-update-mistakenly-disables-ethernet</link>
+      <guid>https://grahamrpugh.com/2016-02-27-apple-security-update-mistakenly-disables-ethernet</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Apple Security Update mistakenly disables Ethernet ports</description>
+    </item>
+    <item>
+      <title>Rootgate - Keep Calm and Carry On Being Secure</title>
+      <link>https://grahamrpugh.com/2017-11-29-Rootgate-remediation</link>
+      <guid>https://grahamrpugh.com/2017-11-29-Rootgate-remediation</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Rootgate - Keep Calm and Carry On Being Secure</description>
+    </item>
+  </channel>
+</rss>

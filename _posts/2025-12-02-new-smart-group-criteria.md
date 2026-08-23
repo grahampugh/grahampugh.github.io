@@ -2,6 +2,11 @@
 layout: post
 title: Two New Criteria for Application Version Comparison in Jamf Pro Smart Computer Groups
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
 ---
 
 ## Introduction

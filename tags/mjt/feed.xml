@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /tags/mjt/feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>mjt | https://grahamrpugh.com</title>
+    <link>https://grahamrpugh.com/tags/mjt/</link>
+    <description>Posts tagged with mjt</description>
+    <item>
+      <title>JOCADS - the Multitenant Object Copier and Deleter Tool for Jamf Pro</title>
+      <link>https://grahamrpugh.com/2023-12-05-jocads-and-other-api-tools</link>
+      <guid>https://grahamrpugh.com/2023-12-05-jocads-and-other-api-tools</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JOCADS - the Multitenant Object Copier and Deleter Tool for Jamf Pro</description>
+    </item>
+    <item>
+      <title>Dissect And Replace Your Monolithic Legacy Configuration Profiles</title>
+      <link>https://grahamrpugh.com/2026-01-28-monolithic-profile-dissector</link>
+      <guid>https://grahamrpugh.com/2026-01-28-monolithic-profile-dissector</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Dissect And Replace Your Monolithic Legacy Configuration Profiles</description>
+    </item>
+  </channel>
+</rss>

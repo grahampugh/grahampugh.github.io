@@ -2,6 +2,10 @@
 layout: post
 title: "A beginner's guide to using AutoPkg with GitLab Runner"
 comments: true
+tags:
+  - apple
+  - mac
+  - autopkg
 ---
 
 I had a rude awakening during an upgrade process, where I decided to upgrade my Test and Prod AutoPkg Runner Mac minis from Mojave to Catalina.

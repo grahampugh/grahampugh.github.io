@@ -2,6 +2,11 @@
 layout: post
 title:  "Jamf-Upload All The Things"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
 ---
 
 ## Introduction

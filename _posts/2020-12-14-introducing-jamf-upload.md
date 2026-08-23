@@ -2,6 +2,12 @@
 layout: post
 title: "JamfUploader - new AutoPkg processors for importing packages to Jamf Pro"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
+  - jamfuploader
 ---
 
 My first post for a few months, and apologies in advance as it's a long one...

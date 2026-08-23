@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /tags/community/feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>community | https://grahamrpugh.com</title>
+    <link>https://grahamrpugh.com/tags/community/</link>
+    <description>Posts tagged with community</description>
+    <item>
+      <title>One Mac Admin&apos;s tips on maintaining a popular Open Source project</title>
+      <link>https://grahamrpugh.com/2023-07-10-handling-an-open-source-project</link>
+      <guid>https://grahamrpugh.com/2023-07-10-handling-an-open-source-project</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>One Mac Admin&apos;s tips on maintaining a popular Open Source project</description>
+    </item>
+  </channel>
+</rss>

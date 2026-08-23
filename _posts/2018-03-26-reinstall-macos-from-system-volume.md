@@ -2,6 +2,10 @@
 layout: post
 title:  "Erase All Contents And Settings - erase and reinstall macOS in situ"
 comments: true
+tags:
+  - apple
+  - mac
+  - erase-install
 ---
 
 Many Mac admins have been anticipating an **"Erase All Contents And Settings"** option for macOS, to emulate that available on iOS. Apple have taken a big step further towards that goal in macOS 10.13.4.
@@ -45,6 +49,7 @@ It's as near as you can get to "Erase All Contents And Settings" without some so
 ## Remotely wiping a managed Mac
 
 Since this command requires no interaction, it is easy to run this as a command on your management tool (e.g. [Jamf Pro]), or package the command up as a payload-free package to run in [Munki]. All you need to do is ensure the latest `Install macOS High Sierra.app` is available on the device. This is of course done normally via the Mac App Store.
+
 ### installinstallmacos.py
 
 Greg Neagle published a script named [installinstallmacos.py][3] which makes obtaining `Install macOS High Sierra.app` even simpler than via the Mac App Store. It is *not quite* non-interactive, because you have to choose which version of the app to download, but this can be circumvented - see below.
@@ -73,7 +78,7 @@ Choose a product to download (1-3):
 At this point you select 1, 2 or 3, and the download proceeds. At the time this post was written, option 1 gives you the latest official 10.13.4 build. By default the `Install macOS High Sierra.app` is saved into a sparse disk image. If you know in advance which value you want (in tests, it does consistently provide the list in the same order), you can supply the required value in a shell script with the following syntax, which will make the script proceed without interaction:
 
 ```
-$ yes 1 | sudo python installinstallmacos.py
+yes 1 | sudo python installinstallmacos.py
 ```
 
 Using this command means that you don't need to host the `Install macOS High Sierra.app` on your management system, you  can just run this when required on the device itself.
@@ -96,11 +101,10 @@ Adding the `--installpackage` flag to the `startosinstall` command, you can add 
 
 ---
 
-## Warning!
+## Warning
 
 This is a **lethal** workflow and should obviously only be made available to the correct people, and warning messages should be added before it is triggered, since it wipes the device!
 
-[1]: https://support.apple.com/en-us/HT208020
 [2]: https://derflounder.wordpress.com/2017/09/26/using-the-macos-high-sierra-os-installers-startosinstall-tool-to-install-additional-packages-as-post-upgrade-tasks/
 [3]: https://github.com/munki/macadmin-scripts/blob/master/installinstallmacos.py
 [4]: https://derflounder.wordpress.com/2018/02/27/using-installinstallmacos-py-to-download-macos-high-sierra-installers/

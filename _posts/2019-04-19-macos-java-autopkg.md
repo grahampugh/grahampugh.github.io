@@ -2,6 +2,10 @@
 layout: post
 title:  "Java SE licensing, macOS, and AutoPkg - what now?"
 comments: true
+tags:
+  - apple
+  - mac
+  - autopkg
 ---
 
 # Oracle Java SE now requires a license subscription
@@ -22,7 +26,6 @@ The updates appear [still publicly available](https://www.oracle.com/technetwork
 
 For extensive details about the changes to licensing, see this [Java Champions article on Medium](https://medium.com/@javachampions/java-is-still-free-2-0-0-6b9aa8d6d244).
 
-
 # OpenJDK
 
 Fortunately, for many if not most or all requirements, there are alternatives to Oracle's commercial Java SE product. As stated on [Oracle's Java download page](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html):
@@ -41,13 +44,11 @@ It is not clear how long OpenJDK 11 will continue to be supported. OpenJDK 8 is 
 
 **Note:** Red Hat have stated that they are taking the lead in the support of OpenJDK, and are maintaining LTS installers for Red Hat, CentOS and Windows. However, to date, they do not provide a macOS installer.
 
-
 ## AdoptOpenJDK
 
 The AdoptOpenJDK project is maintaining a wide range of JDK and JRE installers. They offer JDK and JRE LTS builds for versions 8 and 11 over a wide range of platforms, as well as version 12. These are available to download from Github.
 
 I have made recipes for [versions 8, 11 and 12 of AdoptOpenJDK JDK, and the 8 JRE](https://github.com/grahampugh/recipes/tree/master/AdoptOpenJDK).
-
 
 ## Amazon Corretto JDK
 
@@ -57,20 +58,17 @@ Amazon maintain freely licensed, [LTS versions of JDK 8 and 11](https://docs.aws
 
 If you require the version reported by AutoPkg to match that reported from the CLI, and don't need a signed package, you might want to consider my [pkg recipes for versions 8 and 11](https://github.com/grahampugh/recipes/tree/master/AmazonCorrettoJDK).
 
-
 ## Azul Zulu JDK
 
 Azul Systems are providing LTS versions of Open JDK 12, 11, 8 and 7, with a separate JRE available for version 8 (see [download page](https://www.azul.com/downloads/zulu/#)). They are the only third-party provider to include the JavaFX features in their builds.
 
 So far, no AutoPkg recipes are available for Azul Zulu.
 
-
 ## SapMachine
 
 [SapMachine](https://sap.github.io/SapMachine/) is SAP's downstream fork of the OpenJDK project. It is used to build and maintain a SAP supported version of OpenJDK for SAP customers and partners who wish to use OpenJDK to run their applications.
 
 SAP maintain an LTS version of OpenJDK 11 for macOS. [Rich Trouton][@rtrouton] maintains AutoPkg recipes for [SapMachine - latest](https://github.com/autopkg/rtrouton-recipes/tree/master/SapMachine) and [SapMachine 11 (LTS)](https://github.com/autopkg/rtrouton-recipes/tree/master/SapMachineJDK11).
-
 
 Conclusion
 ==========

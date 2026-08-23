@@ -2,6 +2,11 @@
 layout: post
 title:  "Customise Atom for editing AutoPkg recipes"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
 ---
 
 Just a quick one!

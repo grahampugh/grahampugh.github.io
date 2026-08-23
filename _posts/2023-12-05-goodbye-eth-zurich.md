@@ -2,6 +2,10 @@
 layout: post
 title:  "Personal reflections on my time at ETH Zürich"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 At the end of October, I said goodbye to ETH Zürich as my employers of 6.5 years. I'd like to pause to reflect on my journey.
@@ -12,7 +16,7 @@ I've been given tremendous opportunities since joining ETH, largely due to the r
 
 ![The audience at JNUC 2019](/assets/images/jnuc-2019.jpg)
 
-During the pandemic, I gave virtual presentations for the MacSysAdmins conference that normally takes place in Sweden, and together with **Anthony Reimer** for the MacAdmins Conference at Penn State University and once again JNUC. 
+During the pandemic, I gave virtual presentations for the MacSysAdmins conference that normally takes place in Sweden, and together with **Anthony Reimer** for the MacAdmins Conference at Penn State University and once again JNUC.
 
 After two years of no in-person conferences, it was really special to go to San Diego for JNUC 2022 in person to participate in the Jamf Customer Advisory Board, and even more so to present at the MacAdmins UK conference this year in Brighton.
 

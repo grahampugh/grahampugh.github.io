@@ -2,6 +2,12 @@
 layout: post
 title:  "Introducing JCDS 2.0 for uploading packages to Jamf Pro Cloud distribution points"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
+  - jamfuploader
 ---
 
 **Jamf Pro is introducing a new Jamf Cloud Distribution Point (JCDS), including an official API endpoint for uploading packages.** 🎉🥳🍾🪅

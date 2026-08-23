@@ -2,6 +2,10 @@
 layout: post
 title:  "Version controlling Munki and AutoPkg"
 comments: true
+tags:
+  - apple
+  - mac
+  - munki
 ---
 
 __In this post I summarise what version control is, and why to add it to your Mac managament toolset. I then look at how to manage a Git-enabled Munki repository, and list other files associated with Mac management that you should consider version controlling.__
@@ -11,15 +15,15 @@ __In this post I summarise what version control is, and why to add it to your Ma
 Why use version control?
 -------------
 
-Version control is a useful, if not essential part of a System Administrator's toolbox. Traditional file backup is good, but if you didn't notice a file corruption, or a mistake, before the next backup was made, then without version control, there is no way back to the working state. 
+Version control is a useful, if not essential part of a System Administrator's toolbox. Traditional file backup is good, but if you didn't notice a file corruption, or a mistake, before the next backup was made, then without version control, there is no way back to the working state.
 
-If you're a sole Mac administrator, running your administration tools on a Mac, then Time Machine is a basic form of version control. Versions are kept for several months, until your Time Machine disk runs out of space. However, Time Machine over a network doesn't work well over enterprise networks, and I've found it to be virtually useless over wi-fi. 
+If you're a sole Mac administrator, running your administration tools on a Mac, then Time Machine is a basic form of version control. Versions are kept for several months, until your Time Machine disk runs out of space. However, Time Machine over a network doesn't work well over enterprise networks, and I've found it to be virtually useless over wi-fi.
 
 Backups to cloud services are also an option. Dropbox, Google Drive and the like all provide versioning in their UI. Collaboration is also possible, which is likely to be required in all but the smallest IT organisations.
 
 Your organisation may offer backup with versioning using in-house solutions such as EMC Networker, or IBM's Tivoli Storage Manager.
 
-However, all of the services I've mentioned thus far assume a single working copy of all the files. 
+However, all of the services I've mentioned thus far assume a single working copy of all the files.
 
 Collaborative Version Control
 -------------
@@ -46,7 +50,7 @@ Munki
 
 __The [Munki Wiki][munki-with-git] provides tips on how to git-enable your Munki repository, and for using Munki with git on the command line.__
 
-*__Note:__ A version of Munki called [Simian], which runs on Google App Engine, has been developed to handle a cloud-based Munki repository, which could suit your organisation if you have good bandwidth available to your clients.* 
+*__Note:__ A version of Munki called [Simian], which runs on Google App Engine, has been developed to handle a cloud-based Munki repository, which could suit your organisation if you have good bandwidth available to your clients.*
 
 The common tasks associated with managing a Munki repository are as follows:
 
@@ -79,7 +83,7 @@ Some AutoPkg recipes have been written to automate this task:
 * [My][@GrahamRPugh] adaptation of the AutoPkg [MakeCatalogs recipe][1] provides a single commit to Git after a complete AutoPkg run, after `makecatalogs` has been run.
 * [My][@GrahamRPugh] [MunkiGitBranchingCommitter.py][1]  is an [AutoPkg postprocessor][Autopkg prepostprocessors] which will add and commit each new pkginfo file to new, unique branch of a Git repository for examination by a repo administrator.
 
-If you use [AutoPkgr], the good news is that an upcoming version, currently in beta testing, will allow the addition of pre- and post-processors to your recipe list, and allow your own custom MakeCatalogs recipe to run after all other Munki recipes have been processed. 
+If you use [AutoPkgr], the good news is that an upcoming version, currently in beta testing, will allow the addition of pre- and post-processors to your recipe list, and allow your own custom MakeCatalogs recipe to run after all other Munki recipes have been processed.
 
 Assigning software packages to manifests
 ==============
@@ -104,17 +108,17 @@ The Munki repository is not the only set of files required to run effective Mac 
 * Any scripts you produce locally, such as AutoPkg recipes and package-making scripts (e.g. The Luggage).
 * User profile settings, such as your `.bashrc` or `.bash_profile` files.
 * Server configuration: If you're running Munki and associated reporting and management tools on a local server, you should consider versioning the files you edit to make the server work in your environment. These come under the category of Configuration Management, and could be done directly or via a [Puppet] or other config management server, where the files were under version control and changes were pushed to the server. Such files could include:
-    * Security: `iptables` and `selinux` 
-    * Samba: `smb.conf`
-    * Apache: `httpd.conf` and `<VirtualHosts>` files
-    * PHP: `php.ini` 
-    * MunkiWebAdmin: `settings.py` and the database
-    * Sal: `settings.py` and the database
-    * Munki-Do: `settings.py` and the database
-    * MunkiReport-PHP: `config.php`
-    * Munki-Enroll: `config.php`
-    * Databases associated with Dockerized services: these could include Munki, Sal, Munki-Do, Munki-Trello and so on. 
-    * Copies of the files or commands used to run the Docker containers would also benefit from version control.
+  * Security: `iptables` and `selinux`
+  * Samba: `smb.conf`
+  * Apache: `httpd.conf` and `<VirtualHosts>` files
+  * PHP: `php.ini`
+  * MunkiWebAdmin: `settings.py` and the database
+  * Sal: `settings.py` and the database
+  * Munki-Do: `settings.py` and the database
+  * MunkiReport-PHP: `config.php`
+  * Munki-Enroll: `config.php`
+  * Databases associated with Dockerized services: these could include Munki, Sal, Munki-Do, Munki-Trello and so on.
+  * Copies of the files or commands used to run the Docker containers would also benefit from version control.
 
 [1]: https://github.com/grahampugh/recipes/tree/master/SharedProcessors
 [2]: https://github.com/autopkg/n8felton-recipes/tree/master/SharedProcessors
@@ -123,8 +127,6 @@ The Munki repository is not the only set of files required to run effective Mac 
 [3]: https://git-scm.com/book/en/v1/Git-Branching
 
 [img-1]: http://cdn.electric-cloud.com/wp-content/uploads/2016/03/version-all-the-things.gif
-[img-2]: http://opendigitalscience.eu/wp-content/uploads/2015/09/github-logo.png
 [img-3]: https://munkibuilds.org/logo.jpg
 
 {% include urls.md %}
-

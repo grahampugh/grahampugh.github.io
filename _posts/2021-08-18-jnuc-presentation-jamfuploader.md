@@ -2,6 +2,13 @@
 layout: post
 title: "JNUC Presentation Announcement - 21 October 2021 - JamfUploader"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
+  - jamfuploader
+  - presentations
 ---
 
 On 21 October 2021, at 02:00 PM CDT (21:00 Central European Time), I am proud to be co-presenting with Anthony Reimer at the [Virtual JNUC 2021](https://www.jamf.com/events/jamf-nation-user-conference/2021/), on the following topic:

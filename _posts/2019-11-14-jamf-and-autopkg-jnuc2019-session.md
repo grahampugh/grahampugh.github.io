@@ -2,6 +2,12 @@
 layout: post
 title:  "Jamf and AutoPkg: JNUC 2019 Session Links and commands - UPDATE: video and slide deck now available"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
+  - presentations
 ---
 
 On 14 November 2019, at 13:30, I presented at the [Jamf Nation User Conference in Minneapolis, MN, USA](https://www.jamf.com/events/jamf-nation-user-conference/2019/), on the following topic:
@@ -68,11 +74,9 @@ Setting AutoPkg to fail if recipe are not trusted:
 
     defaults write com.github.autopkg FAIL_RECIPES_WITHOUT_TRUST_INFO -bool true
 
-
 Making a recipe override file (saved to `~/Library/AutoPkg/RecipeOverrides` by default):
 
     autopkg make-override iTerm2.jss
-
 
 Making a recipe override file (saved to `~/Library/AutoPkg/RecipeOverrides` by default):
 
@@ -160,25 +164,21 @@ Recipe Override example: [Atom.jss.recipe](https://gist.github.com/grahampugh/3c
 
 [JSSRecipeCreator] - example command to make `VLC.jss.recipe`:
 
-    $ JSSRecipeCreator.py --auto ~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/VLC/VLC.pkg.recipe
-
+    JSSRecipeCreator.py --auto ~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/VLC/VLC.pkg.recipe
 
 ## Package-only recipes
 
 [JSSRecipeCreator] - example command to make `VLC.jss-upload.recipe`:
 
-
-    $ JSSRecipeCreator.py --package_only --auto ~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/VLC/VLC.pkg.recipe
+    JSSRecipeCreator.py --package_only --auto ~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/VLC/VLC.pkg.recipe
 
 * [Using Autopkg for package Uploads to Jamf Cloud only](https://dazwallace.wordpress.com/2019/03/12/using-autopkg-for-package-uploads-to-jamf-cloud-only/) by Daz Wallace (@dazwallace on [MacAdmins Slack Team])
 * [How to Upload Packages to Jamf Cloud using Autopkgr](https://hcsonline.com/support/white-papers/how-to-upload-packages-to-jamf-cloud-using-autopkgr) by Keith Mitnick (@kmitnick on [MacAdmins Slack Team])
 * [JSS_Package_Only_Recipes](https://github.com/autopkg/grahampugh-recipes/tree/master/_JSS_Package_Only_Recipes) in `grahampugh-recipes`
 
-
 ## Script-only recipes
 
 * [JSS_Script_Recipes](https://github.com/autopkg/grahampugh-recipes/tree/master/_JSS_Script_Recipes) in `grahampugh-recipes`
-
 
 ## Production recipes
 
@@ -202,7 +202,5 @@ Recipe Override example: [Atom.jss.recipe](https://gist.github.com/grahampugh/3c
 * [Facilitate uploads to cloud distribution point via API or other non-manual method](https://www.jamf.com/jamf-nation/feature-requests/6665/facilitate-uploads-to-cloud-distribution-point-via-api-or-other-non-manual-method)
 * [API connection persistence (classic API)](https://www.jamf.com/jamf-nation/feature-requests/8698/api-connection-persistence-classic-api)
 * [Every aspect of the Jamf web GUI should be accessible via the API](https://www.jamf.com/jamf-nation/feature-requests/6583/every-aspect-of-the-jamf-web-gui-should-be-accessible-via-the-api)
-
-
 
 {% include urls.md %}

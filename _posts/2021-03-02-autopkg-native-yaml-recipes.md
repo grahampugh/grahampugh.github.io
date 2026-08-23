@@ -2,6 +2,10 @@
 layout: post
 title: "YAML-formatted AutoPkg recipes can now be run natively without conversion to plist"
 comments: true
+tags:
+  - apple
+  - mac
+  - autopkg
 ---
 
 Back in 2018, I published a blog post about how you can write AutoPkg recipes in `yaml` format, and convert them to `plist`-format to run them. See [Writing AutoPkg recipes and other plist-formatted files in yaml][1]. I've been writing all my recipes in `yaml` format since then.

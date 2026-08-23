@@ -2,6 +2,13 @@
 layout: post
 title: "JNUC Presentation - 21 October 2021 - Making package uploading and deployment easier with JamfUploader"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
+  - autopkg
+  - presentations
 ---
 
 On 21 October 2021, I proudly co-presented with [Anthony Reimer][1] at the [Virtual Jamf Nation User Conference 2021][2], on the topic **Making package uploading and deployment easier with JamfUploader**.

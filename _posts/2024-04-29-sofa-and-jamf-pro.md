@@ -2,6 +2,10 @@
 layout: post
 title:  "SOFA, and how to use it with Jamf Pro"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 ## What is SOFA?

@@ -2,6 +2,12 @@
 layout: post
 title:  "JamfRecipeMaker - use AutoPkg to make Jamf recipes automatically!"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
+  - autopkg
 ---
 
 In case you missed it, the [JSSImporter] processor is deprecated, and will cease to function when Jamf remove basic authentication from the Classic API endpoints, which they have announced will happen sometime between August and December 2022.
@@ -16,7 +22,7 @@ JamfUploader is designed to be more flexible than JSSImporter, so a straight con
 
 However, if your policy and smart group design is compatible with the "standard" design devised for `.jss` recipes, you may be contemplating having to write a bunch of `.jamf` recipe that do exactly the same thing as those existing "standard" `.jss` recipes that are currently available in the [jss-recipes][1] and various other repos, notably [rtrouton-recipes][2].
 
-To help achieve this, I've developed a novel idea - a new AutoPkg processor that reads from a `.jss` recipe while running it, and writes a new `.jamf` recipe. 
+To help achieve this, I've developed a novel idea - a new AutoPkg processor that reads from a `.jss` recipe while running it, and writes a new `.jamf` recipe.
 
 **Say hello to `JamfRecipeMaker`.**
 
@@ -32,7 +38,7 @@ Exactly. Sounds weird, but when you run an AutoPkg recipe, all the relevant vari
 
 We just need to write these to a file in the correct structure of a `.jamf` recipe. This is pretty much what Elliot Jordan's excellent [Recipe Robot] app is doing when generating a `.jss` or indeed `.munki` recipe, after all.
 
-## How does JamfRecipeMaker work?!
+## How does JamfRecipeMaker work?
 
 We can use `JamfRecipeMaker` as a pre-processor (or post-processor if you like) when running a `.jss` recipe. There are 2 main options:
 
@@ -67,6 +73,7 @@ You'll probably want to supply your own Recipe Identifier prefix too, either usi
 ```bash
 defaults write ~/Library/Preferences/com.github.autopkg.plist RECIPE_IDENTIFIER_PREFIX com.acme.autopkg-recipes
 ```
+
 And you can specify the output path for the `jamf` recipes. The default is whatever directory you run the command from (`.`):
 
 ```bash

@@ -2,6 +2,10 @@
 layout: post
 title: "Munki-Enroll tweaked: Leverage DeployStudio's 'Computer Information' fields to customise Munki builds"
 comments: true
+tags:
+  - apple
+  - mac
+  - munki
 ---
 
 [Munki-Enroll] is a useful tool to use when installing the Munki tools on Mac clients. It enables the automated creation of unique client manifests, which makes it easy to change the group manifests of a client remotely at any time using tools like [`manifestutil`][manifestutil], [MunkiAdmin] or [MunkiWebAdmin], utilising the `included_manifest` key in Munki manifests.
@@ -91,9 +95,9 @@ $hostname   = $_POST["hostname"];
 // Ensure we aren't nesting a manifest within itself
 // Note that this will create a default manifest - it will not honour any options from DS
 if ( $identifier1 == "client-" . $hostname )
-	{
-		$identifier1 = "_cg_ru"; $identifier2 = "";
-	}
+ {
+  $identifier1 = "_cg_ru"; $identifier2 = "";
+ }
 // Check if manifest already exists for this machine
 echo "\n\tMUNKI-ENROLLER. Checking for existing manifests.\n\n";
 if ( file_exists( '../manifests/client-' . $hostname ) )
@@ -105,13 +109,13 @@ else
     {
         echo "\tComputer manifest does not exist. Will create.\n\n";
     }
-	$plist = new CFPropertyList();
-	$plist->add( $dict = new CFDictionary() );
-        
+ $plist = new CFPropertyList();
+ $plist->add( $dict = new CFDictionary() );
+
     // Add manifest to production catalog by default
     $dict->add( 'catalogs', $array = new CFArray() );
     $array->add( new CFString( $catalog ) );
-        
+
     // Add parent manifest to included_manifests to achieve waterfall effect
     $dict->add( 'included_manifests', $array = new CFArray() );
     if ( $identifier1 != "" )
@@ -135,7 +139,7 @@ else
     chmod( '../manifests/client-' . $hostname, 0775 );
     echo "\tNew manifest created: client-" . $hostname . "\n";
     echo "\tIncluded Manifest(s): " . $identifier1 . " " . $identifier2 . " " . $identifier3 . " " . $identifier4 . "\n";
-        
+
 ?>
 
 {% endhighlight %}
@@ -143,17 +147,17 @@ else
 The full `munki-enroll.sh` script:
 
 {% highlight bash %}
-#!/bin/bash
+# !/bin/bash
 
 # The Munki Repo URL
 
-MUNKI_REPO_URL="http://your.munki.server"
+MUNKI_REPO_URL="<http://your.munki.server>"
 
 COMPFIELD1=`defaults read /Library/Preferences/com.apple.RemoteDesktop Text1`
 COMPFIELD2=`defaults read /Library/Preferences/com.apple.RemoteDesktop Text2`
 COMPFIELD3=`defaults read /Library/Preferences/com.apple.RemoteDesktop Text3`
 
-#COMPFIELD1: Zone splits
+# COMPFIELD1: Zone splits
 if [ "$COMPFIELD1" = "ZA" ]; then
 IDENTIFIER1="\_cg_za"
 elif [ "$COMPFIELD1" = "ZB" ]; then
@@ -172,7 +176,7 @@ else
 IDENTIFIER1="\_cg_ru"
 fi
 
-#COMPFIELD2: AD stuff
+# COMPFIELD2: AD stuff
 if [ "$COMPFIELD2" = "AD" ]; then
 if [ "$IDENTIFIER1" == "_cg_ru" ]; then
 IDENTIFIER1="\_cg_ru_ad"
@@ -199,7 +203,7 @@ IDENTIFIER2=""
 fi
 fi
 
-#COMPFIELD3: FileVault
+# COMPFIELD3: FileVault
 if [ "$COMPFIELD3" = "FV" ]; then
 IDENTIFIER3="\_cg_encrypt"
 else
@@ -237,7 +241,7 @@ ITTAGCHECK=`echo $LOCALHOSTNAME | grep -iE '\<IT[0-9]{6}\>'`
 if [ $? -ne 0 ]; then # Sets the LocalHostName to the serial number if we don't have an IT tag name
 SERIAL=`/usr/sbin/system_profiler SPHardwareDataType | /usr/bin/awk '/Serial\ Number\ \(system\)/ {print $NF}'`
 scutil --set LocalHostName "$SERIAL"
-	LOCALHOSTNAME="$SERIAL"
+ LOCALHOSTNAME="$SERIAL"
 fi
 
 # set the ClientIdentifier to "client-LOCALHOSTNAME
@@ -257,7 +261,7 @@ SUBMITURL="$MUNKI_REPO_URL/munki-enroll/enroll.php"
 CURL="/usr/bin/curl"
 
 $CURL --max-time 5 --data \
-	"hostname=$LOCALHOSTNAME&identifier1=$IDENTIFIER1&identifier2=$IDENTIFIER2&identifier3=$IDENTIFIER3" \
+ "hostname=$LOCALHOSTNAME&identifier1=$IDENTIFIER1&identifier2=$IDENTIFIER2&identifier3=$IDENTIFIER3" \
  $SUBMITURL
 exit 0
 {% endhighlight %}

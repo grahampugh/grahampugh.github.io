@@ -2,6 +2,11 @@
 layout: post
 title:  "Create custom profiles using JamfUploader without a template file"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
 ---
 
 ## Introduction

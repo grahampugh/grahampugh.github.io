@@ -2,12 +2,15 @@
 layout: post
 title:  "Rootgate - Keep Calm and Carry On Being Secure"
 comments: true
+tags:
+  - apple
+  - mac
+  - security
 ---
 
 So everyone has tweeted, slacked, facebooked and blogged about [#rootgate][1] (or #iamroot). An oversight with the code development of macOS High Sierra resulted in requests for administrator access to certain System Preference Panes, Utility applications and Keychain Access enabling the `root` user with a null password.
 
 Whilst the furore was so big that Apple were sure to provide a quick solution, which they [did within 24 hours][2], many scrambled to provide fixes for the bug. Many of you were probably mandated by your seniors to provide a fix. Some of whom probably hadn't considered the existing vulnerabilities on their Mac fleet. But, how serious is it really, and was your Mac really secure before this bug came around?
-
 
 Clear and Present Danger
 ----
@@ -49,7 +52,6 @@ So what should I do?
 
 Take these basic security measures to minimise risk of your data being exposed. They are not specific to Rootgate, just sensible measures that everyone should take to protect their data:
 
-
 ### Encrypt with FileVault
 
 [Your Mac should be encrypted.][8] Without this, anyone with physical access to your Mac can easily access your data without knowing about your account details or password.
@@ -89,16 +91,15 @@ But, our management still tell us we have to push a patch for Rootgate
 
 Yes, I understand. We were also asked to push a patch for the problem, and so we wrote a script that we could push with our current management solution. This script can be pushed to all clients. It checks the following, in this order:
 
-3. Whether the client is running 10.13. If not...
-1. Whether the client has already been patched with [Security Update 2017-001][2]. If not...
-2. If the script has already been run on the client and the root bug fixed.
+1. Whether the client is running 10.13. If not...
+2. Whether the client has already been patched with [Security Update 2017-001][2]. If not...
+3. If the script has already been run on the client and the root bug fixed.
 4. If `root` is already enabled with a real password.
 5. If none of the above, proceed to enable root with a complex random password (actually a UUID).
 
 Since it has built-in checks, this script can be repeatedly run until you (or your management) are satisfied that all your clients have been patched.
 
 {% gist b37173a492a0b79ee9a241a07a791602 %}
-
 
 [1]: https://twitter.com/search?q=%23rootgate&src=tyah
 [2]: https://support.apple.com/en-us/HT208315
@@ -110,10 +111,8 @@ Since it has built-in checks, this script can be repeatedly run until you (or yo
 [8]: https://support.apple.com/en-us/HT204837
 [9]: http://knowyourmeme.com/memes/make-me-a-sandwich
 [10]: https://support.apple.com/guide/mac-help/use-find-my-mac-mh36811/10.13/mac/10.13
-[11]: https://support.apple.com/en-us/HT204455
 [12]: https://support.apple.com/en-us/HT204455
 
 [img-1]: http://i0.kym-cdn.com/entries/icons/facebook/000/004/689/sandwich.jpg
-
 
 {% include urls.md %}

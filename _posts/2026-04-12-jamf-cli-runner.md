@@ -2,6 +2,11 @@
 layout: post
 title:  "jamf-cli, and how you can use it with AutoPkg to automate complex Jamf workflows"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
 ---
 
 ## Introduction

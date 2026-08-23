@@ -1,0 +1,453 @@
+---
+layout: null
+permalink: /tags/jamf/feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>jamf | https://grahamrpugh.com</title>
+    <link>https://grahamrpugh.com/tags/jamf/</link>
+    <description>Posts tagged with jamf</description>
+    <item>
+      <title>Configuring SplashBuddy</title>
+      <link>https://grahamrpugh.com/2016-11-10-casper-splash</link>
+      <guid>https://grahamrpugh.com/2016-11-10-casper-splash</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Configuring SplashBuddy</description>
+    </item>
+    <item>
+      <title>Writing an application to run shell commands with admin rights</title>
+      <link>https://grahamrpugh.com/2017-01-07-application-to-run-shell-commands-with-admin-rights</link>
+      <guid>https://grahamrpugh.com/2017-01-07-application-to-run-shell-commands-with-admin-rights</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Writing an application to run shell commands with admin rights</description>
+    </item>
+    <item>
+      <title>Writing a (better) application to run shell scripts with admin rights</title>
+      <link>https://grahamrpugh.com/2017-01-08-better-application-to-run-shell-scripts-with-admin-rights</link>
+      <guid>https://grahamrpugh.com/2017-01-08-better-application-to-run-shell-scripts-with-admin-rights</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Writing a (better) application to run shell scripts with admin rights</description>
+    </item>
+    <item>
+      <title>AutoPkg Setup for JSS</title>
+      <link>https://grahamrpugh.com/2017-07-27-AutoPkg_Setup_for_JSS</link>
+      <guid>https://grahamrpugh.com/2017-07-27-AutoPkg_Setup_for_JSS</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>AutoPkg Setup for JSS</description>
+    </item>
+    <item>
+      <title>Customise Atom for editing AutoPkg recipes</title>
+      <link>https://grahamrpugh.com/2017-10-20-customize-atom-for-autopkg-recipes</link>
+      <guid>https://grahamrpugh.com/2017-10-20-customize-atom-for-autopkg-recipes</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Customise Atom for editing AutoPkg recipes</description>
+    </item>
+    <item>
+      <title>How many Jamf Pro Policies does each application need?</title>
+      <link>https://grahamrpugh.com/2017-11-02-how-many-policies</link>
+      <guid>https://grahamrpugh.com/2017-11-02-how-many-policies</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>How many Jamf Pro Policies does each application need?</description>
+    </item>
+    <item>
+      <title>Help Make the Jamf Pro API Better</title>
+      <link>https://grahamrpugh.com/2017-11-30-Jamf-And-API</link>
+      <guid>https://grahamrpugh.com/2017-11-30-Jamf-And-API</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Help Make the Jamf Pro API Better</description>
+    </item>
+    <item>
+      <title>A Slack notification post-processor for AutoPkg/JSSImporter</title>
+      <link>https://grahamrpugh.com/2017-12-22-slack-for-autopkg-jssimporter</link>
+      <guid>https://grahamrpugh.com/2017-12-22-slack-for-autopkg-jssimporter</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>A Slack notification post-processor for AutoPkg/JSSImporter</description>
+    </item>
+    <item>
+      <title>Jamf Pro uninstaller policies with a little help from Munki</title>
+      <link>https://grahamrpugh.com/2018-01-19-uninstall-packages-with-jamf-and</link>
+      <guid>https://grahamrpugh.com/2018-01-19-uninstall-packages-with-jamf-and</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Jamf Pro uninstaller policies with a little help from Munki</description>
+    </item>
+    <item>
+      <title>Fix Jamf Pro 10 Reinstall Button Values</title>
+      <link>https://grahamrpugh.com/2018-02-17-fix-jamf-policy-reinstall-buttons</link>
+      <guid>https://grahamrpugh.com/2018-02-17-fix-jamf-policy-reinstall-buttons</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Fix Jamf Pro 10 Reinstall Button Values</description>
+    </item>
+    <item>
+      <title>ETH Zurich and Jamf Pro - Jamf Nation Roadshow, Munich, 13 June 2018</title>
+      <link>https://grahamrpugh.com/2018-06-13-Jamf-Nation-Roadshow-Presentation</link>
+      <guid>https://grahamrpugh.com/2018-06-13-Jamf-Nation-Roadshow-Presentation</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>ETH Zurich and Jamf Pro - Jamf Nation Roadshow, Munich, 13 June 2018</description>
+    </item>
+    <item>
+      <title>Using the Keychain to store passwords for Jamf Pro API calls in bash scripts</title>
+      <link>https://grahamrpugh.com/2018-08-14-api-passwords-in-keychain</link>
+      <guid>https://grahamrpugh.com/2018-08-14-api-passwords-in-keychain</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Using the Keychain to store passwords for Jamf Pro API calls in bash scripts</description>
+    </item>
+    <item>
+      <title>Writing AutoPkg recipes and other plist-formatted files in yaml</title>
+      <link>https://grahamrpugh.com/2018-08-29-autopkg-recipes-in-yaml</link>
+      <guid>https://grahamrpugh.com/2018-08-29-autopkg-recipes-in-yaml</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Writing AutoPkg recipes and other plist-formatted files in yaml</description>
+    </item>
+    <item>
+      <title>Disable macOS Upgrade Notifications</title>
+      <link>https://grahamrpugh.com/2018-10-19-disable-macos-upgrade-notifications</link>
+      <guid>https://grahamrpugh.com/2018-10-19-disable-macos-upgrade-notifications</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Disable macOS Upgrade Notifications</description>
+    </item>
+    <item>
+      <title>Send an Email from Jamf Pro Self Service</title>
+      <link>https://grahamrpugh.com/2018-10-31-email-from-jamf-self-service-bookmark</link>
+      <guid>https://grahamrpugh.com/2018-10-31-email-from-jamf-self-service-bookmark</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Send an Email from Jamf Pro Self Service</description>
+    </item>
+    <item>
+      <title>Maintain daily, weekly and monthly MySQL backups</title>
+      <link>https://grahamrpugh.com/2019-01-15-mysqldump-daily-weekly-monthly</link>
+      <guid>https://grahamrpugh.com/2019-01-15-mysqldump-daily-weekly-monthly</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Maintain daily, weekly and monthly MySQL backups</description>
+    </item>
+    <item>
+      <title>IBM SPSS Statistics 26 silent installer woes</title>
+      <link>https://grahamrpugh.com/2019-05-31-spss-26-java</link>
+      <guid>https://grahamrpugh.com/2019-05-31-spss-26-java</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>IBM SPSS Statistics 26 silent installer woes</description>
+    </item>
+    <item>
+      <title>JSSImporter 1.0.2b3 puts the brakes on</title>
+      <link>https://grahamrpugh.com/2019-06-13-jssimporter-update</link>
+      <guid>https://grahamrpugh.com/2019-06-13-jssimporter-update</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JSSImporter 1.0.2b3 puts the brakes on</description>
+    </item>
+    <item>
+      <title>Update a config profile on multiple Jamf Pro servers with the API</title>
+      <link>https://grahamrpugh.com/2019-09-25-jamf-config-profile-api</link>
+      <guid>https://grahamrpugh.com/2019-09-25-jamf-config-profile-api</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Update a config profile on multiple Jamf Pro servers with the API</description>
+    </item>
+    <item>
+      <title>JNUC Presentation - 14 November 2019 - Jamf Pro and AutoPkg</title>
+      <link>https://grahamrpugh.com/2019-10-06-jnuc-presentation-autopkg-jssimporter</link>
+      <guid>https://grahamrpugh.com/2019-10-06-jnuc-presentation-autopkg-jssimporter</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JNUC Presentation - 14 November 2019 - Jamf Pro and AutoPkg</description>
+    </item>
+    <item>
+      <title>Slack notifications for errors in a multi-context Jamf Pro environment</title>
+      <link>https://grahamrpugh.com/2019-10-22-jamf-error-log-slack-multicontext</link>
+      <guid>https://grahamrpugh.com/2019-10-22-jamf-error-log-slack-multicontext</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Slack notifications for errors in a multi-context Jamf Pro environment</description>
+    </item>
+    <item>
+      <title>AutoPkg 1.3 is incompatible with JSSImporter. UPDATE: fixed in version 1.3.1</title>
+      <link>https://grahamrpugh.com/2019-11-05-AutoPkg1-3-breaks-JSSImporter</link>
+      <guid>https://grahamrpugh.com/2019-11-05-AutoPkg1-3-breaks-JSSImporter</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>AutoPkg 1.3 is incompatible with JSSImporter. UPDATE: fixed in version 1.3.1</description>
+    </item>
+    <item>
+      <title>Jamf and AutoPkg: JNUC 2019 Session Links and commands - UPDATE: video and slide deck now available</title>
+      <link>https://grahamrpugh.com/2019-11-14-jamf-and-autopkg-jnuc2019-session</link>
+      <guid>https://grahamrpugh.com/2019-11-14-jamf-and-autopkg-jnuc2019-session</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Jamf and AutoPkg: JNUC 2019 Session Links and commands - UPDATE: video and slide deck now available</description>
+    </item>
+    <item>
+      <title>Managing Configuration Profiles between Jamf Pro instances using the Classic API</title>
+      <link>https://grahamrpugh.com/2020-04-27-managing-profiles-between-multiple-jamf-instances</link>
+      <guid>https://grahamrpugh.com/2020-04-27-managing-profiles-between-multiple-jamf-instances</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Managing Configuration Profiles between Jamf Pro instances using the Classic API</description>
+    </item>
+    <item>
+      <title>Automated Device Enrollment settings affect Setup Assistant beyond enrollment</title>
+      <link>https://grahamrpugh.com/2020-06-06-prestages-setup-assistant</link>
+      <guid>https://grahamrpugh.com/2020-06-06-prestages-setup-assistant</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Automated Device Enrollment settings affect Setup Assistant beyond enrollment</description>
+    </item>
+    <item>
+      <title>Better Jamf Policy Version Control with AutoPkg and Regex</title>
+      <link>https://grahamrpugh.com/2020-09-17-better-jamf-policy-version-control-autopkg</link>
+      <guid>https://grahamrpugh.com/2020-09-17-better-jamf-policy-version-control-autopkg</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Better Jamf Policy Version Control with AutoPkg and Regex</description>
+    </item>
+    <item>
+      <title>JamfUploader - new AutoPkg processors for importing packages to Jamf Pro</title>
+      <link>https://grahamrpugh.com/2020-12-14-introducing-jamf-upload</link>
+      <guid>https://grahamrpugh.com/2020-12-14-introducing-jamf-upload</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JamfUploader - new AutoPkg processors for importing packages to Jamf Pro</description>
+    </item>
+    <item>
+      <title>When a single Adobe package can have two versions depending on architecture</title>
+      <link>https://grahamrpugh.com/2021-01-24-adobe-ccda-versions-and-apple-silicon</link>
+      <guid>https://grahamrpugh.com/2021-01-24-adobe-ccda-versions-and-apple-silicon</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>When a single Adobe package can have two versions depending on architecture</description>
+    </item>
+    <item>
+      <title>JNUC Presentation Announcement - 21 October 2021 - JamfUploader</title>
+      <link>https://grahamrpugh.com/2021-08-18-jnuc-presentation-jamfuploader</link>
+      <guid>https://grahamrpugh.com/2021-08-18-jnuc-presentation-jamfuploader</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JNUC Presentation Announcement - 21 October 2021 - JamfUploader</description>
+    </item>
+    <item>
+      <title>Deploying Mobile Device Apps to Apple Silicon Macs with Jamf Pro</title>
+      <link>https://grahamrpugh.com/2021-08-24-jamf-ios-apps-on-macos</link>
+      <guid>https://grahamrpugh.com/2021-08-24-jamf-ios-apps-on-macos</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Deploying Mobile Device Apps to Apple Silicon Macs with Jamf Pro</description>
+    </item>
+    <item>
+      <title>AutoPkg - verify and update trust information on all recipes in a recipe-list</title>
+      <link>https://grahamrpugh.com/2021-08-31-autopkg-update-trust-info-recipe-list</link>
+      <guid>https://grahamrpugh.com/2021-08-31-autopkg-update-trust-info-recipe-list</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>AutoPkg - verify and update trust information on all recipes in a recipe-list</description>
+    </item>
+    <item>
+      <title>MacSysAdmin Presentation - 07 October 2021 - AutoPkg Everything</title>
+      <link>https://grahamrpugh.com/2021-10-05-macsysadmin-presentation</link>
+      <guid>https://grahamrpugh.com/2021-10-05-macsysadmin-presentation</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>MacSysAdmin Presentation - 07 October 2021 - AutoPkg Everything</description>
+    </item>
+    <item>
+      <title>JNUC Presentation - 21 October 2021 - Making package uploading and deployment easier with JamfUploader</title>
+      <link>https://grahamrpugh.com/2021-10-21-jnuc-presentation-jamfuploader-session</link>
+      <guid>https://grahamrpugh.com/2021-10-21-jnuc-presentation-jamfuploader-session</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JNUC Presentation - 21 October 2021 - Making package uploading and deployment easier with JamfUploader</description>
+    </item>
+    <item>
+      <title>macOS Monterey - MDM custom preference to disable python 2 deprecation popups</title>
+      <link>https://grahamrpugh.com/2021-10-25-monterey-disable-python-2-deprecation-warnings</link>
+      <guid>https://grahamrpugh.com/2021-10-25-monterey-disable-python-2-deprecation-warnings</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>macOS Monterey - MDM custom preference to disable python 2 deprecation popups</description>
+    </item>
+    <item>
+      <title>How do changes to the Jamf Pro API authentication affect JamfUploader and JSSImporter?</title>
+      <link>https://grahamrpugh.com/2022-02-16-jssimporter-jamf-pro-api-token-auth</link>
+      <guid>https://grahamrpugh.com/2022-02-16-jssimporter-jamf-pro-api-token-auth</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>How do changes to the Jamf Pro API authentication affect JamfUploader and JSSImporter?</description>
+    </item>
+    <item>
+      <title>JamfPackageUploader &apos;JCDS-mode&apos; for a new way to upload packages to Jamf Cloud</title>
+      <link>https://grahamrpugh.com/2022-04-19-jamfuploader-jcds-mode</link>
+      <guid>https://grahamrpugh.com/2022-04-19-jamfuploader-jcds-mode</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JamfPackageUploader &apos;JCDS-mode&apos; for a new way to upload packages to Jamf Cloud</description>
+    </item>
+    <item>
+      <title>JamfRecipeMaker - use AutoPkg to make Jamf recipes automatically!</title>
+      <link>https://grahamrpugh.com/2022-05-03-jamf-recipe-maker</link>
+      <guid>https://grahamrpugh.com/2022-05-03-jamf-recipe-maker</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JamfRecipeMaker - use AutoPkg to make Jamf recipes automatically!</description>
+    </item>
+    <item>
+      <title>Comparing a JamfUploader recipe to a standard JSSImporter recipe</title>
+      <link>https://grahamrpugh.com/2022-05-13-jss-to-jamf-recipes</link>
+      <guid>https://grahamrpugh.com/2022-05-13-jss-to-jamf-recipes</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Comparing a JamfUploader recipe to a standard JSSImporter recipe</description>
+    </item>
+    <item>
+      <title>Stage packages to production with AutoPkg and JamfUploader</title>
+      <link>https://grahamrpugh.com/2022-07-10-staging-jamf-recipes-to-production</link>
+      <guid>https://grahamrpugh.com/2022-07-10-staging-jamf-recipes-to-production</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Stage packages to production with AutoPkg and JamfUploader</description>
+    </item>
+    <item>
+      <title>MacAdmins Presentation - 14 July 2022 - Demystifying JamfUploader</title>
+      <link>https://grahamrpugh.com/2022-07-22-macadmins-presentation-jamfuploader</link>
+      <guid>https://grahamrpugh.com/2022-07-22-macadmins-presentation-jamfuploader</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>MacAdmins Presentation - 14 July 2022 - Demystifying JamfUploader</description>
+    </item>
+    <item>
+      <title>MacAdmins Podcast, Episode 276: Big Changes to Jamf APIs and JSSImporter</title>
+      <link>https://grahamrpugh.com/2022-08-19-macadmins-podcast</link>
+      <guid>https://grahamrpugh.com/2022-08-19-macadmins-podcast</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>MacAdmins Podcast, Episode 276: Big Changes to Jamf APIs and JSSImporter</description>
+    </item>
+    <item>
+      <title>Clean up your packages in Jamf Pro automatically with JamfPackageCleaner</title>
+      <link>https://grahamrpugh.com/2023-04-25-JamfPackageCleaner</link>
+      <guid>https://grahamrpugh.com/2023-04-25-JamfPackageCleaner</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Clean up your packages in Jamf Pro automatically with JamfPackageCleaner</description>
+    </item>
+    <item>
+      <title>Introducing JCDS 2.0 for uploading packages to Jamf Pro Cloud distribution points</title>
+      <link>https://grahamrpugh.com/2023-08-21-introducing-jcds2</link>
+      <guid>https://grahamrpugh.com/2023-08-21-introducing-jcds2</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Introducing JCDS 2.0 for uploading packages to Jamf Pro Cloud distribution points</description>
+    </item>
+    <item>
+      <title>Personal reflections on my time at ETH Zürich</title>
+      <link>https://grahamrpugh.com/2023-12-05-goodbye-eth-zurich</link>
+      <guid>https://grahamrpugh.com/2023-12-05-goodbye-eth-zurich</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Personal reflections on my time at ETH Zürich</description>
+    </item>
+    <item>
+      <title>JOCADS - the Multitenant Object Copier and Deleter Tool for Jamf Pro</title>
+      <link>https://grahamrpugh.com/2023-12-05-jocads-and-other-api-tools</link>
+      <guid>https://grahamrpugh.com/2023-12-05-jocads-and-other-api-tools</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JOCADS - the Multitenant Object Copier and Deleter Tool for Jamf Pro</description>
+    </item>
+    <item>
+      <title>Scripting the upload of packages to Jamf Pro with a Cloud Distribution Point located on an Amazon Web Services S3 Bucket</title>
+      <link>https://grahamrpugh.com/2024-03-06-uploading-packages-to-aws-cdp</link>
+      <guid>https://grahamrpugh.com/2024-03-06-uploading-packages-to-aws-cdp</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Scripting the upload of packages to Jamf Pro with a Cloud Distribution Point located on an Amazon Web Services S3 Bucket</description>
+    </item>
+    <item>
+      <title>SOFA, and how to use it with Jamf Pro</title>
+      <link>https://grahamrpugh.com/2024-04-29-sofa-and-jamf-pro</link>
+      <guid>https://grahamrpugh.com/2024-04-29-sofa-and-jamf-pro</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>SOFA, and how to use it with Jamf Pro</description>
+    </item>
+    <item>
+      <title>Check for unpatched CVEs on Mac with Jamf Pro using SOFA</title>
+      <link>https://grahamrpugh.com/2024-05-05-cve-checks-using-sofa-and-jamf-pro</link>
+      <guid>https://grahamrpugh.com/2024-05-05-cve-checks-using-sofa-and-jamf-pro</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Check for unpatched CVEs on Mac with Jamf Pro using SOFA</description>
+    </item>
+    <item>
+      <title>dbfileupload is dead - long live v1/packages! A new packages API endpoint for Jamf Pro</title>
+      <link>https://grahamrpugh.com/2024-05-16-jamf-new-packages-api-endpoint</link>
+      <guid>https://grahamrpugh.com/2024-05-16-jamf-new-packages-api-endpoint</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>dbfileupload is dead - long live v1/packages! A new packages API endpoint for Jamf Pro</description>
+    </item>
+    <item>
+      <title>Changes to Classic API authentication in Jamf Pro - what you need to know</title>
+      <link>https://grahamrpugh.com/2024-05-16-jamf-pro-api-authentication</link>
+      <guid>https://grahamrpugh.com/2024-05-16-jamf-pro-api-authentication</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Changes to Classic API authentication in Jamf Pro - what you need to know</description>
+    </item>
+    <item>
+      <title>Understanding Jamf Pro API Roles And Clients</title>
+      <link>https://grahamrpugh.com/2024-07-30-jamf-blog-api-clients-and-roles</link>
+      <guid>https://grahamrpugh.com/2024-07-30-jamf-blog-api-clients-and-roles</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Understanding Jamf Pro API Roles And Clients</description>
+    </item>
+    <item>
+      <title>MacSysAdmin Presentation - 03 October 2024 - Automated Testing of Managed Applications</title>
+      <link>https://grahamrpugh.com/2024-10-08-macsysadmin-presentation</link>
+      <guid>https://grahamrpugh.com/2024-10-08-macsysadmin-presentation</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>MacSysAdmin Presentation - 03 October 2024 - Automated Testing of Managed Applications</description>
+    </item>
+    <item>
+      <title>Jamf package inventory recalculation - GUI, API, JamfUploader</title>
+      <link>https://grahamrpugh.com/2024-10-30-package-inventory-recalculation</link>
+      <guid>https://grahamrpugh.com/2024-10-30-package-inventory-recalculation</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Jamf package inventory recalculation - GUI, API, JamfUploader</description>
+    </item>
+    <item>
+      <title>JamfUploader - store your Jamf Pro credentials in the Keychain</title>
+      <link>https://grahamrpugh.com/2025-03-14-jamfuploader-keychain</link>
+      <guid>https://grahamrpugh.com/2025-03-14-jamfuploader-keychain</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JamfUploader - store your Jamf Pro credentials in the Keychain</description>
+    </item>
+    <item>
+      <title>Event Notifications from JamfUploader - Slack, Teams, and now Jira</title>
+      <link>https://grahamrpugh.com/2025-09-07-jamfuploader-notifications</link>
+      <guid>https://grahamrpugh.com/2025-09-07-jamfuploader-notifications</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Event Notifications from JamfUploader - Slack, Teams, and now Jira</description>
+    </item>
+    <item>
+      <title>Jamf-Upload All The Things</title>
+      <link>https://grahamrpugh.com/2025-11-17-jamf-upload-all-the-things</link>
+      <guid>https://grahamrpugh.com/2025-11-17-jamf-upload-all-the-things</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Jamf-Upload All The Things</description>
+    </item>
+    <item>
+      <title>Two New Criteria for Application Version Comparison in Jamf Pro Smart Computer Groups</title>
+      <link>https://grahamrpugh.com/2025-12-02-new-smart-group-criteria</link>
+      <guid>https://grahamrpugh.com/2025-12-02-new-smart-group-criteria</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Two New Criteria for Application Version Comparison in Jamf Pro Smart Computer Groups</description>
+    </item>
+    <item>
+      <title>Dissect And Replace Your Monolithic Legacy Configuration Profiles</title>
+      <link>https://grahamrpugh.com/2026-01-28-monolithic-profile-dissector</link>
+      <guid>https://grahamrpugh.com/2026-01-28-monolithic-profile-dissector</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Dissect And Replace Your Monolithic Legacy Configuration Profiles</description>
+    </item>
+    <item>
+      <title>Unsign Profile&apos; - A Small, Stumbling Step into the World of Shortcuts</title>
+      <link>https://grahamrpugh.com/2026-02-04-shortcut-unsign-profile</link>
+      <guid>https://grahamrpugh.com/2026-02-04-shortcut-unsign-profile</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Unsign Profile&apos; - A Small, Stumbling Step into the World of Shortcuts</description>
+    </item>
+    <item>
+      <title>Create custom profiles using JamfUploader without a template file</title>
+      <link>https://grahamrpugh.com/2026-03-03-JamfUploader-profiles-without-templates</link>
+      <guid>https://grahamrpugh.com/2026-03-03-JamfUploader-profiles-without-templates</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Create custom profiles using JamfUploader without a template file</description>
+    </item>
+    <item>
+      <title>jamf-cli, and how you can use it with AutoPkg to automate complex Jamf workflows</title>
+      <link>https://grahamrpugh.com/2026-04-12-jamf-cli-runner</link>
+      <guid>https://grahamrpugh.com/2026-04-12-jamf-cli-runner</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>jamf-cli, and how you can use it with AutoPkg to automate complex Jamf workflows</description>
+    </item>
+    <item>
+      <title>JamfUploader now supports Jamf Platform Integrations, integrates with jamf-cli</title>
+      <link>https://grahamrpugh.com/2026-04-19-jamfuploader-platform</link>
+      <guid>https://grahamrpugh.com/2026-04-19-jamfuploader-platform</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JamfUploader now supports Jamf Platform Integrations, integrates with jamf-cli</description>
+    </item>
+    <item>
+      <title>Introducing Conditional Logic for JamfUploader and JamfCLIRunner</title>
+      <link>https://grahamrpugh.com/2026-06-28-conditional-logic-autopkg-jamfuploader</link>
+      <guid>https://grahamrpugh.com/2026-06-28-conditional-logic-autopkg-jamfuploader</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Introducing Conditional Logic for JamfUploader and JamfCLIRunner</description>
+    </item>
+  </channel>
+</rss>

@@ -2,6 +2,11 @@
 layout: post
 title:  "Writing AutoPkg recipes and other plist-formatted files in yaml"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
 ---
 
 [AutoPkg] recipes are `plist` files, a form of XML. Even the most simple of Autopkg recipes are somewhat voluminous. For example, here is `pkg` recipe that just does one thing, package up an `app` within a `dmg` using the `AppPkgCreator` processor:
@@ -11,33 +16,33 @@ comments: true
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Description</key>
-	<string>Downloads the latest version of KNIME and creates a package.</string>
-	<key>Identifier</key>
-	<string>com.grahampugh.pkg.KNIME</string>
-	<key>Input</key>
-	<dict>
-		<key>BUNDLE_ID</key>
-		<string>org.knime.product</string>
-		<key>NAME</key>
-		<string>KNIME</string>
-	</dict>
-	<key>MinimumVersion</key>
-	<string>1.0.0</string>
-	<key>ParentRecipe</key>
-	<string>com.grahampugh.download.KNIME</string>
-	<key>Process</key>
-	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
-			</dict>
-			<key>Processor</key>
-			<string>AppPkgCreator</string>
-		</dict>
-	</array>
+ <key>Description</key>
+ <string>Downloads the latest version of KNIME and creates a package.</string>
+ <key>Identifier</key>
+ <string>com.grahampugh.pkg.KNIME</string>
+ <key>Input</key>
+ <dict>
+  <key>BUNDLE_ID</key>
+  <string>org.knime.product</string>
+  <key>NAME</key>
+  <string>KNIME</string>
+ </dict>
+ <key>MinimumVersion</key>
+ <string>1.0.0</string>
+ <key>ParentRecipe</key>
+ <string>com.grahampugh.download.KNIME</string>
+ <key>Process</key>
+ <array>
+  <dict>
+   <key>Arguments</key>
+   <dict>
+    <key>pkg_path</key>
+    <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+   </dict>
+   <key>Processor</key>
+   <string>AppPkgCreator</string>
+  </dict>
+ </array>
 </dict>
 </plist>
 ```
@@ -190,7 +195,5 @@ Convert it straight into the correct path:
 ```
 /path/to/yaml-plist.py /path/to/com.github.autopkg.yaml ~/Library/Preferences/com.github.autopkg.plist
 ```
-
-
 
 {% include urls.md %}

@@ -2,11 +2,15 @@
 layout: post
 title:  "Using the Keychain to store passwords for Jamf Pro API calls in bash scripts"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 The Jamf Pro "classic" REST API uses basic authentication, which requires credentials in the form of a username and password. When making API calls in a script using `curl`, the username and password is therefore passed in plain text.
 
-Jamf Pro's Users & Groups Interface allows you to restrict what a particular user can access. But still, hard-coding the username and password into your API scripts and committing them to git is not ideal. 
+Jamf Pro's Users & Groups Interface allows you to restrict what a particular user can access. But still, hard-coding the username and password into your API scripts and committing them to git is not ideal.
 
 It's easy enough to write a script which you run interactively, which prompts you to enter the credentials and exports them into the shell's environment. But if you're dealing with multiple API credentials each time, this can get tiresome.
 
@@ -16,9 +20,9 @@ It turns out that this is possible with the `security` command.
 
 ## Create a new keychain
 
-If you [create a new non-login keychain][2] rather than using your local or iCloud keychains, the keychain can be put in version control (e.g. git) without exposing the API credentials, and it can be locked after use. 
+If you [create a new non-login keychain][2] rather than using your local or iCloud keychains, the keychain can be put in version control (e.g. git) without exposing the API credentials, and it can be locked after use.
 
-## Unlock the keychain 
+## Unlock the keychain
 
 You need to somehow provide the password to unlock the keychain. This can be done as follows:
 
@@ -26,7 +30,7 @@ You need to somehow provide the password to unlock the keychain. This can be don
 
 If you're running the script from terminal, you can leave out the password from the above command and let the GUI prompt you. If you're scheduling the script to run, you will need to export it as an environment variable or use a tool such as Jenkins which can supply secrets without exposing them to logs etc.
 
-## Get values of a key from the keychain 
+## Get values of a key from the keychain
 
 This command returns the user of a key (substitute the KEYNAME and KEYCHAINPATH accordingly):
 
@@ -50,10 +54,7 @@ I have created a GitHub repository with an example of how this can be done. Head
 
 Have you used a different solution? I'm definitely still on the lookout for the best solution for performing basic authentication API calls securely!
 
-
-
 [1]: https://github.com/brysontyrrell/EncryptedStrings
 [2]: https://www.intego.com/mac-security-blog/create-a-non-login-keychain/
-
 
 {% include urls.md %}

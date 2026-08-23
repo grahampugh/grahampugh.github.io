@@ -2,6 +2,10 @@
 layout: post
 title: "Deploying Mobile Device Apps to Apple Silicon Macs with Jamf Pro"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 Apple made it possible to install iPhone and iPad apps to Apple Silicon Macs as soon as they were released. Since version 10.30 it has been possible to deploy these apps via Jamf Pro.

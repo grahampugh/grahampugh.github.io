@@ -2,19 +2,23 @@
 layout: post
 title: "Munki: How to remove cruft"
 comments: true
+tags:
+  - apple
+  - mac
+  - munki
 ---
 
 An issue with [Munki], especially if using [AutoPkg], is that you can quickly amass many versions of software packages, which can fill up your repository volume. There are no automated ways of clearing out old versions of software, but in many cases there is no reason to keep them.
 
 Removing a package involves the following process:
 
--   Locate the imported package and delete it
--   Locate the associated pkginfo file and delete it
--   `makecatalogs`
+- Locate the imported package and delete it
+- Locate the associated pkginfo file and delete it
+- `makecatalogs`
 
 If you're organised, you'll know exactly where every package is in the subdirectory structure of your Munki repository. But the repository can get hard to navigate. In which folder does Autopkg put Java 8? To where did your colleague import SPSS?
 
-# Use a GUI!
+# Use a GUI
 
 One way of removing packages is using the [MunkiAdmin] application. Simply right- or ctrl-click on an item in the Packages list, and select Delete Package. MunkiAdmin offers to delete the package and associated `pkginfo` file, and potentially the icon.
 
@@ -27,17 +31,17 @@ If you don't wish to use MunkiAdmin, for instance if you are working remotely on
 Pressing `y` deletes the item and moves on to the next item in the list. Pressing `n` or any other character (except `q`) skips the item and moves on to the next. Pressing `q` skips to the end of the list. After the end of the list has been reached, if anything has been deleted, `makecatalogs` is run (for this to work, this script needs to be run on a Mac with munkitools installed and configured to point to your munki repository).
 
 {% highlight bash %}
-#!/bin/bash
+# !/bin/bash
 
-### A script to search your Munki repo and offer to delete items. Use with care!
+### A script to search your Munki repo and offer to delete items. Use with care
 
-### It will search all directories including pkgs, pkgsinfo and icons.
+### It will search all directories including pkgs, pkgsinfo and icons
 
 ### Syntax: /path/to/munkirm -d <search-term>
 
 ### For example, /path/to/munkirm -d xcode
 
-### Search is case insensitive.
+### Search is case insensitive
 
 ### Options are y or Y to delete, n, N or anything else to skip, and q or Q to quit
 
@@ -71,28 +75,28 @@ fi
 
     # Check to see if the repository is mounted
     if [ ! -d ${MUNKI_REPO} ]; then
-    	echo "### Munki repository not mounted! Cannot continue"
-    	echo
-    	exit 1
+     echo "### Munki repository not mounted! Cannot continue"
+     echo
+     exit 1
     fi
 
     case $opt in
     d)
-    	# echo "-d was triggered, Parameter: $OPTARG" >&2
-    	PKG="$OPTARG"
+     # echo "-d was triggered, Parameter: $OPTARG" >&2
+     PKG="$OPTARG"
 
-    	# write find results to temporary file
-    	#find $MUNKI_REPO -type f -iname "*$PKG*" > /tmp/list.txt
-    	find $MUNKI_REPO -type f -iname "*$PKG*" | awk -v FS=/ -v OFS=/ '{ print $NF,$0 }' | sort -n -t / | cut -f2- -d/ > /tmp/list.txt
-    	;;
+     # write find results to temporary file
+     #find $MUNKI_REPO -type f -iname "*$PKG*" > /tmp/list.txt
+     find $MUNKI_REPO -type f -iname "*$PKG*" | awk -v FS=/ -v OFS=/ '{ print $NF,$0 }' | sort -n -t / | cut -f2- -d/ > /tmp/list.txt
+     ;;
     \?)
-      	echo "Invalid option: -$OPTARG" >&2
-      	exit 1
-      	;;
+       echo "Invalid option: -$OPTARG" >&2
+       exit 1
+       ;;
     :)
-      	echo "Option -$OPTARG requires an argument." >&2
-      	exit 1
-      	;;
+       echo "Option -$OPTARG requires an argument." >&2
+       exit 1
+       ;;
 
 esac
 done
@@ -104,11 +108,11 @@ echo
 cat /tmp/list.txt
 echo # Now offer up each file for deletion
 for file in `cat /tmp/list.txt`; do
-read -p "Delete $file (y/n/q)?  " -n 1 input    
-		case $input in 
-			y|Y ) 	echo
-					rm -r $file 
-					echo "$file Deleted!"
+read -p "Delete $file (y/n/q)?  " -n 1 input
+  case $input in
+   y|Y )  echo
+     rm -r $file
+     echo "$file Deleted!"
 echo
 REMAKE=1
 ;;

@@ -2,6 +2,11 @@
 layout: post
 title:  "JSSImporter 1.0.2b3 puts the brakes on"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
 ---
 
 Today we released a new beta of the [JSSImporter] processor for importing packages into [Jamf Pro] using [AutoPkg]. The 1.0.2b3 release is available [here](https://github.com/jssimporter/JSSImporter/releases/tag/1.0.2b3).

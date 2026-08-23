@@ -1,0 +1,110 @@
+---
+layout: null
+permalink: /tags/presentations/feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>presentations | https://grahamrpugh.com</title>
+    <link>https://grahamrpugh.com/tags/presentations/</link>
+    <description>Posts tagged with presentations</description>
+    <item>
+      <title>Docker: Use Cases presentation - 19/3/2015 London Apple Admins @ ThoughtWorks London</title>
+      <link>https://grahamrpugh.com/2015-05-20-docker-presentation</link>
+      <guid>https://grahamrpugh.com/2015-05-20-docker-presentation</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Docker: Use Cases presentation - 19/3/2015 London Apple Admins @ ThoughtWorks London</description>
+    </item>
+    <item>
+      <title>ETH Zurich and Jamf Pro - Jamf Nation Roadshow, Munich, 13 June 2018</title>
+      <link>https://grahamrpugh.com/2018-06-13-Jamf-Nation-Roadshow-Presentation</link>
+      <guid>https://grahamrpugh.com/2018-06-13-Jamf-Nation-Roadshow-Presentation</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>ETH Zurich and Jamf Pro - Jamf Nation Roadshow, Munich, 13 June 2018</description>
+    </item>
+    <item>
+      <title>JNUC Presentation - 14 November 2019 - Jamf Pro and AutoPkg</title>
+      <link>https://grahamrpugh.com/2019-10-06-jnuc-presentation-autopkg-jssimporter</link>
+      <guid>https://grahamrpugh.com/2019-10-06-jnuc-presentation-autopkg-jssimporter</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JNUC Presentation - 14 November 2019 - Jamf Pro and AutoPkg</description>
+    </item>
+    <item>
+      <title>Jamf and AutoPkg: JNUC 2019 Session Links and commands - UPDATE: video and slide deck now available</title>
+      <link>https://grahamrpugh.com/2019-11-14-jamf-and-autopkg-jnuc2019-session</link>
+      <guid>https://grahamrpugh.com/2019-11-14-jamf-and-autopkg-jnuc2019-session</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Jamf and AutoPkg: JNUC 2019 Session Links and commands - UPDATE: video and slide deck now available</description>
+    </item>
+    <item>
+      <title>Presentation at the Texas Apple Admins Virtual Meetup</title>
+      <link>https://grahamrpugh.com/2020-05-05-texas-apple-admins-presentation</link>
+      <guid>https://grahamrpugh.com/2020-05-05-texas-apple-admins-presentation</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Presentation at the Texas Apple Admins Virtual Meetup</description>
+    </item>
+    <item>
+      <title>Second presentation at the Texas Apple Admins Virtual Meetup</title>
+      <link>https://grahamrpugh.com/2021-03-30-texas-apple-admins-presentation-yaml</link>
+      <guid>https://grahamrpugh.com/2021-03-30-texas-apple-admins-presentation-yaml</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Second presentation at the Texas Apple Admins Virtual Meetup</description>
+    </item>
+    <item>
+      <title>JNUC Presentation Announcement - 21 October 2021 - JamfUploader</title>
+      <link>https://grahamrpugh.com/2021-08-18-jnuc-presentation-jamfuploader</link>
+      <guid>https://grahamrpugh.com/2021-08-18-jnuc-presentation-jamfuploader</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JNUC Presentation Announcement - 21 October 2021 - JamfUploader</description>
+    </item>
+    <item>
+      <title>MacSysAdmin Presentation - 07 October 2021 - AutoPkg Everything</title>
+      <link>https://grahamrpugh.com/2021-10-05-macsysadmin-presentation</link>
+      <guid>https://grahamrpugh.com/2021-10-05-macsysadmin-presentation</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>MacSysAdmin Presentation - 07 October 2021 - AutoPkg Everything</description>
+    </item>
+    <item>
+      <title>JNUC Presentation - 21 October 2021 - Making package uploading and deployment easier with JamfUploader</title>
+      <link>https://grahamrpugh.com/2021-10-21-jnuc-presentation-jamfuploader-session</link>
+      <guid>https://grahamrpugh.com/2021-10-21-jnuc-presentation-jamfuploader-session</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>JNUC Presentation - 21 October 2021 - Making package uploading and deployment easier with JamfUploader</description>
+    </item>
+    <item>
+      <title>MacAdmins Presentation - 14 July 2022 - Demystifying JamfUploader</title>
+      <link>https://grahamrpugh.com/2022-07-22-macadmins-presentation-jamfuploader</link>
+      <guid>https://grahamrpugh.com/2022-07-22-macadmins-presentation-jamfuploader</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>MacAdmins Presentation - 14 July 2022 - Demystifying JamfUploader</description>
+    </item>
+    <item>
+      <title>MacAdmins Podcast, Episode 276: Big Changes to Jamf APIs and JSSImporter</title>
+      <link>https://grahamrpugh.com/2022-08-19-macadmins-podcast</link>
+      <guid>https://grahamrpugh.com/2022-08-19-macadmins-podcast</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>MacAdmins Podcast, Episode 276: Big Changes to Jamf APIs and JSSImporter</description>
+    </item>
+    <item>
+      <title>MacAdmins UK Conference Presentation - 23 May 2023 - Erase-Install: A Tool for Upgrading and Reinstalling your Mac</title>
+      <link>https://grahamrpugh.com/2023-05-14-macaduk-presentation-eraseinstall</link>
+      <guid>https://grahamrpugh.com/2023-05-14-macaduk-presentation-eraseinstall</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>MacAdmins UK Conference Presentation - 23 May 2023 - Erase-Install: A Tool for Upgrading and Reinstalling your Mac</description>
+    </item>
+    <item>
+      <title>RocketmanTech LaunchPad Presentation - 7 June 2024 - Why and how to use erase-install</title>
+      <link>https://grahamrpugh.com/2024-06-07-rocketman-launchpad-presentation</link>
+      <guid>https://grahamrpugh.com/2024-06-07-rocketman-launchpad-presentation</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>RocketmanTech LaunchPad Presentation - 7 June 2024 - Why and how to use erase-install</description>
+    </item>
+    <item>
+      <title>MacSysAdmin Presentation - 03 October 2024 - Automated Testing of Managed Applications</title>
+      <link>https://grahamrpugh.com/2024-10-08-macsysadmin-presentation</link>
+      <guid>https://grahamrpugh.com/2024-10-08-macsysadmin-presentation</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>MacSysAdmin Presentation - 03 October 2024 - Automated Testing of Managed Applications</description>
+    </item>
+  </channel>
+</rss>

@@ -2,6 +2,12 @@
 layout: post
 title:  "Dissect And Replace Your Monolithic Legacy Configuration Profiles"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
+  - mjt
 ---
 
 ## Introduction

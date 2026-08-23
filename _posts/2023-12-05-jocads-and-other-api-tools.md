@@ -2,6 +2,11 @@
 layout: post
 title:  "JOCADS - the Multitenant Object Copier and Deleter Tool for Jamf Pro"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - mjt
 ---
 
 For many years while working at ETH Zürich, I developed a set of shell scripts for performing API actions on multiple Jamf instances. These remained for internal use only due to the specific nature of the ETH setup. However, as I am between jobs at the moment while waiting for a German work permit (*received today! Woohoo!*), I have taken some time to work on these scripts so that they could be used by other admins faced with dealing with multiple Jamf Pro instances, whilst still remaining functional for the specific use case at ETH. These scripts are now available for the Mac Admins community at the GitHub repo [multitenant-jamf-tools][1]. I hope they may be of use to somebody!
@@ -43,7 +48,7 @@ A requirement at ETH Zürich was that certain computer groups should not be over
 
 ## Setting up
 
-Instructions for installing and setting up the environment for using JOCADS and the other scripts are available in the [README][2] document. 
+Instructions for installing and setting up the environment for using JOCADS and the other scripts are available in the [README][2] document.
 
 In short, lists of instances are provided as text files. It's possible to have multiple instance lists, for example production and test instance lists. The first item in the list is defined as the default "source" instance, but you can override this to copy from any one instance to multiple others. You can also copy from an instance in one list to instances in another list.
 

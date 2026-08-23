@@ -2,11 +2,14 @@
 layout: post
 title:  "Mystery solved - uninstalled system extensions still listed in System Settings"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 Strange behaviour had been bugging me in the Network Pane of macOS System Preferences (System Settings since macOS Ventura) ever since the introduction of system extensions in macOS Catalina 10.15. System extensions are the replacement for kernel extensions (confusingly referred to as "System Extensions" in macOS System Preferences and in dialogue boxes).
 
-After installing the first apps that came with the new type of system extension, new items are displayed in the Network Pane. In our case this was Sophos Anti-Virus and Cisco AnyConnect. After uninstalling that software &mdash; including uninstalling the system extension of course &mdash; we found that an extension was sometimes left in the Network pane of System Preferences. 
+After installing the first apps that came with the new type of system extension, new items are displayed in the Network Pane. In our case this was Sophos Anti-Virus and Cisco AnyConnect. After uninstalling that software &mdash; including uninstalling the system extension of course &mdash; we found that an extension was sometimes left in the Network pane of System Preferences.
 
 Typically, these "orphans" lose any icon they once had, and are impossible to remove via the GUI, as the "minus" button is greyed out.
 
@@ -34,11 +37,11 @@ So, if you have a profile allowing any system extensions that use the Sophos, Ci
 
 ## But what to do about it?
 
-If you (or your users, and therefore your Service Desk) care about those entries in the Network pane, this may not actually not be easy to resolve. The profile needs to be in place before any potential installation, otherwise the pop-up warnings are going to happen at the point of installation. So, you cannot deploy the profile to computers that have the app installed; it has to be targeted to computers to which the software is _targeted_.
+If you (or your users, and therefore your Service Desk) care about those entries in the Network pane, this may not actually not be easy to resolve. The profile needs to be in place before any potential installation, otherwise the pop-up warnings are going to happen at the point of installation. So, you cannot deploy the profile to computers that have the app installed; it has to be targeted to computers to which the software is *targeted*.
 
 Obviously this is only going to be an issue in circumstances where you need to allow the system extension to be uninstalled, which won't be the case for a lot of security software.
 
-However, you may also encounter a particular software title with a poorly designed installer that bundles in a system extension which &mdash; depending on your installer choices &mdash; serves no purpose. This is the case with Cisco Secure Client (_née_ AnyConnect), where the extensions bundled with the installer  are not required by the VPN client (which is the only part we install), and have been known to cause problems when installed alongside other network extensions such as Sophos Anti-Virus or Microsoft Defender &mdash; not to mention causing confusion to users who have the VPN menu bar item show the duration of connection, which is hijacked by this non-functional content filter extension.
+However, you may also encounter a particular software title with a poorly designed installer that bundles in a system extension which &mdash; depending on your installer choices &mdash; serves no purpose. This is the case with Cisco Secure Client (*née* AnyConnect), where the extensions bundled with the installer  are not required by the VPN client (which is the only part we install), and have been known to cause problems when installed alongside other network extensions such as Sophos Anti-Virus or Microsoft Defender &mdash; not to mention causing confusion to users who have the VPN menu bar item show the duration of connection, which is hijacked by this non-functional content filter extension.
 
 This is a small annoyance that, for such workflows, cannot currently be solved. The Cisco Secure Client extension allow-list profile must be in place at all times, ready for the next update which will install those unnecessary and disruptive extensions again.
 

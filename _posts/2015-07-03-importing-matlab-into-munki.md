@@ -2,6 +2,10 @@
 layout: post
 title: "Importing Matlab into Munki"
 comments: true
+tags:
+  - apple
+  - mac
+  - munki
 ---
 
 Matlab is a cross-platform commercial programming tool. Its use is licensed, either with a personal license code or through a license server. It is made available as an ISO from the Mathworks website by authorised accounts. [A silent installation method is detailed here][matlab silent installation].

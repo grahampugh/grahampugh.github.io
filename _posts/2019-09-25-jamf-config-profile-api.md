@@ -2,6 +2,10 @@
 layout: post
 title:  "Update a config profile on multiple Jamf Pro servers with the API"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 I work with multiple Jamf Pro instances and often need to copy a configuration profile from one instance to many others. I use the Jamf Pro Classic API.

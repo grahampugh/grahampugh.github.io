@@ -2,6 +2,9 @@
 layout: post
 title: "Give Active Directory group members admin rights to their Mac while offline"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 When joining a Mac to Active Directory, you can specify domain users or groups to which you wish to grant administrator rights to the computer. This is done in Directory Utility by ticking the "Allow administration by:" box and entering a domain\username pair:
@@ -11,13 +14,13 @@ When joining a Mac to Active Directory, you can specify domain users or groups t
 Alternatively, a simple command performs the same task:
 
 ```bash
-$ dsconfigad -groups "DOMAIN\GroupName"
+dsconfigad -groups "DOMAIN\GroupName"
 ```
 
 You can also populate multiple groups (or users), separated by commas:
 
 ```bash
-$ dsconfigad -groups "DOMAIN\GroupName1,DOMAIN\GroupName2,DOMAIN\User23"
+dsconfigad -groups "DOMAIN\GroupName1,DOMAIN\GroupName2,DOMAIN\User23"
 ```
 
 This can be altered without unbinding / rebinding the domain.
@@ -29,16 +32,16 @@ However, a limitation of this feature is that users with an AD account in the "A
 Mobile Users can be added to the computer's "admin" group manually, using a command:
 
 ```bash
-$ /usr/sbin/dseditgroup -o edit -a USERNAME -t user admin
+/usr/sbin/dseditgroup -o edit -a USERNAME -t user admin
 ```
 
-<p>Similarly they can be removed, thus:</p>
+Similarly they can be removed, thus:
 
 ```bash
-$ /usr/sbin/dseditgroup -d edit -a USERNAME -t user admin
+/usr/sbin/dseditgroup -d edit -a USERNAME -t user admin
 ```
 
-# Automating the process
+## Automating the process
 
 My solution is [`check_local_admin.sh`][check_local_admin], a script which checks the members of the AD group in the "Allow Administration By" field, and if they also have an existing Mobile Account on the Mac, adds them to the "admin" group which gives them offline admin rights.
 

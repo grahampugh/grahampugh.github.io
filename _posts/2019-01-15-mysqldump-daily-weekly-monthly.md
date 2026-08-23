@@ -2,6 +2,9 @@
 layout: post
 title:  "Maintain daily, weekly and monthly MySQL backups"
 comments: true
+tags:
+  - linux
+  - jamf
 ---
 
 Here is a quick bash script to create backups of MySQL databases on a daily, weekly and monthly basis using `mysqldump`. It maintains a specified number of each backup interval before deleting them to prevent the server filling up to infinity with backups.
@@ -37,7 +40,6 @@ chmod 600 /data/MySQL-Backups
 
 Make sure this folder corresponds to the folder stated in the script below.
 
-
 ## The script
 
 This script should go into `/etc/cron.daily` on a Red Hat or CentOS server on which the MySQL database is situated. Otherwise, add an entry into your `crontab` or create a LaunchDaemon. It's easy to change the number of daily, weekly and monthly backups kept by changing the number in the `DAILY_DELETE_NAME`, `WEEKLY_DELETE_NAME` and `MONTHLY_DELETE_NAME` variable definitions.
@@ -45,9 +47,5 @@ This script should go into `/etc/cron.daily` on a Red Hat or CentOS server on wh
 Note that the script won't work on macOS unless you install the `coreutils` to get GNU date options (not covered here).
 
 {% gist grahampugh/aa0d98968206336bfb12c78e94c88393 %}
-
-
-[1]: https://api.slack.com/incoming-webhooks
-[2]: https://stackoverflow.com/questions/23532954/running-a-terminal-command-every-hour
 
 {% include urls.md %}

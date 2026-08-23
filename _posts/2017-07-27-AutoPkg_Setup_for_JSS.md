@@ -2,10 +2,14 @@
 layout: post
 title:  "AutoPkg Setup for JSS"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
 ---
 
 [Here](https://github.com/grahampugh/AutoPkg_Setup_for_JSS) is a single-script installer/updater for [AutoPkg] and [JSSImporter]. It's largely comprised of code extracted from [Run-Munki-Run] and ultimately [Munki In A Box], but there's no Munki in there any more.
-
 
 ## What does it do?
 
@@ -14,31 +18,29 @@ comments: true
 * Uses AutoPkg to install JSSImporter
 * Configures JSSImporter
 
-
 ### Prerequisites
 
 Create a user on each JSS Instance with the following credentials (**System Settings** => **JSS User Accounts & Groups**):  
 
 * **Account:**
-  - Username: `AutoPkg`
-  - Access Level: `Full Access`
-  - Privilege Set: `Custom`
-  - Access Status: `Enabled`
-  - Full Name: `AutoPkg JSSImporter`
-  - Email Address: `jamfadmin@myorg.com`
-  - Password: `ChangeMe!!!`  
+  * Username: `AutoPkg`
+  * Access Level: `Full Access`
+  * Privilege Set: `Custom`
+  * Access Status: `Enabled`
+  * Full Name: `AutoPkg JSSImporter`
+  * Email Address: `jamfadmin@myorg.com`
+  * Password: `ChangeMe!!!`  
 * **Privileges:**
-  - Categories: `Create` `Read` `Update`
-  - Computer Extension Attributes: `Create` `Read` `Update`
-  - File Share Distribution Points: `Read`
-  - Packages: `Create` `Read` `Update`
-  - Policies: `Create` `Read` `Update`
-  - Scripts: `Create` `Read` `Update`
-  - Smart Computer Groups: `Create` `Read` `Update`
-  - Static Computer Groups: `Create` `Read` `Update`
+  * Categories: `Create` `Read` `Update`
+  * Computer Extension Attributes: `Create` `Read` `Update`
+  * File Share Distribution Points: `Read`
+  * Packages: `Create` `Read` `Update`
+  * Policies: `Create` `Read` `Update`
+  * Scripts: `Create` `Read` `Update`
+  * Smart Computer Groups: `Create` `Read` `Update`
+  * Static Computer Groups: `Create` `Read` `Update`
 
 You also need to know the password that the JSS uses to connect to the distribution point.
-
 
 ## Usage
 
@@ -61,6 +63,5 @@ Then, run the script as the regular user (not as root/sudo):
 ```bash
 ./AutoPkg_Setup_for_JSS.sh
 ```
-
 
 {% include urls.md %}

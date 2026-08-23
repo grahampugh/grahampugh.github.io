@@ -2,6 +2,10 @@
 layout: post
 title:  "Understanding Jamf Pro API Roles And Clients"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 Last week I posted an article in Jamf's official blog regarding how to use the new API Roles and Clients in Jamf Pro. API Roles and Clients provide a more secure way of integrating with the API than using regular accounts.

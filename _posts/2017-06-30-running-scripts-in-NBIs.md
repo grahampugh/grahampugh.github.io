@@ -2,6 +2,9 @@
 layout: post
 title:  "Changing settings in DeployStudio NetBoot images"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 I recently ran into a problem with a [DeployStudio] NetBoot image which required a system setting to be changed. The DeployStudio NBI creation process is a somewhat closed box, normally done using the **DeployStudio Assistant** application, which only allows certain settings to be manipulated. [@MagerValp] made the build process scriptable with the [AutoDSNBI] tool, but it still uses DeployStudio Assistant to do the build.  
@@ -88,9 +91,9 @@ sudo ./create_custom_dsnbi.sh "<path to AutoDSNBI>" "<source>" "<netboot id>" "<
 
 **Notes for interested parties:**
 
- * A DeployStudio NBI is stripped of many binaries, including `networksetup`. For this reason, `ipconfig` is used here to disable IPv6. Apple do not recommend using `ipconfig` to set network settings except for debugging, but it is aceeptable here as this is just a temporary system which does not need to survive a reboot.
+* A DeployStudio NBI is stripped of many binaries, including `networksetup`. For this reason, `ipconfig` is used here to disable IPv6. Apple do not recommend using `ipconfig` to set network settings except for debugging, but it is aceeptable here as this is just a temporary system which does not need to survive a reboot.
 
- * The LaunchDaemon was originally set to `RunAtLoad` but this didn't have the desired effect, presumably as it was called too soon in the boot process and network settings were altered by the system after it ran. Again, one wouldn't want to normally repeatedly run an command to change a setting, but it works in the context of a temporary NetBoot image. One could easily add a line in the script to unload and delete the LaunchDaemon for something you were sure only needed to be run once.
+* The LaunchDaemon was originally set to `RunAtLoad` but this didn't have the desired effect, presumably as it was called too soon in the boot process and network settings were altered by the system after it ran. Again, one wouldn't want to normally repeatedly run an command to change a setting, but it works in the context of a temporary NetBoot image. One could easily add a line in the script to unload and delete the LaunchDaemon for something you were sure only needed to be run once.
 
 * This has been highly simplified from my organisation's production script, so forgive any untested typos!
 

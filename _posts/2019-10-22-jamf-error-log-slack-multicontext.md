@@ -2,6 +2,9 @@
 layout: post
 title:  "Slack notifications for errors in a multi-context Jamf Pro environment"
 comments: true
+tags:
+  - linux
+  - jamf
 ---
 
 If you're running a multi-context, on-premises [Jamf Pro] environment, you probably have some kind of third-party log aggregation and reporting tool to hand. But if you don't have that yet, here's a simple script you can use to get an aggregated output of errors and severe warnings from all your Jamf instances to a Slack channel.

@@ -2,6 +2,10 @@
 layout: post
 title:  "Disable macOS Upgrade Notifications"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 As is common around this time of year, Apple have begun to push out notifications to logged-in Mac users, inviting them to upgrade to the latest version of macOS. This time, of course, it's 10.14 Mojave.
@@ -53,7 +57,6 @@ In the tests of others, this was enough to prevent the pop-up. Incidentally, the
 
 It might also be possible to suppress the notifications by manipulating the preferences in `com.apple.noticeboard`, but you could end up suppressing unrelated notifications. There's scant reference to this method, but see [this Jamf Nation article](https://www.jamf.com/jamf-nation/discussions/26103/high-sierra-upgrade-nags) for how some people dealt with it with High Sierra. But it seems it may not be necessary.
 
-
 ## Have you just got a script for all this?
 
 Sure, see this gist:
@@ -63,7 +66,6 @@ Sure, see this gist:
 If you're in Jamf Pro, push this script in a policy to computers running a version of macOS less than 10.14.
 
 If you use [Munki], then [Rick Heil](https://rickheil.com/) has a blog post just for you: [Suppress New OS Major Version Updates with Munki](https://rickheil.com/suppress-new-os-major-version-updates-with-munki/).
-
 
 What about 10.11 devices?
 ----
@@ -79,9 +81,6 @@ Slack user `@rrenstrom` reported that the notification machanism is different on
 >It adds some entries to `/Library/Preferences/com.apple.noticeboard.plist` to keep track of how many times the notification popup has been dismissed. From the `reminderIntervals` key in the update catalog, looks like it may appear every 7 days, 24 times.
 
 I have not yet set up an OS X 10.11 device with which I could test a mechanism for suppressing these updates. I'll update this blog if I can verify that the above steps are effective.
-
-
-
 
 Acknowledgements
 ----

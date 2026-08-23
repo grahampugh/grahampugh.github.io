@@ -2,6 +2,9 @@
 layout: post
 title: "A 'Do Not Disturb' application for Munki"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 A Mac user complained that Managed Software Center popped up in the middle of a conference presentation. I started looking into how to suppress notifications.
@@ -47,9 +50,7 @@ There is interest in the use of Apple's Notification Centre for Managed Software
 
 **UPDATE 2: Graham Gilbert created a menubar "Do Not Disturb" app written in Swift, which is better than this app for users of Yosemite and newer. Get it here: [Munki-DND]. My app works with Snow Leopard and above, so may be still of use to some.**
 
-[img-1]: /assets/images/do-not-disturb.png
 [img-2]: /assets/images/do-not-disturb-2.png
 [munki-dnd]: https://github.com/grahamgilbert/munki-dnd
-[do-not-disturb package]: https://github.com/grahampugh/munki-do-not-disturb/releases
 
 {% include urls.md %}

@@ -2,6 +2,10 @@
 layout: post
 title: "A script to clean up your AutoPkg Cache folder"
 comments: true
+tags:
+  - apple
+  - mac
+  - autopkg
 ---
 
 The longer you use [AutoPkg] without cleaning up the Cache folder, the more cruft you're going to get. Much of the cruft is older downloads and any packages generated.

@@ -2,6 +2,9 @@
 layout: post
 title: "Creating a pre-configured Junos Pulse VPN client on OS X with The Luggage"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 [Rich Trouton][@rtrouton]'s [Der Flounder] blog recently described [how to create a pre-configured Junos Pulse VPN client on OS X][1].
@@ -14,7 +17,7 @@ If you don't already have The Luggage, install it as follows (as per [@grahamgil
 
 {% highlight bash %}
 $ cd
-$ git clone https://github.com/unixorn/luggage.git
+$ git clone <https://github.com/unixorn/luggage.git>
 {% endhighlight %}
 
 At this point, if you don't already have git installed, you will be prompted to do so. If that happens, install git and rerun the last command. Then continue:
@@ -38,7 +41,7 @@ Create a new file named `Makefile` in the same folder using whatever editor you 
 {% highlight bash linenos %}
 USE_PKGBUILD=1
 include /usr/local/share/luggage/luggage.make
-#PB_EXTRA_ARGS+= --sign "Your Org" ## uncomment this line if you wish to sign the package
+# PB_EXTRA_ARGS+= --sign "Your Org" ## uncomment this line if you wish to sign the package
 
 TITLE=Pulse-Secure-Configured
 PACKAGE_NAME=${TITLE}
@@ -68,7 +71,7 @@ PB_EXTRA_ARGS+= --sign "Your Org"
 Create a new file named `postinstall` in the same folder using whatever editor you use, and populate as follows (this is exactly the same as Rich Trouton's `postinstall` file except for the `install_dir`):
 
 {% highlight bash linenos %}
-#!/bin/bash
+# !/bin/bash
 
 # Determine working directory
 
@@ -158,13 +161,13 @@ $ nano dmg-it.sh
 Contents of `dmg-it.sh`:
 
 {% highlight bash %}
-#!/bin/bash
+# !/bin/bash
 
 # Run this script after "make pkg" to create a DMG
 
 #
 
-# This version of the script will create a DMG for each pkg in the folder it is in.
+# This version of the script will create a DMG for each pkg in the folder it is in
 
 mkdir tmp
 ls ./_.pkg | while read script

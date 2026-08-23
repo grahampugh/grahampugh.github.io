@@ -2,6 +2,10 @@
 layout: post
 title:  "Unpicking Apple's Software Update Catalog Files"
 comments: true
+tags:
+  - apple
+  - mac
+  - erase-install
 ---
 
 ## Introduction to the sucatalog file
@@ -35,7 +39,7 @@ The URL for software updates relating to macOS Tahoe developer program is as fol
 
 The `sucatalog` files are sometimes served as gzipped files, as we saw above. That's helpful, because they are very large files. That first sucatalog file for Leopard is currently 1 MB in size. The gzipped "26beta" sucatalog file is 508 KB, but unzips to 7 MB. What's inside them to make them so large? Put simply, a lot of different software updates are still available... That latter catalog has 98,229 lines!
 
-Let's look briefly at what's inside. Despite the `sucatalog` file suffix, these files are, as often with Apple, Property List files (PLIST) - an XML-compliant format. They consist of just four top-level keys: 
+Let's look briefly at what's inside. Despite the `sucatalog` file suffix, these files are, as often with Apple, Property List files (PLIST) - an XML-compliant format. They consist of just four top-level keys:
 
 * `CatalogVersion` (always `2`)
 * `ApplePostURL` (always an empty value)
@@ -57,7 +61,7 @@ Products which are macOS full installers have additional keys in their `Products
 
 Without delving forever further into the contents of the file, I'm now going to concentrate only on the full macOS installers that are listed in the `Products` dictionary. Firstly, how do we identify that the product is a full macOS installer?
 
-Until 2020, I think up until Monterey - the final Intel-only release - the release included a DMG installer, `BaseSystem.dmg`, amongst other files. The `InstallAssistantPackageIdentifiers` dictionary contained an `OSInstall` key (`com.apple.mpkg.OSInstall`), and an `InstallInfo` key (`com.apple.plist.InstallInfo`). 
+Until 2020, I think up until Monterey - the final Intel-only release - the release included a DMG installer, `BaseSystem.dmg`, amongst other files. The `InstallAssistantPackageIdentifiers` dictionary contained an `OSInstall` key (`com.apple.mpkg.OSInstall`), and an `InstallInfo` key (`com.apple.plist.InstallInfo`).
 
 From Big Sur onwards, this all changed as Apple Silicon devices came into play. The release started to include an `InstallAssistant.pkg` package, which contains the full installer application, as well as packages relating to firmware and installer information.
 
@@ -65,11 +69,11 @@ From Big Sur onwards, this all changed as Apple Silicon devices came into play. 
 
 As the main author of [erase-install], a script for downloading full macOS installers and using them to update, reinstall or erase macOS systems, I've been using other Mac Admin's projects to read the sucatalog files. Originally, I adapted Greg Neagle's [installinstallmacos.py] python script for this purpose, and latterly - when python stopped being bundled with macOS by default - switched to using Nindi Gill's [mist-cli] swift command line tool to do it. I also included an alternative method, which uses the built in `softwareupdate --list-full-installers` and `softwareupdate --fetch-full-installer` commands, though these commands have had their issues over the years so never commanded the same level of confidence as the third party tools.
 
-I've started looking into the sucatalog files myself because `mist-cli` is currently having an issue with obtaining the installers on systems running macOS 15.6 or newer, and I didn't want users of the script to be left in the lurch. The issue with `mist-cli` is not related to any change to the contents of the sucatalog files, but rather due to some change in the way the `installer` binary handles the `.dist` files that are obtained using the URLs in the `.sucatalog` files (or, I should say, how it doesn't handle them any more...). 
+I've started looking into the sucatalog files myself because `mist-cli` is currently having an issue with obtaining the installers on systems running macOS 15.6 or newer, and I didn't want users of the script to be left in the lurch. The issue with `mist-cli` is not related to any change to the contents of the sucatalog files, but rather due to some change in the way the `installer` binary handles the `.dist` files that are obtained using the URLs in the `.sucatalog` files (or, I should say, how it doesn't handle them any more...).
 
 Both `mist-cli` and `installinstallmacos.py` use these `.dist` files to compile an distribution package which consists of not just the `InstallAssistant.pkg` package, but other items which have not proved necessary (as far as I can tell) for the purposes of using the full installers in the way that `erase-install` uses them. Indeed, to solve the issue compiling these packages on newer systems, Greg Neagle has made an update to `installinstallmacos.py` which instead just takes the `InstallAssistant.pkg` package and nothing else.
 
-Faced with potentially pivoting back to bundling in a python distribution with erase-install and using my fork of `installinstallmacos.py` once again, I first wanted to see if I could build a way of obtaining the same information as `mist-cli` and `installinstallmacos.py` using only built-in commands. 
+Faced with potentially pivoting back to bundling in a python distribution with erase-install and using my fork of `installinstallmacos.py` once again, I first wanted to see if I could build a way of obtaining the same information as `mist-cli` and `installinstallmacos.py` using only built-in commands.
 
 ## Going down the rabbit hole
 
@@ -111,8 +115,7 @@ package_plist=$(plutil -extract Products."$ia_product".Packages xml1 -o - "$cata
 package_json=$(echo "$package_plist" | plutil -convert json -o - - 2>/dev/null)
 ```
 
-OK, now we can iterate through all the products, identify those that are macOS full installers, and grab the `InstallAssistant.pkg` URL and package size: 
-
+OK, now we can iterate through all the products, identify those that are macOS full installers, and grab the `InstallAssistant.pkg` URL and package size:
 
 ```bash
 ia_url=$(jq -r 'to_entries | map(select(.value.URL and (.value.URL | endswith("InstallAssistant.pkg")))) | .[0].value.URL // empty' <<< "$package_json" 2>/dev/null)

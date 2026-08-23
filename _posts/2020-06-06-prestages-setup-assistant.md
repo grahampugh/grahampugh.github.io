@@ -2,6 +2,10 @@
 layout: post
 title: "Automated Device Enrollment settings affect Setup Assistant beyond enrollment"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 I came across an interesting phenomenon regarding Automated Device Enrollment (DEP) and macOS's Setup Assistant that I hadn't considered before, while investigating a problem on some managed Mac computers. I'm not sure if it's widely known or not, but since I didn't know it, perhaps others are also not aware.

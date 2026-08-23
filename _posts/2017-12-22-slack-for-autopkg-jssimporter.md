@@ -2,6 +2,11 @@
 layout: post
 title:  "A Slack notification post-processor for AutoPkg/JSSImporter"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
 ---
 
 If you are using [AutoPkgr] to run your [AutoPkg] recipes, you have an in-built Slack notifier. But what if you are not using AutoPkgr?
@@ -64,7 +69,6 @@ You can then add this to your customised Slack output, which is in the following
 ```python
 slack_text = "*New Item added to JSS:*\nURL: %s\nTitle: *%s*\nVersion: *%s*\nCategory: *%s*\nPolicy Name: *%s*" % (JSS_URL, prod_name, jss_policy_version, category, jss_policy_name)
 ```
-
 
 [img-1]: /assets/images/slack-webhook-1.png
 

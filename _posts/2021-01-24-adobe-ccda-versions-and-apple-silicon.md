@@ -2,6 +2,10 @@
 layout: post
 title: "When a single Adobe package can have two versions depending on architecture"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 To get Adobe Creative Cloud Desktop application to work on an Apple Silicon Mac, Adobe have provided a patch for their latest installers.

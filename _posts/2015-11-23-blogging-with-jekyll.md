@@ -2,6 +2,8 @@
 layout: post
 title: "Blogging with Jekyll"
 comments: true
+tags:
+  - blogging
 ---
 
 This blog has run on [WordPress.com] for a while, but I have

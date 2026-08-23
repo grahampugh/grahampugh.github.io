@@ -2,6 +2,10 @@
 layout: post
 title:  "Updates to the erase-install.sh script"
 comments: true
+tags:
+  - apple
+  - mac
+  - erase-install
 ---
 
 Back in March 2018, I wrote a [blog post][1] about `startosinstall --eraseinstall`, which had been introduced that day with macOS 10.13.4. This allows us to reinstall macOS directly on any Mac running 10.13.4 or greater and with an APFS filesystem. Since Mojave was released, all systems are running APFS, so this has become universally useful.
@@ -41,7 +45,6 @@ Anver Housseini introduced localisation to the script. It checks the current use
 ## List-only option
 
 If you just want to run the script to check what versions of macOS installers are available for your system without downloading them, I've added the `--list` parameter, which will just perform the download of the forked `installinstallmacos.py` and then list the available installers and whether they are valid for the system or not, then stop.
-
 
 [1]: 2018-03-26-reinstall-macos-from-system-volume.md
 [2]: https://github.com/grahampugh/erase-install

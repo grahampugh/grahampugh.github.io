@@ -2,6 +2,11 @@
 layout: post
 title: "Better Jamf Policy Version Control with AutoPkg and Regex"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
 ---
 
 One of the major limitations of [Jamf Pro] in comparison to [Munki] when it comes to software deployment is the lack of ability to compare version strings between what is installed on a Mac client and what is available in the software repository. Munki can determine whether the installed version has a "lower", "higher" or equal version string than the version in the repo, which means Munki will never try to install an older version of an app than what is currently installed. Jamf, on the other hand, can only determine whether the strings are equal or not.

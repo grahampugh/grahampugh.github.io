@@ -2,6 +2,9 @@
 layout: post
 title:  "Suppress premium features in Apple's Keynote, Numbers, and Pages apps on macOS"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 ## Introduction
@@ -13,7 +16,7 @@ Apple introduced new versions of the former iWork apps Keynote, Numbers, and Pag
 In Apple Business and Apple School Manager, the apps appear with a new name including promotional description. The legacy versions have been removed for purchase.
 
 | App Name | New Apps & Books Name | Old Bundle ID | New Bundle ID |
-|--|--|--|--|
+| -- | -- | -- | -- |
 | **Keynote** | Keynote: Design Presentations | `com.apple.iWork.Keynote` | `com.apple.Keynote` |
 | **Numbers** | Numbers: Make Spreadsheets | `com.apple.iWork.Numbers` | `com.apple.Numbers` |
 | **Pages** | Pages: Create Documents | `com.apple.iWork.Pages` | `com.apple.Pages` |

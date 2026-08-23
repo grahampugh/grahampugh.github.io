@@ -2,6 +2,8 @@
 layout: post
 title:  "One Mac Admin's tips on maintaining a popular Open Source project"
 comments: true
+tags:
+  - community
 ---
 
 At the recent MacAdmins UK conference [I gave a presentation][6] about my [erase-install] script. [The video is now available here][MacAdUk 2023 Video].
@@ -111,7 +113,7 @@ In GitHub, you make a release from a Tag. Click on the Releases link, then click
 
 An inevitability about sharing a project is that it might not work in different environments to your own. People also have their own ideas about how the thing should work. Both these aspects become more significant as the usage grows.
 
-If you choose to accept feature requests, they can be the most time-consuming form of support. I've found it essential to ask people to record their Feature Request in the GitHub repo so that I could keep a good overview of the things to consider when I next have time to work on the project. 
+If you choose to accept feature requests, they can be the most time-consuming form of support. I've found it essential to ask people to record their Feature Request in the GitHub repo so that I could keep a good overview of the things to consider when I next have time to work on the project.
 
 In GitHub, Feature Requests are also created in the "Issues" section. To better distinguish between a bug report and a feature request, you can set up [templates][3] which encourage people to create their request in a form that is useful for you.
 
@@ -126,7 +128,7 @@ There are important questions to ask yourself when getting feature requests:
 - How difficult and complicated is it going to be to design the change, and is it going to make the overall project more difficult to understand?
 - Am I interested enough in the feature to support it in the future if it stops working for some reason?
 
-Remember, you don't have to accept feature requests! 
+Remember, you don't have to accept feature requests!
 
 ### Use Pull Requests
 
@@ -136,13 +138,13 @@ I've found that I get Pull Requests more often for projects that are coded in sh
 
 I've found it really important to make sure you understood the code changes before accepting and merging the pull request. If you don't understand the code, you're just building problems into your project that may come to haunt you later.
 
-Also, perhaps it's obvious, but - just because that person took the time to prepare the code for their request, you still don't have to accept pull requests! If you don't want to accept it, that person can still maintain a fork of the project with their changes in it - they're still benefitting from your work, and they will be able to merge any changes you make in the future into their own fork. 
+Also, perhaps it's obvious, but - just because that person took the time to prepare the code for their request, you still don't have to accept pull requests! If you don't want to accept it, that person can still maintain a fork of the project with their changes in it - they're still benefitting from your work, and they will be able to merge any changes you make in the future into their own fork.
 
 The same is true if you decide that you cannot or don't want to continue maintaining the project. There are all sorts of legitimate reasons why you might want to stop maintaining some open source project - for example lack of time, a new job, or just because you stopped using it. Again, people can make their own fork and maintain it themselves, if they still have a use for it when you don't. Somebody can take the project over if they think it's still useful. Just make it clear in the `README` file and/or Wiki of the repo that your version is no longer maintained, and people will slowly move on.
 
 ## Create a MacAdmins Slack channel
 
-It has been easier for me to help people who are having problems with erase-install since I adopted a channel in the MacAdmins Slack. In addition, monitoring for keywords that relate to the project gives me notifications when somebody mentions it in any channel. 
+It has been easier for me to help people who are having problems with erase-install since I adopted a channel in the MacAdmins Slack. In addition, monitoring for keywords that relate to the project gives me notifications when somebody mentions it in any channel.
 
 When I get a notification, I can see if somebody's having a problem and if so, I can advise them to ask again in the `#eraseinstall` channel, where there are an increasing number of knowledgeable people who have been helpful in answering questions by newcomers. It's easy from there to ask people to create Issues and Feature Requests in the GitHub repository for anything that's not a quick answer.
 
@@ -163,7 +165,6 @@ Here's my TL;DR about making a code project public:
 That last point is the main reason I recommend open-sourcing your code. I could never have anticipated the amount of thanks I've received from people using erase-install. And, after benefitting from ths community so much, it's also only fair to give a little back, whether that's in the form of sharing code or answering questions.
 
 ![Gif from the IT Crowd of two people giving each other a high five](/assets/images/OpenSource/itcrowd-handslap.gif)
-
 
 [MacAdUk 2023 Video]: https://www.youtube.com/watch?v=kUQcfXzzeQs&list=PLmBOyWhgnnx96KnkTANQ7-eREGTFy9_7P&index=15
 [1]: https://docs.github.com/en/discussions

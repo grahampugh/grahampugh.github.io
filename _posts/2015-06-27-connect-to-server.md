@@ -2,6 +2,9 @@
 layout: post
 title: "'Connect to Server' favourites across devices using Safari bookmarks"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 I made a comment on the **#general** channel of the [MacAdmins Slack Team] yesterday about my wish that the favourites list in the **Go > Connect to Server** list would share between devices using iCloud. This led MacAdmins Slack Team member [scriptingosx] to helpfully reply with [a simple way of achieving this using Internet Shortcuts][1].

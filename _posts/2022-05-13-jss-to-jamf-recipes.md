@@ -2,6 +2,12 @@
 layout: post
 title:  "Comparing a JamfUploader recipe to a standard JSSImporter recipe"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
+  - autopkg
 ---
 
 I have now deprecated the AutoPkg processor [JSSImporter], and it will likely stop working sometime between August and December of this year, 2022 - that is, unless somebody volunteers to take it over and is able to adapt it to work with Jamf's upcoming requirement for token-based API authentication. Once this change happens, you will no longer be able to use any `.jss` recipes.
@@ -205,13 +211,13 @@ Here's the policy template for the `.jamf` recipe:
 
 {% gist c07ff16ae3b4d702bebc19949546c27e %}
 
-In comparison to the template for the `.jss` recipe, the main difference is that there is no "special" handling of the `package_configuration`, `scope` and `scripts` sections. These are instead exactly as you will see if you download an existing policy from your Jamf server using the Classic API. 
+In comparison to the template for the `.jss` recipe, the main difference is that there is no "special" handling of the `package_configuration`, `scope` and `scripts` sections. These are instead exactly as you will see if you download an existing policy from your Jamf server using the Classic API.
 
 Furthermore, there is no special interpreted keys in the template. So there is no `PROD_NAME` or `VERSION`. Instead we supply `POLICY_NAME` directly from the Input array, and `version` comes directly from the parent recipe.
 
 ## Conclusion
 
-I hope this has given a good explanation of the small differences between the outgoing `.jss` recipe format and the new `.jamf` recipes. 
+I hope this has given a good explanation of the small differences between the outgoing `.jss` recipe format and the new `.jamf` recipes.
 
 If you want to see more examples, I have converted most of the recipes from the old [jss-recipes][1] repo into `.jamf` format, available in my own recipe repo at [grahampugh-recipes/Jamf_Recipes][2].
 

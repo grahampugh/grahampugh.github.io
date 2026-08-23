@@ -2,9 +2,12 @@
 layout: post
 title:  "Is XProtect up to date?"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
-Your organisation may want to ensure that XProtect is up to date on Mac. So long as Software Update settings are set to "Install Security Updates and System Files", all should be well... assuming that Software Update is functioning today... 
+Your organisation may want to ensure that XProtect is up to date on Mac. So long as Software Update settings are set to "Install Security Updates and System Files", all should be well... assuming that Software Update is functioning today...
 
 But how can you *verify* that the XProtect version on the system *is* the latest version available? For that, you need to check against Apple's software catalogs or some external source.
 

@@ -1,0 +1,96 @@
+---
+layout: null
+permalink: /tags/munki/feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>munki | https://grahamrpugh.com</title>
+    <link>https://grahamrpugh.com/tags/munki/</link>
+    <description>Posts tagged with munki</description>
+    <item>
+      <title>Making MunkiReport-PHP and MunkiWebAdmin work nicely together</title>
+      <link>https://grahamrpugh.com/2014-11-07-munkiwebadmin-munkireport-together</link>
+      <guid>https://grahamrpugh.com/2014-11-07-munkiwebadmin-munkireport-together</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Making MunkiReport-PHP and MunkiWebAdmin work nicely together</description>
+    </item>
+    <item>
+      <title>Munki: find out in which manifests a package is available</title>
+      <link>https://grahamrpugh.com/2015-04-23-munki-find-in-manifests</link>
+      <guid>https://grahamrpugh.com/2015-04-23-munki-find-in-manifests</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Munki: find out in which manifests a package is available</description>
+    </item>
+    <item>
+      <title>Munki: How to remove cruft</title>
+      <link>https://grahamrpugh.com/2015-04-24-munki-remove-cruft</link>
+      <guid>https://grahamrpugh.com/2015-04-24-munki-remove-cruft</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Munki: How to remove cruft</description>
+    </item>
+    <item>
+      <title>Munki-Enroll tweaked: Leverage DeployStudio&apos;s &apos;Computer Information&apos; fields to customise Munki builds</title>
+      <link>https://grahamrpugh.com/2015-06-13-munki-enroll-tweaked</link>
+      <guid>https://grahamrpugh.com/2015-06-13-munki-enroll-tweaked</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Munki-Enroll tweaked: Leverage DeployStudio&apos;s &apos;Computer Information&apos; fields to customise Munki builds</description>
+    </item>
+    <item>
+      <title>Importing Matlab into Munki</title>
+      <link>https://grahamrpugh.com/2015-07-03-importing-matlab-into-munki</link>
+      <guid>https://grahamrpugh.com/2015-07-03-importing-matlab-into-munki</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Importing Matlab into Munki</description>
+    </item>
+    <item>
+      <title>Munki-Do (beta): a web tool for managing Munki packages</title>
+      <link>https://grahamrpugh.com/2015-09-30-munki-do</link>
+      <guid>https://grahamrpugh.com/2015-09-30-munki-do</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Munki-Do (beta): a web tool for managing Munki packages</description>
+    </item>
+    <item>
+      <title>Munki, Git and Munki-Do</title>
+      <link>https://grahamrpugh.com/2015-10-15-munki-git-munki-do</link>
+      <guid>https://grahamrpugh.com/2015-10-15-munki-git-munki-do</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Munki, Git and Munki-Do</description>
+    </item>
+    <item>
+      <title>Git branches with Munki-Do</title>
+      <link>https://grahamrpugh.com/2015-11-25-munki-do-git-branching</link>
+      <guid>https://grahamrpugh.com/2015-11-25-munki-do-git-branching</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Git branches with Munki-Do</description>
+    </item>
+    <item>
+      <title>Munki-Do: Restrict who has access to edit manifests</title>
+      <link>https://grahamrpugh.com/2015-11-30-munki-restrict-manifest-editing</link>
+      <guid>https://grahamrpugh.com/2015-11-30-munki-restrict-manifest-editing</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Munki-Do: Restrict who has access to edit manifests</description>
+    </item>
+    <item>
+      <title>Version controlling Munki and AutoPkg</title>
+      <link>https://grahamrpugh.com/2015-12-07-version-control-munki-autopkg</link>
+      <guid>https://grahamrpugh.com/2015-12-07-version-control-munki-autopkg</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Version controlling Munki and AutoPkg</description>
+    </item>
+    <item>
+      <title>Run-Munki-Run: Another Simple Munki Test Environment</title>
+      <link>https://grahamrpugh.com/2017-03-17-run-munki-run</link>
+      <guid>https://grahamrpugh.com/2017-03-17-run-munki-run</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Run-Munki-Run: Another Simple Munki Test Environment</description>
+    </item>
+    <item>
+      <title>Jamf Pro uninstaller policies with a little help from Munki</title>
+      <link>https://grahamrpugh.com/2018-01-19-uninstall-packages-with-jamf-and</link>
+      <guid>https://grahamrpugh.com/2018-01-19-uninstall-packages-with-jamf-and</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Jamf Pro uninstaller policies with a little help from Munki</description>
+    </item>
+  </channel>
+</rss>

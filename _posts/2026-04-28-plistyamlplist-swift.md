@@ -2,6 +2,10 @@
 layout: post
 title:  "Plist-Yaml-Plist revisited - a Swift binary for converting PLIST to YAML or YAML to PLIST"
 comments: true
+tags:
+  - apple
+  - mac
+  - autopkg
 ---
 
 ## Introduction

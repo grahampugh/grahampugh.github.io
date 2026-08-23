@@ -2,6 +2,9 @@
 layout: post
 title: "Buggy 802.1x authentications in OS X 10.10 Yosemite - UPDATE: Fixed with 10.10.1"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 Reports from my organisation's Network Team, after consultation with Cisco, are that in some situations Yosemite 802.1x authentications can take up to 20 seconds (due to buggy behaviour in the OS) - this causes a problem when roaming between two access points of similar strength which leads to your connection apparently disappearing from under you for 20secs.

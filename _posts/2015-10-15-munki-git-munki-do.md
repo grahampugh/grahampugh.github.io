@@ -3,6 +3,10 @@ layout: post
 title: "Munki, Git and Munki-Do"
 categories: munki git munki-do
 comments: true
+tags:
+  - apple
+  - mac
+  - munki
 ---
 
 [Munki-Do](https://github.com/grahampugh/munki-do) inherited from its father [MunkiWebAdmin by Greg Neagle et al.](https://github.com/munki/munkiwebadmin), the ability to commit to a Git-initiated Munki Repo when making changes to Munki manifests.
@@ -15,10 +19,10 @@ In my tests, I’ve been using a private repository on [Bitbucket](https://bitbu
 
 Setting up the test Munki repo with Git was done as follows:
 
--   An empty repo was set up on Bitbucket.org
--   The existing munki_repo folder was initialised for git using the commands: `cd /path/to/munki_repo; git init`
--   The pkgs folder was set to be ignored, as I didn’t want the large pkg/dmg/app files to be uploaded to the repo. This was done by editing `/path/to/munki_repo/.gitignore` and simply adding the line `pkgs` to the file.
--   Then, sync the repo to the server:
+- An empty repo was set up on Bitbucket.org
+- The existing munki_repo folder was initialised for git using the commands: `cd /path/to/munki_repo; git init`
+- The pkgs folder was set to be ignored, as I didn’t want the large pkg/dmg/app files to be uploaded to the repo. This was done by editing `/path/to/munki_repo/.gitignore` and simply adding the line `pkgs` to the file.
+- Then, sync the repo to the server:
 
 {% highlight bash %}
 $ git add .

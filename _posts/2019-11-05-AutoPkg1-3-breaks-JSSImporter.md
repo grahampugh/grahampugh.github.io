@@ -2,6 +2,11 @@
 layout: post
 title:  "AutoPkg 1.3 is incompatible with JSSImporter. UPDATE: fixed in version 1.3.1"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
 ---
 
 AutoPkg 1.3 was released this week and unfortunately, changes that were made to the reading of the configuration file breaks JSSImporter.  Therefore, running AutoPkg recipes while [JSSImporter] is installed and configured will fail.  It is advised not to upgrade at this time.

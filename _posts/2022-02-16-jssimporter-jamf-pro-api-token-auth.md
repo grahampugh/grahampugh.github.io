@@ -2,6 +2,12 @@
 layout: post
 title:  "How do changes to the Jamf Pro API authentication affect JamfUploader and JSSImporter?"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
+  - autopkg
 ---
 
 ## TL;DR

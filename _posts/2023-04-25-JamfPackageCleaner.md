@@ -2,6 +2,12 @@
 layout: post
 title:  "Clean up your packages in Jamf Pro automatically with JamfPackageCleaner"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
+  - jamfuploader
 ---
 
 Thanks to the excellent contribution of Henrik Engström (`@creation` on the [MacAdmins Slack][macadmins slack team]), there is a new AutoPkg processor in the [JamfUploader] suite of processors.

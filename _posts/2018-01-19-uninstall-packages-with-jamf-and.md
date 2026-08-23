@@ -2,6 +2,11 @@
 layout: post
 title:  "Jamf Pro uninstaller policies with a little help from Munki"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - munki
 ---
 
 [Munki]'s' `pkginfo` files can contain information not only on how to install a package, but also how to uninstall it. When an application is installed on a client, the **Managed Software Center** can therefore offer a `Remove` button:
@@ -74,8 +79,8 @@ This logic has been built into the Munki client, and it provides a command-line 
 $ sudo /usr/local/munki/removepackages -l jp.co.canon.CUPSPS_M.icons.SF-04.pkg
 Password:
     Gathering information on installed packages...
-	0..20..40..60..80..100
-	0..20..40..60..80..100
+ 0..20..40..60..80..100
+ 0..20..40..60..80..100
     Determining which filesystem items to remove...
 /Library/Printers/Canon/CUPSPS2/Icons/SF-04
 /Library/Printers/Canon/CUPSPS2/Icons/SF-04.bundle
@@ -149,7 +154,7 @@ It may not always be obvious what the package ID is (though it normally is). If 
 
 ---
 
-## Careful Now!
+## Careful Now
 
 ![img-2]
 
@@ -174,6 +179,5 @@ If any of you try this out, please let me know how you get on! Or, if you think 
 [img-2]: /assets/images/father-ted-careful-now.gif
 [img-3]: /assets/images/munki_add_remove.png
 [img-4]: /assets/images/self-service-uninstallers.png
-
 
 {% include urls.md %}

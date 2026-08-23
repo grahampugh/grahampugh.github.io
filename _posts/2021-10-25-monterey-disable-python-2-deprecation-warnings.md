@@ -2,6 +2,12 @@
 layout: post
 title:  "macOS Monterey - MDM custom preference to disable python 2 deprecation popups"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
+  - autopkg
 ---
 
 > **UPDATE:** As python2 was removed entirely from macOS with the release of Monterey 12.4, these instructions are only valid for machines running 12.0-12.3.1.

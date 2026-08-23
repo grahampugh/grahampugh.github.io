@@ -2,6 +2,8 @@
 layout: post
 title: "Jekyll blogs: create a bookmarks file for commonly used weblinks"
 comments: true
+tags:
+  - blogging
 ---
 
 I just started using [Jekyll] for blogging, and the nature of my blog means referencing various weblinks in almost every post. A link in a Markdown is normally constructed inline like so:

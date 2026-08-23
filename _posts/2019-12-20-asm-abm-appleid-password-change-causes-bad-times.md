@@ -2,6 +2,8 @@
 layout: post
 title:  "DEP tokens and MDM Activation Lock are tied to an individual Apple ID account...and password"
 comments: true
+tags:
+  - apple
 ---
 
 My colleague had cause yesterday to change the password that is associated with the Apple ID that they use to login to Apple School Manager. This is the account that we normally (but not always) use to create DEP Tokens and VPP Tokens. In general, we use Managed Apple IDs to log in to Apple School Manager.
@@ -19,7 +21,6 @@ We decided that since Activation Lock is confined to a specific user in School M
 Shortly afterwards we started noticing a lot of errors in the `JAMFSoftwareServer.log` files of all our Jamf Pro instances, such as this:
 
     12:01:10 [ntInstanceSyncCommService] - com.jamfsoftware.jss.objects.streamlinedenrollment.service.DeviceEnrollmentProgramException: An error occurred during oauth token refres
-
 
 These messages were accompanied by error messages in the Jamf Pro, in **Settings > Global Management > Device Enrollment Program**:
 

@@ -2,6 +2,10 @@
 layout: post
 title:  "Munki-Do: Restrict who has access to edit manifests"
 comments: true
+tags:
+  - apple
+  - mac
+  - munki
 ---
 
 You may wish to restrict the right to edit certain [Munki] manifests to certain users in your organisation. For example, you may wish to allow the editing of individual client manifests, but prevent editing of certain "core" manifests that affect a large number of machines. Alternatively, you may have different manifests for different organisational units, and may wish to only allow members of those units to edit their own manifests.
@@ -23,7 +27,6 @@ The manifest name is displayed with "**(restricted)**" appended, to make it clea
 **"Firstline" account is not a member of the "Staff" group, and so cannot edit this manifest - no Edit button is displayed:**
 ![img-2]
 
-
 **"Staffmember" account is a member of the "Staff" group, and so can edit this manifest - the Edit button is displayed:**
 ![img-3]
 
@@ -42,4 +45,3 @@ Thanks go to [@GrahamGilbert] for the idea for this feature of Munki-Do.
 [img-5]: /assets/images/manifest-restriction-5.png
 
 {% include urls.md %}
-

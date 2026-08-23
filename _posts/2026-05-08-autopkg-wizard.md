@@ -2,6 +2,10 @@
 layout: post
 title:  "AutoPkg Wizard - a new open source app for AutoPkg users"
 comments: true
+tags:
+  - apple
+  - mac
+  - autopkg
 ---
 
 ## Introduction

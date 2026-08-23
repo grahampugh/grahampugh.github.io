@@ -2,6 +2,11 @@
 layout: post
 title:  "Presentation at the Texas Apple Admins Virtual Meetup"
 comments: true
+tags:
+  - apple
+  - mac
+  - erase-install
+  - presentations
 ---
 
 I was honoured to join illustrious presenters at the [Texas Apple Admins Virtual Meetup][1] today, 5 May 2020, to talk about multiple uses for my [erase-install] tool.

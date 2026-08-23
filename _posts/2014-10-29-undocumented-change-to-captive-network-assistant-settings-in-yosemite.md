@@ -2,6 +2,9 @@
 layout: post
 title: "An undocumented change to Captive Network Assistant settings in OS X 10.10 Yosemite"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 A [captive portal] is a network that forces an HTTP client to see a special web page (usually for authentication purposes) before using the Internet normally. A captive portal turns a Web browser into an authentication device. These are commonly used on wifi networks where authentication to the private network is done via a login browser page, rather than via the use of a WEP or WPA2 key, for example in some coffee shops and airports, and hotspot providers such as [The Cloud] and [ATT-Wifi].

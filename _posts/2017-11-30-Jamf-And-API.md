@@ -2,6 +2,11 @@
 layout: post
 title:  "Help Make the Jamf Pro API Better"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
 ---
 
 [Jamf Pro] has an extensive [API][Jamf Pro API Documentation], which enables integration with a [wide range of third party apps][Jamf Marketplace], and the ability to code your own integrations. For my work, the API is essential, as the Jamf service we provide is too complicated to support via the GUI alone.
@@ -66,7 +71,7 @@ So now I've got to the point of this blog post, which is to make a plea for all 
 
 ---
 
-Please upvote!
+Please upvote
 ----
 
 Please follow these links and upvote or like the feature requests and posts. And if the issues affect you, make a support request!
@@ -94,7 +99,6 @@ If you have a request you would like to see added to this list, let me know! And
 [1]: https://www.jamf.com/jamf-nation/feature-requests/6371/dedicated-self_service_icons-api-parameter-needed
 [2]: https://www.jamf.com/jamf-nation/discussions/26272/jamf-pro-10-api-breaking-bugs
 [3]: https://www.jamf.com/jamf-nation/feature-requests/6583/every-aspect-of-the-jamf-web-gui-should-be-accessible-via-the-api
-[4]: https://www.jamf.com/jamf-nation/feature-requests/6581/set-default-text-of-the-self-service-after-button-globally-or-the-same-as-the-before-button
 [5]: https://www.jamf.com/jamf-nation/feature-requests/6576/secondary-button-for-self-service-policies-by-api
 [6]: https://www.jamf.com/jamf-nation/feature-requests/6724/add-new-self-service-policy-options-to-the-api
 [7]: https://www.jamf.com/jamf-nation/feature-requests/2945/add-ability-to-post-put-using-json-via-the-jss-api

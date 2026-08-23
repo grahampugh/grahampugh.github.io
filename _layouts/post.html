@@ -1,20 +1,25 @@
 ---
 layout: default
-comments: true
 ---
 
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
 
-    <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-        <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
-    </header>
+  <p class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+  </p>
 
-    <div class="post-content" itemprop="articleBody">
-        {{ content }}
-    </div>
+  {% if page.tags %}
+  <p class="post-meta post-tags"><b>Tags:</b> 
+    {% for tag in page.tags %}
+      <a href="#tag-{{ tag | slugify }}" class="tag-filter-link" data-tag="{{ tag | slugify }}">[ {{ tag | capitalize }} ]</a> 
+    {% endfor %}
+  </p>
+  {% endif %}
 
-    <script src="https://giscus.app/client.js"
+  {{ content }}
+
+  <script src="https://giscus.app/client.js"
         data-repo="grahampugh/grahampugh.github.io"
         data-repo-id="MDEwOlJlcG9zaXRvcnk0NjYzMTE3Mg=="
         data-category="General"
@@ -31,4 +36,4 @@ comments: true
         async>
     </script>
 
-</article>
+</div>

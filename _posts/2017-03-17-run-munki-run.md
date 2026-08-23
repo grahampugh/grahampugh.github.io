@@ -2,6 +2,10 @@
 layout: post
 title:  "Run-Munki-Run: Another Simple Munki Test Environment"
 comments: true
+tags:
+  - apple
+  - mac
+  - munki
 ---
 
 This post describes yet another way of quickly building a test environment for evaluating
@@ -28,7 +32,7 @@ advanced web server setup.
 ![img-1]
 *The MunkiWebAadmin2 interface showing the basic setup of manifests provided by Run-Munki-Run*
 
-Just Run, Munki, Run!
+Just Run, Munki, Run
 ----------------
 
 <img style="float: right;" src="/assets/images/run_fatboy_run-300x225.jpg">
@@ -68,21 +72,21 @@ A basic setup on a modern Mac is as follows:
  4. Change directory: `cd run-munki-run`.
  5. Open `settings.sh` and change the value of `HTPASSWD`. This password is required to access
     the Munki repo via the web, which you will need later on.
- 5. Enter the command: `./RUN-ME-FIRST.sh`.
- 6. You will be prompted for your administrator password. Depending on how long the first part of the setup takes,
+ 6. Enter the command: `./RUN-ME-FIRST.sh`.
+ 7. You will be prompted for your administrator password. Depending on how long the first part of the setup takes,
  you may be asked for your password again when the second part (`run-munki-run.sh`) starts.
 
  After several minutes while everything is setup, you will be provided the web addresses for Sal and MunkiWebAdmin2, and the address of the Munki Client installer.
 
  To install the generated Munki client installer:
 
- 7. Either on the same Mac
+ 1. Either on the same Mac
     or another Mac on the same network, type the address of the client installer into the
     web browser, which will be in the form `http://123.45.67.89:8000/repo/installers/ClientInstaller.pkg`
     (with your actual IP address substituted). You need to enter the basic authentication username (`munki`) and password from point 5 at this point.  Alternatively you could grab the package from
     `/Users/Shared/repo/installers/ClientInstaller.pkg` and distribute it by other means such as
     File Sharing, E-Mail or even [DeployStudio].
- 8. Install the package (note it is not signed, so you need to press Ctrl, click on the package, and press
+ 2. Install the package (note it is not signed, so you need to press Ctrl, click on the package, and press
     Open).
 
 After the client restarts, open `Managed Software Center.app`.
@@ -97,6 +101,5 @@ and customisations available in the settings. Delve into the `settings.sh` scrip
 Let me know if you use it. File issues if it doesn't work for you!
 
 [img-1]: /assets/images/munkiwebadmin2.png
-[img-2]: /assets/images/run_fatboy_run-300x225.jpg
 
 {% include urls.md %}

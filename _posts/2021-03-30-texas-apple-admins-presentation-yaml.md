@@ -2,6 +2,11 @@
 layout: post
 title: "Second presentation at the Texas Apple Admins Virtual Meetup"
 comments: true
+tags:
+  - apple
+  - mac
+  - autopkg
+  - presentations
 ---
 
 I was honoured to present at the [Texas Apple Admins Virtual Meetup][1] yesterday, 30 March 2021, to talk about YAML-formatted AutoPkg recipes.

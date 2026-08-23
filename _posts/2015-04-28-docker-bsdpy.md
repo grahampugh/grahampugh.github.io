@@ -2,12 +2,15 @@
 layout: post
 title: "A test Docker-BSDPy environment"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 Some Mac Admins have recently blogged about testing [BSDPy] using [Docker]:
 
--   [@grahamgilbert] - [Getting Started With BSDPy on Docker][1]
--   [@hunty1er] - [Creating a NetBoot Server with CentOS 7 and BSDPy][2]
+- [@grahamgilbert] - [Getting Started With BSDPy on Docker][1]
+- [@hunty1er] - [Creating a NetBoot Server with CentOS 7 and BSDPy][2]
 
 I decided to try it out in a setup that suited me. Here's how it went.
 
@@ -21,11 +24,11 @@ The posts above details all the reasons for trying this. This post is not intend
 
 My set up is a MacBook Air, with 8GB RAM, and the following programs installed:
 
--   [VirtualBox]
--   [VMWare Fusion] (version 6). Version 7 will work. Note this isn't a free program, but is required to test NetBooting an OS X VM. If you have a spare physical Mac on your network, you can use this instead.
--   [DeployStudio]
--   [Vagrant]
--   [TextWrangler] with Command Line Tools - this enables the `edit` command. You can substitute `nano` or `vi` or another editor.
+- [VirtualBox]
+- [VMWare Fusion] (version 6). Version 7 will work. Note this isn't a free program, but is required to test NetBooting an OS X VM. If you have a spare physical Mac on your network, you can use this instead.
+- [DeployStudio]
+- [Vagrant]
+- [TextWrangler] with Command Line Tools - this enables the `edit` command. You can substitute `nano` or `vi` or another editor.
 
 Side note: I use [AutoPkg] to install TextWrangler, VirtualBox and Vagrant.
 
@@ -33,12 +36,12 @@ Side note: I use [AutoPkg] to install TextWrangler, VirtualBox and Vagrant.
 
 My setup was based on instructions on [@rtrouton]'s [Der Flounder] blog entry [Building Mac test environments with VMWare Fusion, NetBoot and DeployStudio][3].
 
--   Download the latest OS X installer from the App Store, but don't install it. This should reside in your `/Applications` folder, named **Install OS X Yosemite.app**.
--   Open VMWare Fusion, click on **File > New**
--   Drag **Install OS X Yosemite.app** into the "Install from Disk or Image" window
--   Allow the standard setup for OS X 10.10, but press "Customise" before launching.
--   In the "Startup Disk" pane, set the VM to boot to the "Network Adapter NAT".
--   Leave VMWare Fusion open (but don't start the VM) while you perform the remaining tasks - you need the virtual network interface to be active.
+- Download the latest OS X installer from the App Store, but don't install it. This should reside in your `/Applications` folder, named **Install OS X Yosemite.app**.
+- Open VMWare Fusion, click on **File > New**
+- Drag **Install OS X Yosemite.app** into the "Install from Disk or Image" window
+- Allow the standard setup for OS X 10.10, but press "Customise" before launching.
+- In the "Startup Disk" pane, set the VM to boot to the "Network Adapter NAT".
+- Leave VMWare Fusion open (but don't start the VM) while you perform the remaining tasks - you need the virtual network interface to be active.
 
 # 2 - Setup Vagrant
 
@@ -48,7 +51,7 @@ If you wish, you can just clone the `Vagrantfile` and `startup.sh` shown below u
 
 {% highlight bash %}
 $ mkdir -p ~/vagrant/docker-bsdpy
-$ git clone https://github.com/grahampugh/docker-bsdpy-vagrant.git ~/vagrant/docker-bsdpy
+$ git clone <https://github.com/grahampugh/docker-bsdpy-vagrant.git> ~/vagrant/docker-bsdpy
 {% endhighlight %}
 
 Otherwise, carry on reading to create the files yourself:
@@ -66,7 +69,7 @@ $ edit Vagrantfile
 
 # -_- mode: ruby -_-
 
-# vi: set ft=ruby :
+# vi: set ft=ruby
 
 Vagrant.configure(2) do |config|
 config.vm.box = &quot;chef/centos-7.0&quot;
@@ -90,7 +93,7 @@ $ edit startup.sh
 Edit the contents of `startup.sh`. The `ETH` variable is the network interface you are going to use. In my case, the virtual interface created by my VMware Fusion installation (`enp0s8`) worked best. You may get away with `eth0` or `eth1`. Experiment!:
 
 {% highlight bash %}
-#!/bin/bash
+# !/bin/bash
 
 # Set this to match the valid interface
 
@@ -158,7 +161,7 @@ You may wish to remove the entries from the `DisabledSystemIdentifiers` array. Y
 ...
 {% endhighlight %}
 
-# 5 - Vagrant up!
+# 5 - Vagrant up
 
 It's time to start up your virtual Linux server.
 
@@ -207,7 +210,7 @@ $ vagrant ssh -c 'sudo /etc/init.d/vboxadd setup’
 $ vagrant reload
 {% endhighlight %}
 
-6. # Boot your VMWare Fusion VM
+1. # Boot your VMWare Fusion VM
 
 Boot up your VMWare Fusion OS X VM. If all goes well, you'll see the VMWare boot screen, attempting to boot from EFI Network, and then the OS X boot screen with spinning globe:
 

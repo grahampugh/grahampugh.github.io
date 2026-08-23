@@ -2,6 +2,11 @@
 layout: post
 title:  "dbfileupload is dead - long live v1/packages! A new packages API endpoint for Jamf Pro"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
 ---
 
 Jamf announced in the [11.4.0 Release Notes][1] that the undocumented and unsupported `dbfileupload` endpoint will be discontinued in Jamf Pro 11.6.0, along with support for the Jamf Admin application:

@@ -2,11 +2,18 @@
 layout: post
 title: "MacSysAdmin Presentation - 03 October 2024 - Automated Testing of Managed Applications"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
+  - jamfuploader
+  - presentations
 ---
 
 On Thursday, 03 October 2024, I was honoured to present at the [MacSysAdmin Online Conference](https://docs.macsysadmin.se/2024/) alongside Katiuscia Zehnder of ETH Zürich, on the topic **Automated Testing of Managed Applications (As Part of a Fully Automated Software Deployment Workflow)**.
 
-This was my first time attending the MacSysAdmin conference in person, and it was a wonderful event. I highly recommend the conference to any Mac Admin of any level of experience. 
+This was my first time attending the MacSysAdmin conference in person, and it was a wonderful event. I highly recommend the conference to any Mac Admin of any level of experience.
 
 Sharing the stage with Kati was a lot of fun. If there are any of you who are interested in presenting for the first time but intimidated by the thought of creating a 55 minute presentation, consider asking one of us more experienced presenters (maybe you have a colleague) if they would co-present.
 

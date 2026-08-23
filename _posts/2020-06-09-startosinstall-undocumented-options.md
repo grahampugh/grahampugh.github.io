@@ -2,6 +2,10 @@
 layout: post
 title: "Undocumented options in the startosinstall command"
 comments: true
+tags:
+  - apple
+  - mac
+  - erase-install
 ---
 
 Since OS X 10.11, OS X / macOS installer applications have had the `startosinstall` command line tool bundled in it. My [presentation at the Texas Apple Admins Virtual Meetup](https://grahamrpugh.com/2020/05/05/texas-apple-admins-presentation.html) last month went into the history of the command, and the available command line options.
@@ -25,7 +29,7 @@ An additional undocumented option is already well known:
 
 This option, along with the `--agreetolicense` option, is required to run the `startosinstall` command silently, for example from a script.
 
-## There are more options!
+## There are more options
 
 A problem was reported to me by my colleague Anver Housseini while running my [erase-install] tool to reinstall macOS. The `startosinstall` command quit without starting the install, with the following output:
 

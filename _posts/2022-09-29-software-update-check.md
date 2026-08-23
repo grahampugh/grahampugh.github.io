@@ -2,6 +2,9 @@
 layout: post
 title:  "Do you need to use the softwareupdate command to discover available updates?"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 Many open source tools and vendor products for Mac use the `softwareupdate` command to check for software updates. Typically, they will use the folllowing argument:

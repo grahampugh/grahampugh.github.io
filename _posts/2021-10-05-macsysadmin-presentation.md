@@ -2,6 +2,13 @@
 layout: post
 title: "MacSysAdmin Presentation - 07 October 2021 - AutoPkg Everything"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - autopkg
+  - jamfuploader
+  - presentations
 ---
 
 Today, 07 October 2021, I am proud to be presenting at the [MacSysAdmin Online Conference](https://docs.macsysadmin.se/2021/), on **AutoPkg Everything - How ETH Zürich extends the AutoPkg framework beyond uploading packages**.

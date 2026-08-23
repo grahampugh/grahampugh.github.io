@@ -2,6 +2,11 @@
 layout: post
 title:  "ETH Zurich and Jamf Pro - Jamf Nation Roadshow, Munich, 13 June 2018"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - presentations
 ---
 
 Today I gave a presentation at the [Jamf Nation Roadshow in Munich][4]. The presentation is entitled "ETH Zurich and Jamf Pro", and is an introduction to ETH Zurich, and how we have integrated Jamf Pro into our Mac management service over the past year. The presentation concentrates on our reliance on the Jamf Pro API, and the workflows we have created to allow us to maintain the service at scale, with the level of flexibility required to meet the varied demands of our internal customers.
@@ -10,7 +15,6 @@ Today I gave a presentation at the [Jamf Nation Roadshow in Munich][4]. The pres
 
 During the presentation I refer to various tools and scripts, which I will list here:
 
-
 ## Tools and scripts
 
 * [AutoPkg]
@@ -18,11 +22,9 @@ During the presentation I refer to various tools and scripts, which I will list 
 * [JSS-In-A-Box]
 * [JSS-Config-In-A-Box]
 
-
 ## Documentation
 
 * [Jamf Pro API Documentation]
-
 
 ## Presentations
 

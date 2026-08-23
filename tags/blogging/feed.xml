@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /tags/blogging/feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>blogging | https://grahamrpugh.com</title>
+    <link>https://grahamrpugh.com/tags/blogging/</link>
+    <description>Posts tagged with blogging</description>
+    <item>
+      <title>Blogging with Jekyll</title>
+      <link>https://grahamrpugh.com/2015-11-23-blogging-with-jekyll</link>
+      <guid>https://grahamrpugh.com/2015-11-23-blogging-with-jekyll</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Blogging with Jekyll</description>
+    </item>
+    <item>
+      <title>Jekyll blogs: create a bookmarks file for commonly used weblinks</title>
+      <link>https://grahamrpugh.com/2015-11-25-jekyll-bookmarks</link>
+      <guid>https://grahamrpugh.com/2015-11-25-jekyll-bookmarks</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Jekyll blogs: create a bookmarks file for commonly used weblinks</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+---
+layout: null
+permalink: /tags/linux/feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>linux | https://grahamrpugh.com</title>
+    <link>https://grahamrpugh.com/tags/linux/</link>
+    <description>Posts tagged with linux</description>
+    <item>
+      <title>Archive E-Mails from an IMAP E-Mail account</title>
+      <link>https://grahamrpugh.com/2016-09-20-export-emails-from-imap-accounts</link>
+      <guid>https://grahamrpugh.com/2016-09-20-export-emails-from-imap-accounts</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Archive E-Mails from an IMAP E-Mail account</description>
+    </item>
+    <item>
+      <title>Maintain daily, weekly and monthly MySQL backups</title>
+      <link>https://grahamrpugh.com/2019-01-15-mysqldump-daily-weekly-monthly</link>
+      <guid>https://grahamrpugh.com/2019-01-15-mysqldump-daily-weekly-monthly</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Maintain daily, weekly and monthly MySQL backups</description>
+    </item>
+    <item>
+      <title>Send Slack notifications when a partition size exceeds a threshold</title>
+      <link>https://grahamrpugh.com/2019-01-15-slack-notifications-for-partition-sizes</link>
+      <guid>https://grahamrpugh.com/2019-01-15-slack-notifications-for-partition-sizes</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Send Slack notifications when a partition size exceeds a threshold</description>
+    </item>
+    <item>
+      <title>Slack notifications for errors in a multi-context Jamf Pro environment</title>
+      <link>https://grahamrpugh.com/2019-10-22-jamf-error-log-slack-multicontext</link>
+      <guid>https://grahamrpugh.com/2019-10-22-jamf-error-log-slack-multicontext</guid>
+      <pubDate>2020-01-01</pubDate>
+      <description>Slack notifications for errors in a multi-context Jamf Pro environment</description>
+    </item>
+  </channel>
+</rss>

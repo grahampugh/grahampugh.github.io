@@ -2,6 +2,11 @@
 layout: post
 title:  "JamfUploader now supports Jamf Platform Integrations, integrates with jamf-cli"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
 ---
 
 ## Introduction

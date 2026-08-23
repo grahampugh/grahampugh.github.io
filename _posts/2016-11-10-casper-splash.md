@@ -2,6 +2,10 @@
 layout: post
 title:  "Configuring SplashBuddy"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 François Tiffreau-Levaux ([@ftiff])'s [SplashBuddy] application (formerly CasperSplash) is an Application created using Swift, designed to be used when staging a DEP Mac using [JAMF Pro] (formerly Casper). It can equally used to onboard User-Initiated Enrollments. Current in 1.0 release candidate phase, it is fully functional, and relatively easy to set up. the latest version can be downloaded from the [releases page](https://github.com/ftiff/SplashBuddy/releases).
@@ -26,8 +30,8 @@ Secondly, it identifies the path where assets are stored. The default path is `/
 
 * Presentation files for the main window. These are stored in `Presentation.bundle`. This contains a folder named `Base.lproj` that should be renamed to `en.lproj` if you wish to serve the app to English language computers. Inside the `en.lproj` folder should the following assets:
 
-    - `index.html`: The main HTML page which occupies the main window of SplashBuddy.
-    - Any other assets such as images, style sheets, javascript files, other HTML files, YouTube videos etc., which can be linked using relative paths from `index.html`. The pictured example above uses a CSS file and the JPEG image of coffee.
+  * `index.html`: The main HTML page which occupies the main window of SplashBuddy.
+  * Any other assets such as images, style sheets, javascript files, other HTML files, YouTube videos etc., which can be linked using relative paths from `index.html`. The pictured example above uses a CSS file and the JPEG image of coffee.
 
 ---
 
@@ -116,7 +120,7 @@ jamf policy -trigger runsoftwareupdate
 
 # Quit SplashBuddy if still running
 if [[ $(pgrep SplashBuddy) ]]; then
-	pkill SplashBuddy
+ pkill SplashBuddy
 fi
 
 # we are done, so delete SplashBuddy
@@ -132,6 +136,5 @@ rm /Library/LaunchAgents/io.fti.SplashBuddy.launch.plist
 **Note:** this post was updated October 8, 2017 from the original post of 10 November, 2016.
 
 [img-1]: /assets/images/SplashBuddy-1.png
-
 
 {% include urls.md %}

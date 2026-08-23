@@ -2,9 +2,13 @@
 layout: post
 title:  "Git branches with Munki-Do"
 comments: true
+tags:
+  - apple
+  - mac
+  - munki
 ---
 
-I have extended the capability of [Munki-Do] to handle branching in a Git-enabled [Munki] repository, as may be required in larger IT Support teams. Munki-Do now has a `GIT_BRANCHING` option which creates a new, unique branch for each new change made. This branch is identified by Munki-Do user and timestamp. 
+I have extended the capability of [Munki-Do] to handle branching in a Git-enabled [Munki] repository, as may be required in larger IT Support teams. Munki-Do now has a `GIT_BRANCHING` option which creates a new, unique branch for each new change made. This branch is identified by Munki-Do user and timestamp.
 
 When enabled, each commit creates (checks out and pushes) a new branch name such as `graham_20151125152926`. After pushing the changes to the new branch, the server immediately checks out the master branch. This is done to prevent the ability for multiple Munki-Do users to be competing for the checked-out branch. Therefore, the user that made the change will not see it in their view of Munki-Do. The exception to this rule is when a user creates a new manifest, because a user needs to populate the new manifest before it is any use, and it would be unproductive for that user to have to wait for a merge of the new manifest before being able to populate it.
 
@@ -19,17 +23,16 @@ The `GIT_BRANCHING` option is set either in `munkido/settings.py`, in the `Docke
 
 ~~~ bash
 docker run -d --restart=always --name munki-do \
-	-p 8000:8000 \
-	-v /Users/Shared/munki_repo:/munki_repo \
-	-v /Users/Shared/munki-do-db:/munki-do-db \
-	-e DOCKER_MUNKIDO_GIT_PATH="/usr/bin/git" \
-	-e DOCKER_MUNKIDO_GIT_BRANCHING=yes \
-	-e DOCKER_MUNKIDO_GIT_IGNORE_PKGS=yes \
-	-e ADMIN_PASS="pass" \
-	grahamrpugh/munki-do
+ -p 8000:8000 \
+ -v /Users/Shared/munki_repo:/munki_repo \
+ -v /Users/Shared/munki-do-db:/munki-do-db \
+ -e DOCKER_MUNKIDO_GIT_PATH="/usr/bin/git" \
+ -e DOCKER_MUNKIDO_GIT_BRANCHING=yes \
+ -e DOCKER_MUNKIDO_GIT_IGNORE_PKGS=yes \
+ -e ADMIN_PASS="pass" \
+ grahamrpugh/munki-do
 ~~~
 
 [1]: {% post_url 2015-10-15-munki-git-munki-do %}
 
 {% include urls.md %}
-

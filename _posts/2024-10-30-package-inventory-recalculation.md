@@ -2,6 +2,11 @@
 layout: post
 title:  "Jamf package inventory recalculation - GUI, API, JamfUploader"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
 ---
 
 If you're a Jamf Pro cloud customer using the Jamf Cloud Distribution Service (JCDS) for packages, you may have noticed that some packages may take time to be fully available after uploading them. This can occur regardless of whether you upload the package via the web interface or using the Jamf Pro API.
@@ -25,11 +30,11 @@ I have added a new `recalculate` key to the `JamfPackageUploader` processor whic
     recalculate: "True"
 ```
 
-However, depending on your workflow, you may not wish to force a recalculation after each package upload, but rather wait until the end of an AutoPkg run. [Munki] users will be familiar with the concept of recalculating catalogs at the end of a recipe list, which is more efficient than recalculating after every recipe. 
+However, depending on your workflow, you may not wish to force a recalculation after each package upload, but rather wait until the end of an AutoPkg run. [Munki] users will be familiar with the concept of recalculating catalogs at the end of a recipe list, which is more efficient than recalculating after every recipe.
 
 To enable this sort of workflow, I have created a new processor called `JamfPackageRecalculator`, which requires no inputs (other than the credentials you would supply for any JamfUploader processor), and will simply run the package recalculation endpoint.
 
-This should be in its own recipe, and added to the end of a recipe list. So, I've created a recipe, `RecalculatePackages.jamf`, in the repo `autopkg/grahampugh-recipes` (with the same recipe in `grahampugh/jamf-upload` for those of you using this repo). 
+This should be in its own recipe, and added to the end of a recipe list. So, I've created a recipe, `RecalculatePackages.jamf`, in the repo `autopkg/grahampugh-recipes` (with the same recipe in `grahampugh/jamf-upload` for those of you using this repo).
 
 Alternatively, if you wish to include this processor in your own recipe, add the following processor (with no arguments):
 

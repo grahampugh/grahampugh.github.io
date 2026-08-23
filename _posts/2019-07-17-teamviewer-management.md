@@ -3,6 +3,9 @@ layout: post
 title:  "Prevent TeamViewer from opening during package installation"
 comments: true
 excerpt: TeamViewer can be prevented from opening during installation if a specific file is placed in the tmp folder before installation. This can be achieved with the use of a preinstall script.
+tags:
+  - apple
+  - mac
 ---
 
 ### Update for 2023 and beyond

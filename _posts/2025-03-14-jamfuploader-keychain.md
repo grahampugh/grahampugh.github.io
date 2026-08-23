@@ -2,6 +2,12 @@
 layout: post
 title:  "JamfUploader - store your Jamf Pro credentials in the Keychain"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
+  - jamfuploader
+  - autopkg
 ---
 
 

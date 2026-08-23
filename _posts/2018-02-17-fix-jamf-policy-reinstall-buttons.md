@@ -2,6 +2,10 @@
 layout: post
 title:  "Fix Jamf Pro 10 Reinstall Button Values"
 comments: true
+tags:
+  - apple
+  - mac
+  - jamf
 ---
 
 [Jamf Pro] 10 introduced a secondary Self Service button value, which appears after a policy has been run once. The default initial button value is "Install", and the default secondary value is "Reinstall". Both can be changed. Since Jamf Pro 10.2, both can also be changed via API.

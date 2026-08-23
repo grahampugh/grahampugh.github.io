@@ -2,6 +2,11 @@
 layout: post
 title: "MacAdmins UK Conference Presentation - 23 May 2023 - Erase-Install: A Tool for Upgrading and Reinstalling your Mac"
 comments: true
+tags:
+  - apple
+  - mac
+  - erase-install
+  - presentations
 ---
 
 On 23 May 2023, at 12:15 PM BST, I proudly presented at the [MacAdmins UK Conference](https://macad.uk), on the following topic:
@@ -19,6 +24,5 @@ A PDF of the slides and presenter notes is available [here](/assets/documents/Ma
 The video of the presentation is also now available to view here:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kUQcfXzzeQs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 {% include urls.md %}

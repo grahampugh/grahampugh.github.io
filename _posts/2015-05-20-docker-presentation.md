@@ -2,6 +2,10 @@
 layout: post
 title: "Docker: Use Cases presentation - 19/3/2015 London Apple Admins @ ThoughtWorks London"
 comments: true
+tags:
+  - apple
+  - mac
+  - presentations
 ---
 
 Back on 19th March 2015 I gave a short informal presentation at the second [London Apple Admins] meeting at ThoughtWorks London, about how I've been using [Docker] to setup some Mac administration tools, with the examples of [Crypt], [Munki-Trello] and [Munki-Enroll]. Here's my segment:
