@@ -2,6 +2,9 @@
 layout: post
 title: "Resetting Device Enrollment cache without reinstalling macOS"
 comments: true
+tags:
+  - apple
+  - mac
 ---
 
 **UPDATE: This method does not work on macOS Big Sur. It can only be used on Catalina and older**
