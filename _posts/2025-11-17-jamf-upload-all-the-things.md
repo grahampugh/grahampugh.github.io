@@ -7,7 +7,7 @@ tags:
   - mac
   - jamf
   - jamfuploader
-summary: JamfUploader is far more than a package uploader: it can maintain Jamf settings, copy and clean content, adjust scopes, manage profiles, and support broader configuration-as-code workflows across multiple Jamf instances.
+summary: JamfUploader is far more than a package uploader - it can maintain Jamf settings, copy and clean content, adjust scopes, manage profiles, and support broader configuration-as-code workflows across multiple Jamf instances.
 ---
 
 ## Introduction
