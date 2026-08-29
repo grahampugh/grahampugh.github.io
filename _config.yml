@@ -8,19 +8,18 @@
 # Site settings
 title: >
   What The Mac?!
-email: g.r.pugh@gmail.com
+email: blog@whatthemac.com
 description: > # this means to ignore newlines until "baseurl:"
   Graham Pugh's rarely-updated blog about Mac Admin-related stuff.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://grahampugh.github.io" # the base hostname & protocol for your site
 src_url: "https://github.com/grahampugh/grahampugh.github.io/blob/master"
-# twitter_username: GrahamRPugh
 github_username: grahampugh
 slack_username: grahamrpugh
 mastodon_server: mas.to
 mastodon_username: "@SubjectMac"
 author: grahampugh
-timezone: Europe/Zurich
+timezone: Europe/Berlin
 future: true
 
 # Build settings
