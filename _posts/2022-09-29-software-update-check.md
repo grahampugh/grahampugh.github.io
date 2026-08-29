@@ -5,6 +5,7 @@ comments: true
 tags:
   - apple
   - mac
+summary: Running softwareupdate --list can trigger hangs and inconsistencies; this post explains why reading the existing Software Update plist is usually a safer and more accurate way to discover available updates and whether upgrades require a restart.
 ---
 
 Many open source tools and vendor products for Mac use the `softwareupdate` command to check for software updates. Typically, they will use the folllowing argument:

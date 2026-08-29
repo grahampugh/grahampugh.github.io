@@ -7,6 +7,7 @@ tags:
   - mac
   - jamf
   - jamfuploader
+summary: Jamf is retiring the unsupported dbfileupload API endpoint. This post explains the new v1/packages endpoint, how it works for package uploads and deletion, and why it is the modern replacement for cloud distribution point uploads.
 ---
 
 Jamf announced in the [11.4.0 Release Notes][1] that the undocumented and unsupported `dbfileupload` endpoint will be discontinued in Jamf Pro 11.6.0, along with support for the Jamf Admin application:

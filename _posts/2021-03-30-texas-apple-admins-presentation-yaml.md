@@ -7,6 +7,7 @@ tags:
   - mac
   - autopkg
   - presentations
+summary: I presented at the Texas Apple Admins Virtual Meetup on YAML-formatted AutoPkg recipes, covering how native YAML recipes work and linking to the recorded talk, slides, and related blog post.
 ---
 
 I was honoured to present at the [Texas Apple Admins Virtual Meetup][1] yesterday, 30 March 2021, to talk about YAML-formatted AutoPkg recipes.

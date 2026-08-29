@@ -8,6 +8,7 @@ tags:
   - jamf
   - jamfuploader
   - autopkg
+summary: Jamf Pro 10.36 disabled Basic Auth for Classic API endpoints, so JSSImporter users must keep it enabled while JamfUploader and similar tools already support bearer-token authentication and are the safer migration path.
 ---
 
 ## TL;DR

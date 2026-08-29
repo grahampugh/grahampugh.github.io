@@ -5,6 +5,7 @@ comments: true
 tags:
   - apple
   - mac
+summary: SOFA changed its feed URLs and now requires gzip compression and ETag handling to reduce bandwidth. If you use the feed, update your scripts and cached checks to stay compatible and avoid unnecessary data transfer.
 ---
 
 ![SOFA logo](https://github.com/macadmins/sofa/raw/main/images/custom_logo.png)

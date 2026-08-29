@@ -156,6 +156,8 @@ def write_tag_feed(tag, tag_posts):
     items = []
     for path, front in tag_posts:
         title = front.get("title", path.stem)
+        summary = front.get("summary")
+        description = summary if summary else title
         post_url = SITE_URL + "/" + path.stem
         pub_date = front.get("date", "2020-01-01")
         items.append(
@@ -164,7 +166,7 @@ def write_tag_feed(tag, tag_posts):
             + "      <link>" + escape_xml(post_url) + "</link>\n"
             + "      <guid>" + escape_xml(post_url) + "</guid>\n"
             + "      <pubDate>" + escape_xml(pub_date) + "</pubDate>\n"
-            + "      <description>" + escape_xml(title) + "</description>\n"
+            + "      <description>" + escape_xml(description) + "</description>\n"
             + "    </item>"
         )
 

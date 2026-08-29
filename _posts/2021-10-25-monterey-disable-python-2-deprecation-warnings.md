@@ -8,6 +8,7 @@ tags:
   - jamf
   - jamfuploader
   - autopkg
+summary: macOS Monterey still includes Python 2, but triggers confusing deprecation popups. This post explains how to suppress them with a custom MDM preference key and why you should remove Python 2-based scripts and tools from management workflows as soon as possible.
 ---
 
 > **UPDATE:** As python2 was removed entirely from macOS with the release of Monterey 12.4, these instructions are only valid for machines running 12.0-12.3.1.

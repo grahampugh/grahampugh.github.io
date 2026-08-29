@@ -8,6 +8,7 @@ tags:
   - jamf
   - jamfuploader
   - autopkg
+summary: This post compares the old JSSImporter recipe format with the equivalent JamfUploader recipe, showing how to recreate a standard package, smart group, and Self Service policy workflow using multiple purpose-built processors.
 ---
 
 I have now deprecated the AutoPkg processor [JSSImporter], and it will likely stop working sometime between August and December of this year, 2022 - that is, unless somebody volunteers to take it over and is able to adapt it to work with Jamf's upcoming requirement for token-based API authentication. Once this change happens, you will no longer be able to use any `.jss` recipes.

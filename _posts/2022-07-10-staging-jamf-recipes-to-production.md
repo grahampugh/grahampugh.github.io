@@ -8,6 +8,7 @@ tags:
   - jamf
   - autopkg
   - jamfuploader
+summary: AutoPkg can stage tested package uploads to production without re-importing by saving the last successful package details to disk and reusing them in separate production recipes, reducing manual Jamf work and supporting multi-instance deployments.
 ---
 
 [AutoPkg], in conjunction with the [JamfUploader] processors, provides an automated way to import packages into Jamf Pro. For many, the package that has been imported should be tested before it is staged to production. Therefore, a common practice is for the AutoPkg `.jamf` recipe to create a policy that is scoped only to a group of testing computers. For example, when we import `Firefox-102.0.pkg` into Jamf Pro, we can write our `Firefox.jamf` recipe so that it creates a policy with that package attached to it, which is scoped to a smart or static computer group called `Firefox testing`.

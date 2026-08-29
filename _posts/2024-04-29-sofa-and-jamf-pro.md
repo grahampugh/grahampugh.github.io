@@ -6,6 +6,7 @@ tags:
   - apple
   - mac
   - jamf
+summary: SOFA provides machine-readable macOS and XProtect update data. Jamf Pro administrators may use extension attributes and smart groups to identify outdated systems and trigger update workflows without relying on local softwareupdate checks.
 ---
 
 ## What is SOFA?

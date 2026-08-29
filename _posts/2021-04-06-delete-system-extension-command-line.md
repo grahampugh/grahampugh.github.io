@@ -5,6 +5,7 @@ comments: true
 tags:
   - apple
   - mac
+summary: System extensions are not simply deleted with rm; this post shows how to trigger the correct Finder-based uninstallation flow using AppleScript so the extension is deactivated and removed cleanly.
 ---
 
 Modern System Extensions on macOS are generally installed via an application bundle. They can be bundled within the application with which they are associated (for example **Microsoft Defender ATP**), or in specific applications along side the main app that deliver the system extension (examples include **Sophos Anti-Virus** and **Cisco AnyConnect**).

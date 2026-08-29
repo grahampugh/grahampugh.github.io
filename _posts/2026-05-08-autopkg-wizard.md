@@ -6,6 +6,7 @@ tags:
   - apple
   - mac
   - autopkg
+summary: AutoPkg Wizard is a new open source SwiftUI app for AutoPkg users, offering a more user-friendly way to manage recipes, preferences, scheduling, and arguments without interfering with your command-line workflow.
 ---
 
 ## Introduction

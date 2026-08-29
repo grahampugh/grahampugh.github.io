@@ -8,6 +8,7 @@ tags:
   - jamf
   - jamfuploader
   - autopkg
+summary: JamfUploader can now retrieve Jamf Pro credentials from the macOS Keychain, reducing plain-text password storage, avoiding AutoPkg receipts leaks, and making multi-server use much simpler and safer.
 ---
 
 

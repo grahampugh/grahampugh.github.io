@@ -13,7 +13,7 @@ permalink: /tags/community/feed.xml
       <link>https://grahamrpugh.com/2023-07-10-handling-an-open-source-project</link>
       <guid>https://grahamrpugh.com/2023-07-10-handling-an-open-source-project</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>One Mac Admin&apos;s tips on maintaining a popular Open Source project</description>
+      <description>If you publish a useful open source Mac admin tool, expect more users, questions, and maintenance work. Good documentation, issue tracking, releases, and community support can help manage the burden and keep things sustainable.</description>
     </item>
   </channel>
 </rss>

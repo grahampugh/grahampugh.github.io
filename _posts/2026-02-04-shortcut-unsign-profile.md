@@ -6,6 +6,7 @@ tags:
   - apple
   - mac
   - jamf
+summary: A quick way to remove signatures from downloaded Jamf profiles is to create a Finder Quick Action using a shell script. The catch - Finder needs Full Disk Access for the shortcut to work.
 ---
 
 ## Introduction

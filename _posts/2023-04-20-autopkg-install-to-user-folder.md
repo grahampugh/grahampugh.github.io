@@ -6,6 +6,7 @@ tags:
   - apple
   - mac
   - autopkg
+summary: This post introduces UserInstallers for AutoPkg, letting app installs target the current user's Applications folder so apps behave more like user-owned software and avoid admin prompts during updates.
 ---
 
 When setting up my own machine, I often like to install some applications into my own User Applications folder (`/Users/$currentuser/Applications`). This folder does not exist by default, but is recognised as an Applications folder by macOS when created, and items within appear in Spotlight just like any app installed in `/Applications`. Installing them in the user space keeps them separate from apps installed by my management system, MDM or from the App Store.

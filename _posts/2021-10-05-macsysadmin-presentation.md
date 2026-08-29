@@ -9,6 +9,7 @@ tags:
   - autopkg
   - jamfuploader
   - presentations
+summary: In this presentation, I explored how ETH Zurich extends AutoPkg beyond package uploads, covering JamfUploader, version control, scheduling, and reusable processors for managing Jamf workflows at scale.
 ---
 
 Today, 07 October 2021, I am proud to be presenting at the [MacSysAdmin Online Conference](https://docs.macsysadmin.se/2021/), on **AutoPkg Everything - How ETH Zürich extends the AutoPkg framework beyond uploading packages**.

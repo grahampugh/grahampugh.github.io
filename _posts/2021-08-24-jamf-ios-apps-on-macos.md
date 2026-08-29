@@ -6,6 +6,7 @@ tags:
   - apple
   - mac
   - jamf
+summary: This post explains how to manually add an iOS App Store app to Jamf Pro for deployment to Apple Silicon Macs, including icon, licensing, and Self Service details.
 ---
 
 Apple made it possible to install iPhone and iPad apps to Apple Silicon Macs as soon as they were released. Since version 10.30 it has been possible to deploy these apps via Jamf Pro.

@@ -9,6 +9,7 @@ tags:
   - autopkg
   - jamfuploader
   - presentations
+summary: I am co-presenting with Anthony Reimer at Virtual JNUC 2021 on making package uploading and deployment easier with JamfUploader, a new AutoPkg processor set for Jamf Pro workflows.
 ---
 
 On 21 October 2021, at 02:00 PM CDT (21:00 Central European Time), I am proud to be co-presenting with Anthony Reimer at the [Virtual JNUC 2021](https://www.jamf.com/events/jamf-nation-user-conference/2021/), on the following topic:

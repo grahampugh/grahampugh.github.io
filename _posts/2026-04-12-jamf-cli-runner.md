@@ -7,6 +7,7 @@ tags:
   - mac
   - jamf
   - jamfuploader
+summary: jamf-cli provides a simple, cross-platform way to interact with Jamf Pro, Protect, and Platform APIs, while JamfCLIRunner brings that power into AutoPkg workflows for reproducible, conditional Jamf automation.
 ---
 
 ## Introduction

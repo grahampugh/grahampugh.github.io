@@ -5,11 +5,14 @@ comments: true
 tags:
   - apple
   - mac
+summary: This post shows how to compare the installed XProtect version against Apple's software catalogs, and why using a LaunchDaemon plus Extension Attribute is the safer way to verify security updates in Jamf Pro.
 ---
 
 Your organisation may want to ensure that XProtect is up to date on Mac. So long as Software Update settings are set to "Install Security Updates and System Files", all should be well... assuming that Software Update is functioning today...
 
 But how can you *verify* that the XProtect version on the system *is* the latest version available? For that, you need to check against Apple's software catalogs or some external source.
+
+Here are two ways you can automate the process.
 
 ## Silent Knight
 

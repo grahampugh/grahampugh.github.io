@@ -6,6 +6,7 @@ tags:
   - apple
   - mac
   - erase-install
+summary: Apple's sucatalog files contain a huge catalog of software updates, including full macOS installers. This post explores how to parse them with built-in tools to locate installer metadata and download the correct InstallAssistant.pkg without relying on third-party utilities.
 ---
 
 ## Introduction to the sucatalog file

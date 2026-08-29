@@ -9,6 +9,7 @@ tags:
   - autopkg
   - jamfuploader
   - presentations
+summary: I co-presented with Katiuscia Zehnder at MacSysAdmin 2024 on automated testing of managed applications as part of a fully automated software deployment workflow. This post shares slides, video, and links to related resources.
 ---
 
 On Thursday, 03 October 2024, I was honoured to present at the [MacSysAdmin Online Conference](https://docs.macsysadmin.se/2024/) alongside Katiuscia Zehnder of ETH Zürich, on the topic **Automated Testing of Managed Applications (As Part of a Fully Automated Software Deployment Workflow)**.

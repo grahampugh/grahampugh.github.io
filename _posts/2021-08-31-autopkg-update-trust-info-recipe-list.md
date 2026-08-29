@@ -8,6 +8,7 @@ tags:
   - jamf
   - jamfuploader
   - autopkg
+summary: This post introduces a script to update trust information across all AutoPkg recipes in a recipe list, helping manage shared processor changes safely while allowing verification before updating overrides.
 ---
 
 I use [AutoPkg] for multiple workflows, and as a result I have developed a lot of custom shared processors. As with most code, I often have to update my shared processors as I find bugs or scale up and factor in additional edge cases. Often times these shared processors feature in many or all of my recipes, and every time I make a change to one of the processors, I have to update the trust information on every recipe.

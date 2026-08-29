@@ -48,14 +48,14 @@ permalink: /tags/erase-install/feed.xml
       <link>https://grahamrpugh.com/2024-06-07-rocketman-launchpad-presentation</link>
       <guid>https://grahamrpugh.com/2024-06-07-rocketman-launchpad-presentation</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>RocketmanTech LaunchPad Presentation - 7 June 2024 - Why and how to use erase-install</description>
+      <description>At RocketmanTech LaunchPad, I presented why and how to use erase-install for upgrading and updating Macs with Jamf Pro, including a live demonstration and links to related tools, docs, and videos.</description>
     </item>
     <item>
       <title>Unpicking Apple&apos;s Software Update Catalog Files</title>
       <link>https://grahamrpugh.com/2025-08-27-unpicking-sucatalog-files</link>
       <guid>https://grahamrpugh.com/2025-08-27-unpicking-sucatalog-files</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Unpicking Apple&apos;s Software Update Catalog Files</description>
+      <description>Apple&apos;s sucatalog files contain a huge catalog of software updates, including full macOS installers. This post explores how to parse them with built-in tools to locate installer metadata and download the correct InstallAssistant.pkg without relying on third-party utilities.</description>
     </item>
   </channel>
 </rss>

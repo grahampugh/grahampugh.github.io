@@ -6,6 +6,7 @@ tags:
   - apple
   - mac
   - autopkg
+summary: AutoPkg 2.3 adds native YAML recipe support, making recipes easier to read, write, and manage. This post also covers YAML overrides, conversion tools, and caveats for mixed plist and YAML repos.
 ---
 
 Back in 2018, I published a blog post about how you can write AutoPkg recipes in `yaml` format, and convert them to `plist`-format to run them. See [Writing AutoPkg recipes and other plist-formatted files in yaml][1]. I've been writing all my recipes in `yaml` format since then.

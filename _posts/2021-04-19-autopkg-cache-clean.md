@@ -6,9 +6,10 @@ tags:
   - apple
   - mac
   - autopkg
+summary: This post introduces a script to prune old AutoPkg cache files while keeping recent downloads and receipts, helping avoid disk exhaustion without losing useful package history.
 ---
 
-The longer you use [AutoPkg] without cleaning up the Cache folder, the more cruft you're going to get. Much of the cruft is older downloads and any packages generated.
+The longer you use [AutoPkg] without cleaning up the Cache folder, the more cruft you're going to accumulate. Much of the cruft is older downloads and any packages generated.
 
 Depending on your setup, you may be able to just delete the entire Cache folder periodically, or even after every run. In our setup, we cannot do that as we require the latest packages and recipe receipts to be kept in the Cache for further use by other recipes. Additionally, we would rather keep the latest downloads so that comparisons with previous runs can be done to prevent re-download.
 

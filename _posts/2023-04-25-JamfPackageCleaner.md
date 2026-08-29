@@ -8,6 +8,7 @@ tags:
   - jamf
   - autopkg
   - jamfuploader
+summary: JamfPackageCleaner automatically removes old Jamf package uploads by name pattern and version count, helping keep Jamf Pro tidy and preventing disk bloat as AutoPkg-managed package repositories grow.
 ---
 
 Thanks to the excellent contribution of Henrik Engström (`@creation` on the [MacAdmins Slack][macadmins slack team]), there is a new AutoPkg processor in the [JamfUploader] suite of processors.

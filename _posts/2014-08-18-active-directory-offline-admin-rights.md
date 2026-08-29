@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Give Active Directory group members admin rights to their Mac while offline"
+summary: When joining a Mac to Active Directory, you can grant domain users/groups local admin rights while offline by adding them to the "Allow administration by" list and syncing those users to the local admin group when they have mobile accounts. This lets AD-managed users elevate without domain access.
 comments: true
 tags:
   - apple

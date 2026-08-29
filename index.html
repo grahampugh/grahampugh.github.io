@@ -2,7 +2,13 @@
 layout: default
 ---
 
-<img class="header-image" src="/assets/images/riggenberg.jpg" />
+{% assign panorama_files = site.static_files | where_exp: "file", "file.path contains 'assets/images/panoramas/'" %}
+{% if panorama_files.size > 0 %}
+  {% assign panorama = panorama_files | sample %}
+  <img class="header-image" src="{{ panorama.path | relative_url }}" alt="Panorama">
+{% else %}
+  <img class="header-image" src="{{ '/assets/images/panoramas/pano-lenk.jpg' | relative_url }}" alt="Panorama">
+{% endif %}
 
 <div class="header-description">
   <p>{{ site.description }}</p>
@@ -28,7 +34,7 @@ layout: default
       {% endif %}
     </p>
 
-    <p class="post-meta">{{ post.content | strip_html | truncatewords: 50 }}</p>
+  <p class="post-meta">{{ post.summary | default: post.content | strip_html | truncatewords: 50 }}</p>
   </div>
   {% endfor %}
 </div>

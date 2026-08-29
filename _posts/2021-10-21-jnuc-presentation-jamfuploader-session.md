@@ -9,6 +9,7 @@ tags:
   - jamfuploader
   - autopkg
   - presentations
+summary: At JNUC 2021, Anthony Reimer and I showed how JamfUploader simplifies AutoPkg package uploads and policy deployment with examples, templates, and best practices for modern Jamf Pro workflows.
 ---
 
 On 21 October 2021, I proudly co-presented with [Anthony Reimer][1] at the [Virtual Jamf Nation User Conference 2021][2], on the topic **Making package uploading and deployment easier with JamfUploader**.

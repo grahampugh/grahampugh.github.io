@@ -7,6 +7,7 @@ tags:
   - mac
   - jamf
   - jamfuploader
+summary: JamfUploader now supports Jamf Platform API Gateway credentials and jamf-cli profiles, enabling secure authentication for Jamf Pro and related services while remaining backward compatible.
 ---
 
 ## Introduction

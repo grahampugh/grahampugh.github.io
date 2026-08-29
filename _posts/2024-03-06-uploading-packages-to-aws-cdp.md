@@ -7,6 +7,7 @@ tags:
   - mac
   - jamf
   - jamfuploader
+summary: Uploading packages to a Jamf Pro AWS S3 distribution point is straightforward with the AWS CLI and Classic API - authenticate, sync the package to S3, then upload the package metadata to Jamf Pro.
 ---
 
 If you maintain a Jamf Pro server that has a Cloud Distribution Point located on an Amazon Web Services S3 Bucket, you typically either use the Jamf Pro admin user interface to upload packages, or the Jamf Admin app. This post is concerned with how to upload a package using a script, using Jamf's Classic API and the AWS command line interface tools (`aws-cli`).

@@ -8,6 +8,7 @@ tags:
   - jamf
   - autopkg
   - jamfuploader
+summary: Jamf Pro Cloud customers can upload packages to JCDS 2.0 through the official API, but the workflow is more complex than the legacy method and requires checking for existing packages and uploading metadata afterwards. JamfPackageUploader handles it all for you.
 ---
 
 **Jamf Pro is introducing a new Jamf Cloud Distribution Point (JCDS), including an official API endpoint for uploading packages.** 🎉🥳🍾🪅

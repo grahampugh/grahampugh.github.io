@@ -202,84 +202,84 @@ permalink: /tags/jamf/feed.xml
       <link>https://grahamrpugh.com/2021-01-24-adobe-ccda-versions-and-apple-silicon</link>
       <guid>https://grahamrpugh.com/2021-01-24-adobe-ccda-versions-and-apple-silicon</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>When a single Adobe package can have two versions depending on architecture</description>
+      <description>Adobe Creative Cloud Desktop can report different versions on Intel and Apple Silicon from the same package due to architecture-specific patching; Jamf admins must account for both versions in policy logic.</description>
     </item>
     <item>
       <title>JNUC Presentation Announcement - 21 October 2021 - JamfUploader</title>
       <link>https://grahamrpugh.com/2021-08-18-jnuc-presentation-jamfuploader</link>
       <guid>https://grahamrpugh.com/2021-08-18-jnuc-presentation-jamfuploader</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>JNUC Presentation Announcement - 21 October 2021 - JamfUploader</description>
+      <description>I am co-presenting with Anthony Reimer at Virtual JNUC 2021 on making package uploading and deployment easier with JamfUploader, a new AutoPkg processor set for Jamf Pro workflows.</description>
     </item>
     <item>
       <title>Deploying Mobile Device Apps to Apple Silicon Macs with Jamf Pro</title>
       <link>https://grahamrpugh.com/2021-08-24-jamf-ios-apps-on-macos</link>
       <guid>https://grahamrpugh.com/2021-08-24-jamf-ios-apps-on-macos</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Deploying Mobile Device Apps to Apple Silicon Macs with Jamf Pro</description>
+      <description>This post explains how to manually add an iOS App Store app to Jamf Pro for deployment to Apple Silicon Macs, including icon, licensing, and Self Service details.</description>
     </item>
     <item>
       <title>AutoPkg - verify and update trust information on all recipes in a recipe-list</title>
       <link>https://grahamrpugh.com/2021-08-31-autopkg-update-trust-info-recipe-list</link>
       <guid>https://grahamrpugh.com/2021-08-31-autopkg-update-trust-info-recipe-list</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>AutoPkg - verify and update trust information on all recipes in a recipe-list</description>
+      <description>This post introduces a script to update trust information across all AutoPkg recipes in a recipe list, helping manage shared processor changes safely while allowing verification before updating overrides.</description>
     </item>
     <item>
       <title>MacSysAdmin Presentation - 07 October 2021 - AutoPkg Everything</title>
       <link>https://grahamrpugh.com/2021-10-05-macsysadmin-presentation</link>
       <guid>https://grahamrpugh.com/2021-10-05-macsysadmin-presentation</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>MacSysAdmin Presentation - 07 October 2021 - AutoPkg Everything</description>
+      <description>In this presentation, I explored how ETH Zurich extends AutoPkg beyond package uploads, covering JamfUploader, version control, scheduling, and reusable processors for managing Jamf workflows at scale.</description>
     </item>
     <item>
       <title>JNUC Presentation - 21 October 2021 - Making package uploading and deployment easier with JamfUploader</title>
       <link>https://grahamrpugh.com/2021-10-21-jnuc-presentation-jamfuploader-session</link>
       <guid>https://grahamrpugh.com/2021-10-21-jnuc-presentation-jamfuploader-session</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>JNUC Presentation - 21 October 2021 - Making package uploading and deployment easier with JamfUploader</description>
+      <description>At JNUC 2021, Anthony Reimer and I showed how JamfUploader simplifies AutoPkg package uploads and policy deployment with examples, templates, and best practices for modern Jamf Pro workflows.</description>
     </item>
     <item>
       <title>macOS Monterey - MDM custom preference to disable python 2 deprecation popups</title>
       <link>https://grahamrpugh.com/2021-10-25-monterey-disable-python-2-deprecation-warnings</link>
       <guid>https://grahamrpugh.com/2021-10-25-monterey-disable-python-2-deprecation-warnings</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>macOS Monterey - MDM custom preference to disable python 2 deprecation popups</description>
+      <description>macOS Monterey still includes Python 2, but triggers confusing deprecation popups. This post explains how to suppress them with a custom MDM preference key and why you should remove Python 2-based scripts and tools from management workflows as soon as possible.</description>
     </item>
     <item>
       <title>How do changes to the Jamf Pro API authentication affect JamfUploader and JSSImporter?</title>
       <link>https://grahamrpugh.com/2022-02-16-jssimporter-jamf-pro-api-token-auth</link>
       <guid>https://grahamrpugh.com/2022-02-16-jssimporter-jamf-pro-api-token-auth</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>How do changes to the Jamf Pro API authentication affect JamfUploader and JSSImporter?</description>
+      <description>Jamf Pro 10.36 disabled Basic Auth for Classic API endpoints, so JSSImporter users must keep it enabled while JamfUploader and similar tools already support bearer-token authentication and are the safer migration path.</description>
     </item>
     <item>
       <title>JamfPackageUploader &apos;JCDS-mode&apos; for a new way to upload packages to Jamf Cloud</title>
       <link>https://grahamrpugh.com/2022-04-19-jamfuploader-jcds-mode</link>
       <guid>https://grahamrpugh.com/2022-04-19-jamfuploader-jcds-mode</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>JamfPackageUploader &apos;JCDS-mode&apos; for a new way to upload packages to Jamf Cloud</description>
+      <description>JamfPackageUploader&apos;s JCDS mode uses the same upload flow as the Jamf Pro GUI to upload packages to Jamf Cloud when the legacy dbfileupload endpoint becomes unreliable, though it is still unsupported and experimental.</description>
     </item>
     <item>
       <title>JamfRecipeMaker - use AutoPkg to make Jamf recipes automatically!</title>
       <link>https://grahamrpugh.com/2022-05-03-jamf-recipe-maker</link>
       <guid>https://grahamrpugh.com/2022-05-03-jamf-recipe-maker</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>JamfRecipeMaker - use AutoPkg to make Jamf recipes automatically!</description>
+      <description>JamfRecipeMaker converts existing JSSImporter recipes into JamfUploader recipes automatically, helping administrators migrate standard policy-based AutoPkg workflows with less manual rework.</description>
     </item>
     <item>
       <title>Comparing a JamfUploader recipe to a standard JSSImporter recipe</title>
       <link>https://grahamrpugh.com/2022-05-13-jss-to-jamf-recipes</link>
       <guid>https://grahamrpugh.com/2022-05-13-jss-to-jamf-recipes</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Comparing a JamfUploader recipe to a standard JSSImporter recipe</description>
+      <description>This post compares the old JSSImporter recipe format with the equivalent JamfUploader recipe, showing how to recreate a standard package, smart group, and Self Service policy workflow using multiple purpose-built processors.</description>
     </item>
     <item>
       <title>Stage packages to production with AutoPkg and JamfUploader</title>
       <link>https://grahamrpugh.com/2022-07-10-staging-jamf-recipes-to-production</link>
       <guid>https://grahamrpugh.com/2022-07-10-staging-jamf-recipes-to-production</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Stage packages to production with AutoPkg and JamfUploader</description>
+      <description>AutoPkg can stage tested package uploads to production without re-importing by saving the last successful package details to disk and reusing them in separate production recipes, reducing manual Jamf work and supporting multi-instance deployments.</description>
     </item>
     <item>
       <title>MacAdmins Presentation - 14 July 2022 - Demystifying JamfUploader</title>
@@ -293,161 +293,161 @@ permalink: /tags/jamf/feed.xml
       <link>https://grahamrpugh.com/2022-08-19-macadmins-podcast</link>
       <guid>https://grahamrpugh.com/2022-08-19-macadmins-podcast</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>MacAdmins Podcast, Episode 276: Big Changes to Jamf APIs and JSSImporter</description>
+      <description>In episode 276, I joined the MacAdmins Podcast to discuss major changes in Jamf APIs, the impact on JSSImporter, and how JamfUploader grew to keep AutoPkg workflows working with modern Jamf Pro.</description>
     </item>
     <item>
       <title>Clean up your packages in Jamf Pro automatically with JamfPackageCleaner</title>
       <link>https://grahamrpugh.com/2023-04-25-JamfPackageCleaner</link>
       <guid>https://grahamrpugh.com/2023-04-25-JamfPackageCleaner</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Clean up your packages in Jamf Pro automatically with JamfPackageCleaner</description>
+      <description>JamfPackageCleaner automatically removes old Jamf package uploads by name pattern and version count, helping keep Jamf Pro tidy and preventing disk bloat as AutoPkg-managed package repositories grow.</description>
     </item>
     <item>
       <title>Introducing JCDS 2.0 for uploading packages to Jamf Pro Cloud distribution points</title>
       <link>https://grahamrpugh.com/2023-08-21-introducing-jcds2</link>
       <guid>https://grahamrpugh.com/2023-08-21-introducing-jcds2</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Introducing JCDS 2.0 for uploading packages to Jamf Pro Cloud distribution points</description>
+      <description>Jamf Pro Cloud customers can upload packages to JCDS 2.0 through the official API, but the workflow is more complex than the legacy method and requires checking for existing packages and uploading metadata afterwards. JamfPackageUploader handles it all for you.</description>
     </item>
     <item>
       <title>Personal reflections on my time at ETH Zürich</title>
       <link>https://grahamrpugh.com/2023-12-05-goodbye-eth-zurich</link>
       <guid>https://grahamrpugh.com/2023-12-05-goodbye-eth-zurich</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Personal reflections on my time at ETH Zürich</description>
+      <description>After six and a half years at ETH Zurich, I reflect on the opportunities, collaborations, and community work that shaped my Jamf career and prepared me for my next chapter in Germany.</description>
     </item>
     <item>
       <title>JOCADS - the Multitenant Object Copier and Deleter Tool for Jamf Pro</title>
       <link>https://grahamrpugh.com/2023-12-05-jocads-and-other-api-tools</link>
       <guid>https://grahamrpugh.com/2023-12-05-jocads-and-other-api-tools</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>JOCADS - the Multitenant Object Copier and Deleter Tool for Jamf Pro</description>
+      <description>JOCADS is an open source multitenant Jamf Pro object copier and deleter that handles dependencies, copies objects between instances, and supports interactive or scripted operations for complex multi-instance administration.</description>
     </item>
     <item>
       <title>Scripting the upload of packages to Jamf Pro with a Cloud Distribution Point located on an Amazon Web Services S3 Bucket</title>
       <link>https://grahamrpugh.com/2024-03-06-uploading-packages-to-aws-cdp</link>
       <guid>https://grahamrpugh.com/2024-03-06-uploading-packages-to-aws-cdp</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Scripting the upload of packages to Jamf Pro with a Cloud Distribution Point located on an Amazon Web Services S3 Bucket</description>
+      <description>Uploading packages to a Jamf Pro AWS S3 distribution point is straightforward with the AWS CLI and Classic API - authenticate, sync the package to S3, then upload the package metadata to Jamf Pro.</description>
     </item>
     <item>
       <title>SOFA, and how to use it with Jamf Pro</title>
       <link>https://grahamrpugh.com/2024-04-29-sofa-and-jamf-pro</link>
       <guid>https://grahamrpugh.com/2024-04-29-sofa-and-jamf-pro</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>SOFA, and how to use it with Jamf Pro</description>
+      <description>SOFA provides machine-readable macOS and XProtect update data. Jamf Pro administrators may use extension attributes and smart groups to identify outdated systems and trigger update workflows without relying on local softwareupdate checks.</description>
     </item>
     <item>
       <title>Check for unpatched CVEs on Mac with Jamf Pro using SOFA</title>
       <link>https://grahamrpugh.com/2024-05-05-cve-checks-using-sofa-and-jamf-pro</link>
       <guid>https://grahamrpugh.com/2024-05-05-cve-checks-using-sofa-and-jamf-pro</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Check for unpatched CVEs on Mac with Jamf Pro using SOFA</description>
+      <description>SOFA can identify unpatched macOS CVEs and active exploits. This post shows how to use a Jamf Pro Extension Attribute and Smart Groups to monitor CVE exposure and trigger software update remediations.</description>
     </item>
     <item>
       <title>dbfileupload is dead - long live v1/packages! A new packages API endpoint for Jamf Pro</title>
       <link>https://grahamrpugh.com/2024-05-16-jamf-new-packages-api-endpoint</link>
       <guid>https://grahamrpugh.com/2024-05-16-jamf-new-packages-api-endpoint</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>dbfileupload is dead - long live v1/packages! A new packages API endpoint for Jamf Pro</description>
+      <description>Jamf is retiring the unsupported dbfileupload API endpoint. This post explains the new v1/packages endpoint, how it works for package uploads and deletion, and why it is the modern replacement for cloud distribution point uploads.</description>
     </item>
     <item>
       <title>Changes to Classic API authentication in Jamf Pro - what you need to know</title>
       <link>https://grahamrpugh.com/2024-05-16-jamf-pro-api-authentication</link>
       <guid>https://grahamrpugh.com/2024-05-16-jamf-pro-api-authentication</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Changes to Classic API authentication in Jamf Pro - what you need to know</description>
+      <description>This post explains how Jamf Pro Classic API Basic Authentication is being retired, why bearer tokens are required, and how to migrate scripts to bearer-token or client-credentials authentication safely.</description>
     </item>
     <item>
       <title>Understanding Jamf Pro API Roles And Clients</title>
       <link>https://grahamrpugh.com/2024-07-30-jamf-blog-api-clients-and-roles</link>
       <guid>https://grahamrpugh.com/2024-07-30-jamf-blog-api-clients-and-roles</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Understanding Jamf Pro API Roles And Clients</description>
+      <description>This post explains how Jamf Pro API roles and clients work, how to secure integrations by use of client credentials, and how to automate role and client management with the Jamf Pro API.</description>
     </item>
     <item>
       <title>MacSysAdmin Presentation - 03 October 2024 - Automated Testing of Managed Applications</title>
       <link>https://grahamrpugh.com/2024-10-08-macsysadmin-presentation</link>
       <guid>https://grahamrpugh.com/2024-10-08-macsysadmin-presentation</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>MacSysAdmin Presentation - 03 October 2024 - Automated Testing of Managed Applications</description>
+      <description>I co-presented with Katiuscia Zehnder at MacSysAdmin 2024 on automated testing of managed applications as part of a fully automated software deployment workflow. This post shares slides, video, and links to related resources.</description>
     </item>
     <item>
       <title>Jamf package inventory recalculation - GUI, API, JamfUploader</title>
       <link>https://grahamrpugh.com/2024-10-30-package-inventory-recalculation</link>
       <guid>https://grahamrpugh.com/2024-10-30-package-inventory-recalculation</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Jamf package inventory recalculation - GUI, API, JamfUploader</description>
+      <description>Jamf Pro cloud customers may need to force a JCDS package inventory refresh after uploads. This post covers the GUI button, API endpoint, JamfPackageUploader recalculate option, and the standalone jamf-upload.sh workflow.</description>
     </item>
     <item>
       <title>JamfUploader - store your Jamf Pro credentials in the Keychain</title>
       <link>https://grahamrpugh.com/2025-03-14-jamfuploader-keychain</link>
       <guid>https://grahamrpugh.com/2025-03-14-jamfuploader-keychain</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>JamfUploader - store your Jamf Pro credentials in the Keychain</description>
+      <description>JamfUploader can now retrieve Jamf Pro credentials from the macOS Keychain, reducing plain-text password storage, avoiding AutoPkg receipts leaks, and making multi-server use much simpler and safer.</description>
     </item>
     <item>
       <title>Event Notifications from JamfUploader - Slack, Teams, and now Jira</title>
       <link>https://grahamrpugh.com/2025-09-07-jamfuploader-notifications</link>
       <guid>https://grahamrpugh.com/2025-09-07-jamfuploader-notifications</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Event Notifications from JamfUploader - Slack, Teams, and now Jira</description>
+      <description>JamfUploader can notify AutoPkg admins about package and policy updates via Slack, Teams, and Jira, making it easier to track deployments and escalate issues without manual monitoring.</description>
     </item>
     <item>
       <title>Jamf-Upload All The Things</title>
       <link>https://grahamrpugh.com/2025-11-17-jamf-upload-all-the-things</link>
       <guid>https://grahamrpugh.com/2025-11-17-jamf-upload-all-the-things</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Jamf-Upload All The Things</description>
+      <description>JamfUploader is far more than a package uploader: it can maintain Jamf settings, copy and clean content, adjust scopes, manage profiles, and support broader configuration-as-code workflows across multiple Jamf instances.</description>
     </item>
     <item>
       <title>Two New Criteria for Application Version Comparison in Jamf Pro Smart Computer Groups</title>
       <link>https://grahamrpugh.com/2025-12-02-new-smart-group-criteria</link>
       <guid>https://grahamrpugh.com/2025-12-02-new-smart-group-criteria</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Two New Criteria for Application Version Comparison in Jamf Pro Smart Computer Groups</description>
+      <description>Jamf Pro 11.23 adds Application Bundle Short Version and Application Bundle Version criteria, letting AutoPkg recipe authors match the actual app version value without custom extension attributes or duplicate recipes.</description>
     </item>
     <item>
       <title>Dissect And Replace Your Monolithic Legacy Configuration Profiles</title>
       <link>https://grahamrpugh.com/2026-01-28-monolithic-profile-dissector</link>
       <guid>https://grahamrpugh.com/2026-01-28-monolithic-profile-dissector</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Dissect And Replace Your Monolithic Legacy Configuration Profiles</description>
+      <description>Monolithic Jamf configuration profiles can conflict with compliance baselines and other payloads. This post explains how to identify duplicate keys, dissect and replace legacy profiles, and migrate to safer custom payloads or blueprints.</description>
     </item>
     <item>
       <title>Unsign Profile&apos; - A Small, Stumbling Step into the World of Shortcuts</title>
       <link>https://grahamrpugh.com/2026-02-04-shortcut-unsign-profile</link>
       <guid>https://grahamrpugh.com/2026-02-04-shortcut-unsign-profile</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Unsign Profile&apos; - A Small, Stumbling Step into the World of Shortcuts</description>
+      <description>A quick way to remove signatures from downloaded Jamf profiles is to create a Finder Quick Action using a shell script. The catch - Finder needs Full Disk Access for the shortcut to work.</description>
     </item>
     <item>
       <title>Create custom profiles using JamfUploader without a template file</title>
       <link>https://grahamrpugh.com/2026-03-03-JamfUploader-profiles-without-templates</link>
       <guid>https://grahamrpugh.com/2026-03-03-JamfUploader-profiles-without-templates</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Create custom profiles using JamfUploader without a template file</description>
+      <description>JamfUploader now lets you create custom profile payloads directly in AutoPkg recipes, eliminating PLIST template files and simplifying custom macOS configuration profile creation.</description>
     </item>
     <item>
       <title>jamf-cli, and how you can use it with AutoPkg to automate complex Jamf workflows</title>
       <link>https://grahamrpugh.com/2026-04-12-jamf-cli-runner</link>
       <guid>https://grahamrpugh.com/2026-04-12-jamf-cli-runner</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>jamf-cli, and how you can use it with AutoPkg to automate complex Jamf workflows</description>
+      <description>jamf-cli provides a simple, cross-platform way to interact with Jamf Pro, Protect, and Platform APIs, while JamfCLIRunner brings that power into AutoPkg workflows for reproducible, conditional Jamf automation.</description>
     </item>
     <item>
       <title>JamfUploader now supports Jamf Platform Integrations, integrates with jamf-cli</title>
       <link>https://grahamrpugh.com/2026-04-19-jamfuploader-platform</link>
       <guid>https://grahamrpugh.com/2026-04-19-jamfuploader-platform</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>JamfUploader now supports Jamf Platform Integrations, integrates with jamf-cli</description>
+      <description>JamfUploader now supports Jamf Platform API Gateway credentials and jamf-cli profiles, enabling secure authentication for Jamf Pro and related services while remaining backward compatible.</description>
     </item>
     <item>
       <title>Introducing Conditional Logic for JamfUploader and JamfCLIRunner</title>
       <link>https://grahamrpugh.com/2026-06-28-conditional-logic-autopkg-jamfuploader</link>
       <guid>https://grahamrpugh.com/2026-06-28-conditional-logic-autopkg-jamfuploader</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Introducing Conditional Logic for JamfUploader and JamfCLIRunner</description>
+      <description>JamfUploader and JamfCLIRunner can now skip processors based on predicates, reducing recipe duplication and enabling conditional Jamf workflows for different policy and group combinations.</description>
     </item>
   </channel>
 </rss>

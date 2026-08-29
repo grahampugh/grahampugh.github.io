@@ -6,6 +6,7 @@ tags:
   - apple
   - mac
   - jamf
+summary: This post explains how Jamf Pro API roles and clients work, how to secure integrations by use of client credentials, and how to automate role and client management with the Jamf Pro API.
 ---
 
 Last week I posted an article in Jamf's official blog regarding how to use the new API Roles and Clients in Jamf Pro. API Roles and Clients provide a more secure way of integrating with the API than using regular accounts.

@@ -4,6 +4,7 @@ title:  "One Mac Admin's tips on maintaining a popular Open Source project"
 comments: true
 tags:
   - community
+summary: If you publish a useful open source Mac admin tool, expect more users, questions, and maintenance work. Good documentation, issue tracking, releases, and community support can help manage the burden and keep things sustainable.
 ---
 
 At the recent MacAdmins UK conference [I gave a presentation][6] about my [erase-install] script. [The video is now available here][MacAdUk 2023 Video].

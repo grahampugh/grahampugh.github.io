@@ -7,7 +7,10 @@ tags:
   - mac
   - jamf
   - mjt
+summary: JOCADS is an open source multitenant Jamf Pro object copier and deleter that handles dependencies, copies objects between instances, and supports interactive or scripted operations for complex multi-instance administration.
 ---
+
+## Introduction
 
 For many years while working at ETH Zürich, I developed a set of shell scripts for performing API actions on multiple Jamf instances. These remained for internal use only due to the specific nature of the ETH setup. However, as I am between jobs at the moment while waiting for a German work permit (*received today! Woohoo!*), I have taken some time to work on these scripts so that they could be used by other admins faced with dealing with multiple Jamf Pro instances, whilst still remaining functional for the specific use case at ETH. These scripts are now available for the Mac Admins community at the GitHub repo [multitenant-jamf-tools][1]. I hope they may be of use to somebody!
 

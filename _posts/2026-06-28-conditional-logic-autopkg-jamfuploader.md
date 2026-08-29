@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Introducing Conditional Logic for JamfUploader and JamfCLIRunner"
+title: Introducing Conditional Logic for JamfUploader and JamfCLIRunner
 comments: true
 tags:
   - apple
@@ -8,7 +8,7 @@ tags:
   - jamf
   - jamfuploader
   - autopkg
-excerpt: JamfUploader and JamfCLIRunner now include a new skip_if method for skipping a processor based on a predicate.
+summary: JamfUploader and JamfCLIRunner can now skip processors based on predicates, reducing recipe duplication and enabling conditional Jamf workflows for different policy and group combinations.
 ---
 
 # Introduction

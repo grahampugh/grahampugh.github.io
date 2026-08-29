@@ -5,6 +5,7 @@ comments: true
 tags:
   - apple
   - mac
+summary: Apple's new Keynote, Numbers, and Pages apps include premium subscription features that can confuse managed users. This post shows how to suppress premium prompts and hide those features using managed preferences in Jamf Pro and other MDMs.
 ---
 
 ## Introduction

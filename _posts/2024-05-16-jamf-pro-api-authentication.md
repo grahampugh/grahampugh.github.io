@@ -6,6 +6,7 @@ tags:
   - apple
   - mac
   - jamf
+summary: This post explains how Jamf Pro Classic API Basic Authentication is being retired, why bearer tokens are required, and how to migrate scripts to bearer-token or client-credentials authentication safely.
 ---
 
 > Note: My colleague William Smith created a similar blog post [How to convert Classic API scripts to use bearer token authentication][11] in 2022. This post serves as a timely reminder of what is changing with the Classic API, as well as providing updated information about the possible ways to authenticate against both Jamf Pro APIs using Bearer Tokens or API Clients.

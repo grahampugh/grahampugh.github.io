@@ -8,6 +8,7 @@ tags:
   - jamf
   - jamfuploader
   - mjt
+summary: Monolithic Jamf configuration profiles can conflict with compliance baselines and other payloads. This post explains how to identify duplicate keys, dissect and replace legacy profiles, and migrate to safer custom payloads or blueprints.
 ---
 
 ## Introduction

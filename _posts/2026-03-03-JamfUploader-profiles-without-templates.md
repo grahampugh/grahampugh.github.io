@@ -7,6 +7,7 @@ tags:
   - mac
   - jamf
   - jamfuploader
+summary: JamfUploader now lets you create custom profile payloads directly in AutoPkg recipes, eliminating PLIST template files and simplifying custom macOS configuration profile creation.
 ---
 
 ## Introduction

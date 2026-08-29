@@ -8,6 +8,7 @@ tags:
   - jamf
   - jamfuploader
   - autopkg
+summary: JamfRecipeMaker converts existing JSSImporter recipes into JamfUploader recipes automatically, helping administrators migrate standard policy-based AutoPkg workflows with less manual rework.
 ---
 
 In case you missed it, the [JSSImporter] processor is deprecated, and will cease to function when Jamf remove basic authentication from the Classic API endpoints, which they have announced will happen sometime between August and December 2022.

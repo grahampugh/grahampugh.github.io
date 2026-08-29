@@ -6,6 +6,7 @@ tags:
   - apple
   - mac
   - jamf
+summary: Adobe Creative Cloud Desktop can report different versions on Intel and Apple Silicon from the same package due to architecture-specific patching; Jamf admins must account for both versions in policy logic.
 ---
 
 To get Adobe Creative Cloud Desktop application to work on an Apple Silicon Mac, Adobe have provided a patch for their latest installers.

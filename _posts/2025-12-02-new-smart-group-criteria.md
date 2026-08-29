@@ -7,6 +7,8 @@ tags:
   - mac
   - jamf
   - jamfuploader
+  - autopkg
+summary: Jamf Pro 11.23 adds Application Bundle Short Version and Application Bundle Version criteria, letting AutoPkg recipe authors match the actual app version value without custom extension attributes or duplicate recipes.
 ---
 
 ## Introduction

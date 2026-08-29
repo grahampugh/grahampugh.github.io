@@ -8,6 +8,7 @@ tags:
   - jamf
   - jamfuploader
   - autopkg
+summary: JamfPackageUploader's JCDS mode uses the same upload flow as the Jamf Pro GUI to upload packages to Jamf Cloud when the legacy dbfileupload endpoint becomes unreliable, though it is still unsupported and experimental.
 ---
 
 Tools such as the [JSSImporter] and [JamfUploader] AutoPkg processors traditionally use an undocumented API endpoint for uploading packages to Jamf Cloud Distribution Points. Various people figured this `dbfileupload` endpoint out by reverse-engineering the package upload done by the Jamf Admin (formerly Casper Admin) application.

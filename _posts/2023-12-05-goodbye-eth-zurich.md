@@ -6,6 +6,7 @@ tags:
   - apple
   - mac
   - jamf
+summary: After six and a half years at ETH Zurich, I reflect on the opportunities, collaborations, and community work that shaped my Jamf career and prepared me for my next chapter in Germany.
 ---
 
 At the end of October, I said goodbye to ETH Zürich as my employers of 6.5 years. I'd like to pause to reflect on my journey.

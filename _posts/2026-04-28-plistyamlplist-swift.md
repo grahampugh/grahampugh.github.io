@@ -6,6 +6,7 @@ tags:
   - apple
   - mac
   - autopkg
+summary: Plist-Yaml-Plist has been rewritten in Swift as a signed, notarized binary that converts PLIST, YAML, and JSON files with the same functionality as the existing python tool, including batch conversion and tidy formatting for AutoPkg recipes.
 ---
 
 ## Introduction

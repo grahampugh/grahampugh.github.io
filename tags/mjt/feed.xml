@@ -13,14 +13,14 @@ permalink: /tags/mjt/feed.xml
       <link>https://grahamrpugh.com/2023-12-05-jocads-and-other-api-tools</link>
       <guid>https://grahamrpugh.com/2023-12-05-jocads-and-other-api-tools</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>JOCADS - the Multitenant Object Copier and Deleter Tool for Jamf Pro</description>
+      <description>JOCADS is an open source multitenant Jamf Pro object copier and deleter that handles dependencies, copies objects between instances, and supports interactive or scripted operations for complex multi-instance administration.</description>
     </item>
     <item>
       <title>Dissect And Replace Your Monolithic Legacy Configuration Profiles</title>
       <link>https://grahamrpugh.com/2026-01-28-monolithic-profile-dissector</link>
       <guid>https://grahamrpugh.com/2026-01-28-monolithic-profile-dissector</guid>
       <pubDate>2020-01-01</pubDate>
-      <description>Dissect And Replace Your Monolithic Legacy Configuration Profiles</description>
+      <description>Monolithic Jamf configuration profiles can conflict with compliance baselines and other payloads. This post explains how to identify duplicate keys, dissect and replace legacy profiles, and migrate to safer custom payloads or blueprints.</description>
     </item>
   </channel>
 </rss>

@@ -7,6 +7,7 @@ tags:
   - mac
   - jamf
   - jamfuploader
+summary: Jamf Pro cloud customers may need to force a JCDS package inventory refresh after uploads. This post covers the GUI button, API endpoint, JamfPackageUploader recalculate option, and the standalone jamf-upload.sh workflow.
 ---
 
 If you're a Jamf Pro cloud customer using the Jamf Cloud Distribution Service (JCDS) for packages, you may have noticed that some packages may take time to be fully available after uploading them. This can occur regardless of whether you upload the package via the web interface or using the Jamf Pro API.

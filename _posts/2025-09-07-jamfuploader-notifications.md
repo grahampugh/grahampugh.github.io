@@ -7,6 +7,7 @@ tags:
   - mac
   - jamf
   - jamfuploader
+summary: JamfUploader can notify AutoPkg admins about package and policy updates via Slack, Teams, and Jira, making it easier to track deployments and escalate issues without manual monitoring.
 ---
 
 ## Introduction

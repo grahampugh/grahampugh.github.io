@@ -5,6 +5,7 @@ comments: true
 tags:
   - apple
   - mac
+summary: System extension entries in the macOS Network pane can remain after uninstall when an MDM allow-list profile still exists. Removing the profile clears the orphaned entries, even though systemextensionsctl does not show them.
 ---
 
 Strange behaviour had been bugging me in the Network Pane of macOS System Preferences (System Settings since macOS Ventura) ever since the introduction of system extensions in macOS Catalina 10.15. System extensions are the replacement for kernel extensions (confusingly referred to as "System Extensions" in macOS System Preferences and in dialogue boxes).

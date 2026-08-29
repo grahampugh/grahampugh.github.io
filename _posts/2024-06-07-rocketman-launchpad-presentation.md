@@ -7,6 +7,7 @@ tags:
   - mac
   - erase-install
   - presentations
+summary: At RocketmanTech LaunchPad, I presented why and how to use erase-install for upgrading and updating Macs with Jamf Pro, including a live demonstration and links to related tools, docs, and videos.
 ---
 
 Today, 7 June 2024, at 12:00 PM MST, I am proudly presenting at the [RocketmanTech LaunchPad Meetup](https://rocketman.tech/launchpad), on the following topic:
