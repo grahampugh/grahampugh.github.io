@@ -9,6 +9,7 @@ tags:
   - autopkg
   - jamfuploader
   - presentations
+summary: At the MacAdmins 2022 Campfire Sessions, I presented Demystifying JamfUploader, showing how to take AutoPkg and Jamf Pro workflows beyond package uploads with scripting, templating, and automation.
 ---
 
 <img align="right" src="/assets/images/psumac2022logo.png" alt="PSU MacAdmins 2022 Logo" width="150" height="150" />On 14 July 2022, I was once again fortunate to co-present with [Anthony Reimer][1], this time at the [MacAdmins 2022 Campfire Sessions][2], on the topic **Demystifying JamfUploader - Taking Your Jamf AutoPkg Workflows to the Next Level**.

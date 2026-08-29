@@ -7,6 +7,7 @@ tags:
   - mac
   - erase-install
   - presentations
+summary: I presented at MacAdmins UK 2023 on erase-install, a tool for upgrading and reinstalling macOS, covering its evolution, current use cases, and the lessons learned from maintaining a widely used open source project.
 ---
 
 On 23 May 2023, at 12:15 PM BST, I proudly presented at the [MacAdmins UK Conference](https://macad.uk), on the following topic:
