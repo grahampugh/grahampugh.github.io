@@ -12,7 +12,7 @@ summary: Reflecting on my time as a Mac Admins Slack admin, I look back on commu
 
 Today, I'm stepping down as an admin (moderator) of the [Mac Admins Slack][macadmins slack team] after three-and-a-half years. I want to send my gratitude to all the current and past admins and board members who have helped along the way, and many thanks in advance to the new admins that we have just onboarded.
 
-Since I joined the team in February 2023, membership has increased from maybe 50,000 members to 80,000. I posted 1,372 messages in the private admins channels and another 230 answers in `#ask-about-this-slack`, while relocating from Switzerland to Germany, changing jobs from ETH Zurich to Jamf, presenting at the Mac Admins UK and MacSysAdmin conferences, and at several Jamf Nation Live events (twice in German!), and learning so much from members of the Mac Admins community.
+Since I joined the team in February 2023, membership has increased from maybe 50,000 members to 86,000. I posted 1,372 messages in the private admins channels and another 230 answers in `#ask-about-this-slack`, while relocating from Switzerland to Germany, changing jobs from ETH Zurich to Jamf, presenting at the Mac Admins UK and MacSysAdmin conferences, and at several Jamf Nation Live events (twice in German!), and learning so much from members of the Mac Admins community.
 
 Being an admin was an honour, and there have been some interesting problems to solve. I will emphasise that the overwhelming number of members of Mac Admins Slack are helpful and courteous, and understand the value of community.
 
