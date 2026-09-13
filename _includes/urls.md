@@ -48,6 +48,7 @@
 [hello-it]: https://github.com/ygini/Hello-IT
 [imagr]: https://github.com/grahamgilbert/imagr/wiki/Getting-Started
 [installinstallmacos.py]: https://github.com/grahampugh/macadmin-scripts/blob/main/installinstallmacos.py
+[Jamf Account]: https://account.jamf.com
 [Jamf API Utility]: https://github.com/Jamf-Concepts/apiutil
 [jamf-cli]: https://github.com/Jamf-Concepts/jamf-cli
 [JamfCLIRunner]: https://github.com/autopkg/grahampugh-recipes/tree/main/JamfCLI-Runner
@@ -60,7 +61,8 @@
 [jamf pro logo]: /assets/images/JamfPro-Logo.png
 [jamf pro patch management]: https://www.jamf.com/products/jamf-pro/patch-management/
 [jamf-upload.sh]: https://github.com/grahampugh/jamf-upload/wiki/jamf-upload.sh
-[jamfuploader]: https://github.com/grahampugh/jamf-upload/wiki/JamfUploader-AutoPkg-Processors
+[jamfuploader]: https://github.com/grahampugh/jamf-upload/wiki
+[JamfUploader]: https://github.com/grahampugh/jamf-upload/wiki
 [jctl]: https://github.com/univ-of-utah-marriott-library-apple/jctl
 [jekyll]: http://jekyllrb.com/
 [jnuc]: https://www.jamf.com/events/jamf-nation-user-conference/
