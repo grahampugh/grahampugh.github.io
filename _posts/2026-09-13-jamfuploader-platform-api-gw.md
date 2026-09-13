@@ -47,7 +47,7 @@ The Jamf Pro Classic API is still available via Platform API Gateway, and has no
 
     https://eu.api.jamfcloud.com/proclassic/policies
 
-This is equivalent to the following URL if you are using the Jamf Pro API rather than Platform API:
+This is equivalent to the following URL if you are using the Classic API rather than Platform API:
 
     https://your.jamfcloud.com/JSSResource/policies
 
