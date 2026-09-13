@@ -62,7 +62,6 @@
 [jamf pro patch management]: https://www.jamf.com/products/jamf-pro/patch-management/
 [jamf-upload.sh]: https://github.com/grahampugh/jamf-upload/wiki/jamf-upload.sh
 [jamfuploader]: https://github.com/grahampugh/jamf-upload/wiki
-[JamfUploader]: https://github.com/grahampugh/jamf-upload/wiki
 [jctl]: https://github.com/univ-of-utah-marriott-library-apple/jctl
 [jekyll]: http://jekyllrb.com/
 [jnuc]: https://www.jamf.com/events/jamf-nation-user-conference/
