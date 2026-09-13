@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Jamf's Platform API is now generally available - what JamfUploader users need to know"
+title:  "Jamf's Platform API is now generally available - and what JamfUploader users need to know"
 comments: true
 tags:
   - apple
