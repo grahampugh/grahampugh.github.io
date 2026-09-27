@@ -5,7 +5,7 @@ comments: true
 tags:
   - apple
   - mac
-summary: "macOS update notifications warn that apps may block a scheduled update, but don't identify which ones. This post explores my efforts to detect likely blockers such as unsaved documents, modal dialogs, and elevated Terminal sessions, with mixed success, and introduces the 'Blocking Apps' app that flags apps that may prevent shutdown or software updates."
+summary: "macOS update notifications warn that apps may block a scheduled update, but don't identify which ones. This post explores my efforts to detect blockers such as unsaved documents, modal dialogs, and elevated Terminal sessions, and introduces the 'Blocking Apps' app that flags apps that may prevent shutdown or software updates."
 ---
 
 ## Introduction
